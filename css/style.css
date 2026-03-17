@@ -164,6 +164,77 @@ a {
     background: rgba(255,255,255,0.8);
 }
 
+/* Referral Badge on Product Cards */
+.referral-badge {
+    background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%);
+    border: 2px solid #4a90d9;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 15px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #2c5aa0;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Referral Banner Section */
+.referral-banner {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%);
+    text-align: center;
+}
+
+.referral-banner h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.referral-banner > .container > p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+}
+
+.referral-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.step {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.step-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.step h3 {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.step p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 .btn {
     display: inline-block;
     padding: 0.875rem 2rem;
@@ -633,6 +704,14 @@ a {
     
     .carousel-label {
         font-size: 1.2rem;
+    }
+    
+    .referral-banner h2 {
+        font-size: 2rem;
+    }
+    
+    .referral-steps {
+        grid-template-columns: 1fr;
     }
 }
 
