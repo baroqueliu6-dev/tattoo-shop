@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cover Templates - Oriental Symbols</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            padding: 40px;
+            margin: 0;
+        }
+        .covers-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .cover {
+            width: 1280px;
+            height: 720px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            page-break-after: always;
+        }
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(233,69,96,0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        .character {
+            font-size: 280px;
+            color: #ffffff;
+            font-weight: bold;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            z-index: 1;
+            margin-bottom: 20px;
+        }
+        .product-name {
+            font-size: 48px;
+            color: #e94560;
+            font-weight: bold;
+            z-index: 1;
+            margin-bottom: 10px;
+        }
+        .product-desc {
+            font-size: 28px;
+            color: rgba(255,255,255,0.8);
+            z-index: 1;
+            margin-bottom: 40px;
+        }
+        .price-tag {
+            background: #e94560;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 32px;
+            font-weight: bold;
+            z-index: 1;
+            box-shadow: 0 10px 30px rgba(233,69,96,0.4);
+        }
+        .original-price {
+            text-decoration: line-through;
+            opacity: 0.7;
+            font-size: 24px;
+            margin-right: 15px;
+        }
+        .sale-price {
+            font-size: 36px;
+        }
+        .brand {
+            position: absolute;
+            bottom: 40px;
+            color: rgba(255,255,255,0.5);
+            font-size: 20px;
+            z-index: 1;
+        }
+        .features {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+            z-index: 1;
+        }
+        .feature {
+            color: rgba(255,255,255,0.7);
+            font-size: 18px;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+        .instructions {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+        @media print {
+            body { background: white; padding: 0; }
+            .instructions, h1 { display: none; }
+            .covers-container { display: block; }
+            .cover { 
+                page-break-after: always; 
+                margin: 0;
+                width: 1280px;
+                height: 720px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>📸 产品封面图模板</h1>
+    
+    <div class="instructions">
+        <strong>如何使用：</strong>
+        <ol>
+            <li>在浏览器中打开此页面</li>
+            <li>使用截图工具截取每个封面（推荐：Cmd+Shift+4 选择区域截图）</li>
+            <li>或者：右键 → 检查 → 选中 .cover → 右键 → Capture node screenshot（Chrome）</li>
+            <li>保存为：love-cover.jpg, courage-cover.jpg, freedom-cover.jpg, dream-cover.jpg</li>
+        </ol>
+    </div>
+
+    <div class="covers-container">
+        <!-- Cover 1: 爱 (Love) -->
+        <div class="cover">
+            <div class="character">爱</div>
+            <div class="product-name">爱 (Love)</div>
+            <div class="product-desc">Authentic Chinese Character Tattoo Design</div>
+            <div class="price-tag">
+                <span class="original-price">$19.99</span>
+                <span class="sale-price">$9.99</span>
+            </div>
+            <div class="features">
+                <span class="feature">✓ SVG + PNG</span>
+                <span class="feature">✓ 300 DPI</span>
+                <span class="feature">✓ Cultural Guide</span>
+            </div>
+            <div class="brand">Oriental Symbols Tattoo</div>
+        </div>
+
+        <!-- Cover 2: 乐 (Joy) -->
+        <div class="cover">
+            <div class="character">乐</div>
+            <div class="product-name">乐 (Joy)</div>
+            <div class="product-desc">Authentic Chinese Character Tattoo Design</div>
+            <div class="price-tag">
+                <span class="original-price">$19.99</span>
+                <span class="sale-price">$9.99</span>
+            </div>
+            <div class="features">
+                <span class="feature">✓ SVG + PNG</span>
+                <span class="feature">✓ 300 DPI</span>
+                <span class="feature">✓ Cultural Guide</span>
+            </div>
+            <div class="brand">Oriental Symbols Tattoo</div>
+        </div>
+
+        <!-- Cover 3: 酷 (Cool) -->
+        <div class="cover">
+            <div class="character">酷</div>
+            <div class="product-name">酷 (Cool)</div>
+            <div class="product-desc">Authentic Chinese Character Tattoo Design</div>
+            <div class="price-tag">
+                <span class="original-price">$19.99</span>
+                <span class="sale-price">$9.99</span>
+            </div>
+            <div class="features">
+                <span class="feature">✓ SVG + PNG</span>
+                <span class="feature">✓ 300 DPI</span>
+                <span class="feature">✓ Cultural Guide</span>
+            </div>
+            <div class="brand">Oriental Symbols Tattoo</div>
+        </div>
+
+        <!-- Cover 4: 好 (Good) -->
+        <div class="cover">
+            <div class="character">好</div>
+            <div class="product-name">好 (Good)</div>
+            <div class="product-desc">Authentic Chinese Character Tattoo Design</div>
+            <div class="price-tag">
+                <span class="original-price">$19.99</span>
+                <span class="sale-price">$9.99</span>
+            </div>
+            <div class="features">
+                <span class="feature">✓ SVG + PNG</span>
+                <span class="feature">✓ 300 DPI</span>
+                <span class="feature">✓ Cultural Guide</span>
+            </div>
+            <div class="brand">Oriental Symbols Tattoo</div>
+        </div>
+
+        <!-- Cover 5: 美 (Beauty) -->
+        <div class="cover">
+            <div class="character">美</div>
+            <div class="product-name">美 (Beauty)</div>
+            <div class="product-desc">Authentic Chinese Character Tattoo Design</div>
+            <div class="price-tag">
+                <span class="original-price">$19.99</span>
+                <span class="sale-price">$9.99</span>
+            </div>
+            <div class="features">
+                <span class="feature">✓ SVG + PNG</span>
+                <span class="feature">✓ 300 DPI</span>
+                <span class="feature">✓ Cultural Guide</span>
+            </div>
+            <div class="brand">Oriental Symbols Tattoo</div>
+        </div>
+
+        <!-- Cover 6: 史 (History) -->
+        <div class="cover">
+            <div class="character">史</div>
+            <div class="product-name">史 (History)</div>
+            <div class="product-desc">Authentic Chinese Character Tattoo Design</div>
+            <div class="price-tag">
+                <span class="original-price">$19.99</span>
+                <span class="sale-price">$9.99</span>
+            </div>
+            <div class="features">
+                <span class="feature">✓ SVG + PNG</span>
+                <span class="feature">✓ 300 DPI</span>
+                <span class="feature">✓ Cultural Guide</span>
+            </div>
+            <div class="brand">Oriental Symbols Tattoo</div>
+        </div>
+    </div>
+
+    <script>
+        console.log('💡 Tip: Use Chrome DevTools to capture high-quality screenshots of each cover');
+    </script>
+</body>
+</html>

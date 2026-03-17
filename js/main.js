@@ -1,5 +1,50 @@
 // Main JavaScript for Chinese Character Tattoo Shop
 
+// Hero Carousel Functionality
+function initHeroCarousel() {
+    const track = document.getElementById('carouselTrack');
+    const dots = document.querySelectorAll('.dot');
+    if (!track || dots.length === 0) return;
+    
+    let currentIndex = 0;
+    const totalSlides = dots.length;
+    
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+    
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+    }
+    
+    // Auto-advance every 3 seconds
+    let carouselInterval = setInterval(nextSlide, 3000);
+    
+    // Click on dots to navigate
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+            // Reset interval on manual navigation
+            clearInterval(carouselInterval);
+            carouselInterval = setInterval(nextSlide, 3000);
+        });
+    });
+    
+    // Pause on hover
+    const carousel = document.querySelector('.hero-carousel');
+    if (carousel) {
+        carousel.addEventListener('mouseenter', () => clearInterval(carouselInterval));
+        carousel.addEventListener('mouseleave', () => {
+            carouselInterval = setInterval(nextSlide, 3000);
+        });
+    }
+}
+
 // Product Search Functionality
 function initProductSearch() {
     const searchInput = document.getElementById('product-search');
@@ -58,6 +103,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Initialize PayPal buttons when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🎨 Oriental Symbols Tattoo Shop loaded');
+    
+    // Initialize carousel
+    initHeroCarousel();
     
     // Initialize search functionality
     initProductSearch();

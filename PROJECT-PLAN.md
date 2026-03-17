@@ -11,17 +11,20 @@
 ### 已完成
 - ✅ 网站基础框架（HTML/CSS/JS）
 - ✅ 品牌定位（Oriental Symbols - 东方符号）
-- ✅ 4 个产品页面（愛、勇、自由、梦）
+- ✅ 6 个产品页面（爱、乐、酷、好、美、史）
 - ✅ PayPal 支付集成
 - ✅ 法律文件（Terms/Privacy/License）
 - ✅ 域名配置（13801380.site）
 - ✅ SSL 证书
 - ✅ Vercel 部署
+- ✅ 搜索功能（JavaScript 实现）
+- ✅ 产品素材（SVG 文件 + PNG 文件已准备）
+- ✅ 封面图模板（6 个）
 
 ### 待完成
-- ⏳ 产品素材（SVG/PNG 文件）
-- ⏳ 搜索功能
-- ⏳ 产品交付系统（自动发送邮件）
+- ⏳ 文化解读文档（6 个 HTML → PDF）
+- ⏳ Gumroad 配置（注册 + 创建 6 个产品）
+- ⏳ 网站按钮替换（PayPal → Gumroad）
 - ⏳ 社交媒体运营
 
 ---
@@ -199,9 +202,37 @@ function searchProducts(query) {
 
 **下一步行动：**
 
-1. **立即：** 确定产品交付方案（Gumroad vs 自建）
-2. **今天：** 准备 4 个产品的 SVG/PNG 素材
-3. **本周：** 添加搜索功能
-4. **下周：** 开始社交媒体运营
+### 🎯 今天必须完成（上线前）
+
+1. **转换 PNG 文件**（30 分钟）
+   - 打开 `products/README.md` 查看转换方法
+   - 用在线工具将 4 个 SVG 转为 300 DPI PNG
+   - 文件命名：`love-character.png`, `courage-character.png`, 等
+
+2. **生成封面图**（20 分钟）
+   - 用浏览器打开 `products/cover-templates.html`
+   - 截图保存 4 个封面：`love-cover.jpg`, `courage-cover.jpg`, 等
+   - 尺寸应为 1280x720px
+
+3. **生成 PDF 文档**（15 分钟）
+   - 用 Chrome 打开每个 `*-meaning.html`
+   - Cmd+P → 另存为 PDF
+   - 得到 4 个文化解读 PDF
+
+4. **注册 Gumroad**（15 分钟）
+   - 访问 https://gumroad.com
+   - 用邮箱注册
+   - 连接 PayPal 收款账号
+   - 按 `GUMROAD-SETUP.md` 步骤创建 4 个产品
+
+5. **替换网站按钮**（20 分钟）
+   - 获取 Gumroad 产品嵌入代码
+   - 替换 `index.html` 中的 PayPal 按钮
+   - 运行 `./deploy.sh` 部署
+
+### 📅 本周完成
+
+- [ ] 测试完整购买流程
+- [ ] 开始社交媒体运营（Reddit/Instagram）
 
 **记住：慢就是快。做好规划，执行会更顺利！**

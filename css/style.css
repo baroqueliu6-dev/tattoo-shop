@@ -94,6 +94,76 @@ a {
     animation: fadeInUp 0.8s ease 0.2s backwards;
 }
 
+/* Hero Carousel */
+.hero-carousel {
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.carousel-character {
+    font-size: 120px;
+    color: var(--white);
+    font-weight: bold;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    animation: carouselPulse 2s ease-in-out infinite;
+    line-height: 1;
+}
+
+@keyframes carouselPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
+
+.carousel-label {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background: var(--accent-color);
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background: rgba(255,255,255,0.8);
+}
+
 .btn {
     display: inline-block;
     padding: 0.875rem 2rem;
@@ -555,6 +625,14 @@ a {
     
     .character-preview {
         font-size: 5rem;
+    }
+    
+    .carousel-character {
+        font-size: 80px;
+    }
+    
+    .carousel-label {
+        font-size: 1.2rem;
     }
 }
 
