@@ -286,15 +286,60 @@ a {
 .btn-buy {
     display: inline-block;
     text-align: center;
-    padding: 12px 30px;
+    padding: 14px 30px;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
 }
 
 .btn-buy:hover {
     background: #ff6b6b;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(233, 69, 96, 0.4);
+}
+
+/* Product Card Hover Effect */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+/* Price Badge */
+.sale-price {
+    position: relative;
+    background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Guarantee Badge */
+.guarantee-badge {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.guarantee-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
 /* Features Section */
