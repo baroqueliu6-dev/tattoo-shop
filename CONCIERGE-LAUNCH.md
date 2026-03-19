@@ -7,7 +7,7 @@
 
 ## ✅ 已完成
 
-### 第 1 步：创建服务介绍页面
+### 第 1 步：创建服务介绍页面 ✅
 - **文件:** `/concierge/index.html`
 - **内容:** 完整的英文服务介绍
 - **包含:**
@@ -17,11 +17,21 @@
   - 工作流程
   - 为什么选择我们
 
+### 第 2 步：推送代码到 GitHub ✅
+- **Commit:** `fc380f7`
+- **时间:** 2026-03-19 20:20
+- **状态:** 已成功推送
+
+### 第 3 步：在 Vercel 添加子域名 ✅
+- **子域名:** `service.13801380.site`
+- **状态:** 已添加到 Vercel
+- **Vercel 状态:** Invalid Configuration（等待 DNS 配置）
+
 ---
 
 ## ⏳ 待完成
 
-### 第 2 步：推送代码到 GitHub
+### 第 4 步：配置 DNS 记录
 ```bash
 cd ~/.openclaw/workspace/tattoo-shop
 git add -A
