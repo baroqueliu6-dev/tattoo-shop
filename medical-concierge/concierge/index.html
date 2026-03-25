@@ -558,44 +558,143 @@
         </div>
     </section>
 
-    <!-- Pricing - USD with Discount -->
+    <!-- Pricing - Session Based (4-hour blocks) -->
     <section id="pricing" class="pricing">
         <div class="container">
             <h2>Transparent Pricing (USD)</h2>
-            <p class="section-subtitle">No hidden fees. Pay after service completion. 100% satisfaction guarantee.</p>
+            <p class="section-subtitle">Billed in 4-hour sessions. Pay after service completion. 100% satisfaction guarantee.</p>
+            
+            <div class="pricing-intro">
+                <div class="intro-card">
+                    <h3>📅 How Sessions Work</h3>
+                    <ul>
+                        <li><strong>Morning:</strong> 08:00-12:00 (4 hours)</li>
+                        <li><strong>Afternoon:</strong> 13:00-17:00 (4 hours)</li>
+                        <li><strong>Evening:</strong> 18:00-22:00 (4 hours)</li>
+                        <li>Minimum booking: 1 session (4 hours)</li>
+                        <li>Multiple sessions can be booked for full-day care</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3 style="text-align: center; margin: 3rem 0 2rem 0;">Choose Your Service Level</h3>
             
             <div class="pricing-grid">
+                <!-- Standard Care -->
                 <div class="pricing-card">
-                    <div class="pricing-icon">💬</div>
-                    <h3>Quick Consultation</h3>
-                    <p class="pricing-desc">For simple questions</p>
+                    <div class="pricing-icon">🩺</div>
+                    <h3>Standard Care</h3>
+                    <p class="pricing-desc">Certified companion</p>
                     <div class="price">
-                        <span class="original-price">$5.00</span>
                         <span class="currency">$</span>
-                        <span class="amount">0.10</span>
+                        <span class="amount">100</span>
+                        <span class="period">/session</span>
                     </div>
-                    <p class="pricing-note">98% OFF - Limited Time!</p>
+                    <p class="pricing-note">$25/hour - Weekdays</p>
                     <ul class="pricing-features">
-                        <li>✓ 15-minute video call</li>
-                        <li>✓ Medical advice referral</li>
-                        <li>✓ Hospital recommendations</li>
-                        <li>✓ General health questions</li>
+                        <li>✓ High school education +</li>
+                        <li>✓ 40-hour basic training</li>
+                        <li>✓ CPR/AED certified</li>
+                        <li>✓ Hospital process training</li>
+                        <li>✓ Basic medical knowledge</li>
                         <li>✓ <strong>100% Refund if not satisfied</strong></li>
                     </ul>
-                    <div id="paypal-container-consult" class="paypal-button-container"></div>
+                    <div class="session-prices">
+                        <p><strong>Session Prices:</strong></p>
+                        <ul>
+                            <li>Morning: $100</li>
+                            <li>Afternoon: $100</li>
+                            <li>Evening: $140 (+40%)</li>
+                            <li>Weekend: $125 (+25%)</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Book Standard</a>
                 </div>
 
+                <!-- Professional Care -->
                 <div class="pricing-card featured">
-                    <div class="featured-badge">Best Value</div>
-                    <div class="pricing-icon">⏰</div>
-                    <h3>Half-Day Service</h3>
-                    <p class="pricing-desc">Per 4 hours</p>
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="pricing-icon">👩‍⚕️</div>
+                    <h3>Professional Care</h3>
+                    <p class="pricing-desc">Licensed nurse</p>
                     <div class="price">
-                        <span class="original-price">$150</span>
                         <span class="currency">$</span>
-                        <span class="amount">110</span>
+                        <span class="amount">180</span>
+                        <span class="period">/session</span>
                     </div>
-                    <p class="pricing-note">Save $40! ($27.50/hour)</p>
+                    <p class="pricing-note">$45/hour - Weekdays</p>
+                    <ul class="pricing-features">
+                        <li>✓ Nursing degree required</li>
+                        <li>✓ Licensed nurse (RN)</li>
+                        <li>✓ 2+ years clinical experience</li>
+                        <li>✓ 80-hour advanced training</li>
+                        <li>✓ Medication management</li>
+                        <li>✓ Post-op care expertise</li>
+                        <li>✓ <strong>100% Refund if not satisfied</strong></li>
+                    </ul>
+                    <div class="session-prices">
+                        <p><strong>Session Prices:</strong></p>
+                        <ul>
+                            <li>Morning: $180</li>
+                            <li>Afternoon: $180</li>
+                            <li>Evening: $250 (+40%)</li>
+                            <li>Weekend: $225 (+25%)</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Book Professional</a>
+                </div>
+
+                <!-- Premium Care -->
+                <div class="pricing-card">
+                    <div class="pricing-icon">⭐</div>
+                    <h3>Premium Care</h3>
+                    <p class="pricing-desc">Bilingual medical pro</p>
+                    <div class="price">
+                        <span class="original-price">$400</span>
+                        <span class="currency">$</span>
+                        <span class="amount">320</span>
+                        <span class="period">/session</span>
+                    </div>
+                    <p class="pricing-note">$80/hour - 20% OFF!</p>
+                    <ul class="pricing-features">
+                        <li>✓ Nursing/Medical degree</li>
+                        <li>✓ 3+ years at top hospital</li>
+                        <li>✓ Fluent English (IELTS 6.5+)</li>
+                        <li>✓ 120-hour elite training</li>
+                        <li>✓ Bilingual medical translation</li>
+                        <li>✓ International hospital expertise</li>
+                        <li>✓ <strong>100% Refund if not satisfied</strong></li>
+                    </ul>
+                    <div class="session-prices">
+                        <p><strong>Session Prices:</strong></p>
+                        <ul>
+                            <li>Morning: $320</li>
+                            <li>Afternoon: $320</li>
+                            <li>Evening: $450 (+40%)</li>
+                            <li>Weekend: $400 (+25%)</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Book Premium</a>
+                </div>
+            </div>
+
+            <!-- Quick Consultation -->
+            <div style="margin-top: 3rem; text-align: center;">
+                <h3 style="margin-bottom: 1rem;">Need Quick Advice?</h3>
+                <div class="quick-consult-card">
+                    <div class="quick-consult-content">
+                        <h4>💬 Quick Consultation - 15 minutes</h4>
+                        <p>For simple questions, hospital recommendations, or medical advice referral</p>
+                        <div class="quick-price">
+                            <span class="original-price">$5.00</span>
+                            <span class="currency">$</span>
+                            <span class="amount">2.50</span>
+                        </div>
+                        <p class="quick-note">50% OFF - First-time clients only</p>
+                        <a href="#contact" class="btn btn-secondary">Book Now</a>
+                    </div>
+                </div>
+            </div>
                     <ul class="pricing-features">
                         <li>✓ Everything in Consultation</li>
                         <li>✓ Hospital accompaniment</li>
@@ -612,13 +711,14 @@
                 <div class="pricing-card">
                     <div class="pricing-icon">🌟</div>
                     <h3>Full-Day Service</h3>
-                    <p class="pricing-desc">Per 8 hours</p>
+                    <p class="pricing-desc">Per hour</p>
                     <div class="price">
-                        <span class="original-price">$280</span>
+                        <span class="original-price">$35</span>
                         <span class="currency">$</span>
-                        <span class="amount">200</span>
+                        <span class="amount">25</span>
+                        <span class="period">/hour</span>
                     </div>
-                    <p class="pricing-note">Save $80! ($25/hour)</p>
+                    <p class="pricing-note">8 hours minimum - Save $80!</p>
                     <ul class="pricing-features">
                         <li>✓ Everything in Half-Day</li>
                         <li>✓ Extended support</li>
@@ -657,9 +757,74 @@
             </div>
             
             <div class="pricing-note" style="margin-top: 2rem; padding: 1.5rem; background: #f0fdf4; border-left: 4px solid #48bb78; border-radius: 8px;">
-                <p>💳 <strong>Payment:</strong> Secure payment via PayPal. Pay before service, refund instantly if not satisfied.</p>
+                <p>💳 <strong>Payment:</strong> Secure payment via PayPal. Pay after service completion.</p>
                 <p>🛡️ <strong>Satisfaction Guarantee:</strong> Not happy with our service? Full refund within 24 hours. No questions asked.</p>
                 <p>💰 <strong>Group Discount:</strong> 15% off for family bookings or multiple appointments.</p>
+            </div>
+
+            <!-- Premium Services & Surcharges -->
+            <div style="margin-top: 3rem;">
+                <h3 style="text-align: center; margin-bottom: 2rem;">🔔 Premium Services & Surcharges</h3>
+                <div class="premium-services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                    <div class="premium-card" style="padding: 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px;">
+                        <h4 style="margin-top: 0;">🚨 Emergency Service</h4>
+                        <p style="font-size: 2rem; margin: 1rem 0;">+50%</p>
+                        <p style="margin-bottom: 0;">Response within 2 hours. Available 24/7 for urgent medical needs.</p>
+                    </div>
+                    <div class="premium-card" style="padding: 1.5rem; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border-radius: 12px;">
+                        <h4 style="margin-top: 0;">🌙 Night Service</h4>
+                        <p style="font-size: 2rem; margin: 1rem 0;">+40%</p>
+                        <p style="margin-bottom: 0;">20:00-08:00. For late-night emergencies or early morning appointments.</p>
+                    </div>
+                    <div class="premium-card" style="padding: 1.5rem; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; border-radius: 12px;">
+                        <h4 style="margin-top: 0;">📅 Weekend/Holiday</h4>
+                        <p style="font-size: 2rem; margin: 1rem 0;">+25%</p>
+                        <p style="margin-bottom: 0;">Saturday, Sunday, and Chinese national holidays.</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1.5rem; color: #666;"><em>Maximum 2 surcharges can be stacked. Holiday rates already include maximum surcharge.</em></p>
+            </div>
+
+            <!-- Referral Rewards Program -->
+            <div style="margin-top: 4rem; padding: 2.5rem; background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); border-radius: 16px;">
+                <h3 style="text-align: center; margin-bottom: 1rem;">🎁 Refer a Friend & Earn Rewards</h3>
+                <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">Share the care, earn cash rewards - up to 3 levels!</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 0.5rem;">🥇</div>
+                        <h4 style="margin: 0.5rem 0;">Level 1</h4>
+                        <p style="font-size: 2rem; color: #667eea; font-weight: bold; margin: 1rem 0;">10%</p>
+                        <p style="margin-bottom: 0.5rem;">Direct referral (your friend)</p>
+                        <p style="font-size: 0.9rem; color: #666;">Cash back when they book</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 0.5rem;">🥈</div>
+                        <h4 style="margin: 0.5rem 0;">Level 2</h4>
+                        <p style="font-size: 2rem; color: #764ba2; font-weight: bold; margin: 1rem 0;">5%</p>
+                        <p style="margin-bottom: 0.5rem;">Friend's friend</p>
+                        <p style="font-size: 0.9rem; color: #666;">Passive income from network</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 0.5rem;">🥉</div>
+                        <h4 style="margin: 0.5rem 0;">Level 3</h4>
+                        <p style="font-size: 2rem; color: #f5576c; font-weight: bold; margin: 1rem 0;">2%</p>
+                        <p style="margin-bottom: 0.5rem;">Third level connection</p>
+                        <p style="font-size: 0.9rem; color: #666;">Coupon rewards (120% value)</p>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-top: 2rem;">
+                    <h4 style="margin-top: 0;">💰 Example: Your friend books $500 service</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><strong>You (Level 1):</strong> $500 × 10% = <strong>$50 cash</strong></li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><strong>Your friend (Level 2):</strong> $500 × 5% = <strong>$25 cash</strong></li>
+                        <li style="padding: 0.5rem 0;"><strong>Their friend (Level 3):</strong> $500 × 2% = <strong>$10 coupon</strong> ($12 value)</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                        <strong>Withdrawal:</strong> Min $50 for cash, 2% fee. Coupons have 90-day validity and can be transferred.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -947,7 +1112,7 @@
                 </div>
                 
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" required placeholder="Your name">
@@ -965,19 +1130,95 @@
                         
                         <div class="form-group">
                             <label for="service">Service Needed</label>
-                            <select id="service" name="service">
+                            <select id="service" name="service" required>
                                 <option value="">Select a service</option>
-                                <option value="consultation">$0.10 Quick Consultation</option>
-                                <option value="half-day">Half-Day Service ($110)</option>
-                                <option value="full-day">Full-Day Service ($200)</option>
+                                <option value="consultation">Quick Consultation ($2.50)</option>
+                                <option value="half-day">Half-Day Service ($27.50/hour)</option>
+                                <option value="full-day">Full-Day Service ($25/hour)</option>
                                 <option value="translation">Medical Translation ($55/hour)</option>
                                 <option value="other">Other / Not Sure</option>
                             </select>
                         </div>
                         
+                        <!-- Service Tier Selector -->
+                        <div class="form-group">
+                            <label for="service-tier">Service Level *</label>
+                            <select id="service-tier" name="service_tier" required>
+                                <option value="standard">Standard - Base Price</option>
+                                <option value="professional">Professional (Nurse) +$20/hour</option>
+                                <option value="premium">Premium (Bilingual) +$40/hour</option>
+                            </select>
+                            <p class="tier-description" style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem;">
+                                <strong>Standard:</strong> General medical assistant<br>
+                                <strong>Professional:</strong> Certified nurse with medical expertise<br>
+                                <strong>Premium:</strong> Bilingual medical professional (English + Chinese)
+                            </p>
+                        </div>
+                        
+                        <!-- Premium Options Checkboxes -->
+                        <div class="form-group">
+                            <label style="font-weight: 600; margin-bottom: 0.8rem; display: block;">Premium Options</label>
+                            
+                            <label class="checkbox-label" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; cursor: pointer;">
+                                <input type="checkbox" id="urgent-service" name="urgent_service" value="yes" style="margin-top: 0.25rem;">
+                                <span>
+                                    <strong>🚨 Urgent Service (+100%)</strong><br>
+                                    <span style="font-size: 0.85rem; color: var(--text-light);">2-hour response time</span>
+                                </span>
+                            </label>
+                            
+                            <label class="checkbox-label" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; cursor: pointer;">
+                                <input type="checkbox" id="night-service" name="night_service" value="yes" style="margin-top: 0.25rem;">
+                                <span>
+                                    <strong>🌙 Night Service (+50%)</strong><br>
+                                    <span style="font-size: 0.85rem; color: var(--text-light);">8:00 PM - 8:00 AM</span>
+                                </span>
+                            </label>
+                            
+                            <label class="checkbox-label" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; cursor: pointer;">
+                                <input type="checkbox" id="weekend-service" name="weekend_service" value="yes" style="margin-top: 0.25rem;">
+                                <span>
+                                    <strong>📅 Weekend/Holiday (+30%)</strong><br>
+                                    <span style="font-size: 0.85rem; color: var(--text-light);">Saturday, Sunday & Public Holidays</span>
+                                </span>
+                            </label>
+                        </div>
+                        
                         <div class="form-group">
                             <label for="message">Your Message *</label>
                             <textarea id="message" name="message" rows="5" required placeholder="Tell us about your medical needs..."></textarea>
+                        </div>
+                        
+                        <!-- Referral Rewards Section -->
+                        <div class="referral-rewards" style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #48bb78; margin-bottom: 1.5rem;">
+                            <h4 style="margin: 0 0 0.75rem 0; color: #2f855a; font-size: 1.1rem;">🎁 Refer a Friend & Earn Cash Rewards</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.75rem; margin-bottom: 0.75rem;">
+                                <div style="background: white; padding: 0.75rem; border-radius: 8px; text-align: center;">
+                                    <div style="font-size: 1.5rem; font-weight: bold; color: #48bb78;">$10</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-light);">1st Referral</div>
+                                </div>
+                                <div style="background: white; padding: 0.75rem; border-radius: 8px; text-align: center;">
+                                    <div style="font-size: 1.5rem; font-weight: bold; color: #48bb78;">$25</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-light);">3rd Referral</div>
+                                </div>
+                                <div style="background: white; padding: 0.75rem; border-radius: 8px; text-align: center;">
+                                    <div style="font-size: 1.5rem; font-weight: bold; color: #48bb78;">$50</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-light);">5th Referral</div>
+                                </div>
+                            </div>
+                            <p style="font-size: 0.85rem; color: var(--text-light); margin: 0;">Your friend also gets 10% off their first service!</p>
+                        </div>
+                        
+                        <!-- Terms Agreement Checkbox -->
+                        <div class="form-group">
+                            <label class="checkbox-label" style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+                                <input type="checkbox" id="terms-agree" name="terms_agree" required style="margin-top: 0.25rem;">
+                                <span style="font-size: 0.9rem;">
+                                    I agree to the <a href="../terms.html" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Terms of Service</a>, 
+                                    <a href="refund-policy.html" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Refund Policy</a>, and 
+                                    <a href="../privacy.html" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Privacy Policy</a> *
+                                </span>
+                            </label>
                         </div>
                         
                         <button type="submit" class="btn btn-primary btn-block">📧 Send Message</button>
@@ -1022,9 +1263,9 @@
                 <div class="footer-section">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms of Service</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
                     </ul>
                 </div>
             </div>
@@ -1039,7 +1280,10 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
+    <!-- WhatsApp Float - Hidden temporarily -->
+    <style>
+        .whatsapp-float { display: none !important; }
+    </style>
     <a href="https://wa.me/8613801380000" class="whatsapp-float" target="_blank" rel="noopener">
         <svg viewBox="0 0 32 32" class="whatsapp-icon">
             <path fill="#25D366" d="M16 0C7.163 0 0 7.163 0 16c0 2.825 0.737 5.607 2.137 8.048L0 32l8.161-2.082C10.535 31.263 13.262 32 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zM16 29.467c-2.482 0-4.908-0.668-7.055-1.932l-0.506-0.301-5.245 1.339 1.403-5.109-0.329-0.523C2.923 20.705 2.267 18.379 2.267 16c0-7.565 6.168-13.733 13.733-13.733S29.733 8.435 29.733 16 23.565 29.467 16 29.467z"/>

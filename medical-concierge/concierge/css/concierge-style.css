@@ -825,8 +825,10 @@ a {
     opacity: 0.7;
 }
 
-/* WhatsApp Float */
+/* WhatsApp Float - Hidden per optimization request */
 .whatsapp-float {
+    display: none !important;
+    /* Original styles preserved for future reference:
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -841,9 +843,10 @@ a {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.3s;
     z-index: 1000;
+    */
 }
 
-.whatsapp-float:hover {
+/* .whatsapp-float:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
@@ -852,6 +855,7 @@ a {
     width: 35px;
     height: 35px;
 }
+*/
 
 /* Animations */
 @keyframes fadeInUp {
@@ -863,6 +867,97 @@ a {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Service Tier Selector Styles */
+.tier-description {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Checkbox Label Styles */
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.checkbox-label:hover {
+    background: rgba(102, 126, 234, 0.05);
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 0.25rem;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+.checkbox-label strong {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+/* Referral Rewards Section */
+.referral-rewards {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid #48bb78;
+    margin-bottom: 1.5rem;
+}
+
+.referral-rewards h4 {
+    margin: 0 0 0.75rem 0;
+    color: #2f855a;
+    font-size: 1.1rem;
+}
+
+.referral-rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.referral-tier {
+    background: white;
+    padding: 0.75rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.referral-amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #48bb78;
+}
+
+.referral-label {
+    font-size: 0.75rem;
+    color: var(--text-light);
+}
+
+/* Price Calculator Display */
+.price-calculator {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border: 2px solid #e2e8f0;
+}
+
+.price-calculator .estimated-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
 /* Responsive */
@@ -908,5 +1003,9 @@ a {
     
     .process-step:not(:last-child)::after {
         display: none;
+    }
+    
+    .referral-rewards-grid {
+        grid-template-columns: 1fr;
     }
 }

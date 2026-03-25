@@ -87,18 +87,92 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScroll = currentScroll;
     });
     
-    // Form Validation
-    const contactForm = document.querySelector('.contact-form');
+    // Form Validation & Price Calculator
+    const contactForm = document.getElementById('contactForm');
     if (contactForm) {
+        // Price calculation function
+        function calculateEstimatedPrice() {
+            const service = document.getElementById('service').value;
+            const tier = document.getElementById('service-tier').value;
+            const urgent = document.getElementById('urgent-service').checked;
+            const night = document.getElementById('night-service').checked;
+            const weekend = document.getElementById('weekend-service').checked;
+            
+            // Base prices per hour
+            let basePrice = 0;
+            switch(service) {
+                case 'consultation': basePrice = 2.50; break;
+                case 'half-day': basePrice = 27.50; break;
+                case 'full-day': basePrice = 25; break;
+                case 'translation': basePrice = 55; break;
+                default: basePrice = 0;
+            }
+            
+            // Service tier add-ons
+            let tierAddOn = 0;
+            switch(tier) {
+                case 'professional': tierAddOn = 20; break;
+                case 'premium': tierAddOn = 40; break;
+            }
+            
+            // Calculate subtotal
+            let subtotal = basePrice + tierAddOn;
+            
+            // Apply premium options (multipliers)
+            let multiplier = 1;
+            if (urgent) multiplier += 1.0; // +100%
+            if (night) multiplier += 0.5; // +50%
+            if (weekend) multiplier += 0.3; // +30%
+            
+            let total = subtotal * multiplier;
+            
+            return total.toFixed(2);
+        }
+        
+        // Update price display (if price calculator element exists)
+        function updatePriceDisplay() {
+            const priceDisplay = document.getElementById('estimated-price');
+            if (priceDisplay) {
+                const price = calculateEstimatedPrice();
+                if (price > 0) {
+                    priceDisplay.textContent = `$${price}`;
+                    priceDisplay.parentElement.style.display = 'block';
+                } else {
+                    priceDisplay.parentElement.style.display = 'none';
+                }
+            }
+        }
+        
+        // Add event listeners for price calculation
+        const serviceSelect = document.getElementById('service');
+        const tierSelect = document.getElementById('service-tier');
+        const urgentCheckbox = document.getElementById('urgent-service');
+        const nightCheckbox = document.getElementById('night-service');
+        const weekendCheckbox = document.getElementById('weekend-service');
+        
+        [serviceSelect, tierSelect, urgentCheckbox, nightCheckbox, weekendCheckbox].forEach(el => {
+            if (el) {
+                el.addEventListener('change', updatePriceDisplay);
+            }
+        });
+        
         contactForm.addEventListener('submit', function(e) {
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const service = document.getElementById('service').value;
+            const serviceTier = document.getElementById('service-tier').value;
             const message = document.getElementById('message').value.trim();
+            const termsAgree = document.getElementById('terms-agree').checked;
             
-            if (!name || !email || !service || !message) {
+            if (!name || !email || !service || !serviceTier || !message) {
                 e.preventDefault();
                 alert('Please fill in all required fields.');
+                return;
+            }
+            
+            if (!termsAgree) {
+                e.preventDefault();
+                alert('You must agree to the Terms of Service, Refund Policy, and Privacy Policy to continue.');
                 return;
             }
             
@@ -108,6 +182,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.preventDefault();
                 alert('Please enter a valid email address.');
                 return;
+            }
+            
+            // Collect premium options
+            const premiumOptions = [];
+            if (document.getElementById('urgent-service').checked) premiumOptions.push('Urgent Service (+100%)');
+            if (document.getElementById('night-service').checked) premiumOptions.push('Night Service (+50%)');
+            if (document.getElementById('weekend-service').checked) premiumOptions.push('Weekend/Holiday (+30%)');
+            
+            // Add hidden fields for form submission
+            let hiddenFields = document.createElement('input');
+            hiddenFields.type = 'hidden';
+            hiddenFields.name = 'service_tier_label';
+            hiddenFields.value = document.getElementById('service-tier').options[document.getElementById('service-tier').selectedIndex].text;
+            contactForm.appendChild(hiddenFields);
+            
+            if (premiumOptions.length > 0) {
+                let premiumField = document.createElement('input');
+                premiumField.type = 'hidden';
+                premiumField.name = 'premium_options';
+                premiumField.value = premiumOptions.join(', ');
+                contactForm.appendChild(premiumField);
             }
             
             // Show success message (will be replaced by Formspree redirect)
