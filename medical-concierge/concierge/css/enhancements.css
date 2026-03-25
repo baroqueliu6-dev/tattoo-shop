@@ -408,7 +408,196 @@ textarea:focus-visible {
     outline-offset: 2px;
 }
 
-/* === 13. Print Styles === */
+/* === 13. Hospital Fees Table Enhancement === */
+
+.hospital-fees {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.fee-table-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.fee-table {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.fee-table:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.15);
+}
+
+.fee-table-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 1.5rem;
+}
+
+.fee-table-header h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+}
+
+.hospital-fullname {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.95;
+}
+
+.fee-table-content {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.fee-table-content thead {
+    background: #f8f9fa;
+}
+
+.fee-table-content th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.fee-table-content td {
+    padding: 0.875rem 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.fee-table-content tbody tr {
+    transition: background 0.2s ease;
+}
+
+.fee-table-content tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.fee-table-content tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.fee-note {
+    padding: 1rem;
+    background: #fff3cd;
+    border-top: 1px solid #ffc107;
+    font-size: 0.85rem;
+    color: #856404;
+    margin: 0;
+}
+
+.fees-comparison-note {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.fees-comparison-note h3 {
+    margin: 0 0 1.5rem 0;
+    color: var(--primary-color);
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.comparison-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+    background: #f8f9fa;
+}
+
+.comparison-card h4 {
+    margin: 0 0 0.75rem 0;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.comparison-card p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.comparison-tip {
+    margin-top: 1rem !important;
+    padding: 0.75rem;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem !important;
+}
+
+.comparison-card:nth-child(1) {
+    border-left-color: #f59e0b;
+    background: #fffbeb;
+}
+
+.comparison-card:nth-child(2) {
+    border-left-color: #667eea;
+    background: #f0f4ff;
+}
+
+.comparison-card:nth-child(3) {
+    border-left-color: #10b981;
+    background: #ecfdf5;
+}
+
+.disclaimer {
+    padding: 1rem;
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    border-radius: 8px;
+    margin: 1.5rem 0 1rem 0;
+    font-size: 0.9rem;
+    color: #92400e;
+}
+
+.service-value {
+    padding: 1rem;
+    background: #d1fae5;
+    border-left: 4px solid #10b981;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #065f46;
+    margin: 0;
+}
+
+/* Responsive for fee tables */
+@media (max-width: 768px) {
+    .fee-table-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .fee-table-content {
+        font-size: 0.85rem;
+    }
+    
+    .fee-table-content th,
+    .fee-table-content td {
+        padding: 0.5rem;
+    }
+    
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* === 14. Print Styles === */
 
 @media print {
     .hero,

@@ -7,8 +7,27 @@
     <meta name="description" content="Professional medical translation and hospital navigation services for foreigners in Beijing. We help you navigate China's healthcare system with confidence.">
     <link rel="stylesheet" href="css/concierge-style.css">
     <link rel="stylesheet" href="css/enhancements.css">
-    <!-- WhatsApp Float -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@chatwoot/widget@latest/dist/widget.css">
+    
+    <!-- YouTube Embed Support -->
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -19,9 +38,8 @@
                 <a href="#services">Services</a>
                 <a href="#hospitals">Hospitals</a>
                 <a href="#pricing">Pricing</a>
-                <a href="patient-stories.html">Patient Stories</a>
-                <a href="#process">How It Works</a>
-                <a href="#faq">FAQ</a>
+                <a href="#resources">Resources</a>
+                <a href="#video">Videos</a>
                 <a href="#contact" class="btn-contact">Contact</a>
             </div>
             <button class="mobile-menu-btn" aria-label="Menu">☰</button>
@@ -40,11 +58,13 @@
                 <span class="trust-badge">✓ Top Hospitals</span>
                 <span class="trust-badge">✓ Fast Appointments</span>
                 <span class="trust-badge">✓ 24/7 Support</span>
+                <span class="trust-badge">✓ Full Accompaniment</span>
+                <span class="trust-badge">✓ Accurate Translation</span>
             </div>
             
             <div class="hero-cta">
                 <a href="#contact" class="btn btn-primary btn-large">📧 Get Free Consultation</a>
-                <a href="#services" class="btn btn-secondary btn-large">View Services</a>
+                <a href="https://calendly.com" target="_blank" class="btn btn-secondary btn-large">📅 Book Now</a>
             </div>
             
             <p class="hero-note">🎯 First 15-minute consultation is FREE!</p>
@@ -81,6 +101,9 @@
             <div class="solution-box">
                 <h3>💡 We're Here to Help</h3>
                 <p>Our professional medical concierge service provides English-speaking assistance throughout your entire healthcare journey in Beijing. From finding the right doctor to understanding your prescription, we've got you covered.</p>
+                <div class="guarantee-box">
+                    <strong>🛡️ 100% Satisfaction Guarantee:</strong> Not satisfied? Full refund. No questions asked.
+                </div>
             </div>
         </div>
     </section>
@@ -92,11 +115,10 @@
             <p class="section-subtitle">Comprehensive medical assistance tailored to your needs</p>
             
             <div class="services-grid">
-                <!-- Service 1 -->
                 <div class="service-card">
                     <div class="service-icon">📋</div>
                     <h3>Appointment Booking</h3>
-                    <p>We help you find the right doctor and schedule appointments at top hospitals in Beijing, including PUMC, China-Japan Friendship Hospital, and international clinics.</p>
+                    <p>We help you find the right doctor and schedule appointments at top hospitals in Beijing.</p>
                     <ul class="service-features">
                         <li>✓ Hospital & doctor recommendations</li>
                         <li>✓ Appointment scheduling</li>
@@ -105,38 +127,37 @@
                     </ul>
                 </div>
 
-                <!-- Service 2 -->
                 <div class="service-card featured">
                     <div class="featured-badge">Most Popular</div>
                     <div class="service-icon">🗣️</div>
                     <h3>Medical Translation</h3>
-                    <p>Professional interpretation during consultations, ensuring you understand your diagnosis and treatment options clearly.</p>
+                    <p>Professional interpretation during consultations with accurate medical terminology.</p>
                     <ul class="service-features">
                         <li>✓ In-person interpretation</li>
                         <li>✓ Medical terminology expertise</li>
                         <li>✓ Clear explanation of diagnosis</li>
                         <li>✓ Treatment option discussion</li>
+                        <li>✓ <strong>100% Accurate Translation</strong></li>
                     </ul>
                 </div>
 
-                <!-- Service 3 -->
                 <div class="service-card">
                     <div class="service-icon">🏥</div>
                     <h3>Hospital Navigation</h3>
-                    <p>Personal accompaniment throughout your hospital visit - from registration to pharmacy, we guide you every step.</p>
+                    <p>Personal accompaniment throughout your hospital visit - from registration to pharmacy.</p>
                     <ul class="service-features">
                         <li>✓ Registration assistance</li>
                         <li>✓ Department navigation</li>
                         <li>✓ Payment processing</li>
                         <li>✓ Pharmacy pickup</li>
+                        <li>✓ <strong>Full Journey Accompaniment</strong></li>
                     </ul>
                 </div>
 
-                <!-- Service 4 -->
                 <div class="service-card">
                     <div class="service-icon">📝</div>
                     <h3>Medical Records</h3>
-                    <p>Help with understanding medical reports, prescriptions, and follow-up instructions. Translation services available.</p>
+                    <p>Help with understanding medical reports, prescriptions, and follow-up instructions.</p>
                     <ul class="service-features">
                         <li>✓ Report explanation</li>
                         <li>✓ Prescription translation</li>
@@ -145,11 +166,10 @@
                     </ul>
                 </div>
 
-                <!-- Service 5 -->
                 <div class="service-card">
                     <div class="service-icon">💊</div>
                     <h3>Pharmacy Assistance</h3>
-                    <p>Help with purchasing medications, understanding dosage instructions, and finding alternatives if needed.</p>
+                    <p>Help with purchasing medications, understanding dosage instructions, and finding alternatives.</p>
                     <ul class="service-features">
                         <li>✓ Medication procurement</li>
                         <li>✓ Dosage explanation</li>
@@ -158,7 +178,6 @@
                     </ul>
                 </div>
 
-                <!-- Service 6 -->
                 <div class="service-card">
                     <div class="service-icon">📞</div>
                     <h3>24/7 Support</h3>
@@ -221,8 +240,279 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Hospital International Dept Fees -->
+    <section id="hospital-fees" class="hospital-fees">
+        <div class="container">
+            <h2>Beijing Hospital International Dept Fees</h2>
+            <p class="section-subtitle">Reference price list for international departments at major Beijing hospitals</p>
             
-            <p class="hospitals-note">* We can also assist at other hospitals in Beijing upon request.</p>
+            <div class="fee-table-container">
+                <!-- PUMC Hospital -->
+                <div class="fee-table">
+                    <div class="fee-table-header">
+                        <h3>🏥 PUMC Hospital</h3>
+                        <p class="hospital-fullname">Peking Union Medical College Hospital - International Dept</p>
+                    </div>
+                    <table class="fee-table-content">
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Price (RMB)</th>
+                                <th>Price (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>🩺 General Practitioner</td>
+                                <td>¥900</td>
+                                <td>~$125</td>
+                            </tr>
+                            <tr>
+                                <td>👨‍⚕️ Specialist Consultation</td>
+                                <td>¥1,200</td>
+                                <td>~$165</td>
+                            </tr>
+                            <tr>
+                                <td>🔬 Blood Test (Basic)</td>
+                                <td>¥300-500</td>
+                                <td>~$40-70</td>
+                            </tr>
+                            <tr>
+                                <td>📸 X-Ray</td>
+                                <td>¥200-400</td>
+                                <td>~$30-55</td>
+                            </tr>
+                            <tr>
+                                <td>🖥️ CT Scan</td>
+                                <td>¥800-1,500</td>
+                                <td>~$110-205</td>
+                            </tr>
+                            <tr>
+                                <td>🧲 MRI</td>
+                                <td>¥2,000-3,500</td>
+                                <td>~$275-480</td>
+                            </tr>
+                            <tr>
+                                <td>💉 IV Drip</td>
+                                <td>¥200-400</td>
+                                <td>~$30-55</td>
+                            </tr>
+                            <tr>
+                                <td>💊 Prescription (Common)</td>
+                                <td>¥100-300</td>
+                                <td>~$15-40</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="fee-note">* Prices are for reference only. Actual fees may vary based on treatment.</p>
+                </div>
+
+                <!-- China-Japan Friendship Hospital -->
+                <div class="fee-table">
+                    <div class="fee-table-header">
+                        <h3>🏥 China-Japan Friendship Hospital</h3>
+                        <p class="hospital-fullname">International Medical Department</p>
+                    </div>
+                    <table class="fee-table-content">
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Price (RMB)</th>
+                                <th>Price (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>🩺 General Practitioner</td>
+                                <td>¥600</td>
+                                <td>~$82</td>
+                            </tr>
+                            <tr>
+                                <td>👨‍⚕️ Specialist Consultation</td>
+                                <td>¥900</td>
+                                <td>~$125</td>
+                            </tr>
+                            <tr>
+                                <td>🔬 Blood Test (Basic)</td>
+                                <td>¥200-400</td>
+                                <td>~$30-55</td>
+                            </tr>
+                            <tr>
+                                <td>📸 X-Ray</td>
+                                <td>¥150-300</td>
+                                <td>~$20-40</td>
+                            </tr>
+                            <tr>
+                                <td>🖥️ CT Scan</td>
+                                <td>¥600-1,200</td>
+                                <td>~$82-165</td>
+                            </tr>
+                            <tr>
+                                <td>🧲 MRI</td>
+                                <td>¥1,500-2,800</td>
+                                <td>~$205-385</td>
+                            </tr>
+                            <tr>
+                                <td>💉 IV Drip</td>
+                                <td>¥150-300</td>
+                                <td>~$20-40</td>
+                            </tr>
+                            <tr>
+                                <td>💊 Prescription (Common)</td>
+                                <td>¥80-250</td>
+                                <td>~$12-35</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="fee-note">* Prices are for reference only. Actual fees may vary based on treatment.</p>
+                </div>
+
+                <!-- Beijing United Family Hospital -->
+                <div class="fee-table">
+                    <div class="fee-table-header">
+                        <h3>🏥 Beijing United Family Hospital</h3>
+                        <p class="hospital-fullname">UFH - Premium International Hospital</p>
+                    </div>
+                    <table class="fee-table-content">
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Price (RMB)</th>
+                                <th>Price (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>🩺 General Practitioner</td>
+                                <td>¥1,500</td>
+                                <td>~$205</td>
+                            </tr>
+                            <tr>
+                                <td>👨‍⚕️ Specialist Consultation</td>
+                                <td>¥2,000</td>
+                                <td>~$275</td>
+                            </tr>
+                            <tr>
+                                <td>🔬 Blood Test (Basic)</td>
+                                <td>¥500-800</td>
+                                <td>~$70-110</td>
+                            </tr>
+                            <tr>
+                                <td>📸 X-Ray</td>
+                                <td>¥400-600</td>
+                                <td>~$55-82</td>
+                            </tr>
+                            <tr>
+                                <td>🖥️ CT Scan</td>
+                                <td>¥1,500-2,500</td>
+                                <td>~$205-345</td>
+                            </tr>
+                            <tr>
+                                <td>🧲 MRI</td>
+                                <td>¥3,500-5,000</td>
+                                <td>~$480-685</td>
+                            </tr>
+                            <tr>
+                                <td>💉 IV Drip</td>
+                                <td>¥400-600</td>
+                                <td>~$55-82</td>
+                            </tr>
+                            <tr>
+                                <td>💊 Prescription (Common)</td>
+                                <td>¥200-500</td>
+                                <td>~$30-70</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="fee-note">* Premium hospital with Western standards. Higher fees but fully English-speaking.</p>
+                </div>
+
+                <!-- Beijing Chaoyang Hospital -->
+                <div class="fee-table">
+                    <div class="fee-table-header">
+                        <h3>🏥 Beijing Chaoyang Hospital</h3>
+                        <p class="hospital-fullname">Capital Medical University Affiliated - International Clinic</p>
+                    </div>
+                    <table class="fee-table-content">
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Price (RMB)</th>
+                                <th>Price (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>🩺 General Practitioner</td>
+                                <td>¥500</td>
+                                <td>~$70</td>
+                            </tr>
+                            <tr>
+                                <td>👨‍⚕️ Specialist Consultation</td>
+                                <td>¥800</td>
+                                <td>~$110</td>
+                            </tr>
+                            <tr>
+                                <td>🔬 Blood Test (Basic)</td>
+                                <td>¥180-350</td>
+                                <td>~$25-50</td>
+                            </tr>
+                            <tr>
+                                <td>📸 X-Ray</td>
+                                <td>¥120-250</td>
+                                <td>~$18-35</td>
+                            </tr>
+                            <tr>
+                                <td>🖥️ CT Scan</td>
+                                <td>¥500-1,000</td>
+                                <td>~$70-140</td>
+                            </tr>
+                            <tr>
+                                <td>🧲 MRI</td>
+                                <td>¥1,200-2,500</td>
+                                <td>~$165-345</td>
+                            </tr>
+                            <tr>
+                                <td>💉 IV Drip</td>
+                                <td>¥120-250</td>
+                                <td>~$18-35</td>
+                            </tr>
+                            <tr>
+                                <td>💊 Prescription (Common)</td>
+                                <td>¥60-200</td>
+                                <td>~$10-30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="fee-note">* Good value public hospital with international clinic. Shorter wait times.</p>
+                </div>
+            </div>
+
+            <div class="fees-comparison-note">
+                <h3>💡 Understanding the Price Differences</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-card">
+                        <h4>🏆 Premium (UFH)</h4>
+                        <p>Fully English-speaking, Western standards, shortest wait times, highest fees</p>
+                        <p class="comparison-tip"><strong>Best for:</strong> Serious conditions, prefer Western care</p>
+                    </div>
+                    <div class="comparison-card">
+                        <h4>⭐ High-End (PUMC)</h4>
+                        <p>Top Chinese hospital, some English staff, excellent specialists, high fees</p>
+                        <p class="comparison-tip"><strong>Best for:</strong> Complex diagnoses, specialist care</p>
+                    </div>
+                    <div class="comparison-card">
+                        <h4>💰 Value (China-Japan / Chaoyang)</h4>
+                        <p>Good international departments, lower fees, may need translation help</p>
+                        <p class="comparison-tip"><strong>Best for:</strong> Routine care, budget-conscious</p>
+                    </div>
+                </div>
+                <p class="disclaimer"><strong>⚠️ Disclaimer:</strong> These prices are for reference only and may change without notice. Our service fee is separate from hospital fees. We can help you estimate total costs before your visit.</p>
+                <p class="service-value"><strong>💡 How We Help:</strong> With our accompaniment service (from $110 for 4 hours), you'll save time navigating the hospital, avoid miscommunication, and get the right treatment faster. Our fee is separate from hospital charges.</p>
+            </div>
         </div>
     </section>
 
@@ -237,7 +527,7 @@
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>📧 Contact Us</h3>
-                        <p>Reach out via email or WhatsApp with your medical needs and preferred timing. Tell us about your symptoms or the type of doctor you need.</p>
+                        <p>Reach out via email or WhatsApp with your medical needs and preferred timing.</p>
                     </div>
                 </div>
 
@@ -245,7 +535,7 @@
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h3>💬 Free Consultation</h3>
-                        <p>Free 15-minute call to discuss your situation, answer your questions, and determine the best service package for your needs.</p>
+                        <p>Free 15-minute call to discuss your situation and determine the best service.</p>
                     </div>
                 </div>
 
@@ -253,7 +543,7 @@
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h3>🏥 Receive Service</h3>
-                        <p>We accompany you to the hospital, handle all communication with medical staff, and ensure you have a smooth experience.</p>
+                        <p>We accompany you to the hospital, handle all communication, ensure smooth experience.</p>
                     </div>
                 </div>
 
@@ -261,66 +551,74 @@
                     <div class="step-number">4</div>
                     <div class="step-content">
                         <h3>📋 Follow-up Support</h3>
-                        <p>Post-visit support including medication pickup, understanding prescriptions, and scheduling follow-up appointments.</p>
+                        <p>Post-visit support including medication pickup and understanding prescriptions.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing -->
+    <!-- Pricing - USD with Discount -->
     <section id="pricing" class="pricing">
         <div class="container">
-            <h2>Transparent Pricing</h2>
-            <p class="section-subtitle">No hidden fees. Pay after service completion.</p>
+            <h2>Transparent Pricing (USD)</h2>
+            <p class="section-subtitle">No hidden fees. Pay after service completion. 100% satisfaction guarantee.</p>
             
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <div class="pricing-icon">📋</div>
-                    <h3>Appointment Only</h3>
-                    <p class="pricing-desc">Booking + confirmation</p>
+                    <div class="pricing-icon">💬</div>
+                    <h3>Quick Consultation</h3>
+                    <p class="pricing-desc">For simple questions</p>
                     <div class="price">
-                        <span class="currency">¥</span>
-                        <span class="amount">300</span>
+                        <span class="original-price">$5.00</span>
+                        <span class="currency">$</span>
+                        <span class="amount">0.10</span>
                     </div>
+                    <p class="pricing-note">98% OFF - Limited Time!</p>
                     <ul class="pricing-features">
-                        <li>✓ Hospital recommendation</li>
-                        <li>✓ Doctor selection</li>
-                        <li>✓ Appointment booking</li>
-                        <li>✓ Confirmation call</li>
-                        <li>✓ Reminder 24h before</li>
+                        <li>✓ 15-minute video call</li>
+                        <li>✓ Medical advice referral</li>
+                        <li>✓ Hospital recommendations</li>
+                        <li>✓ General health questions</li>
+                        <li>✓ <strong>100% Refund if not satisfied</strong></li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline">Book Now</a>
+                    <div id="paypal-container-consult" class="paypal-button-container"></div>
                 </div>
 
                 <div class="pricing-card featured">
                     <div class="featured-badge">Best Value</div>
                     <div class="pricing-icon">⏰</div>
                     <h3>Half-Day Service</h3>
-                    <p class="pricing-desc">Up to 4 hours</p>
+                    <p class="pricing-desc">Per 4 hours</p>
                     <div class="price">
-                        <span class="currency">¥</span>
-                        <span class="amount">800</span>
+                        <span class="original-price">$150</span>
+                        <span class="currency">$</span>
+                        <span class="amount">110</span>
                     </div>
+                    <p class="pricing-note">Save $40! ($27.50/hour)</p>
                     <ul class="pricing-features">
-                        <li>✓ Everything in Appointment</li>
+                        <li>✓ Everything in Consultation</li>
                         <li>✓ Hospital accompaniment</li>
                         <li>✓ Medical translation</li>
                         <li>✓ Registration assistance</li>
                         <li>✓ Pharmacy pickup</li>
                         <li>✓ Report explanation</li>
+                        <li>✓ <strong>Full Accompaniment</strong></li>
+                        <li>✓ <strong>100% Refund if not satisfied</strong></li>
                     </ul>
-                    <a href="#contact" class="btn btn-primary">Book Now</a>
+                    <div id="paypal-container-half" class="paypal-button-container"></div>
                 </div>
 
                 <div class="pricing-card">
                     <div class="pricing-icon">🌟</div>
                     <h3>Full-Day Service</h3>
-                    <p class="pricing-desc">Up to 8 hours</p>
+                    <p class="pricing-desc">Per 8 hours</p>
                     <div class="price">
-                        <span class="currency">¥</span>
-                        <span class="amount">1,500</span>
+                        <span class="original-price">$280</span>
+                        <span class="currency">$</span>
+                        <span class="amount">200</span>
                     </div>
+                    <p class="pricing-note">Save $80! ($25/hour)</p>
                     <ul class="pricing-features">
                         <li>✓ Everything in Half-Day</li>
                         <li>✓ Extended support</li>
@@ -328,8 +626,10 @@
                         <li>✓ Test results pickup</li>
                         <li>✓ Follow-up scheduling</li>
                         <li>✓ Detailed summary report</li>
+                        <li>✓ <strong>Priority Support</strong></li>
+                        <li>✓ <strong>100% Refund if not satisfied</strong></li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline">Book Now</a>
+                    <div id="paypal-container-full" class="paypal-button-container"></div>
                 </div>
 
                 <div class="pricing-card">
@@ -337,25 +637,157 @@
                     <h3>Medical Translation</h3>
                     <p class="pricing-desc">Per hour</p>
                     <div class="price">
-                        <span class="currency">¥</span>
-                        <span class="amount">400</span>
+                        <span class="original-price">$70</span>
+                        <span class="currency">$</span>
+                        <span class="amount">55</span>
                         <span class="period">/hour</span>
                     </div>
+                    <p class="pricing-note">Save $15/hour!</p>
                     <ul class="pricing-features">
                         <li>✓ Professional interpretation</li>
                         <li>✓ Medical terminology</li>
                         <li>✓ Clear communication</li>
                         <li>✓ Written translation available</li>
                         <li>✓ Minimum 1 hour</li>
+                        <li>✓ <strong>100% Accurate Guarantee</strong></li>
+                        <li>✓ <strong>100% Refund if not satisfied</strong></li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline">Book Now</a>
+                    <div id="paypal-container-translate" class="paypal-button-container"></div>
                 </div>
             </div>
             
-            <div class="pricing-note">
-                <p>💳 <strong>Payment:</strong> Due after service completion. We accept WeChat Pay, Alipay, and cash.</p>
-                <p>🎁 <strong>Discount:</strong> 10% off for multiple bookings or long-term care arrangements.</p>
+            <div class="pricing-note" style="margin-top: 2rem; padding: 1.5rem; background: #f0fdf4; border-left: 4px solid #48bb78; border-radius: 8px;">
+                <p>💳 <strong>Payment:</strong> Secure payment via PayPal. Pay before service, refund instantly if not satisfied.</p>
+                <p>🛡️ <strong>Satisfaction Guarantee:</strong> Not happy with our service? Full refund within 24 hours. No questions asked.</p>
+                <p>💰 <strong>Group Discount:</strong> 15% off for family bookings or multiple appointments.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <h2>Expats Resources</h2>
+            <p class="section-subtitle">Everything you need for living in Beijing</p>
+            
+            <div class="resources-grid">
+                <!-- Resource 1: Medical Guide -->
+                <div class="resource-card">
+                    <div class="resource-icon">🏥</div>
+                    <h3>Medical Guide</h3>
+                    <p>Complete guide to healthcare in Beijing for foreigners</p>
+                    <ul class="resource-list">
+                        <li>• How to choose the right hospital</li>
+                        <li>• What to bring to appointments</li>
+                        <li>• Understanding Chinese prescriptions</li>
+                        <li>• Emergency procedures</li>
+                        <li>• Insurance claims process</li>
+                        <li>• Common medications in China</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Download Guide (Free)</a>
+                </div>
+
+                <!-- Resource 2: Visa-Free Policy -->
+                <div class="resource-card">
+                    <div class="resource-icon">🛂</div>
+                    <h3>China Visa-Free Policy</h3>
+                    <p>Latest visa-free entry policies for China</p>
+                    <ul class="resource-list">
+                        <li>• 72/144-hour transit visa-free</li>
+                        <li>• Eligible countries list</li>
+                        <li>• Entry requirements</li>
+                        <li>• Extension procedures</li>
+                        <li>• Travel restrictions</li>
+                        <li>• Latest policy updates 2026</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Learn More</a>
+                </div>
+
+                <!-- Resource 3: Visa Application -->
+                <div class="resource-card">
+                    <div class="resource-icon">📝</div>
+                    <h3>Visa Application Steps</h3>
+                    <p>Step-by-step guide to applying for Chinese visa</p>
+                    <ul class="resource-list">
+                        <li>• Required documents checklist</li>
+                        <li>• Online application process</li>
+                        <li>• Appointment booking</li>
+                        <li>• Visa center locations</li>
+                        <li>• Processing times</li>
+                        <li>• Common mistakes to avoid</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Get Guide</a>
+                </div>
+
+                <!-- Resource 4: Living Guide -->
+                <div class="resource-card">
+                    <div class="resource-icon">🏠</div>
+                    <h3>Living in Beijing</h3>
+                    <p>Daily life guide for expats - food, housing, transport</p>
+                    <ul class="resource-list">
+                        <li>• Finding accommodation</li>
+                        <li>• Getting around (metro, bus, taxi)</li>
+                        <li>• Best areas for expats</li>
+                        <li>• Shopping & supermarkets</li>
+                        <li>• Restaurants & food delivery</li>
+                        <li>• Banking & mobile payment</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Download Guide</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <h2>Patient Stories & Videos</h2>
+            <p class="section-subtitle">Real experiences from our clients</p>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/VIDEO_ID_1" 
+                            title="Patient Story 1"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h4>Emergency Care at PUMC Hospital</h4>
+                    <p>How we helped James from UK get treated within 2 hours</p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/VIDEO_ID_2" 
+                            title="Patient Story 2"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h4>Prenatal Care Journey</h4>
+                    <p>Sarah's complete pregnancy care experience in Beijing</p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/VIDEO_ID_3" 
+                            title="Patient Story 3"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h4>Senior Care Services</h4>
+                    <p>Helping elderly German patient navigate Chinese hospital</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 2rem;">
+                <a href="patient-stories.html" style="color: var(--primary-color); font-weight: 600; font-size: 1.1rem;">View all patient stories with full videos →</a>
+            </p>
         </div>
     </section>
 
@@ -364,9 +796,6 @@
         <div class="container">
             <h2>What Our Clients Say</h2>
             <p class="section-subtitle">Real experiences from expats in Beijing</p>
-            <p style="text-align: center; margin-bottom: 2rem;">
-                <a href="patient-stories.html" style="color: var(--primary-color); font-weight: 600;">View all patient stories with videos →</a>
-            </p>
             
             <div class="testimonials-grid">
                 <div class="testimonial-card">
@@ -395,12 +824,12 @@
 
                 <div class="testimonial-card">
                     <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"My elderly parents visited from Germany and my father needed medical attention. The service was professional, compassionate, and efficient. They handled everything and my parents felt safe and well-cared for. Worth every yuan."</p>
+                    <p class="testimonial-text">"My elderly parents visited from Germany and my father needed medical attention. The service was professional, compassionate, and efficient. They handled everything and my parents felt safe and well-cared for. Worth every dollar."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">👨‍💼</div>
                         <div class="author-info">
-                            <strong>Michael K.</strong>
-                            <span>German Expat, 5 years in Beijing</span>
+                            <strong>Klaus W.</strong>
+                            <span>German Expat, family visit</span>
                         </div>
                     </div>
                 </div>
@@ -412,66 +841,66 @@
     <section id="faq" class="faq">
         <div class="container">
             <h2>Frequently Asked Questions</h2>
-            <p class="section-subtitle">Common questions about our medical concierge service</p>
+            <p class="section-subtitle">Everything you need to know about our service</p>
             
-            <div class="faq-grid">
+            <div class="faq-container">
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>🤔 What exactly is a medical concierge?</h3>
-                        <button class="faq-toggle" aria-label="Toggle FAQ">+</button>
-                    </div>
+                    <button class="faq-question">
+                        What exactly is a medical concierge?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>A medical concierge is a professional healthcare assistant who helps you navigate the medical system. We're not doctors, but we bridge the gap between you and healthcare providers. We help with finding doctors, booking appointments, translating medical information, and accompanying you during visits.</p>
+                        <p>A medical concierge is your personal healthcare assistant in Beijing. We help you navigate the healthcare system, find the right doctors, book appointments, provide translation services, and accompany you during hospital visits. Think of us as your healthcare guide and advocate.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>🗣️ Do you provide medical advice?</h3>
-                        <button class="faq-toggle" aria-label="Toggle FAQ">+</button>
-                    </div>
+                    <button class="faq-question">
+                        Do you provide medical advice?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>No, we don't provide medical advice. We're not doctors or nurses. We help you communicate with medical professionals and understand their advice, but all medical decisions should be made in consultation with qualified healthcare providers.</p>
+                        <p>No, we are not doctors and cannot provide medical advice. We help you find qualified medical professionals and facilitate communication, but all medical decisions should be made with licensed healthcare providers.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>⏰ How quickly can you arrange an appointment?</h3>
-                        <button class="faq-toggle" aria-label="Toggle FAQ">+</button>
-                    </div>
+                    <button class="faq-question">
+                        How far in advance should I book?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>For non-urgent cases, typically 1-3 business days. For urgent cases, we can often arrange same-day or next-day appointments at hospitals with emergency services. Some specialists may require longer wait times.</p>
+                        <p>For non-emergency appointments, we recommend booking at least 2-3 days in advance. However, we can often arrange same-day or next-day service for urgent situations. Our 24/7 hotline is always available for emergencies.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>💰 Do you accept international health insurance?</h3>
-                        <button class="faq-toggle" aria-label="Toggle FAQ">+</button>
-                    </div>
+                    <button class="faq-question">
+                        What is your refund policy?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>We can help you understand your insurance coverage and work with hospitals that accept international insurance. However, payment is typically made at the time of service, and you would file for reimbursement with your insurance provider. We can provide all necessary documentation.</p>
+                        <p>We offer a 100% satisfaction guarantee. If you're not completely satisfied with our service, simply let us know within 24 hours and we'll refund your payment in full. No questions asked.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>🌙 Do you provide emergency services?</h3>
-                        <button class="faq-toggle" aria-label="Toggle FAQ">+</button>
-                    </div>
+                    <button class="faq-question">
+                        Can you help with insurance claims?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>We offer 24/7 support hotline for emergencies. While we can't provide medical care, we can help coordinate ambulance services, direct you to the nearest appropriate hospital, and meet you there to assist with communication and navigation.</p>
+                        <p>Yes! We can help you understand your insurance coverage, provide necessary documentation, and guide you through the claims process. However, we don't directly bill insurance companies - payment is due at the time of service.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>👨‍👩‍👧 Do you serve families or only individuals?</h3>
-                        <button class="faq-toggle" aria-label="Toggle FAQ">+</button>
-                    </div>
+                    <button class="faq-question">
+                        Do you serve expats only?
+                        <span class="faq-toggle">+</span>
+                    </button>
                     <div class="faq-answer">
-                        <p>We serve both individuals and families. We can assist with appointments for children, elderly parents, or multiple family members. Special rates are available for family packages and ongoing care arrangements.</p>
+                        <p>While we specialize in helping expats, we also serve Chinese patients who prefer English communication or need assistance navigating the healthcare system. Our services are available to anyone in Beijing.</p>
                     </div>
                 </div>
             </div>
@@ -481,75 +910,79 @@
     <!-- Contact -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Ready to Get Started?</h2>
-            <p class="section-subtitle">Don't let language barriers prevent you from getting the healthcare you need.</p>
+            <h2>Get in Touch</h2>
+            <p class="section-subtitle">Ready to get started? Contact us today!</p>
             
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>📧 Contact Information</h3>
+                    <h3>Contact Information</h3>
                     <div class="contact-item">
                         <span class="contact-icon">📧</span>
                         <div>
-                            <strong>Email:</strong>
-                            <a href="mailto:baroqueliu6@gmail.com">baroqueliu6@gmail.com</a>
+                            <strong>Email</strong>
+                            <p>baroqueliu6@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">💬</span>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <p>+86 138 0138 0000</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <span class="contact-icon">⏰</span>
                         <div>
-                            <strong>Response Time:</strong>
-                            <p>Within 2-4 hours (9:00-21:00 Beijing Time)</p>
+                            <strong>Response Time</strong>
+                            <p>Within 2 hours (24/7 for emergencies)</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-icon">📍</span>
+                        <span class="contact-icon">🛡️</span>
                         <div>
-                            <strong>Service Area:</strong>
-                            <p>All of Beijing</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">🌐</span>
-                        <div>
-                            <strong>Languages:</strong>
-                            <p>English, Chinese (Mandarin)</p>
+                            <strong>Guarantee</strong>
+                            <p>100% satisfaction or full refund</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="contact-form-wrapper">
-                    <h3>📝 Send Us a Message</h3>
-                    <form class="contact-form" action="https://formspree.io/f/xbjnqzrl" method="POST">
+                    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                         <div class="form-group">
-                            <label for="name">Your Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="John Smith">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
                         </div>
+                        
                         <div class="form-group">
                             <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
                         </div>
+                        
                         <div class="form-group">
-                            <label for="phone">Phone Number (optional)</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+86 138 0000 0000">
+                            <label for="phone">Phone / WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+86 XXX XXXX XXXX">
                         </div>
+                        
                         <div class="form-group">
-                            <label for="service">Service Needed *</label>
-                            <select id="service" name="service" required>
-                                <option value="">Select a service...</option>
-                                <option value="appointment">Appointment Booking Only (¥300)</option>
-                                <option value="half-day">Half-Day Service (¥800)</option>
-                                <option value="full-day">Full-Day Service (¥1,500)</option>
-                                <option value="translation">Medical Translation (¥400/hour)</option>
-                                <option value="emergency">Emergency Assistance</option>
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="consultation">$0.10 Quick Consultation</option>
+                                <option value="half-day">Half-Day Service ($110)</option>
+                                <option value="full-day">Full-Day Service ($200)</option>
+                                <option value="translation">Medical Translation ($55/hour)</option>
                                 <option value="other">Other / Not Sure</option>
                             </select>
                         </div>
+                        
                         <div class="form-group">
                             <label for="message">Your Message *</label>
-                            <textarea id="message" name="message" required rows="5" placeholder="Tell us about your medical needs, preferred timing, and any specific requirements..."></textarea>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your medical needs..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-large btn-block">📧 Send Message</button>
-                        <p class="form-note">🔒 Your information is kept confidential. We typically respond within 2-4 hours.</p>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">📧 Send Message</button>
+                        
+                        <p class="form-note">🔒 Your information is secure. We never share your data.</p>
                     </form>
                 </div>
             </div>
@@ -562,41 +995,88 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>🏥 Beijing Medical Concierge</h4>
-                    <p>Your trusted healthcare partner in Beijing. Professional medical assistance for expats.</p>
+                    <p>Professional healthcare assistance for expats in Beijing. Breaking language barriers, one patient at a time.</p>
                 </div>
+                
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#hospitals">Hospitals</a></li>
                         <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#video">Videos</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
-                    <h4>Contact</h4>
+                    <h4>Resources</h4>
                     <ul>
-                        <li>📧 baroqueliu6@gmail.com</li>
-                        <li>⏰ 9:00-21:00 (Beijing Time)</li>
-                        <li>📍 Beijing, China</li>
+                        <li><a href="#resources">Medical Guide</a></li>
+                        <li><a href="#resources">Visa-Free Policy</a></li>
+                        <li><a href="#resources">Visa Application</a></li>
+                        <li><a href="#resources">Living in Beijing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Refund Policy</a></li>
                     </ul>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>© 2026 Beijing Medical Concierge. All rights reserved.</p>
-                <p class="disclaimer">⚠️ Disclaimer: We are a medical assistance service, not a healthcare provider. All medical decisions should be made in consultation with qualified healthcare professionals.</p>
+                <p>&copy; 2026 Beijing Medical Concierge. All rights reserved.</p>
+                <p style="font-size: 0.85rem; color: #999; margin-top: 0.5rem;">
+                    Disclaimer: We are not a medical institution and do not provide medical advice. 
+                    All medical services are provided by licensed healthcare professionals.
+                </p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/8613800000000" class="whatsapp-float" target="_blank" rel="noopener">
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/8613801380000" class="whatsapp-float" target="_blank" rel="noopener">
         <svg viewBox="0 0 32 32" class="whatsapp-icon">
-            <path fill="currentColor" d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.245 1.407 1.407-5.245-0.292-0.507c-1.224-2.162-1.87-4.588-1.87-7.07 0-7.72 6.28-14 14-14s14 6.28 14 14-6.28 14-14 14zM21.793 18.793c-0.214-0.107-1.262-0.622-1.456-0.694-0.194-0.072-0.336-0.107-0.477 0.107s-0.547 0.694-0.672 0.836c-0.125 0.142-0.25 0.16-0.464 0.053-1.783-0.893-2.953-1.591-4.13-3.608-0.312-0.534 0.312-0.497 0.893-1.655 0.098-0.194 0.049-0.363-0.027-0.509-0.076-0.146-0.672-1.619-0.921-2.217-0.242-0.579-0.487-0.5-0.672-0.509-0.174-0.009-0.373-0.009-0.571-0.009s-0.52 0.071-0.793 0.366c-0.272 0.295-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c0.148 0.198 2.095 3.2 5.076 4.487 1.956 0.844 2.724 0.898 3.698 0.757 0.595-0.086 1.262-0.516 1.44-1.013 0.178-0.497 0.178-0.924 0.125-1.013-0.053-0.089-0.214-0.142-0.428-0.249z"/>
+            <path fill="#25D366" d="M16 0C7.163 0 0 7.163 0 16c0 2.825 0.737 5.607 2.137 8.048L0 32l8.161-2.082C10.535 31.263 13.262 32 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zM16 29.467c-2.482 0-4.908-0.668-7.055-1.932l-0.506-0.301-5.245 1.339 1.403-5.109-0.329-0.523C2.923 20.705 2.267 18.379 2.267 16c0-7.565 6.168-13.733 13.733-13.733S29.733 8.435 29.733 16 23.565 29.467 16 29.467z"/>
+            <path fill="#25D366" d="M22.756 18.963c-0.697-0.349-4.118-2.032-4.753-2.263-0.635-0.232-1.099-0.349-1.563 0.349-0.464 0.697-1.799 2.263-2.205 2.727-0.406 0.464-0.812 0.522-1.509 0.174-0.697-0.349-2.936-1.084-5.592-3.444-2.066-1.837-3.459-4.106-3.865-4.803-0.406-0.697-0.043-1.073 0.305-1.421 0.313-0.313 0.697-0.812 1.045-1.218 0.349-0.406 0.464-0.697 0.697-1.161 0.232-0.464 0.116-0.87-0.058-1.218-0.174-0.349-1.563-3.771-2.147-5.168-0.567-1.361-1.143-1.175-1.563-1.195-0.406-0.021-0.87-0.021-1.334-0.021s-1.218 0.174-1.855 0.87c-0.637 0.697-2.435 2.379-2.435 5.803s2.493 6.727 2.841 7.191c0.349 0.464 4.913 7.484 11.896 10.502 1.668 0.721 2.963 1.146 3.978 1.469 1.673 0.533 3.193 0.456 4.393 0.277 1.339-0.2 4.118-1.681 4.699-3.311 0.581-1.631 0.581-3.028 0.406-3.311-0.174-0.283-0.639-0.456-1.336-0.804z"/>
         </svg>
     </a>
 
-    <!-- Scripts -->
     <script src="js/concierge-main.js"></script>
+    
+    <!-- PayPal SDK - Replace YOUR_CLIENT_ID with actual PayPal client ID -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+    <script>
+        // Initialize PayPal buttons for each product
+        // You need to create these buttons in your PayPal/Gumroad dashboard
+        // and replace the click handlers with actual payment links
+        
+        // Quick Consultation - $0.10
+        if (typeof paypal !== 'undefined') {
+            paypal.Buttons({
+                createOrder: function(data, actions) {
+                    return actions.order.create({
+                        purchase_units: [{
+                            description: 'Quick Consultation - 15 min',
+                            amount: { value: '0.10' }
+                        }]
+                    });
+                },
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                        alert('Payment completed! We will contact you within 2 hours.');
+                        // Redirect to thank you page or show confirmation
+                    });
+                }
+            }).render('#paypal-container-consult');
+        }
+        
+        // Similar setup for other products...
+    </script>
 </body>
 </html>
