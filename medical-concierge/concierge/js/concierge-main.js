@@ -1,7 +1,30 @@
 // Beijing Medical Concierge - Interactive Features
 
+// Scroll Animation Observer
+function initScrollAnimations() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    // Observe all fade-in elements
+    document.querySelectorAll('.fade-in, .service-card, .pricing-card, .testimonial-card, .faq-item').forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
+    });
+}
+
 // FAQ Toggle Functionality
 document.addEventListener('DOMContentLoaded', function() {
+    
+    // Initialize scroll animations
+    initScrollAnimations();
     const faqItems = document.querySelectorAll('.faq-item');
     
     faqItems.forEach(item => {
