@@ -1,4 +1,4 @@
-// Beijing Medical Concierge - Interactive Features
+// Beijing Medical Concierge - Interactive Features (Updated for Session-Based Pricing)
 
 // Scroll Animation Observer
 function initScrollAnimations() {
@@ -20,11 +20,86 @@ function initScrollAnimations() {
     });
 }
 
+// Time Slot Selector
+function initTimeSlotSelector() {
+    const timeSlotOptions = document.querySelectorAll('.time-slot-option');
+    const timeSlotInput = document.getElementById('time-slot');
+    
+    if (!timeSlotOptions.length || !timeSlotInput) return;
+    
+    timeSlotOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            // Remove selected from all
+            timeSlotOptions.forEach(opt => opt.classList.remove('selected'));
+            
+            // Add selected to clicked
+            this.classList.add('selected');
+            
+            // Update hidden input
+            timeSlotInput.value = this.dataset.value;
+            
+            // Update price calculation
+            updatePriceCalculation();
+        });
+    });
+}
+
+// Price Calculation
+function updatePriceCalculation() {
+    const service = document.getElementById('service');
+    const timeSlotInput = document.getElementById('time-slot');
+    const urgentCheckbox = document.getElementById('urgent-service');
+    
+    if (!service || !timeSlotInput) return;
+    
+    const selectedOption = service.options[service.selectedIndex];
+    const timeSlot = timeSlotInput.value;
+    const isUrgent = urgentCheckbox ? urgentCheckbox.checked : false;
+    
+    // Base prices by service level (weekday rates)
+    const basePrices = {
+        'standard': 100,
+        'professional': 180,
+        'premium': 320,
+        'consultation': 2.50
+    };
+    
+    let basePrice = basePrices[service.value] || 0;
+    
+    // Time slot modifiers
+    let timeSlotMultiplier = 1;
+    if (timeSlot === 'evening') {
+        timeSlotMultiplier = 1.4; // +40%
+    }
+    // Weekend would be +25% but we handle that separately
+    
+    // Calculate subtotal
+    let subtotal = basePrice * timeSlotMultiplier;
+    
+    // Emergency service +50%
+    if (isUrgent) {
+        subtotal *= 1.5;
+    }
+    
+    // Display estimated price (if price display element exists)
+    const priceDisplay = document.getElementById('estimated-price-display');
+    if (priceDisplay && subtotal > 0) {
+        priceDisplay.textContent = `Estimated: $${subtotal.toFixed(2)}`;
+        priceDisplay.style.display = 'block';
+    }
+    
+    return subtotal;
+}
+
 // FAQ Toggle Functionality
 document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize scroll animations
     initScrollAnimations();
+    
+    // Initialize time slot selector
+    initTimeSlotSelector();
+    
     const faqItems = document.querySelectorAll('.faq-item');
     
     faqItems.forEach(item => {
@@ -62,12 +137,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
+    const navLinksContainer = document.querySelector('.nav-links');
     
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            navLinksContainer.classList.toggle('active');
+            mobileMenuBtn.textContent = navLinksContainer.classList.contains('active') ? '✕' : '☰';
         });
     }
     
@@ -90,83 +165,36 @@ document.addEventListener('DOMContentLoaded', function() {
     // Form Validation & Price Calculator
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        // Price calculation function
-        function calculateEstimatedPrice() {
-            const service = document.getElementById('service').value;
-            const tier = document.getElementById('service-tier').value;
-            const urgent = document.getElementById('urgent-service').checked;
-            const night = document.getElementById('night-service').checked;
-            const weekend = document.getElementById('weekend-service').checked;
-            
-            // Base prices per hour
-            let basePrice = 0;
-            switch(service) {
-                case 'consultation': basePrice = 2.50; break;
-                case 'half-day': basePrice = 27.50; break;
-                case 'full-day': basePrice = 25; break;
-                case 'translation': basePrice = 55; break;
-                default: basePrice = 0;
-            }
-            
-            // Service tier add-ons
-            let tierAddOn = 0;
-            switch(tier) {
-                case 'professional': tierAddOn = 20; break;
-                case 'premium': tierAddOn = 40; break;
-            }
-            
-            // Calculate subtotal
-            let subtotal = basePrice + tierAddOn;
-            
-            // Apply premium options (multipliers)
-            let multiplier = 1;
-            if (urgent) multiplier += 1.0; // +100%
-            if (night) multiplier += 0.5; // +50%
-            if (weekend) multiplier += 0.3; // +30%
-            
-            let total = subtotal * multiplier;
-            
-            return total.toFixed(2);
-        }
-        
-        // Update price display (if price calculator element exists)
-        function updatePriceDisplay() {
-            const priceDisplay = document.getElementById('estimated-price');
-            if (priceDisplay) {
-                const price = calculateEstimatedPrice();
-                if (price > 0) {
-                    priceDisplay.textContent = `$${price}`;
-                    priceDisplay.parentElement.style.display = 'block';
-                } else {
-                    priceDisplay.parentElement.style.display = 'none';
-                }
-            }
-        }
-        
         // Add event listeners for price calculation
         const serviceSelect = document.getElementById('service');
-        const tierSelect = document.getElementById('service-tier');
+        const timeSlotInput = document.getElementById('time-slot');
         const urgentCheckbox = document.getElementById('urgent-service');
-        const nightCheckbox = document.getElementById('night-service');
-        const weekendCheckbox = document.getElementById('weekend-service');
         
-        [serviceSelect, tierSelect, urgentCheckbox, nightCheckbox, weekendCheckbox].forEach(el => {
-            if (el) {
-                el.addEventListener('change', updatePriceDisplay);
-            }
-        });
+        if (serviceSelect) {
+            serviceSelect.addEventListener('change', updatePriceCalculation);
+        }
+        
+        if (urgentCheckbox) {
+            urgentCheckbox.addEventListener('change', updatePriceCalculation);
+        }
         
         contactForm.addEventListener('submit', function(e) {
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const service = document.getElementById('service').value;
-            const serviceTier = document.getElementById('service-tier').value;
+            const timeSlot = document.getElementById('time-slot').value;
             const message = document.getElementById('message').value.trim();
             const termsAgree = document.getElementById('terms-agree').checked;
             
-            if (!name || !email || !service || !serviceTier || !message) {
+            if (!name || !email || !service || !message) {
                 e.preventDefault();
                 alert('Please fill in all required fields.');
+                return;
+            }
+            
+            if (!timeSlot) {
+                e.preventDefault();
+                alert('Please select a preferred time slot.');
                 return;
             }
             
@@ -184,18 +212,36 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Collect premium options
-            const premiumOptions = [];
-            if (document.getElementById('urgent-service').checked) premiumOptions.push('Urgent Service (+100%)');
-            if (document.getElementById('night-service').checked) premiumOptions.push('Night Service (+50%)');
-            if (document.getElementById('weekend-service').checked) premiumOptions.push('Weekend/Holiday (+30%)');
+            // Get service label
+            const serviceLabel = serviceSelect.options[serviceSelect.selectedIndex].text;
+            
+            // Get time slot label
+            const timeSlotElement = document.querySelector(`.time-slot-option[data-value="${timeSlot}"]`);
+            const timeSlotLabel = timeSlotElement ? timeSlotElement.querySelector('.time-slot-name').textContent : timeSlot;
             
             // Add hidden fields for form submission
             let hiddenFields = document.createElement('input');
             hiddenFields.type = 'hidden';
-            hiddenFields.name = 'service_tier_label';
-            hiddenFields.value = document.getElementById('service-tier').options[document.getElementById('service-tier').selectedIndex].text;
+            hiddenFields.name = 'service_label';
+            hiddenFields.value = serviceLabel;
             contactForm.appendChild(hiddenFields);
+            
+            let timeSlotField = document.createElement('input');
+            timeSlotField.type = 'hidden';
+            timeSlotField.name = 'time_slot_label';
+            timeSlotField.value = timeSlotLabel;
+            contactForm.appendChild(timeSlotField);
+            
+            // Add premium options
+            const premiumOptions = [];
+            if (urgentCheckbox && urgentCheckbox.checked) {
+                premiumOptions.push('Emergency Service (+50%)');
+                let urgentField = document.createElement('input');
+                urgentField.type = 'hidden';
+                urgentField.name = 'urgent_service';
+                urgentField.value = 'yes';
+                contactForm.appendChild(urgentField);
+            }
             
             if (premiumOptions.length > 0) {
                 let premiumField = document.createElement('input');
@@ -203,6 +249,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 premiumField.name = 'premium_options';
                 premiumField.value = premiumOptions.join(', ');
                 contactForm.appendChild(premiumField);
+            }
+            
+            // Calculate estimated price
+            const estimatedPrice = updatePriceCalculation();
+            if (estimatedPrice > 0) {
+                let priceField = document.createElement('input');
+                priceField.type = 'hidden';
+                priceField.name = 'estimated_price';
+                priceField.value = `$${estimatedPrice.toFixed(2)}`;
+                contactForm.appendChild(priceField);
             }
             
             // Show success message (will be replaced by Formspree redirect)
@@ -276,9 +332,10 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('%c🏥 Beijing Medical Concierge', 'font-size: 20px; font-weight: bold; color: #667eea;');
     console.log('%cProfessional Healthcare Assistance for Expats in Beijing', 'font-size: 12px; color: #666;');
     console.log('%cContact: baroqueliu6@gmail.com', 'font-size: 12px; color: #666;');
+    console.log('%cPricing: Session-based (4-hour blocks) - Updated 2026-03-25', 'font-size: 12px; color: #666;');
 });
 
-// Service Selection Helper (for future use)
+// Service Selection Helper
 function selectService(serviceType) {
     const serviceSelect = document.getElementById('service');
     if (serviceSelect) {

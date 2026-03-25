@@ -877,6 +877,140 @@ a {
     line-height: 1.6;
 }
 
+/* Time Slot Selector Styles */
+.time-slot-selector {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.time-slot-option {
+    padding: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.time-slot-option:hover {
+    border-color: var(--primary-color);
+    background: #f0f4ff;
+}
+
+.time-slot-option.selected {
+    border-color: var(--primary-color);
+    background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.time-slot-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.time-slot-name {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--text-color);
+}
+
+.time-slot-hours {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* Pricing Table Styles */
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.pricing-table th {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-weight: 600;
+}
+
+.pricing-table tr:hover {
+    background: #f8f9fa;
+}
+
+.pricing-table .service-name {
+    text-align: left;
+    font-weight: 600;
+}
+
+.price-highlight {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+/* Session Prices Box */
+.session-prices {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.session-prices ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+}
+
+.session-prices li {
+    padding: 0.3rem 0;
+    color: var(--text-light);
+}
+
+/* Quick Consultation Card */
+.quick-consult-card {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid #48bb78;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.quick-price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2f855a;
+    margin: 1rem 0;
+}
+
+.quick-price .original-price {
+    font-size: 1.5rem;
+    color: #999;
+    text-decoration: line-through;
+    margin-right: 0.5rem;
+}
+
+.quick-note {
+    color: #2f855a;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Premium Tier Card */
+.pricing-card.premium-tier {
+    border: 2px solid #f093fb;
+    background: linear-gradient(135deg, #fdf4ff 0%, #fae8ff 100%);
+}
+
 /* Checkbox Label Styles */
 .checkbox-label {
     display: flex;

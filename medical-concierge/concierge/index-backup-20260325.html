@@ -27,130 +27,6 @@
             height: 100%;
             border: none;
         }
-        
-        /* Time Slot Selector Styles */
-        .time-slot-selector {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin: 1rem 0;
-        }
-        
-        .time-slot-option {
-            padding: 1rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .time-slot-option:hover {
-            border-color: var(--primary-color);
-            background: #f0f4ff;
-        }
-        
-        .time-slot-option.selected {
-            border-color: var(--primary-color);
-            background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
-        }
-        
-        .time-slot-icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .time-slot-name {
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
-        
-        .time-slot-hours {
-            font-size: 0.85rem;
-            color: var(--text-light);
-        }
-        
-        .pricing-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1.5rem 0;
-        }
-        
-        .pricing-table th,
-        .pricing-table td {
-            padding: 1rem;
-            text-align: center;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .pricing-table th {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            font-weight: 600;
-        }
-        
-        .pricing-table tr:hover {
-            background: #f8f9fa;
-        }
-        
-        .pricing-table .service-name {
-            text-align: left;
-            font-weight: 600;
-        }
-        
-        .price-highlight {
-            font-weight: bold;
-            color: var(--primary-color);
-            font-size: 1.1rem;
-        }
-        
-        .session-prices {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-        }
-        
-        .session-prices ul {
-            list-style: none;
-            padding: 0;
-            margin: 0.5rem 0 0 0;
-        }
-        
-        .session-prices li {
-            padding: 0.3rem 0;
-            color: var(--text-light);
-        }
-        
-        .quick-consult-card {
-            background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            border-left: 4px solid #48bb78;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .quick-price {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #2f855a;
-            margin: 1rem 0;
-        }
-        
-        .quick-price .original-price {
-            font-size: 1.5rem;
-            color: #999;
-            text-decoration: line-through;
-            margin-right: 0.5rem;
-        }
-        
-        .quick-note {
-            color: #2f855a;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
     </style>
 </head>
 <body>
@@ -367,31 +243,337 @@
         </div>
     </section>
 
+    <!-- Hospital International Dept Fees -->
+    <section id="hospital-fees" class="hospital-fees">
+        <div class="container">
+            <h2>Beijing Hospital International Dept Fees</h2>
+            <p class="section-subtitle">Reference price list for international departments at major Beijing hospitals</p>
+            
+            <div class="fee-table-container">
+                <!-- PUMC Hospital -->
+                <div class="fee-table">
+                    <div class="fee-table-header">
+                        <h3>🏥 PUMC Hospital</h3>
+                        <p class="hospital-fullname">Peking Union Medical College Hospital - International Dept</p>
+                    </div>
+                    <table class="fee-table-content">
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Price (RMB)</th>
+                                <th>Price (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>🩺 General Practitioner</td>
+                                <td>¥900</td>
+                                <td>~$125</td>
+                            </tr>
+                            <tr>
+                                <td>👨‍⚕️ Specialist Consultation</td>
+                                <td>¥1,200</td>
+                                <td>~$165</td>
+                            </tr>
+                            <tr>
+                                <td>🔬 Blood Test (Basic)</td>
+                                <td>¥300-500</td>
+                                <td>~$40-70</td>
+                            </tr>
+                            <tr>
+                                <td>📸 X-Ray</td>
+                                <td>¥200-400</td>
+                                <td>~$30-55</td>
+                            </tr>
+                            <tr>
+                                <td>🖥️ CT Scan</td>
+                                <td>¥800-1,500</td>
+                                <td>~$110-205</td>
+                            </tr>
+                            <tr>
+                                <td>🧲 MRI</td>
+                                <td>¥2,000-3,500</td>
+                                <td>~$275-480</td>
+                            </tr>
+                            <tr>
+                                <td>💉 IV Drip</td>
+                                <td>¥200-400</td>
+                                <td>~$30-55</td>
+                            </tr>
+                            <tr>
+                                <td>💊 Prescription (Common)</td>
+                                <td>¥100-300</td>
+                                <td>~$15-40</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="fee-note">* Prices are for reference only. Actual fees may vary based on treatment.</p>
+                </div>
+
+                <!-- China-Japan Friendship Hospital -->
+                <div class="fee-table">
+                    <div class="fee-table-header">
+                        <h3>🏥 China-Japan Friendship Hospital</h3>
+                        <p class="hospital-fullname">International Medical Department</p>
+                    </div>
+                    <table class="fee-table-content">
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Price (RMB)</th>
+                                <th>Price (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>🩺 General Practitioner</td>
+                                <td>¥600</td>
+                                <td>~$82</td>
+                            </tr>
+                            <tr>
+                                <td>👨‍⚕️ Specialist Consultation</td>
+                                <td>¥900</td>
+                                <td>~$125</td>
+                            </tr>
+                            <tr>
+                                <td>🔬 Blood Test (Basic)</td>
+                                <td>¥200-400</td>
+                                <td>~$30-55</td>
+                            </tr>
+                            <tr>
+                                <td>📸 X-Ray</td>
+                                <td>¥150-300</td>
+                                <td>~$20-40</td>
+                            </tr>
+                            <tr>
+                                <td>🖥️ CT Scan</td>
+                                <td>¥600-1,200</td>
+                                <td>~$82-165</td>
+                            </tr>
+                            <tr>
+                                <td>🧲 MRI</td>
+                                <td>¥1,500-2,800</td>
+                                <td>~$205-385</td>
+                            </tr>
+                            <tr>
+                                <td>💉 IV Drip</td>
+                                <td>¥150-300</td>
+                                <td>~$20-40</td>
+                            </tr>
+                            <tr>
+                                <td>💊 Prescription (Common)</td>
+                                <td>¥80-250</td>
+                                <td>~$12-35</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="fee-note">* Prices are for reference only. Actual fees may vary based on treatment.</p>
+                </div>
+
+                <!-- Beijing United Family Hospital -->
+                <div class="fee-table">
+                    <div class="fee-table-header">
+                        <h3>🏥 Beijing United Family Hospital</h3>
+                        <p class="hospital-fullname">UFH - Premium International Hospital</p>
+                    </div>
+                    <table class="fee-table-content">
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Price (RMB)</th>
+                                <th>Price (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>🩺 General Practitioner</td>
+                                <td>¥1,500</td>
+                                <td>~$205</td>
+                            </tr>
+                            <tr>
+                                <td>👨‍⚕️ Specialist Consultation</td>
+                                <td>¥2,000</td>
+                                <td>~$275</td>
+                            </tr>
+                            <tr>
+                                <td>🔬 Blood Test (Basic)</td>
+                                <td>¥500-800</td>
+                                <td>~$70-110</td>
+                            </tr>
+                            <tr>
+                                <td>📸 X-Ray</td>
+                                <td>¥400-600</td>
+                                <td>~$55-82</td>
+                            </tr>
+                            <tr>
+                                <td>🖥️ CT Scan</td>
+                                <td>¥1,500-2,500</td>
+                                <td>~$205-345</td>
+                            </tr>
+                            <tr>
+                                <td>🧲 MRI</td>
+                                <td>¥3,500-5,000</td>
+                                <td>~$480-685</td>
+                            </tr>
+                            <tr>
+                                <td>💉 IV Drip</td>
+                                <td>¥400-600</td>
+                                <td>~$55-82</td>
+                            </tr>
+                            <tr>
+                                <td>💊 Prescription (Common)</td>
+                                <td>¥200-500</td>
+                                <td>~$30-70</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="fee-note">* Premium hospital with Western standards. Higher fees but fully English-speaking.</p>
+                </div>
+
+                <!-- Beijing Chaoyang Hospital -->
+                <div class="fee-table">
+                    <div class="fee-table-header">
+                        <h3>🏥 Beijing Chaoyang Hospital</h3>
+                        <p class="hospital-fullname">Capital Medical University Affiliated - International Clinic</p>
+                    </div>
+                    <table class="fee-table-content">
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Price (RMB)</th>
+                                <th>Price (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>🩺 General Practitioner</td>
+                                <td>¥500</td>
+                                <td>~$70</td>
+                            </tr>
+                            <tr>
+                                <td>👨‍⚕️ Specialist Consultation</td>
+                                <td>¥800</td>
+                                <td>~$110</td>
+                            </tr>
+                            <tr>
+                                <td>🔬 Blood Test (Basic)</td>
+                                <td>¥180-350</td>
+                                <td>~$25-50</td>
+                            </tr>
+                            <tr>
+                                <td>📸 X-Ray</td>
+                                <td>¥120-250</td>
+                                <td>~$18-35</td>
+                            </tr>
+                            <tr>
+                                <td>🖥️ CT Scan</td>
+                                <td>¥500-1,000</td>
+                                <td>~$70-140</td>
+                            </tr>
+                            <tr>
+                                <td>🧲 MRI</td>
+                                <td>¥1,200-2,500</td>
+                                <td>~$165-345</td>
+                            </tr>
+                            <tr>
+                                <td>💉 IV Drip</td>
+                                <td>¥120-250</td>
+                                <td>~$18-35</td>
+                            </tr>
+                            <tr>
+                                <td>💊 Prescription (Common)</td>
+                                <td>¥60-200</td>
+                                <td>~$10-30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="fee-note">* Good value public hospital with international clinic. Shorter wait times.</p>
+                </div>
+            </div>
+
+            <div class="fees-comparison-note">
+                <h3>💡 Understanding the Price Differences</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-card">
+                        <h4>🏆 Premium (UFH)</h4>
+                        <p>Fully English-speaking, Western standards, shortest wait times, highest fees</p>
+                        <p class="comparison-tip"><strong>Best for:</strong> Serious conditions, prefer Western care</p>
+                    </div>
+                    <div class="comparison-card">
+                        <h4>⭐ High-End (PUMC)</h4>
+                        <p>Top Chinese hospital, some English staff, excellent specialists, high fees</p>
+                        <p class="comparison-tip"><strong>Best for:</strong> Complex diagnoses, specialist care</p>
+                    </div>
+                    <div class="comparison-card">
+                        <h4>💰 Value (China-Japan / Chaoyang)</h4>
+                        <p>Good international departments, lower fees, may need translation help</p>
+                        <p class="comparison-tip"><strong>Best for:</strong> Routine care, budget-conscious</p>
+                    </div>
+                </div>
+                <p class="disclaimer"><strong>⚠️ Disclaimer:</strong> These prices are for reference only and may change without notice. Our service fee is separate from hospital fees. We can help you estimate total costs before your visit.</p>
+                <p class="service-value"><strong>💡 How We Help:</strong> With our accompaniment service (from $110 for 4 hours), you'll save time navigating the hospital, avoid miscommunication, and get the right treatment faster. Our fee is separate from hospital charges.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="process" class="process">
+        <div class="container">
+            <h2>How It Works</h2>
+            <p class="section-subtitle">Simple 4-step process to get the care you need</p>
+            
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>📧 Contact Us</h3>
+                        <p>Reach out via email or WhatsApp with your medical needs and preferred timing.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>💬 Free Consultation</h3>
+                        <p>Free 15-minute call to discuss your situation and determine the best service.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>🏥 Receive Service</h3>
+                        <p>We accompany you to the hospital, handle all communication, ensure smooth experience.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>📋 Follow-up Support</h3>
+                        <p>Post-visit support including medication pickup and understanding prescriptions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing - Session Based (4-hour blocks) -->
     <section id="pricing" class="pricing">
         <div class="container">
             <h2>Transparent Pricing (USD)</h2>
             <p class="section-subtitle">Billed in 4-hour sessions. Pay after service completion. 100% satisfaction guarantee.</p>
             
-            <div class="pricing-intro" style="background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--primary-color); margin-bottom: 2rem;">
-                <h3 style="margin: 0 0 1rem 0; color: var(--primary-color);">📅 Time Slot System</h3>
-                <p style="margin: 0 0 1rem 0;">All services are booked in 4-hour sessions for your convenience:</p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
-                    <div style="background: white; padding: 1rem; border-radius: 8px; text-align: center;">
-                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌅</div>
-                        <div style="font-weight: bold;">Morning</div>
-                        <div style="color: var(--text-light); font-size: 0.9rem;">08:00 - 12:00</div>
-                    </div>
-                    <div style="background: white; padding: 1rem; border-radius: 8px; text-align: center;">
-                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">☀️</div>
-                        <div style="font-weight: bold;">Afternoon</div>
-                        <div style="color: var(--text-light); font-size: 0.9rem;">13:00 - 17:00</div>
-                    </div>
-                    <div style="background: white; padding: 1rem; border-radius: 8px; text-align: center;">
-                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌙</div>
-                        <div style="font-weight: bold;">Evening</div>
-                        <div style="color: var(--text-light); font-size: 0.9rem;">18:00 - 22:00</div>
-                    </div>
+            <div class="pricing-intro">
+                <div class="intro-card">
+                    <h3>📅 How Sessions Work</h3>
+                    <ul>
+                        <li><strong>Morning:</strong> 08:00-12:00 (4 hours)</li>
+                        <li><strong>Afternoon:</strong> 13:00-17:00 (4 hours)</li>
+                        <li><strong>Evening:</strong> 18:00-22:00 (4 hours)</li>
+                        <li>Minimum booking: 1 session (4 hours)</li>
+                        <li>Multiple sessions can be booked for full-day care</li>
+                    </ul>
                 </div>
             </div>
             
@@ -420,9 +602,10 @@
                     <div class="session-prices">
                         <p><strong>Session Prices:</strong></p>
                         <ul>
-                            <li>Weekday: $100</li>
-                            <li>Weekend: $125 (+25%)</li>
+                            <li>Morning: $100</li>
+                            <li>Afternoon: $100</li>
                             <li>Evening: $140 (+40%)</li>
+                            <li>Weekend: $125 (+25%)</li>
                         </ul>
                     </div>
                     <a href="#contact" class="btn btn-primary">Book Standard</a>
@@ -452,17 +635,17 @@
                     <div class="session-prices">
                         <p><strong>Session Prices:</strong></p>
                         <ul>
-                            <li>Weekday: $180</li>
-                            <li>Weekend: $225 (+25%)</li>
+                            <li>Morning: $180</li>
+                            <li>Afternoon: $180</li>
                             <li>Evening: $250 (+40%)</li>
+                            <li>Weekend: $225 (+25%)</li>
                         </ul>
                     </div>
                     <a href="#contact" class="btn btn-primary">Book Professional</a>
                 </div>
 
                 <!-- Premium Care -->
-                <div class="pricing-card premium-tier">
-                    <div class="featured-badge" style="background: linear-gradient(90deg, #f093fb, #667eea);">Premium</div>
+                <div class="pricing-card">
                     <div class="pricing-icon">⭐</div>
                     <h3>Premium Care</h3>
                     <p class="pricing-desc">Bilingual medical pro</p>
@@ -485,9 +668,10 @@
                     <div class="session-prices">
                         <p><strong>Session Prices:</strong></p>
                         <ul>
-                            <li>Weekday: $320</li>
-                            <li>Weekend: $400 (+25%)</li>
+                            <li>Morning: $320</li>
+                            <li>Afternoon: $320</li>
                             <li>Evening: $450 (+40%)</li>
+                            <li>Weekend: $400 (+25%)</li>
                         </ul>
                     </div>
                     <a href="#contact" class="btn btn-primary">Book Premium</a>
@@ -511,50 +695,135 @@
                     </div>
                 </div>
             </div>
+                    <ul class="pricing-features">
+                        <li>✓ Everything in Consultation</li>
+                        <li>✓ Hospital accompaniment</li>
+                        <li>✓ Medical translation</li>
+                        <li>✓ Registration assistance</li>
+                        <li>✓ Pharmacy pickup</li>
+                        <li>✓ Report explanation</li>
+                        <li>✓ <strong>Full Accompaniment</strong></li>
+                        <li>✓ <strong>100% Refund if not satisfied</strong></li>
+                    </ul>
+                    <div id="paypal-container-half" class="paypal-button-container"></div>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-icon">🌟</div>
+                    <h3>Full-Day Service</h3>
+                    <p class="pricing-desc">Per hour</p>
+                    <div class="price">
+                        <span class="original-price">$35</span>
+                        <span class="currency">$</span>
+                        <span class="amount">25</span>
+                        <span class="period">/hour</span>
+                    </div>
+                    <p class="pricing-note">8 hours minimum - Save $80!</p>
+                    <ul class="pricing-features">
+                        <li>✓ Everything in Half-Day</li>
+                        <li>✓ Extended support</li>
+                        <li>✓ Multiple departments</li>
+                        <li>✓ Test results pickup</li>
+                        <li>✓ Follow-up scheduling</li>
+                        <li>✓ Detailed summary report</li>
+                        <li>✓ <strong>Priority Support</strong></li>
+                        <li>✓ <strong>100% Refund if not satisfied</strong></li>
+                    </ul>
+                    <div id="paypal-container-full" class="paypal-button-container"></div>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-icon">🗣️</div>
+                    <h3>Medical Translation</h3>
+                    <p class="pricing-desc">Per hour</p>
+                    <div class="price">
+                        <span class="original-price">$70</span>
+                        <span class="currency">$</span>
+                        <span class="amount">55</span>
+                        <span class="period">/hour</span>
+                    </div>
+                    <p class="pricing-note">Save $15/hour!</p>
+                    <ul class="pricing-features">
+                        <li>✓ Professional interpretation</li>
+                        <li>✓ Medical terminology</li>
+                        <li>✓ Clear communication</li>
+                        <li>✓ Written translation available</li>
+                        <li>✓ Minimum 1 hour</li>
+                        <li>✓ <strong>100% Accurate Guarantee</strong></li>
+                        <li>✓ <strong>100% Refund if not satisfied</strong></li>
+                    </ul>
+                    <div id="paypal-container-translate" class="paypal-button-container"></div>
+                </div>
+            </div>
             
-            <!-- Complete Pricing Table -->
-            <div class="pricing-table-container" style="margin-top: 3rem; background: white; padding: 2rem; border-radius: 12px; box-shadow: var(--shadow);">
-                <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--primary-color);">📋 Complete Pricing Guide (Per 4-Hour Session)</h3>
-                
-                <div class="pricing-table-wrapper" style="overflow-x: auto;">
-                    <table class="pricing-table">
-                        <thead>
-                            <tr>
-                                <th style="text-align: left;">Service Level</th>
-                                <th>Weekday</th>
-                                <th>Weekend</th>
-                                <th>Evening</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="service-name">🏥 Standard</td>
-                                <td class="price-highlight">$100</td>
-                                <td class="price-highlight">$125</td>
-                                <td class="price-highlight">$140</td>
-                            </tr>
-                            <tr style="background: #f8f9fa;">
-                                <td class="service-name">👩‍⚕️ Professional (Nurse)</td>
-                                <td class="price-highlight">$180</td>
-                                <td class="price-highlight">$225</td>
-                                <td class="price-highlight">$250</td>
-                            </tr>
-                            <tr>
-                                <td class="service-name">🌟 Premium (Bilingual)</td>
-                                <td class="price-highlight">$320</td>
-                                <td class="price-highlight">$400</td>
-                                <td class="price-highlight">$450</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="pricing-note" style="margin-top: 2rem; padding: 1.5rem; background: #f0fdf4; border-left: 4px solid #48bb78; border-radius: 8px;">
+                <p>💳 <strong>Payment:</strong> Secure payment via PayPal. Pay after service completion.</p>
+                <p>🛡️ <strong>Satisfaction Guarantee:</strong> Not happy with our service? Full refund within 24 hours. No questions asked.</p>
+                <p>💰 <strong>Group Discount:</strong> 15% off for family bookings or multiple appointments.</p>
+            </div>
+
+            <!-- Premium Services & Surcharges -->
+            <div style="margin-top: 3rem;">
+                <h3 style="text-align: center; margin-bottom: 2rem;">🔔 Premium Services & Surcharges</h3>
+                <div class="premium-services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                    <div class="premium-card" style="padding: 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px;">
+                        <h4 style="margin-top: 0;">🚨 Emergency Service</h4>
+                        <p style="font-size: 2rem; margin: 1rem 0;">+50%</p>
+                        <p style="margin-bottom: 0;">Response within 2 hours. Available 24/7 for urgent medical needs.</p>
+                    </div>
+                    <div class="premium-card" style="padding: 1.5rem; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border-radius: 12px;">
+                        <h4 style="margin-top: 0;">🌙 Night Service</h4>
+                        <p style="font-size: 2rem; margin: 1rem 0;">+40%</p>
+                        <p style="margin-bottom: 0;">20:00-08:00. For late-night emergencies or early morning appointments.</p>
+                    </div>
+                    <div class="premium-card" style="padding: 1.5rem; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; border-radius: 12px;">
+                        <h4 style="margin-top: 0;">📅 Weekend/Holiday</h4>
+                        <p style="font-size: 2rem; margin: 1rem 0;">+25%</p>
+                        <p style="margin-bottom: 0;">Saturday, Sunday, and Chinese national holidays.</p>
+                    </div>
                 </div>
+                <p style="text-align: center; margin-top: 1.5rem; color: #666;"><em>Maximum 2 surcharges can be stacked. Holiday rates already include maximum surcharge.</em></p>
+            </div>
+
+            <!-- Referral Rewards Program -->
+            <div style="margin-top: 4rem; padding: 2.5rem; background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); border-radius: 16px;">
+                <h3 style="text-align: center; margin-bottom: 1rem;">🎁 Refer a Friend & Earn Rewards</h3>
+                <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">Share the care, earn cash rewards - up to 3 levels!</p>
                 
-                <div style="margin-top: 1.5rem; padding: 1rem; background: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 8px;">
-                    <p style="margin: 0;"><strong>⚡ Emergency Service:</strong> +50% all time slots (2-hour response guaranteed)</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 0.5rem;">🥇</div>
+                        <h4 style="margin: 0.5rem 0;">Level 1</h4>
+                        <p style="font-size: 2rem; color: #667eea; font-weight: bold; margin: 1rem 0;">10%</p>
+                        <p style="margin-bottom: 0.5rem;">Direct referral (your friend)</p>
+                        <p style="font-size: 0.9rem; color: #666;">Cash back when they book</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 0.5rem;">🥈</div>
+                        <h4 style="margin: 0.5rem 0;">Level 2</h4>
+                        <p style="font-size: 2rem; color: #764ba2; font-weight: bold; margin: 1rem 0;">5%</p>
+                        <p style="margin-bottom: 0.5rem;">Friend's friend</p>
+                        <p style="font-size: 0.9rem; color: #666;">Passive income from network</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 0.5rem;">🥉</div>
+                        <h4 style="margin: 0.5rem 0;">Level 3</h4>
+                        <p style="font-size: 2rem; color: #f5576c; font-weight: bold; margin: 1rem 0;">2%</p>
+                        <p style="margin-bottom: 0.5rem;">Third level connection</p>
+                        <p style="font-size: 0.9rem; color: #666;">Coupon rewards (120% value)</p>
+                    </div>
                 </div>
-                
-                <div style="margin-top: 1rem; padding: 1rem; background: #d1fae5; border-left: 4px solid #10b981; border-radius: 8px;">
-                    <p style="margin: 0;"><strong>📞 Time Slots:</strong> Morning (08:00-12:00) | Afternoon (13:00-17:00) | Evening (18:00-22:00)</p>
+
+                <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-top: 2rem;">
+                    <h4 style="margin-top: 0;">💰 Example: Your friend books $500 service</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><strong>You (Level 1):</strong> $500 × 10% = <strong>$50 cash</strong></li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><strong>Your friend (Level 2):</strong> $500 × 5% = <strong>$25 cash</strong></li>
+                        <li style="padding: 0.5rem 0;"><strong>Their friend (Level 3):</strong> $500 × 2% = <strong>$10 coupon</strong> ($12 value)</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                        <strong>Withdrawal:</strong> Min $50 for cash, 2% fee. Coupons have 90-day validity and can be transferred.
+                    </p>
                 </div>
             </div>
         </div>
@@ -820,6 +1089,13 @@
                         </div>
                     </div>
                     <div class="contact-item">
+                        <span class="contact-icon">💬</span>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <p>+86 138 0138 0000</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
                         <span class="contact-icon">⏰</span>
                         <div>
                             <strong>Response Time</strong>
@@ -852,41 +1128,30 @@
                             <input type="tel" id="phone" name="phone" placeholder="+86 XXX XXXX XXXX">
                         </div>
                         
-                        <!-- Service Selection -->
                         <div class="form-group">
-                            <label for="service">Service Level *</label>
+                            <label for="service">Service Needed</label>
                             <select id="service" name="service" required>
-                                <option value="">Select service level</option>
-                                <option value="standard">Standard Care - $100/session</option>
-                                <option value="professional">Professional Care (Nurse) - $180/session</option>
-                                <option value="premium">Premium Care (Bilingual) - $320/session</option>
-                                <option value="consultation">Quick Consultation - $2.50</option>
+                                <option value="">Select a service</option>
+                                <option value="consultation">Quick Consultation ($2.50)</option>
+                                <option value="half-day">Half-Day Service ($27.50/hour)</option>
+                                <option value="full-day">Full-Day Service ($25/hour)</option>
+                                <option value="translation">Medical Translation ($55/hour)</option>
+                                <option value="other">Other / Not Sure</option>
                             </select>
                         </div>
                         
-                        <!-- Time Slot Selector -->
+                        <!-- Service Tier Selector -->
                         <div class="form-group">
-                            <label>Preferred Time Slot *</label>
-                            <div class="time-slot-selector">
-                                <div class="time-slot-option" data-value="morning" data-base-price="100">
-                                    <div class="time-slot-icon">🌅</div>
-                                    <div class="time-slot-name">Morning</div>
-                                    <div class="time-slot-hours">08:00 - 12:00</div>
-                                </div>
-                                <div class="time-slot-option" data-value="afternoon" data-base-price="100">
-                                    <div class="time-slot-icon">☀️</div>
-                                    <div class="time-slot-name">Afternoon</div>
-                                    <div class="time-slot-hours">13:00 - 17:00</div>
-                                </div>
-                                <div class="time-slot-option" data-value="evening" data-base-price="140">
-                                    <div class="time-slot-icon">🌙</div>
-                                    <div class="time-slot-name">Evening</div>
-                                    <div class="time-slot-hours">18:00 - 22:00</div>
-                                </div>
-                            </div>
-                            <input type="hidden" id="time-slot" name="time_slot" required>
+                            <label for="service-tier">Service Level *</label>
+                            <select id="service-tier" name="service_tier" required>
+                                <option value="standard">Standard - Base Price</option>
+                                <option value="professional">Professional (Nurse) +$20/hour</option>
+                                <option value="premium">Premium (Bilingual) +$40/hour</option>
+                            </select>
                             <p class="tier-description" style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem;">
-                                <strong>Note:</strong> Weekend rates +25%, Evening rates +40%
+                                <strong>Standard:</strong> General medical assistant<br>
+                                <strong>Professional:</strong> Certified nurse with medical expertise<br>
+                                <strong>Premium:</strong> Bilingual medical professional (English + Chinese)
                             </p>
                         </div>
                         
@@ -897,8 +1162,24 @@
                             <label class="checkbox-label" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; cursor: pointer;">
                                 <input type="checkbox" id="urgent-service" name="urgent_service" value="yes" style="margin-top: 0.25rem;">
                                 <span>
-                                    <strong>🚨 Emergency Service (+50%)</strong><br>
-                                    <span style="font-size: 0.85rem; color: var(--text-light);">2-hour response guaranteed</span>
+                                    <strong>🚨 Urgent Service (+100%)</strong><br>
+                                    <span style="font-size: 0.85rem; color: var(--text-light);">2-hour response time</span>
+                                </span>
+                            </label>
+                            
+                            <label class="checkbox-label" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; cursor: pointer;">
+                                <input type="checkbox" id="night-service" name="night_service" value="yes" style="margin-top: 0.25rem;">
+                                <span>
+                                    <strong>🌙 Night Service (+50%)</strong><br>
+                                    <span style="font-size: 0.85rem; color: var(--text-light);">8:00 PM - 8:00 AM</span>
+                                </span>
+                            </label>
+                            
+                            <label class="checkbox-label" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; cursor: pointer;">
+                                <input type="checkbox" id="weekend-service" name="weekend_service" value="yes" style="margin-top: 0.25rem;">
+                                <span>
+                                    <strong>📅 Weekend/Holiday (+30%)</strong><br>
+                                    <span style="font-size: 0.85rem; color: var(--text-light);">Saturday, Sunday & Public Holidays</span>
                                 </span>
                             </label>
                         </div>
@@ -909,35 +1190,23 @@
                         </div>
                         
                         <!-- Referral Rewards Section -->
-                        <div class="referral-rewards" style="background: linear-gradient(135deg, #fff4e6 0%, #ffecd2 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #f59e0b; margin-bottom: 1.5rem;">
-                            <h4 style="margin: 0 0 1rem 0; color: #c2410c; font-size: 1.1rem;">🎁 3-Level Referral Rewards</h4>
-                            
-                            <div style="background: white; padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
-                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 0.5rem; margin-bottom: 0.75rem;">
-                                    <div style="background: #f0f4ff; padding: 0.5rem; border-radius: 6px; text-align: center;">
-                                        <div style="font-size: 1.25rem; font-weight: bold; color: #667eea;">$10</div>
-                                        <div style="font-size: 0.7rem; color: var(--text-light);">Level 1</div>
-                                        <div style="font-size: 0.65rem; color: var(--text-light);">Your referral</div>
-                                    </div>
-                                    <div style="background: #fef3c7; padding: 0.5rem; border-radius: 6px; text-align: center;">
-                                        <div style="font-size: 1.25rem; font-weight: bold; color: #d97706;">$2</div>
-                                        <div style="font-size: 0.7rem; color: var(--text-light);">Level 2</div>
-                                        <div style="font-size: 0.65rem; color: var(--text-light);">2nd level</div>
-                                    </div>
-                                    <div style="background: #dbeafe; padding: 0.5rem; border-radius: 6px; text-align: center;">
-                                        <div style="font-size: 1.25rem; font-weight: bold; color: #2563eb;">$0.50</div>
-                                        <div style="font-size: 0.7rem; color: var(--text-light);">Level 3</div>
-                                        <div style="font-size: 0.65rem; color: var(--text-light);">3rd level</div>
-                                    </div>
+                        <div class="referral-rewards" style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #48bb78; margin-bottom: 1.5rem;">
+                            <h4 style="margin: 0 0 0.75rem 0; color: #2f855a; font-size: 1.1rem;">🎁 Refer a Friend & Earn Cash Rewards</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.75rem; margin-bottom: 0.75rem;">
+                                <div style="background: white; padding: 0.75rem; border-radius: 8px; text-align: center;">
+                                    <div style="font-size: 1.5rem; font-weight: bold; color: #48bb78;">$10</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-light);">1st Referral</div>
                                 </div>
-                                <p style="font-size: 0.8rem; color: var(--text-light); margin: 0.5rem 0 0 0; line-height: 1.4;">
-                                    <strong>Example:</strong> You → Friend ($10) → Friend's friend ($2 to them, $2 to you) → Next level ($0.50 to you)
-                                </p>
+                                <div style="background: white; padding: 0.75rem; border-radius: 8px; text-align: center;">
+                                    <div style="font-size: 1.5rem; font-weight: bold; color: #48bb78;">$25</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-light);">3rd Referral</div>
+                                </div>
+                                <div style="background: white; padding: 0.75rem; border-radius: 8px; text-align: center;">
+                                    <div style="font-size: 1.5rem; font-weight: bold; color: #48bb78;">$50</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-light);">5th Referral</div>
+                                </div>
                             </div>
-                            
-                            <div style="font-size: 0.8rem; color: var(--text-light);">
-                                <strong>💵 Voucher Rules:</strong> Use for next service OR withdraw after $30 (tax self-handled)
-                            </div>
+                            <p style="font-size: 0.85rem; color: var(--text-light); margin: 0;">Your friend also gets 10% off their first service!</p>
                         </div>
                         
                         <!-- Terms Agreement Checkbox -->
@@ -1003,7 +1272,6 @@
             
             <div class="footer-bottom">
                 <p>&copy; 2026 Beijing Medical Concierge. All rights reserved.</p>
-
                 <p style="font-size: 0.85rem; color: #999; margin-top: 0.5rem;">
                     Disclaimer: We are not a medical institution and do not provide medical advice. 
                     All medical services are provided by licensed healthcare professionals.
@@ -1012,7 +1280,10 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Float - Hidden -->
+    <!-- WhatsApp Float - Hidden temporarily -->
+    <style>
+        .whatsapp-float { display: none !important; }
+    </style>
     <a href="https://wa.me/8613801380000" class="whatsapp-float" target="_blank" rel="noopener">
         <svg viewBox="0 0 32 32" class="whatsapp-icon">
             <path fill="#25D366" d="M16 0C7.163 0 0 7.163 0 16c0 2.825 0.737 5.607 2.137 8.048L0 32l8.161-2.082C10.535 31.263 13.262 32 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zM16 29.467c-2.482 0-4.908-0.668-7.055-1.932l-0.506-0.301-5.245 1.339 1.403-5.109-0.329-0.523C2.923 20.705 2.267 18.379 2.267 16c0-7.565 6.168-13.733 13.733-13.733S29.733 8.435 29.733 16 23.565 29.467 16 29.467z"/>
@@ -1021,5 +1292,35 @@
     </a>
 
     <script src="js/concierge-main.js"></script>
+    
+    <!-- PayPal SDK - Replace YOUR_CLIENT_ID with actual PayPal client ID -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+    <script>
+        // Initialize PayPal buttons for each product
+        // You need to create these buttons in your PayPal/Gumroad dashboard
+        // and replace the click handlers with actual payment links
+        
+        // Quick Consultation - $0.10
+        if (typeof paypal !== 'undefined') {
+            paypal.Buttons({
+                createOrder: function(data, actions) {
+                    return actions.order.create({
+                        purchase_units: [{
+                            description: 'Quick Consultation - 15 min',
+                            amount: { value: '0.10' }
+                        }]
+                    });
+                },
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                        alert('Payment completed! We will contact you within 2 hours.');
+                        // Redirect to thank you page or show confirmation
+                    });
+                }
+            }).render('#paypal-container-consult');
+        }
+        
+        // Similar setup for other products...
+    </script>
 </body>
 </html>
