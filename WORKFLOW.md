@@ -48,7 +48,7 @@ git push origin main
 - Commit: xxxxx
 - 时间: HH:MM
 - 状态: ✅ 成功 / ❌ 失败
-- 预览: https://tatoo-shop-2024.vercel.app
+- 预览: ~~https://tatoo-shop-2024.vercel.app~~（⚠️ 已废弃，使用生产域名）
 - 备注: （如有问题说明情况）
 ```
 
@@ -120,12 +120,12 @@ git push origin main
 - 部署时间：通常 1-2 分钟
 
 ### 检查部署状态
-1. 访问 Vercel 控制台：`https://vercel.com/baroqueliu6-devs-projects/tatoo-shop-2024`
+1. 访问 Vercel 控制台：`https://vercel.com/baroqueliu6-devs-projects/tattoo-shop`（⚠️ 旧项目名 `tatoo-shop-2024` 已废弃）
 2. 查看最新部署：
    - 状态：**Ready** = 成功
    - 状态：**Building** = 部署中
    - 状态：**Failed** = 失败（查看 Logs）
-3. 访问预览链接验证：`https://tatoo-shop-2024.vercel.app`
+3. 访问预览链接验证：~~`https://tatoo-shop-2024.vercel.app`~~（⚠️ 已废弃，使用生产域名）
 
 ### 如果网站没更新
 1. **等几分钟** - Vercel 部署需要时间

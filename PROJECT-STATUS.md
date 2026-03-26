@@ -45,14 +45,14 @@
 
 ### 部署
 - **平台:** Vercel
-- **项目:** `tatoo-shop-2024`
-- **域名:** `13801380.site` → Vercel → `tatoo-shop-2024.vercel.app`
+- **项目:** `tatoo-shop-2024`（⚠️ 已废弃，拼写错误）
+- **域名:** `13801380.site` → Vercel → `tatoo-shop-2024.vercel.app`（历史配置）
 
 ### 访问
 - **生产环境:** https://13801380.site
-- **Vercel 预览:** https://tatoo-shop-2024.vercel.app
+- **Vercel 预览:** ~~https://tatoo-shop-2024.vercel.app~~（⚠️ 已废弃）
 - **GitHub:** https://github.com/baroqueliu6-dev/tattoo-shop
-- **Vercel 控制台:** https://vercel.com/baroqueliu6-devs-projects/tatoo-shop-2024
+- **Vercel 控制台:** ~~https://vercel.com/baroqueliu6-devs-projects/tatoo-shop-2024~~（⚠️ 已废弃）
 
 ---
 

@@ -13,8 +13,8 @@
 - **分支:** `main`
 
 ### Vercel
-- **项目:** `tatoo-shop-2024`（注意：项目名拼写有误，但连接正确）
-- **URL:** https://vercel.com/baroqueliu6-devs-projects/tatoo-shop-2024
+- **项目:** ~~`tatoo-shop-2024`~~（⚠️ 已废弃，拼写错误）
+- **URL:** ~~https://vercel.com/baroqueliu6-devs-projects/tatoo-shop-2024~~（⚠️ 已废弃）
 - **Git 连接:** ✅ 已连接 `baroqueliu6-dev/tattoo-shop`
 
 ### 域名配置

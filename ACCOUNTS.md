@@ -83,7 +83,7 @@
 - **账号:** baroqueliu6@gmail.com
 - **项目名:** tattoo-site
 - **项目链接:** https://vercel.com/baroqueliu6-devs-projects/tattoo-site
-- **预览域名:** https://tatoo-shop-2024.vercel.app
+- **预览域名:** ~~https://tatoo-shop-2024.vercel.app~~（⚠️ 已废弃，使用生产域名）
 - **生产域名:** https://13801380.site
 - **状态:** ✅ 已配置，自动部署
 
@@ -91,8 +91,8 @@
 
 - **网址:** https://github.com/
 - **账号:** baroqueliu6-dev
-- **仓库:** tattoo-site
-- **仓库链接:** https://github.com/baroqueliu6-dev/tattoo-site
+- **仓库:** tattoo-shop（两个 t！）
+- **仓库链接:** https://github.com/baroqueliu6-dev/tattoo-shop
 - **分支:** main
 - **状态:** ✅ 已配置，Vercel 自动部署
 

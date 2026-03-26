@@ -40,7 +40,7 @@
 - **本地路径:** `~/.openclaw/workspace/tattoo-shop/`
 - **Vercel 项目:** tattoo-site
 - **生产域名:** https://13801380.site
-- **Vercel 预览:** https://tatoo-shop-2024.vercel.app
+- **Vercel 预览:** ~~https://tatoo-shop-2024.vercel.app~~（⚠️ 已废弃）
 
 ### 账号信息
 - **主邮箱:** baroqueliu6@gmail.com

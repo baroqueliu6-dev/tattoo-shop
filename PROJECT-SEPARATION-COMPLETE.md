@@ -62,8 +62,8 @@
 ## 📋 下一步
 
 1. **删除旧项目**
-   - [ ] tatoo-shop-2024（Vercel）
-   - [ ] tatoo-shop（Vercel）
+   - [x] ~~tatoo-shop-2024~~（Vercel）（⚠️ 已废弃）
+   - [x] ~~tatoo-shop~~（Vercel）（⚠️ 已废弃）
 
 2. **配置域名**
    - [ ] tattoo.13801380.site
