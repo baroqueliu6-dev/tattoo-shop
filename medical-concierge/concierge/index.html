@@ -836,126 +836,41 @@
                 </div>
                 
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" action="https://formspree.io/f/mvgqzpwl" method="POST" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="Your name">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required placeholder="your@email.com">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone / WhatsApp</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+86 XXX XXXX XXXX">
-                        </div>
-                        
-                        <!-- Service Selection -->
-                        <div class="form-group">
-                            <label for="service">Service Level *</label>
-                            <select id="service" name="service" required>
-                                <option value="">Select service level</option>
-                                <option value="standard">Standard Care - $100/session</option>
-                                <option value="professional">Professional Care (Nurse) - $180/session</option>
-                                <option value="premium">Premium Care (Bilingual) - $320/session</option>
-                                <option value="consultation">Quick Consultation - $2.50</option>
-                            </select>
-                        </div>
-                        
-                        <!-- Time Slot Selector -->
-                        <div class="form-group">
-                            <label>Preferred Time Slot *</label>
-                            <div class="time-slot-selector">
-                                <div class="time-slot-option" data-value="morning" data-base-price="100">
-                                    <div class="time-slot-icon">🌅</div>
-                                    <div class="time-slot-name">Morning</div>
-                                    <div class="time-slot-hours">08:00 - 12:00</div>
-                                </div>
-                                <div class="time-slot-option" data-value="afternoon" data-base-price="100">
-                                    <div class="time-slot-icon">☀️</div>
-                                    <div class="time-slot-name">Afternoon</div>
-                                    <div class="time-slot-hours">13:00 - 17:00</div>
-                                </div>
-                                <div class="time-slot-option" data-value="evening" data-base-price="140">
-                                    <div class="time-slot-icon">🌙</div>
-                                    <div class="time-slot-name">Evening</div>
-                                    <div class="time-slot-hours">18:00 - 22:00</div>
-                                </div>
-                            </div>
-                            <input type="hidden" id="time-slot" name="time_slot" required>
-                            <p class="tier-description" style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem;">
-                                <strong>Note:</strong> Weekend rates +25%, Evening rates +40%
+                    <!-- Contact Form - Email Client Method (Formspree temporarily disabled) -->
+                    <div class="contact-form">
+                        <div style="background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--primary-color); margin-bottom: 1.5rem;">
+                            <h4 style="margin: 0 0 1rem 0; color: var(--primary-color);">📧 Quick Contact</h4>
+                            <p style="margin: 0 0 1rem 0; color: var(--text-light);">Click the button below to open your email client with a pre-filled message. Or email us directly:</p>
+                            <p style="margin: 0; font-size: 1.1rem;">
+                                <a href="mailto:baroqueliu6@gmail.com" style="color: var(--primary-color); font-weight: 600;">baroqueliu6@gmail.com</a>
                             </p>
                         </div>
                         
-                        <!-- Premium Options Checkboxes -->
-                        <div class="form-group">
-                            <label style="font-weight: 600; margin-bottom: 0.8rem; display: block;">Premium Options</label>
-                            
-                            <label class="checkbox-label" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; cursor: pointer;">
-                                <input type="checkbox" id="urgent-service" name="urgent_service" value="yes" style="margin-top: 0.25rem;">
-                                <span>
-                                    <strong>🚨 Emergency Service (+50%)</strong><br>
-                                    <span style="font-size: 0.85rem; color: var(--text-light);">2-hour response guaranteed</span>
-                                </span>
-                            </label>
-                        </div>
+                        <a href="mailto:baroqueliu6@gmail.com?subject=Medical Concierge Inquiry&body=Hi,%0D%0A%0D%0AI need medical assistance in Beijing.%0D%0A%0D%0AMy name: %0D%0ASymptoms/Needs: %0D%0APreferred hospital: %0D%0APreferred time slot: [Morning/Afternoon/Evening]%0D%0AService level: [Standard/Professional/Premium]%0D%0APhone: %0D%0A%0D%0AThank you!" 
+                           class="btn btn-primary btn-block" 
+                           style="display: block; text-align: center; margin-bottom: 1rem;">
+                            ✉️ Open Email Client
+                        </a>
                         
-                        <div class="form-group">
-                            <label for="message">Your Message *</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your medical needs..."></textarea>
-                        </div>
-                        
-                        <!-- Referral Rewards Section -->
-                        <div class="referral-rewards" style="background: linear-gradient(135deg, #fff4e6 0%, #ffecd2 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #f59e0b; margin-bottom: 1.5rem;">
-                            <h4 style="margin: 0 0 1rem 0; color: #c2410c; font-size: 1.1rem;">🎁 3-Level Referral Rewards</h4>
+                        <!-- Alternative Contact Methods -->
+                        <div style="margin-top: 1.5rem;">
+                            <h4 style="margin: 0 0 1rem 0; font-size: 1rem;">📱 Other Contact Options:</h4>
                             
-                            <div style="background: white; padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem;">
-                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 0.5rem; margin-bottom: 0.75rem;">
-                                    <div style="background: #f0f4ff; padding: 0.5rem; border-radius: 6px; text-align: center;">
-                                        <div style="font-size: 1.25rem; font-weight: bold; color: #667eea;">$10</div>
-                                        <div style="font-size: 0.7rem; color: var(--text-light);">Level 1</div>
-                                        <div style="font-size: 0.65rem; color: var(--text-light);">Your referral</div>
-                                    </div>
-                                    <div style="background: #fef3c7; padding: 0.5rem; border-radius: 6px; text-align: center;">
-                                        <div style="font-size: 1.25rem; font-weight: bold; color: #d97706;">$2</div>
-                                        <div style="font-size: 0.7rem; color: var(--text-light);">Level 2</div>
-                                        <div style="font-size: 0.65rem; color: var(--text-light);">2nd level</div>
-                                    </div>
-                                    <div style="background: #dbeafe; padding: 0.5rem; border-radius: 6px; text-align: center;">
-                                        <div style="font-size: 1.25rem; font-weight: bold; color: #2563eb;">$0.50</div>
-                                        <div style="font-size: 0.7rem; color: var(--text-light);">Level 3</div>
-                                        <div style="font-size: 0.65rem; color: var(--text-light);">3rd level</div>
-                                    </div>
+                            <div style="display: grid; gap: 0.75rem;">
+                                <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+                                    <strong>⏰ Response Time:</strong>
+                                    <p style="margin: 0.25rem 0 0 0; color: var(--text-light); font-size: 0.9rem;">Within 2 hours (24/7 for emergencies)</p>
                                 </div>
-                                <p style="font-size: 0.8rem; color: var(--text-light); margin: 0.5rem 0 0 0; line-height: 1.4;">
-                                    <strong>Example:</strong> You → Friend ($10) → Friend's friend ($2 to them, $2 to you) → Next level ($0.50 to you)
-                                </p>
-                            </div>
-                            
-                            <div style="font-size: 0.8rem; color: var(--text-light);">
-                                <strong>💵 Voucher Rules:</strong> Use for next service OR withdraw after $30 (tax self-handled)
+                                
+                                <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+                                    <strong>🛡️ Guarantee:</strong>
+                                    <p style="margin: 0.25rem 0 0 0; color: var(--text-light); font-size: 0.9rem;">100% satisfaction or full refund</p>
+                                </div>
                             </div>
                         </div>
                         
-                        <!-- Terms Agreement Checkbox -->
-                        <div class="form-group">
-                            <label class="checkbox-label" style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
-                                <input type="checkbox" id="terms-agree" name="terms_agree" required style="margin-top: 0.25rem;">
-                                <span style="font-size: 0.9rem;">
-                                    I agree to the <a href="../terms.html" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Terms of Service</a>, 
-                                    <a href="refund-policy.html" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Refund Policy</a>, and 
-                                    <a href="../privacy.html" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Privacy Policy</a> *
-                                </span>
-                            </label>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-block">📧 Send Message</button>
-                        
-                        <p class="form-note">🔒 Your information is secure. We never share your data.</p>
-                    </form>
+                        <p class="form-note" style="margin-top: 1.5rem;">🔒 Your information is secure. We never share your data.</p>
+                    </div>
                 </div>
             </div>
         </div>
