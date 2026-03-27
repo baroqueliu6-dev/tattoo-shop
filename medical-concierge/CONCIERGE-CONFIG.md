@@ -20,7 +20,7 @@
 ### service-site（陪诊服务）
 - **Vercel 项目 URL:** https://vercel.com/baroqueliu6-devs-projects/service-site
 - **预览域名:** https://service-site-gamma.vercel.app
-- **Root Directory:** 需要设置为 `concierge`
+- **Root Directory:** 需要设置为 `medical-concierge/concierge` ⚠️ 完整路径
 - **部署分支:** `main`
 
 ### tattoo-site（纹身设计）

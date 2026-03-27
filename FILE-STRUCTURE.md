@@ -55,7 +55,7 @@ tattoo-shop/
 - **GitHub 仓库:** `baroqueliu6-dev/tattoo-shop`
 - **Vercel 项目:** `service-site`
 - **域名:** `13801380.site`
-- **Root Directory:** `concierge`
+- **Root Directory:** `medical-concierge/concierge` ⚠️ 完整路径，不是 `concierge`
 
 ---
 

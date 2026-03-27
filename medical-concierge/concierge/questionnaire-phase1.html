@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beijing Medical Concierge - Client Questionnaire</title>
+    <link rel="stylesheet" href="css/concierge-style.css">
+    <style>
+        .questionnaire-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .questionnaire-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .questionnaire-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .questionnaire-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group input[type="tel"]:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+        
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: normal;
+            cursor: pointer;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .required {
+            color: #e53e3e;
+        }
+        
+        .submit-section {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e2e8f0;
+        }
+        
+        .submit-note {
+            margin-top: 1rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .questionnaire-container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+            
+            .checkbox-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">🏥 Beijing Medical Concierge</a>
+            <div class="nav-links">
+                <a href="index.html#services">Services</a>
+                <a href="index.html#hospitals">Hospitals</a>
+                <a href="index.html#pricing">Pricing</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Questionnaire Container -->
+    <div class="questionnaire-container">
+        <div class="questionnaire-header">
+            <h1>📋 Client Information Questionnaire</h1>
+            <p style="color: var(--text-light); margin-top: 0.5rem;">
+                Please fill out this 2-minute questionnaire. We'll review your information and provide a personalized recommendation within 2 hours.
+            </p>
+        </div>
+
+        <form id="questionnaireForm" action="mailto:baroqueliu6@gmail.com" method="post" enctype="text/plain">
+            
+            <!-- Section 1: Basic Information -->
+            <div class="questionnaire-section">
+                <h3>📝 Part 1: Basic Information <span class="required">*</span> Required</h3>
+                
+                <div class="form-group">
+                    <label for="name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="Your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="gender">Gender <span class="required">*</span></label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Please select...</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other / Prefer not to say</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Age Group <span class="required">*</span></label>
+                    <select id="age" name="age" required>
+                        <option value="">Please select...</option>
+                        <option value="18-30">18-30 years</option>
+                        <option value="31-45">31-45 years</option>
+                        <option value="46-60">46-60 years</option>
+                        <option value="61-75">61-75 years</option>
+                        <option value="76+">76+ years (⚠️ Family companion required)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact">Contact Information <span class="required">*</span></label>
+                    <input type="text" id="contact" name="contact" required placeholder="WeChat / Phone / Email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Current Location <span class="required">*</span></label>
+                    <select id="location" name="location" required>
+                        <option value="">Please select...</option>
+                        <option value="beijing">Beijing (Local)</option>
+                        <option value="china">Other city in China (Planning to visit Beijing)</option>
+                        <option value="overseas">Overseas (Planning to return to China)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Section 2: Medical Needs -->
+            <div class="questionnaire-section">
+                <h3>🏥 Part 2: Medical Needs <span class="required">*</span> Required</h3>
+                
+                <div class="form-group">
+                    <label>Service Type Needed <span class="required">*</span></label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="service_type" value="appointment"> Appointment Booking</label>
+                        <label><input type="checkbox" name="service_type" value="accompaniment"> Visit Accompaniment</label>
+                        <label><input type="checkbox" name="service_type" value="translation"> Medical Translation</label>
+                        <label><input type="checkbox" name="service_type" value="records"> Medical Records</label>
+                        <label><input type="checkbox" name="service_type" value="other"> Other</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="department">Department / Symptoms <span class="required">*</span></label>
+                    <select id="department" name="department" required>
+                        <option value="">Please select...</option>
+                        <option value="dental">Dental (e.g., tooth extraction, cleaning)</option>
+                        <option value="internal">Internal Medicine (e.g., cold, stomach issues)</option>
+                        <option value="surgery">Surgery (e.g., orthopedics, general surgery)</option>
+                        <option value="obgyn">Obstetrics & Gynecology</option>
+                        <option value="pediatrics">Pediatrics</option>
+                        <option value="checkup">Health Checkup / Vaccination</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="timing">Preferred Timing <span class="required">*</span></label>
+                    <select id="timing" name="timing" required>
+                        <option value="">Please select...</option>
+                        <option value="urgent">Within this week (Urgent)</option>
+                        <option value="1-2weeks">Next week (1-2 weeks)</option>
+                        <option value="1month">Within one month</option>
+                        <option value="flexible">Flexible, open to suggestions</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="hospital_preference">Hospital Preference</label>
+                    <select id="hospital_preference" name="hospital_preference">
+                        <option value="none">No preference, open to expert recommendations</option>
+                        <option value="pumc">Peking Union Medical College Hospital</option>
+                        <option value="pumc_dental">Peking University School of Stomatology</option>
+                        <option value="china_japan">China-Japan Friendship Hospital</option>
+                        <option value="chaoyang">Beijing Chaoyang Hospital</option>
+                        <option value="united">Beijing United Family Hospital</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Section 3: Health Screening -->
+            <div class="questionnaire-section">
+                <h3>⚠️ Part 3: Health Screening (Important)</h3>
+                
+                <div class="form-group">
+                    <label>Chronic Conditions <span class="required">*</span></label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="conditions" value="none" checked> None</label>
+                        <label><input type="checkbox" name="conditions" value="hypertension"> Hypertension</label>
+                        <label><input type="checkbox" name="conditions" value="diabetes"> Diabetes</label>
+                        <label><input type="checkbox" name="conditions" value="heart"> Heart Disease</label>
+                        <label><input type="checkbox" name="conditions" value="blood"> Blood Disorders</label>
+                        <label><input type="checkbox" name="conditions" value="immune"> Immune System Disorders</label>
+                        <label><input type="checkbox" name="conditions" value="other"> Other</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="allergies">Drug Allergies</label>
+                    <select id="allergies" name="allergies">
+                        <option value="none">None</option>
+                        <option value="penicillin">Penicillin</option>
+                        <option value="aspirin">Aspirin</option>
+                        <option value="sulfa">Sulfa Drugs</option>
+                        <option value="other">Other (please specify below)</option>
+                    </select>
+                    <input type="text" name="allergies_other" placeholder="If other, please specify:" style="margin-top: 0.5rem;">
+                </div>
+                
+                <div class="form-group">
+                    <label for="medications">Currently Taking Medications</label>
+                    <textarea id="medications" name="medications" rows="2" placeholder="List any medications you're currently taking, or write 'None'"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pregnancy">For Female: Pregnant or Trying to Conceive?</label>
+                    <select id="pregnancy" name="pregnancy">
+                        <option value="na">Not Applicable</option>
+                        <option value="no">No</option>
+                        <option value="yes">Yes (⚠️ Requires special attention)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Section 4: Additional Information -->
+            <div class="questionnaire-section">
+                <h3>📝 Part 4: Additional Information</h3>
+                
+                <div class="form-group">
+                    <label for="companion">Do You Have a Companion?</label>
+                    <select id="companion" name="companion">
+                        <option value="no">No, visiting alone</option>
+                        <option value="yes">Yes, with family/friend</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="accessibility">Do You Need Accessibility Facilities?</label>
+                    <select id="accessibility" name="accessibility">
+                        <option value="no">No</option>
+                        <option value="wheelchair">Wheelchair Access Needed</option>
+                        <option value="other">Other (please specify)</option>
+                    </select>
+                    <input type="text" name="accessibility_other" placeholder="If other, please specify:" style="margin-top: 0.5rem;">
+                </div>
+                
+                <div class="form-group">
+                    <label for="referral">How Did You Hear About Us?</label>
+                    <select id="referral" name="referral">
+                        <option value="google">Google Search</option>
+                        <option value="referral">Friend Referral</option>
+                        <option value="reddit">Reddit / Social Media</option>
+                        <option value="wechat">WeChat</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Section 5: Confirmation -->
+            <div class="questionnaire-section">
+                <h3>✅ Confirmation</h3>
+                
+                <div class="form-group">
+                    <label class="checkbox-group" style="display: block;">
+                        <input type="checkbox" name="confirm_accurate" required>
+                        I confirm that the information provided is accurate and complete. <span class="required">*</span>
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-group" style="display: block;">
+                        <input type="checkbox" name="confirm_understanding" required>
+                        I understand that concierge services do not provide medical advice, and all medical decisions must be made with licensed healthcare professionals. <span class="required">*</span>
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-group" style="display: block;">
+                        <input type="checkbox" name="confirm_contact" required>
+                        I agree to be contacted by Beijing Medical Concierge team via the contact information provided above. <span class="required">*</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Submit Section -->
+            <div class="submit-section">
+                <button type="submit" class="btn btn-primary btn-large">
+                    📧 Submit Questionnaire
+                </button>
+                
+                <p class="submit-note">
+                    🕐 Response Time: Within 2 hours (9:00-21:00 Beijing Time)<br>
+                    📧 We'll contact you via your preferred contact method<br>
+                    🔒 Your information is kept strictly confidential
+                </p>
+                
+                <div style="margin-top: 1.5rem; padding: 1rem; background: #f0fdf4; border-radius: 8px; border-left: 3px solid #10b981;">
+                    <strong>💬 Need Immediate Help?</strong><br>
+                    WeChat: <strong>baroque_med</strong> | Email: <strong>baroqueliu6@gmail.com</strong>
+                </div>
+                
+                <p style="margin-top: 1rem;">
+                    <a href="index.html" style="color: var(--primary-color);">← Back to Homepage</a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" style="margin-top: 3rem;">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Beijing Medical Concierge. All rights reserved.</p>
+                <p style="font-size: 0.85rem; color: #999; margin-top: 0.5rem;">
+                    ⚠️ Disclaimer: We are not a medical institution and do not provide medical advice.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handler
+        document.getElementById('questionnaireForm').addEventListener('submit', function(e) {
+            const name = document.getElementById('name').value;
+            const department = document.getElementById('department').value;
+            const timing = document.getElementById('timing').value;
+            
+            // Create email subject and body
+            const subject = encodeURIComponent(`New Questionnaire: ${name} - ${department}`);
+            const body = encodeURIComponent(`Thank you for your submission!\n\nWe will review your information and contact you within 2 hours.\n\nYour Request:\n- Name: ${name}\n- Department: ${department}\n- Timing: ${timing}\n\nBest regards,\nBeijing Medical Concierge Team`);
+            
+            // Set the form action dynamically
+            this.action = `mailto:baroqueliu6@gmail.com?subject=${subject}&body=${body}`;
+        });
+    </script>
+</body>
+</html>
