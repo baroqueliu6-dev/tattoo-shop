@@ -151,6 +151,37 @@
             font-weight: 600;
             margin-bottom: 1rem;
         }
+        
+        /* Testimonial Collapse Styles */
+        .testimonial-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-text.expanded {
+            -webkit-line-clamp: unset;
+            overflow: visible;
+        }
+        
+        .testimonial-expand-btn {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            cursor: pointer;
+            padding: 0.25rem 0;
+            margin-top: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .testimonial-expand-btn:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -853,14 +884,14 @@
                 <div class="video-card">
                     <div class="video-container">
                         <iframe 
-                            src="https://www.youtube.com/embed/VIDEO_ID_1" 
-                            title="Patient Story 1"
+                            src="https://www.youtube.com/embed/Ko7wU0R8Rbk" 
+                            title="China Hospital vs UK NHS"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
                         </iframe>
                     </div>
-                    <h4>Emergency Care at PUMC Hospital</h4>
-                    <p>How we helped James from UK get treated within 2 hours</p>
+                    <h4>China Hospital vs UK NHS (We Took My Dad)</h4>
+                    <p>Real comparison of healthcare systems - 100k+ views</p>
                 </div>
 
                 <div class="video-card">
@@ -903,42 +934,13 @@
             <p class="section-subtitle">Real experiences from expats in Beijing</p>
             
             <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"I broke my arm and had no idea which hospital to go to. The team not only found me a great orthopedic specialist but also stayed with me throughout the entire visit. They explained everything clearly and helped me understand the treatment plan. Lifesaver!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">👨</div>
-                        <div class="author-info">
-                            <strong>James M.</strong>
-                            <span>British Expat, 3 years in Beijing</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"As a pregnant foreigner in Beijing, I was worried about prenatal care. The concierge service helped me find an English-speaking OB-GYN and accompanied me to all my appointments. They even translated all my medical records. Highly recommend!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">👩</div>
-                        <div class="author-info">
-                            <strong>Sarah L.</strong>
-                            <span>American Expat, expecting mother</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"My elderly parents visited from Germany and my father needed medical attention. The service was professional, compassionate, and efficient. They handled everything and my parents felt safe and well-cared for. Worth every dollar."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">👨‍💼</div>
-                        <div class="author-info">
-                            <strong>Klaus W.</strong>
-                            <span>German Expat, family visit</span>
-                        </div>
-                    </div>
-                </div>
+                <!-- Testimonials are dynamically loaded from JavaScript -->
+                <!-- 30 testimonials in database, 6 random displayed per page load -->
             </div>
+            
+            <p style="text-align: center; margin-top: 2rem; color: var(--text-light); font-size: 0.9rem;">
+                🔄 Refresh page to see more patient stories (36+ testimonials in database)
+            </p>
         </div>
     </section>
 
