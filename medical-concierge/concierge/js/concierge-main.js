@@ -694,4 +694,112 @@ window.toggleTestimonial = toggleTestimonial;
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize testimonials with random display
     initTestimonials();
+    
+    // Initialize videos with random display
+    initRandomVideos();
 });
+
+// ============================================
+// Random Video Display
+// ============================================
+
+// Video Database
+const videoDatabase = [
+    {
+        id: "Ko7wU0R8Rbk",
+        title: "China Hospital vs UK NHS (We Took My Dad)",
+        description: "Real comparison of healthcare systems - 100k+ views",
+        category: "comparison"
+    },
+    {
+        id: "vEelapLhqdI",
+        title: "Where to Find GI Specialists in China",
+        description: "Expat shares experience finding gastroenterologist",
+        category: "specialist"
+    },
+    {
+        id: "Um9Yj-Ah5dE",
+        title: "Health Insurance in China for Expats",
+        description: "Everything you need to know about health insurance",
+        category: "insurance"
+    },
+    {
+        id: "qsCydTdE40M",
+        title: "Truth About China: I Ended Up in a Chinese Hospital",
+        description: "Foreigner's honest hospital experience - 220k views",
+        category: "experience"
+    },
+    {
+        id: "yXITNw3aYjs",
+        title: "Public vs Private Medical Care in China",
+        description: "Comparison of healthcare options - 700k views",
+        category: "comparison"
+    },
+    {
+        id: "moEcVc_xT6I",
+        title: "How Much It Costs to Give Birth in China",
+        description: "Childbirth costs and experience - 6M views",
+        category: "cost"
+    },
+    {
+        id: "bXYBfTat18M",
+        title: "Healthcare Differences: China vs USA",
+        description: "American expat compares healthcare systems",
+        category: "comparison"
+    },
+    {
+        id: "65DioGgh0AY",
+        title: "Healthcare in China - Costly or Affordable?",
+        description: "Breaking down medical costs in China",
+        category: "cost"
+    }
+];
+
+// Get Random Videos
+function getRandomVideos(count = 3) {
+    const shuffled = shuffleArray(videoDatabase);
+    return shuffled.slice(0, count);
+}
+
+// Initialize Random Videos
+function initRandomVideos() {
+    const videoGrid = document.querySelector('.video-grid');
+    if (!videoGrid) return;
+    
+    // Clear existing videos
+    videoGrid.innerHTML = '';
+    
+    // Get random videos
+    const selectedVideos = getRandomVideos(3);
+    
+    // Render videos
+    selectedVideos.forEach((video, index) => {
+        const card = document.createElement('div');
+        card.className = 'video-card';
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        card.style.transitionDelay = `${index * 0.1}s`;
+        
+        card.innerHTML = `
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/${video.id}" 
+                    title="${video.title}"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <h4>${video.title}</h4>
+            <p>${video.description}</p>
+        `;
+        
+        videoGrid.appendChild(card);
+        
+        // Trigger animation
+        setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, 100 + index * 100);
+    });
+}
