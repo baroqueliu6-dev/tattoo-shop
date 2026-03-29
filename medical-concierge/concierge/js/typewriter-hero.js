@@ -1,7 +1,7 @@
 /**
  * Typewriter Hero Effect
  * Displays rotating advantage statements with typewriter animation
- * Keywords are highlighted with gradient colors
+ * Friend-to-friend conversational style with rhyming punchlines
  */
 
 (function() {
@@ -17,29 +17,11 @@
         mobileSpeed: 50         // ms per character on mobile (also fast)
     };
 
-    // Advantage phrases with keywords marked for gradient highlighting
-    // Format: Full sentence with HTML for gradient keyword
-    const phrases = [
-        { 
-            html: '<span class="gradient-text">24/7 Available</span> — Whenever you need us, we\'re here.',
-            plain: '24/7 Available — Whenever you need us, we\'re here.'
-        },
-        { 
-            html: '<span class="gradient-text">English-Speaking Doctors</span> — No language barriers, ever.',
-            plain: 'English-Speaking Doctors — No language barriers, ever.'
-        },
-        { 
-            html: '<span class="gradient-text">Same-Day Appointments</span> — Skip the wait, see a doctor today.',
-            plain: 'Same-Day Appointments — Skip the wait, see a doctor today.'
-        },
-        { 
-            html: '<span class="gradient-text">100% Satisfaction Guarantee</span> — Not happy? Full refund.',
-            plain: '100% Satisfaction Guarantee — Not happy? Full refund.'
-        },
-        { 
-            html: '<span class="gradient-text">500+ Expats Served</span> — Trusted by Beijing\'s international community.',
-            plain: '500+ Expats Served — Trusted by Beijing\'s international community.'
-        }
+    // Advantage phrases - Friend-to-friend conversational style with rhyming punchlines
+    const lines = [
+        "Same doctors, same care — way less than the US, honestly. Care can wait, your health can't. See someone today, not next month.",
+        "Why pay more? Why wait longer? Doctors rest, pain doesn't. Get checked this week, not in 3 months.",
+        "So many folks come here now. They get it: care waits, health doesn't. Top hospitals, fraction of cost. Done."
     ];
 
     let currentPhraseIndex = 0;
@@ -75,120 +57,51 @@
      * Render a static phrase on mobile (no animation)
      */
     function renderStaticPhrase() {
-        const phrase = phrases[0];
-        const html = formatPhrase(phrase);
-        typewriterElement.innerHTML = html;
+        typewriterElement.innerHTML = `<span class="typewriter-word">${lines[0]}</span>`;
         if (cursorElement) cursorElement.style.display = 'none';
     }
 
     /**
-     * Format phrase with gradient keyword highlighting
-     */
-    function formatPhrase(phrase) {
-        const { text, keyword } = phrase;
-        const keywordIndex = text.indexOf(keyword);
-        
-        if (keywordIndex === -1) {
-            return `<span class="typewriter-word">${text}</span>`;
-        }
-
-        const before = text.substring(0, keywordIndex);
-        const match = text.substring(keywordIndex, keywordIndex + keyword.length);
-        const after = text.substring(keywordIndex + keyword.length);
-
-        return `
-            <span class="typewriter-word">${before}</span>
-            <span class="typewriter-word"><span class="gradient-text">${match}</span></span>
-            <span class="typewriter-word">${after}</span>
-        `.trim();
-    }
-
-    /**
-     * Smart HTML insertion - handles HTML tags correctly during typing
-     * Shows HTML up to the given plain text position
-     */
-    function insertHtmlAtPosition(fullHtml, plainText, position) {
-        if (position >= plainText.length) {
-            return fullHtml; // Show complete HTML
-        }
-        
-        let result = '';
-        let plainIndex = 0;
-        let i = 0;
-        
-        while (i < fullHtml.length && plainIndex < position) {
-            const char = fullHtml[i];
-            
-            if (char === '<') {
-                // Found opening bracket - extract full tag
-                const tagEnd = fullHtml.indexOf('>', i);
-                if (tagEnd === -1) break; // Malformed HTML
-                
-                const tag = fullHtml.substring(i, tagEnd + 1);
-                result += tag;
-                i = tagEnd + 1;
-            } else {
-                // Regular character
-                result += char;
-                plainIndex++;
-                i++;
-            }
-        }
-        
-        return result;
-    }
-
-    /**
-     * Type the next character - Smart HTML handling
+     * Type the next character
      */
     function type() {
         if (isPaused) return;
 
-        const currentPhrase = phrases[currentPhraseIndex];
+        const currentLine = lines[currentPhraseIndex];
         const currentSpeed = window.innerWidth <= CONFIG.mobileBreakpoint 
             ? CONFIG.mobileSpeed 
             : CONFIG.typingSpeed;
         
         if (!isDeleting) {
             // Typing forward
-            if (currentCharIndex <= currentPhrase.plain.length) {
-                const htmlToShow = insertHtmlAtPosition(
-                    currentPhrase.html, 
-                    currentPhrase.plain, 
-                    currentCharIndex
-                );
-                typewriterElement.innerHTML = `<span class="typewriter-word">${htmlToShow}</span>`;
+            if (currentCharIndex <= currentLine.length) {
+                typewriterElement.innerHTML = `<span class="typewriter-word">${currentLine.substring(0, currentCharIndex)}</span>`;
                 currentCharIndex++;
                 setTimeout(type, currentSpeed);
             } else {
                 // Finished typing, pause then start deleting
                 isPaused = true;
                 
-                // Render with gradient highlighting when complete
-                typewriterElement.innerHTML = currentPhrase.html;
+                // Show complete line when done
+                typewriterElement.innerHTML = `<span class="typewriter-word">${currentLine}</span>`;
                 
                 setTimeout(() => {
                     isPaused = false;
                     isDeleting = true;
-                    currentCharIndex = currentPhrase.plain.length;
+                    currentCharIndex = currentLine.length;
                     setTimeout(type, CONFIG.deletePause);
                 }, CONFIG.pauseTime);
             }
         } else {
             // Deleting
             if (currentCharIndex >= 0) {
-                const htmlToShow = insertHtmlAtPosition(
-                    currentPhrase.html, 
-                    currentPhrase.plain, 
-                    currentCharIndex
-                );
-                typewriterElement.innerHTML = `<span class="typewriter-word">${htmlToShow}</span>`;
+                typewriterElement.innerHTML = `<span class="typewriter-word">${currentLine.substring(0, currentCharIndex)}</span>`;
                 currentCharIndex--;
                 setTimeout(type, CONFIG.deletingSpeed);
             } else {
                 // Finished deleting, move to next phrase
                 isDeleting = false;
-                currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+                currentPhraseIndex = (currentPhraseIndex + 1) % lines.length;
                 setTimeout(type, 300);
             }
         }
