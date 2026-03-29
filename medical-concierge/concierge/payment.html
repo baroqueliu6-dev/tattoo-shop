@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Beijing Medical Concierge</title>
+    <link rel="stylesheet" href="css/concierge-style.css">
+    <style>
+        .payment-page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .payment-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .payment-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .payment-header h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .payment-notice {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #f59e0b;
+            margin: 2rem 0;
+        }
+        
+        .payment-notice h3 {
+            color: #92400e;
+            margin-bottom: 0.75rem;
+        }
+        
+        .payment-notice p {
+            color: #78350f;
+            line-height: 1.6;
+        }
+        
+        .benefits-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #48bb78;
+            margin: 2rem 0;
+        }
+        
+        .benefits-box h4 {
+            color: #065f46;
+            margin-bottom: 1rem;
+        }
+        
+        .benefits-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .benefits-box li {
+            padding: 0.5rem 0;
+            color: #047857;
+            display: flex;
+            align-items: center;
+        }
+        
+        .benefits-box li::before {
+            content: '✅';
+            margin-right: 0.5rem;
+        }
+        
+        .payment-form {
+            margin: 2rem 0;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .paypal-button {
+            background: linear-gradient(135deg, #0070ba 0%, #003087 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .paypal-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,112,186,0.3);
+        }
+        
+        .secure-badge {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .example-box {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .example-box p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-page">
+        <div class="payment-card">
+            <div class="payment-header">
+                <h1>💳 Initial Consultation Payment</h1>
+                <p style="color: #666; font-size: 1.1rem;">Professional medical assessment for expats in Beijing</p>
+            </div>
+            
+            <!-- 重要提示 -->
+            <div class="payment-notice">
+                <h3>⏱️ Payment Processing Time</h3>
+                <p><strong>Due to international network conditions,</strong> payment confirmation may take <span style="background: #fbbf24; padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: bold;">20-60 minutes</span>. You'll receive an email confirmation once payment is verified. Your consultation slot is reserved immediately!</p>
+            </div>
+            
+            <!-- 优惠提示 -->
+            <div class="benefits-box">
+                <h4>🎉 Good News!</h4>
+                <p style="margin-bottom: 1rem; color: #047857;"><strong>Your consultation fee ($20) will be <span style="background: #48bb78; color: white; padding: 0.25rem 0.5rem; border-radius: 4px;">100% credited toward</span> any service package you purchase!</strong></p>
+                
+                <h4>✨ What You Get After Payment:</h4>
+                <ul>
+                    <li><strong>Service Credit Certificate</strong> - Proof of $20 credit toward any package</li>
+                    <li><strong>Priority Consultation</strong> - Skip the queue, get responded within 2 hours</li>
+                    <li><strong>Personalized Assessment</strong> - We'll analyze your needs and recommend the best package</li>
+                    <li><strong>Refund Guarantee</strong> - Full refund if you're not satisfied with our consultation</li>
+                </ul>
+                
+                <div class="example-box">
+                    <p><strong>Example:</strong> If you choose our $800 All-Day Accompaniment package, you'll only pay $780 after the $20 credit.</p>
+                </div>
+            </div>
+            
+            <!-- 支付表单 -->
+            <form class="payment-form" id="paymentForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="John Smith" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">WhatsApp/WeChat (Optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900">
+                </div>
+                
+                <div class="form-group">
+                    <label for="needs">Medical Needs / Symptoms *</label>
+                    <textarea id="needs" name="needs" rows="4" placeholder="Please describe your symptoms, preferred hospital, or any specific requirements..." required></textarea>
+                </div>
+                
+                <button type="submit" class="paypal-button">
+                    💳 Pay $20 via PayPal
+                </button>
+                
+                <div class="secure-badge">
+                    🔒 Secure payment powered by PayPal • SSL Encrypted
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 获取表单数据
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                needs: document.getElementById('needs').value
+            };
+            
+            // 保存到 localStorage（支付成功后使用）
+            localStorage.setItem('consultationData', JSON.stringify(formData));
+            
+            // 跳转到 PayPal 支付
+            // 注意：替换为你的 PayPal 邮箱
+            const paypalUrl = 'https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=baroqueliu6@gmail.com&item_name=Medical+Consultation+Fee&amount=20.00&currency_code=USD&return=https://13801380.site/payment-success.html&cancel_return=https://13801380.site/payment-cancelled.html&cbt=Return+to+Beijing+Medical+Concierge';
+            
+            window.location.href = paypalUrl;
+        });
+    </script>
+</body>
+</html>

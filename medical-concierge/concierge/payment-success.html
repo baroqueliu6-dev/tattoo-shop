@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success - Beijing Medical Concierge</title>
+    <link rel="stylesheet" href="css/concierge-style.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <style>
+        .success-page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .success-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .success-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .success-header h1 {
+            color: #48bb78;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .certificate-container {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        /* 承诺书样式 */
+        #certificate {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 3px solid #0284c7;
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .cert-header {
+            text-align: center;
+            border-bottom: 2px solid #0284c7;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cert-header h2 {
+            color: #0c4a6e;
+            font-size: 1.8rem;
+            margin: 0.5rem 0;
+        }
+        
+        .cert-header p {
+            color: #0369a1;
+            font-size: 1rem;
+            margin: 0;
+        }
+        
+        .cert-body {
+            margin: 1.5rem 0;
+        }
+        
+        .cert-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #bae6fd;
+        }
+        
+        .cert-label {
+            color: #0369a1;
+            font-weight: 600;
+        }
+        
+        .cert-value {
+            color: #0c4a6e;
+            font-weight: 500;
+        }
+        
+        .cert-credit {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid #f59e0b;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .cert-credit h3 {
+            color: #92400e;
+            margin: 0 0 0.5rem 0;
+            font-size: 1.3rem;
+        }
+        
+        .cert-credit p {
+            color: #78350f;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        
+        .cert-credit .amount {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #b45309;
+        }
+        
+        .cert-section {
+            margin: 1.5rem 0;
+        }
+        
+        .cert-section h4 {
+            color: #0c4a6e;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+        
+        .cert-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .cert-section li {
+            padding: 0.5rem 0;
+            color: #0369a1;
+            font-size: 0.95rem;
+        }
+        
+        .cert-section li::before {
+            content: '✓ ';
+            color: #48bb78;
+            font-weight: bold;
+        }
+        
+        .cert-footer {
+            text-align: center;
+            border-top: 2px solid #0284c7;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .cert-footer p {
+            color: #0369a1;
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .cert-footer .contact {
+            font-weight: 600;
+            color: #0c4a6e;
+        }
+        
+        .download-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 0.5rem;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(72,187,120,0.3);
+        }
+        
+        .download-btn.secondary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .next-steps {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .next-steps h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .next-steps ol {
+            padding-left: 1.5rem;
+        }
+        
+        .next-steps li {
+            padding: 0.5rem 0;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .notice-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #f59e0b;
+            margin: 1rem 0;
+        }
+        
+        .notice-box p {
+            color: #92400e;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-page">
+        <div class="success-header">
+            <div class="success-icon">✅</div>
+            <h1>Payment Received!</h1>
+            <p style="color: #666; font-size: 1.1rem;">Thank you for your consultation payment</p>
+        </div>
+        
+        <div class="certificate-container">
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem;">📜 Your Service Credit Certificate</h2>
+            
+            <!-- 承诺书 -->
+            <div id="certificate">
+                <div class="cert-header">
+                    <h2>🏥 Beijing Medical Concierge</h2>
+                    <p>Service Credit Certificate</p>
+                </div>
+                
+                <div class="cert-body">
+                    <div class="cert-row">
+                        <span class="cert-label">Certificate ID:</span>
+                        <span class="cert-value" id="cert-id">BMC-2026-0001</span>
+                    </div>
+                    
+                    <div class="cert-row">
+                        <span class="cert-label">Date:</span>
+                        <span class="cert-value" id="cert-date">March 29, 2026</span>
+                    </div>
+                    
+                    <div class="cert-row">
+                        <span class="cert-label">Customer:</span>
+                        <span class="cert-value" id="cert-name">[Customer Name]</span>
+                    </div>
+                    
+                    <div class="cert-credit">
+                        <h3>✅ Service Credit</h3>
+                        <p class="amount">$20 USD</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">(Consultation fee credited toward any service package)</p>
+                    </div>
+                    
+                    <div class="cert-section">
+                        <h4>📋 About Us:</h4>
+                        <ul>
+                            <li>Professional medical concierge service for expats in Beijing</li>
+                            <li>Help you navigate China's healthcare system with confidence</li>
+                            <li>English-speaking assistance from booking to pharmacy</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cert-section">
+                        <h4>🎁 Referral Rewards (3-Tier):</h4>
+                        <ul>
+                            <li>Tier 1: Refer 1 friend → 10% off your next service</li>
+                            <li>Tier 2: Refer 3 friends → 20% off your next service</li>
+                            <li>Tier 3: Refer 5 friends → 30% off + FREE consultation for life</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="cert-footer">
+                    <p class="contact">📧 hello@13801380.site | 🌐 13801380.site | 💬 WhatsApp: +86 138 0138 0000</p>
+                    <p>Valid for 12 months from issue date</p>
+                </div>
+            </div>
+            
+            <!-- 下载按钮 -->
+            <div class="download-section">
+                <button class="download-btn" onclick="downloadCertificate()">
+                    📥 Download Certificate (PNG)
+                </button>
+                <button class="download-btn secondary" onclick="window.print()">
+                    🖨️ Print Certificate
+                </button>
+            </div>
+            
+            <!-- 下一步指引 -->
+            <div class="next-steps">
+                <h3>🎯 What Happens Next?</h3>
+                <ol>
+                    <li><strong>Payment Verification (20-60 minutes):</strong> Due to international network conditions, we need 20-60 minutes to confirm your payment. You'll receive an email confirmation shortly.</li>
+                    <li><strong>Priority Consultation (within 2 hours):</strong> After verification, we'll analyze your medical needs and send personalized hospital/doctor recommendations.</li>
+                    <li><strong>Service Booking:</strong> If you choose our accompaniment service, your $20 consultation fee will be automatically credited toward the total cost.</li>
+                    <li><strong>Ongoing Support:</strong> We're with you every step - from booking to pharmacy, we've got you covered!</li>
+                </ol>
+                
+                <div class="notice-box">
+                    <p><strong>⏱️ Note:</strong> Payment confirmation may take 20-60 minutes due to international network conditions. Your consultation slot is reserved immediately!</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="index.html#contact" style="color: var(--primary-color); font-weight: 600; font-size: 1.1rem;">← Back to Website</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 页面加载时填充客户信息
+        window.addEventListener('load', function() {
+            // 从 localStorage 获取表单数据
+            const formData = JSON.parse(localStorage.getItem('consultationData') || '{}');
+            
+            // 生成证书 ID
+            const certId = 'BMC-2026-' + Math.floor(Math.random() * 10000).toString().padStart(4, '0');
+            document.getElementById('cert-id').textContent = certId;
+            
+            // 设置日期
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('cert-date').textContent = today.toLocaleDateString('en-US', options);
+            
+            // 填充客户姓名
+            if (formData.name) {
+                document.getElementById('cert-name').textContent = formData.name;
+            } else {
+                document.getElementById('cert-name').textContent = '[Customer Name]';
+            }
+        });
+        
+        // 下载证书为 PNG
+        function downloadCertificate() {
+            const certificate = document.getElementById('certificate');
+            
+            html2canvas(certificate, {
+                scale: 2,
+                backgroundColor: '#f0f9ff',
+                logging: false,
+                useCORS: true
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'Beijing-Medical-Concierge-Certificate.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+                
+                alert('✅ Certificate downloaded! Please save it for your records.');
+            }).catch(err => {
+                console.error('Download failed:', err);
+                alert('❌ Download failed. Please try again or take a screenshot.');
+            });
+        }
+    </script>
+</body>
+</html>
