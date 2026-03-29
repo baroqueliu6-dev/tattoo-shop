@@ -18,7 +18,7 @@
     --text-light: #6B7280; /* 次要文字 - 中灰 */
     --text-lighter: #9CA3AF; /* 浅色文字 - 浅灰 */
     --bg-light: #F9FAFB; /* 柔和白 - 页面大背景 */
-    --white: #FFFFFF; /* 纯白 - 内容卡片 */
+    --white: #EDE9FE; /* 浅紫色 - 内容卡片 */
     --bg-gray: #F3F4F6; /* 浅灰 - 分隔区域 */
     --success: #10B981; /* 成功绿 */
     --warning: #F59E0B; /* 警告橙 */
@@ -372,7 +372,7 @@ a {
 }
 
 .problem-card {
-    background: #FFFFFF;
+    background: #EDE9FE;
     padding: 2rem;
     border-radius: 12px; /* 大圆角 */
     text-align: left;
@@ -465,7 +465,7 @@ a {
 }
 
 .service-card {
-    background: #FFFFFF;
+    background: #EDE9FE;
     padding: 2.5rem;
     border-radius: 12px;
     border: 1px solid #E5E7EB;
@@ -555,7 +555,7 @@ a {
 }
 
 .hospital-card {
-    background: #FFFFFF;
+    background: #EDE9FE;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
@@ -685,7 +685,7 @@ a {
 }
 
 .pricing-card {
-    background: #FFFFFF;
+    background: #EDE9FE;
     padding: 2.5rem;
     border-radius: 12px;
     text-align: center;
@@ -771,7 +771,7 @@ a {
 }
 
 .pricing-note {
-    background: #FFFFFF;
+    background: #EDE9FE;
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
