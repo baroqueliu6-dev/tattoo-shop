@@ -7,6 +7,7 @@
     <meta name="description" content="Professional medical translation and hospital navigation services for foreigners in Beijing. We help you navigate China's healthcare system with confidence.">
     <link rel="stylesheet" href="css/concierge-style.css">
     <link rel="stylesheet" href="css/enhancements.css">
+    <link rel="stylesheet" href="css/typewriter-hero.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@chatwoot/widget@latest/dist/widget.css">
     
     <!-- YouTube Embed Support -->
@@ -201,15 +202,66 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- NEW Hero Section - Typewriter Effect (First Block) -->
+    <section class="typewriter-hero">
+        <div class="typewriter-container">
+            <h1 class="typewriter-text">
+                <span id="typewriter-content"></span><span class="typewriter-cursor"></span>
+            </h1>
+            <p class="typewriter-subtitle">
+                Professional medical assistance for expats in Beijing. 
+                From booking to pharmacy — we're with you every step.
+            </p>
+            
+            <div class="typewriter-cta">
+                <a href="#contact" class="btn btn-primary btn-large">📧 Get Free Consultation</a>
+                <a href="questionnaire-phase1.html" class="btn btn-secondary btn-large">⚡ Fast Track (2-min Quiz)</a>
+            </div>
+            
+            <!-- Accessibility: Screen reader support -->
+            <div class="sr-only" aria-live="polite" aria-atomic="true" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
+                <span id="sr-typewriter-content">24/7 Available — Whenever you need us, we're here.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Original Hero Section - Now Second Block (Problem/Solution) -->
     <section class="hero">
         <div class="container">
-            <!-- Version A: Problem-driven (Testing) -->
-            <h1>Lost in Beijing's Hospitals? We've Got You Covered.</h1>
-            <p class="hero-subtitle">English-speaking medical assistance for expats. From booking to pharmacy — we're with you every step. 100% satisfaction guarantee.</p>
+            <h2>Healthcare in Beijing Can Be Challenging</h2>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">🗣️</div>
+                    <h3>Language Barrier</h3>
+                    <p>Most doctors don't speak English. Misunderstandings can lead to wrong diagnoses or treatments.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🏥</div>
+                    <h3>Unfamiliar System</h3>
+                    <p>Chinese hospitals work differently. Registration, payment, pharmacy - all can be confusing.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">⏰</div>
+                    <h3>Long Waits</h3>
+                    <p>Without local knowledge, you might wait hours. We help you skip the lines.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">💊</div>
+                    <h3>Medication Confusion</h3>
+                    <p>Chinese prescriptions are hard to understand. Dosage instructions may be unclear.</p>
+                </div>
+            </div>
             
-            <!-- Enhanced Trust Badges -->
-            <div class="trust-badges">
+            <div class="solution-box">
+                <h3>💡 We're Here to Help</h3>
+                <p>Our professional medical concierge service provides English-speaking assistance throughout your entire healthcare journey in Beijing. From finding the right doctor to understanding your prescription, we've got you covered.</p>
+                <div class="guarantee-box">
+                    <strong>🛡️ 100% Satisfaction Guarantee:</strong> Not satisfied? Full refund. No questions asked.
+                </div>
+            </div>
+            
+            <!-- Enhanced Trust Badges (moved from first hero) -->
+            <div class="trust-badges" style="margin-top: 2rem;">
                 <span class="trust-badge">🗣️ Fluent English</span>
                 <span class="trust-badge">🏥 Top Hospitals</span>
                 <span class="trust-badge">⚡ Same-Day Appointments</span>
@@ -219,19 +271,12 @@
             </div>
             
             <!-- Enhanced Social Proof -->
-            <div style="text-align: center; margin: 1.5rem 0; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
+            <div style="text-align: center; margin: 1.5rem 0; padding: 1rem; background: rgba(102, 126, 234, 0.1); border-radius: 8px; border: 1px solid rgba(102, 126, 234, 0.2);">
                 <p style="margin: 0; font-size: 1.1rem;">
                     <span style="color: #48bb78; font-weight: 600;">⭐⭐⭐⭐⭐</span>
-                    <span style="margin-left: 0.5rem;">Trusted by 500+ expats in Beijing</span>
+                    <span style="margin-left: 0.5rem; color: #667eea;">Trusted by 500+ expats in Beijing</span>
                 </p>
             </div>
-            
-            <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary btn-large">📧 Get Free Consultation</a>
-                <a href="questionnaire-phase1.html" class="btn btn-secondary btn-large">⚡ Fast Track (2-min Quiz)</a>
-            </div>
-            
-            <p class="hero-note">🎯 First 15-minute consultation is FREE! Response within 2 hours.</p>
         </div>
     </section>
 
@@ -1183,6 +1228,7 @@
     </footer>
 
     <script src="js/concierge-main.js"></script>
+    <script src="js/typewriter-hero.js"></script>
     
     <!-- WhatsApp/WeChat Float Button -->
     <a href="https://wa.me/8613801380000" class="whatsapp-float" target="_blank" rel="noopener" style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; z-index: 1000; transition: all 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
