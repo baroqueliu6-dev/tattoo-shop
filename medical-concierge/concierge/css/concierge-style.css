@@ -15,7 +15,7 @@
     --text-color: #333;
     --text-light: #666;
     --bg-light: #f8f9fa;
-    --white: #ffffff;
+    --white: #f8f9fa; /* 柔和白色，不刺眼 */
     --success: #48bb78;
     --warning: #ed8936;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
