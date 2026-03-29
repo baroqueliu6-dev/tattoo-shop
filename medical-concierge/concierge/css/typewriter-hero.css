@@ -8,11 +8,10 @@
     position: relative;
     overflow: hidden;
     min-height: 280px; /* FIXED HEIGHT - prevents jumping */
-    height: auto;
+    max-height: 280px; /* LOCK HEIGHT - no expansion */
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
 }
 
 .typewriter-hero::before {
