@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Console welcome message
     console.log('%c🏥 Beijing Medical Concierge', 'font-size: 20px; font-weight: bold; color: #667eea;');
     console.log('%cProfessional Healthcare Assistance for Expats in Beijing', 'font-size: 12px; color: #666;');
-    console.log('%cContact: baroqueliu6@gmail.com', 'font-size: 12px; color: #666;');
+    console.log('%cContact: hello@13801380.site', 'font-size: 12px; color: #666;');
     console.log('%cPricing: Session-based (4-hour blocks) - Updated 2026-03-25', 'font-size: 12px; color: #666;');
 });
 
@@ -346,7 +346,7 @@ function selectService(serviceType) {
 
 // Emergency Contact Helper
 function emergencyContact() {
-    alert('For medical emergencies, please call 120 (China emergency medical number) immediately.\n\nAfter calling, contact us at baroqueliu6@gmail.com and we will meet you at the hospital to assist.');
+    alert('For medical emergencies, please call 120 (China emergency medical number) immediately.\n\nAfter calling, contact us at hello@13801380.site and we will meet you at the hospital to assist.');
 }
 
 // ============================================
