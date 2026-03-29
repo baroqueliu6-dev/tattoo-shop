@@ -321,7 +321,7 @@ a {
 
 /* Problem/Solution Section */
 .problem-solution {
-    padding: 5rem 0;
+    padding: 2rem 0; /* 降低 50%，减少页面高度 */
     background: var(--bg-light);
 }
 
@@ -369,8 +369,8 @@ a {
     color: var(--white);
     padding: 2rem;
     border-radius: 12px;
-    text-align: left;
-    max-width: 900px;
+    text-align: left; /* 左对齐，更美观 */
+    max-width: 800px; /* 缩小宽度 */
     margin: 0 auto;
 }
 
@@ -1273,6 +1273,11 @@ a {
         font-size: 0.9rem;
         padding: 0.5rem 1rem;
         margin-top: 0.5rem;
+    }
+    
+    /* Healthcare 板块手机端降低 30% */
+    .problem-solution {
+        padding: 1.4rem 0;
     }
     
     .contact-content {
