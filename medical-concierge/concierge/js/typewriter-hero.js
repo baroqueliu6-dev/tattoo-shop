@@ -57,8 +57,15 @@
      * Render a static phrase on mobile (no animation)
      */
     function renderStaticPhrase() {
+        // Mobile: Show first phrase statically (no typewriter animation)
         typewriterElement.innerHTML = `<span class="typewriter-word">${lines[0]}</span>`;
+        typewriterElement.style.display = 'block';
+        typewriterElement.style.opacity = '1';
+        typewriterElement.style.visibility = 'visible';
         if (cursorElement) cursorElement.style.display = 'none';
+        
+        // Force reflow to ensure visibility
+        void typewriterElement.offsetWidth;
     }
 
     /**

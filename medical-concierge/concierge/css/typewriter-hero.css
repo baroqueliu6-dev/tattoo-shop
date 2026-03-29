@@ -101,6 +101,57 @@
     50% { opacity: 0; }
 }
 
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .typewriter-hero {
+        min-height: 180px;
+        padding: 3rem 1rem;
+    }
+    
+    .typewriter-container {
+        padding: 0 15px;
+    }
+    
+    .typewriter-text {
+        font-size: 1.3rem;
+        line-height: 1.5;
+        min-height: 2rem;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    .typewriter-word {
+        display: inline;
+    }
+    
+    .typewriter-cursor {
+        display: none; /* Hide cursor on mobile */
+    }
+    
+    .gradient-text {
+        font-size: 1.4rem;
+    }
+}
+
+/* Small Mobile (iPhone SE etc.) */
+@media (max-width: 375px) {
+    .typewriter-hero {
+        min-height: 200px;
+        padding: 2.5rem 0.75rem;
+    }
+    
+    .typewriter-text {
+        font-size: 1.1rem;
+    }
+    
+    .gradient-text {
+        font-size: 1.2rem;
+    }
+}
+    50% { opacity: 0; }
+}
+
 /* Floating Animation */
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
