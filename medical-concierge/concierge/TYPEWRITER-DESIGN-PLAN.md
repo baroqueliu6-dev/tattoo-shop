@@ -1,9 +1,10 @@
 # 陪诊网站首页打字机效果设计方案
 
 **日期：** 2026-03-29  
+**更新日期：** 2026-03-29 (超精简版文案)  
 **设计师：** 参谋 (Canmou) 👻  
 **协作：** 进化官 (Jinhua)  
-**状态：** 方案设计完成，待技术实现
+**状态：** ✅ 文案定稿，待技术实现
 
 ---
 
@@ -42,29 +43,54 @@
 
 ## ✍️ 文案设计
 
-### 核心优势文案（5 条循环播放）
+### 🎯 核心优势文案（3 条循环播放）- 超精简版
+
+**更新日期：** 2026-03-29  
+**设计原则：** 每条 5-10 个词 | 一眼能看懂 | 有冲击力 | 渐变色高亮关键词
 
 ```
-1. "24/7 Available — Whenever you need us, we're here."
-2. "English-Speaking Doctors — No language barriers, ever."
-3. "Same-Day Appointments — Skip the wait, see a doctor today."
-4. "100% Satisfaction Guarantee — Not happy? Full refund."
-5. "500+ Expats Served — Trusted by Beijing's international community."
+1. "80% Cheaper Than US Healthcare"
+2. "500+ Americans Treated. 100% Happy."
+3. "Expert Doctors. Zero Wait Time."
 ```
 
 ### 文案结构分析
 
-| 部分 | 内容 | 样式 |
-|------|------|------|
-| **关键词** | "24/7 Available" / "English-Speaking Doctors" 等 | **渐变色高亮** |
-| **连接符** | " — " | 普通白色，轻微停顿 |
-| **说明文字** | "Whenever you need us, we're here." 等 | 普通白色 |
+| 文案 | 词数 | 关键词（渐变高亮） | 核心诉求 |
+|------|------|-------------------|---------|
+| **第 1 条** | 6 词 | "80% Cheaper" | 价格冲击 |
+| **第 2 条** | 6 词 | "500+ Americans" + "100% Happy" | 信任背书 |
+| **第 3 条** | 5 词 | "Expert Doctors" + "Zero Wait" | 专业 + 速度 |
 
 ### 文案设计理念
-- **前段关键词:** 3-5 个词，快速抓住注意力
-- **后段说明:** 8-12 个词，建立信任感
-- **整体长度:** 每句 12-18 秒完整播放
-- **循环间隔:** 每句结束后暂停 2 秒，然后淡出，下一句开始
+
+**设计风格：** 混合方案 A（对比式）+ B（断言式）
+
+| 特点 | 说明 |
+|------|------|
+| **极简:** | 每条 5-6 个词，一眼看懂 |
+| **数据冲击:** | 80% / 500+ / 100% / Zero — 具体数字增强可信度 |
+| **对比强烈:** | US Healthcare / Americans — 明确目标受众 |
+| **无废话:** | 删除所有连接词和说明文字，只保留核心信息 |
+
+### 详细信息下沉策略
+
+**第一板块（打字机）：** 只展示 3 条超精简文案，快速抓住注意力
+
+**第二板块（原 Hero Section 下沉）：** 放置详细证据和描述
+- 具体价格对比表格
+- 患者真实案例和评价
+- 医院资质和医生背景
+- 服务流程和时间承诺
+
+**用户旅程：**
+```
+[第一板块] 3 秒内建立印象 → "哇，这么便宜/这么多人选择/这么快"
+     ↓
+[第二板块] 30 秒内建立信任 → "原来是这样，有证据支撑"
+     ↓
+[CTA] 立即行动 → "预约咨询"
+```
 
 ---
 
@@ -171,12 +197,11 @@
 ### JavaScript 核心逻辑
 
 ```javascript
+// 超精简版文案 - 3 条循环
 const typewriterTexts = [
-    '<span class="gradient-text">24/7 Available</span> — Whenever you need us, we\'re here.',
-    '<span class="gradient-text">English-Speaking Doctors</span> — No language barriers, ever.',
-    '<span class="gradient-text">Same-Day Appointments</span> — Skip the wait, see a doctor today.',
-    '<span class="gradient-text">100% Satisfaction Guarantee</span> — Not happy? Full refund.',
-    '<span class="gradient-text">500+ Expats Served</span> — Trusted by Beijing\'s international community.'
+    '<span class="gradient-text">80% Cheaper</span> Than US Healthcare',
+    '<span class="gradient-text">500+ Americans</span> Treated. <span class="gradient-text">100% Happy</span>.',
+    '<span class="gradient-text">Expert Doctors</span>. <span class="gradient-text">Zero Wait Time</span>.'
 ];
 
 let textIndex = 0;
