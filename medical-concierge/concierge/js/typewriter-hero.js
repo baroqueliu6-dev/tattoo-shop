@@ -39,18 +39,28 @@
         cursorElement = document.querySelector('.typewriter-cursor');
 
         if (!typewriterElement) {
-            console.warn('Typewriter element not found');
+            console.warn('[Typewriter] Element not found');
             return;
         }
 
-        // Check if mobile - simplify animation
-        if (window.innerWidth <= CONFIG.mobileBreakpoint) {
-            renderStaticPhrase();
-            return;
+        console.log('[Typewriter] Initializing...');
+        
+        // ALWAYS render static phrase first to ensure content is visible
+        renderStaticPhrase();
+        
+        // Check if desktop - start typewriter animation
+        if (window.innerWidth > CONFIG.mobileBreakpoint) {
+            console.log('[Typewriter] Desktop detected, starting animation');
+            // Clear static content and start typewriter
+            setTimeout(() => {
+                currentCharIndex = 0;
+                isDeleting = false;
+                isPaused = false;
+                type();
+            }, 1000);
+        } else {
+            console.log('[Typewriter] Mobile detected, keeping static display');
         }
-
-        // Start the typewriter loop
-        setTimeout(type, 500);
     }
 
     /**
@@ -58,14 +68,14 @@
      */
     function renderStaticPhrase() {
         // Mobile: Show first phrase statically (no typewriter animation)
-        typewriterElement.innerHTML = `<span class="typewriter-word">${lines[0]}</span>`;
-        typewriterElement.style.display = 'block';
-        typewriterElement.style.opacity = '1';
-        typewriterElement.style.visibility = 'visible';
+        console.log('[Typewriter] Mobile detected, rendering static phrase');
+        typewriterElement.innerHTML = `<span class="typewriter-word" style="display: inline; opacity: 1; visibility: visible;">${lines[0]}</span>`;
+        typewriterElement.style.cssText = 'display: block !important; opacity: 1 !important; visibility: visible !important; height: auto !important;';
         if (cursorElement) cursorElement.style.display = 'none';
         
         // Force reflow to ensure visibility
         void typewriterElement.offsetWidth;
+        console.log('[Typewriter] Static phrase rendered successfully');
     }
 
     /**

@@ -48,12 +48,14 @@
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.3;
-    min-height: 3.25rem;
+    height: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.5rem;
+    overflow: hidden;
+    transition: opacity 0.3s ease;
 }
 
 .typewriter-word {
@@ -104,7 +106,7 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .typewriter-hero {
-        min-height: 180px;
+        min-height: 200px;
         padding: 3rem 1rem;
     }
     
@@ -115,10 +117,11 @@
     .typewriter-text {
         font-size: 1.3rem;
         line-height: 1.5;
+        height: auto;
         min-height: 2rem;
-        display: block !important;
-        opacity: 1 !important;
-        visibility: visible !important;
+        display: block;
+        opacity: 1;
+        visibility: visible;
     }
     
     .typewriter-word {
@@ -137,19 +140,18 @@
 /* Small Mobile (iPhone SE etc.) */
 @media (max-width: 375px) {
     .typewriter-hero {
-        min-height: 200px;
+        min-height: 220px;
         padding: 2.5rem 0.75rem;
     }
     
     .typewriter-text {
         font-size: 1.1rem;
+        height: auto;
     }
     
     .gradient-text {
         font-size: 1.2rem;
     }
-}
-    50% { opacity: 0; }
 }
 
 /* Floating Animation */
@@ -192,20 +194,6 @@
 
 /* Responsive Design - Tablet */
 @media (max-width: 768px) {
-    .typewriter-hero {
-        padding: 3rem 0;
-        min-height: 240px;
-    }
-    
-    .typewriter-text {
-        font-size: 1.8rem;
-        min-height: 2.6rem;
-    }
-    
-    .typewriter-cursor {
-        height: 1.8rem;
-    }
-    
     .typewriter-subtitle {
         font-size: 1rem;
     }
@@ -217,21 +205,6 @@
 
 /* Responsive Design - Mobile */
 @media (max-width: 480px) {
-    .typewriter-hero {
-        padding: 2.5rem 0;
-        min-height: 220px;
-    }
-    
-    .typewriter-text {
-        font-size: 1.4rem;
-        min-height: 2rem;
-    }
-    
-    .typewriter-cursor {
-        height: 1.4rem;
-        width: 2px;
-    }
-    
     .typewriter-subtitle {
         font-size: 0.95rem;
     }
@@ -258,18 +231,4 @@
     }
 }
 
-/* Mobile Simplified Version - No Typewriter */
-@media (max-width: 480px) {
-    .typewriter-text {
-        animation: fadeIn 1s ease;
-    }
-    
-    .typewriter-cursor {
-        display: none;
-    }
-    
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-}
+
