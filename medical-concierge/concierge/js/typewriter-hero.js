@@ -7,14 +7,14 @@
 (function() {
     'use strict';
 
-    // Configuration - Optimized per Canmou's design plan
+    // Configuration - Fast typewriter speed per Boss's requirement
     const CONFIG = {
-        typingSpeed: 60,        // ms per character (desktop standard)
-        deletingSpeed: 30,      // ms per character (faster deletion)
+        typingSpeed: 45,        // ms per character (FAST - 40-50ms range)
+        deletingSpeed: 25,      // ms per character (faster deletion)
         pauseTime: 2000,        // ms to wait after completing a phrase
         deletePause: 500,       // ms to wait before deleting
         mobileBreakpoint: 768,  // disable typewriter on small screens
-        mobileSpeed: 80         // ms per character on mobile
+        mobileSpeed: 50         // ms per character on mobile (also fast)
     };
 
     // Advantage phrases with keywords marked for gradient highlighting

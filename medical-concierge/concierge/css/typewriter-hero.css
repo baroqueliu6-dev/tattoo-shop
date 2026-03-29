@@ -60,9 +60,9 @@
     display: inline-block;
 }
 
-/* Gradient Text Effect - Blue-Purple gradient per Canmou's design */
+/* Gradient Text Effect - Blue-Green gradient (Professional + Health) */
 .gradient-text {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2196F3 0%, #4CAF50 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
