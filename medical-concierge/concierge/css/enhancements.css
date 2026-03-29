@@ -423,7 +423,7 @@ textarea:focus-visible {
 }
 
 .fee-table {
-    background: white;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -498,7 +498,7 @@ textarea:focus-visible {
 .fees-comparison-note {
     margin-top: 3rem;
     padding: 2rem;
-    background: white;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }

@@ -21,7 +21,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background: var(--white);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
 .container {
@@ -365,7 +365,7 @@ a {
     background: var(--white);
     padding: 2rem;
     border-radius: 15px;
-    text-align: center;
+    text-align: left;
     box-shadow: var(--shadow);
     transition: transform 0.3s;
 }
@@ -462,6 +462,7 @@ a {
 
 .product-info {
     padding: 2rem;
+    text-align: left;
 }
 
 .product-info h3 {
@@ -474,6 +475,7 @@ a {
     color: var(--text-light);
     margin-bottom: 1rem;
     line-height: 1.6;
+    text-align: left;
 }
 
 .product-features {

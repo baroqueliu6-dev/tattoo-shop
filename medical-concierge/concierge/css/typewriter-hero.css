@@ -8,9 +8,11 @@
     position: relative;
     overflow: hidden;
     min-height: 280px; /* FIXED HEIGHT - prevents jumping */
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .typewriter-hero::before {
@@ -93,7 +95,7 @@
     display: inline-block;
     width: 3px;
     height: 2.5rem;
-    background: white;
+    background: #ffffff;
     margin-left: 5px;
     animation: blink 1s step-end infinite;
     vertical-align: middle;
