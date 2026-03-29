@@ -39,19 +39,20 @@
         cursorElement = document.querySelector('.typewriter-cursor');
 
         if (!typewriterElement) {
-            console.warn('[Typewriter] Element not found');
+            console.error('[Typewriter] ERROR: Element not found!');
             return;
         }
 
         console.log('[Typewriter] Initializing...');
+        console.log('[Typewriter] Window width:', window.innerWidth);
+        console.log('[Typewriter] Mobile breakpoint:', CONFIG.mobileBreakpoint);
         
-        // ALWAYS render static phrase first to ensure content is visible
+        // CRITICAL: ALWAYS render static phrase first to ensure content is visible on mobile
         renderStaticPhrase();
         
-        // Check if desktop - start typewriter animation
+        // Only start typewriter animation on desktop
         if (window.innerWidth > CONFIG.mobileBreakpoint) {
-            console.log('[Typewriter] Desktop detected, starting animation');
-            // Clear static content and start typewriter
+            console.log('[Typewriter] Desktop detected (>768px), starting animation');
             setTimeout(() => {
                 currentCharIndex = 0;
                 isDeleting = false;
@@ -59,7 +60,8 @@
                 type();
             }, 1000);
         } else {
-            console.log('[Typewriter] Mobile detected, keeping static display');
+            console.log('[Typewriter] Mobile detected (≤768px), keeping static display');
+            console.log('[Typewriter] Static content should be visible now');
         }
     }
 
