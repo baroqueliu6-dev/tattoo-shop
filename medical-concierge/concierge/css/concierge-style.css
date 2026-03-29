@@ -8,25 +8,30 @@
 }
 
 :root {
-    --primary-color: #667eea;
-    --primary-dark: #5a67d8;
-    --secondary-color: #764ba2;
-    --accent-color: #f093fb;
-    --text-color: #333;
-    --text-light: #666;
-    --bg-light: #f8f9fa;
-    --white: #f8f9fa; /* 柔和白色，不刺眼 */
-    --success: #48bb78;
-    --warning: #ed8936;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+    /* 紫色主题配色 - 专业、信任、优雅 */
+    --primary-color: #7B61C1; /* 优雅紫 */
+    --primary-dark: #6B52B1; /* 深紫色 - hover 状态 */
+    --primary-light: #9D8AD6; /* 浅紫色 - 背景装饰 */
+    --secondary-color: #4ECDC4; /* 青绿 - 辅助功能 */
+    --accent-color: #F59E0B; /* 橙色 - 紧急 CTA */
+    --text-color: #1F2937; /* 主文字 - 深灰黑 */
+    --text-light: #6B7280; /* 次要文字 - 中灰 */
+    --text-lighter: #9CA3AF; /* 浅色文字 - 浅灰 */
+    --bg-light: #F9FAFB; /* 柔和白 - 页面大背景 */
+    --white: #FFFFFF; /* 纯白 - 内容卡片 */
+    --bg-gray: #F3F4F6; /* 浅灰 - 分隔区域 */
+    --success: #10B981; /* 成功绿 */
+    --warning: #F59E0B; /* 警告橙 */
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-purple-glow: 0 4px 14px rgba(123, 97, 193, 0.4);
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans SC', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(180deg, #F9FAFB 0%, #FFFFFF 100%);
 }
 
 .container {
@@ -98,10 +103,10 @@ a {
     cursor: pointer;
 }
 
-/* Hero Section - Enhanced for Mobile Conversion */
+/* Hero Section - 紫色渐变背景 */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%),
-                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background: linear-gradient(135deg, #7B61C1 0%, #9D8AD6 100%),
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     color: var(--white);
     padding: 2.5rem 0 2rem;
     text-align: center;
@@ -167,11 +172,11 @@ a {
 .trust-badge {
     font-size: 0.9rem;
     font-weight: 600;
-    background: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.2);
     padding: 0.7rem 1rem;
-    border-radius: 12px;
+    border-radius: 9999px; /* 全圆角 */
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,7 +186,7 @@ a {
 }
 
 .trust-badge:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
@@ -206,10 +211,10 @@ a {
     animation: pulse 2s ease-in-out infinite;
 }
 
-/* Enhanced CTA Buttons */
+/* Enhanced CTA Buttons - 紫色渐变 + 光晕特效 */
 .btn-primary.btn-large {
-    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
-    box-shadow: 0 4px 15px rgba(72, 187, 120, 0.4);
+    background: linear-gradient(135deg, #7B61C1 0%, #6B52B1 100%);
+    box-shadow: var(--shadow-purple-glow);
     position: relative;
     overflow: hidden;
 }
@@ -234,7 +239,7 @@ a {
 
 .btn-primary.btn-large:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(72, 187, 120, 0.5);
+    box-shadow: 0 6px 20px rgba(123, 97, 193, 0.5);
 }
 
 .btn-primary.btn-large:active {
@@ -266,48 +271,66 @@ a {
     }
 }
 
-/* Buttons */
+/* Buttons - 紫色主题 */
 .btn {
     display: inline-block;
-    padding: 0.8rem 2rem;
-    border-radius: 30px;
+    padding: 12px 32px; /* 设计文档标准 */
+    border-radius: 8px; /* 中圆角 */
     font-weight: 600;
-    transition: all 0.3s;
+    font-size: 1rem;
+    transition: all 0.3s ease;
     cursor: pointer;
-    border: 2px solid transparent;
+    border: none;
+    min-height: 44px; /* 触摸友好 */
 }
 
 .btn-primary {
-    background: var(--primary-color);
-    color: var(--white);
+    background: linear-gradient(135deg, #7B61C1 0%, #6B52B1 100%);
+    color: #FFFFFF;
+    box-shadow: var(--shadow-purple-glow);
 }
 
 .btn-primary:hover {
-    background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 6px 20px rgba(123, 97, 193, 0.5);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
 }
 
 .btn-secondary {
-    background: transparent;
-    color: var(--white);
-    border: 2px solid var(--white);
+    background: #FFFFFF;
+    color: #7B61C1;
+    border: 2px solid #7B61C1;
 }
 
 .btn-secondary:hover {
-    background: var(--white);
-    color: var(--primary-color);
+    background: #F9FAFB;
+    transform: translateY(-2px);
 }
 
 .btn-outline {
     background: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: #7B61C1;
+    border: 2px solid #7B61C1;
 }
 
 .btn-outline:hover {
-    background: var(--primary-color);
-    color: var(--white);
+    background: #7B61C1;
+    color: #FFFFFF;
+}
+
+.btn-accent {
+    background: #F59E0B;
+    color: #FFFFFF;
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+}
+
+.btn-accent:hover {
+    background: #D97706;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
 }
 
 .btn-large {
@@ -319,17 +342,26 @@ a {
     width: 100%;
 }
 
-/* Problem/Solution Section */
+/* Problem/Solution Section - 紫色主题 */
 .problem-solution {
-    padding: 2rem 0; /* 降低 50%，减少页面高度 */
+    padding: 4rem 0; /* 标准间距 */
     background: var(--bg-light);
 }
 
 .problem-solution h2 {
     text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 3rem;
-    color: var(--text-color);
+    font-size: 2.25rem; /* H2 标准 */
+    margin-bottom: 1rem;
+    color: #1F2937;
+    font-weight: 600;
+}
+
+.problem-solution .section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto 3rem;
 }
 
 .problems-grid {
@@ -340,13 +372,13 @@ a {
 }
 
 .problem-card {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    background: #FFFFFF;
     padding: 2rem;
-    border-radius: 12px;
+    border-radius: 12px; /* 大圆角 */
     text-align: left;
     box-shadow: var(--shadow);
-    transition: all 0.3s;
-    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    border: 1px solid #E5E7EB;
     display: block;
     text-decoration: none;
     color: inherit;
@@ -355,62 +387,67 @@ a {
 .problem-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--primary-color);
+    border-color: #7B61C1;
 }
 
 .problem-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+    display: inline-block;
+    padding: 16px;
+    background: #EDE9FE; /* 浅紫色背景 */
+    border-radius: 12px;
+    color: #7B61C1;
 }
 
 .problem-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem; /* H3 标准 */
     margin-bottom: 0.8rem;
-    color: var(--primary-color);
+    color: #1F2937;
+    font-weight: 600;
+}
+
+.problem-card p {
+    color: var(--text-light);
+    line-height: 1.6;
 }
 
 .solution-box {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--white);
-    padding: 2rem;
+    background: linear-gradient(135deg, #7B61C1 0%, #6B52B1 100%);
+    color: #FFFFFF;
+    padding: 2.5rem;
     border-radius: 12px;
     text-align: left;
     max-width: 800px;
     margin: 0 auto;
-}
-
-.solution-box h3,
-.solution-box p {
-    text-align: left;
+    box-shadow: var(--shadow-purple-glow);
 }
 
 .solution-box h3 {
     font-size: 1.6rem;
     margin-bottom: 0.75rem;
+    color: #FFFFFF;
 }
 
 .solution-box p {
     font-size: 1rem;
     opacity: 0.95;
     line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
 }
 
-/* Services Section */
+/* Services Section - 紫色主题 */
 .services {
     padding: 5rem 0;
+    background: var(--white);
 }
 
-.services h2,
-.hospitals h2,
-.process h2,
-.pricing h2,
-.testimonials h2,
-.faq h2,
-.contact h2 {
+.services h2 {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2.25rem;
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: #1F2937;
+    font-weight: 600;
 }
 
 .section-subtitle {
@@ -428,46 +465,55 @@ a {
 }
 
 .service-card {
-    background: var(--white);
+    background: #FFFFFF;
     padding: 2.5rem;
     border-radius: 12px;
-    border: 2px solid var(--bg-light);
-    transition: all 0.3s;
+    border: 1px solid #E5E7EB;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
     position: relative;
 }
 
 .service-card:hover {
-    border-color: var(--primary-color);
-    transform: translateY(-5px);
+    border-color: #7B61C1;
+    transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
 }
 
 .service-card.featured {
-    border-color: var(--primary-color);
-    background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%);
+    border: 2px solid #7B61C1;
+    background: linear-gradient(135deg, #F9FAFB 0%, #FFFFFF 100%);
+    box-shadow: 0 10px 25px -5px rgba(123, 97, 193, 0.3);
 }
 
 .featured-badge {
     position: absolute;
     top: -12px;
-    right: 20px;
-    background: var(--primary-color);
-    color: var(--white);
-    padding: 0.3rem 1rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #7B61C1;
+    color: #FFFFFF;
+    padding: 4px 16px;
+    border-radius: 9999px; /* 全圆角 */
+    font-size: 0.875rem;
     font-weight: 600;
 }
 
 .service-icon {
     font-size: 3.5rem;
     margin-bottom: 1rem;
+    display: inline-block;
+    padding: 16px;
+    background: #EDE9FE;
+    border-radius: 12px;
+    color: #7B61C1;
 }
 
 .service-card h3 {
-    font-size: 1.4rem;
-    color: var(--primary-color);
+    font-size: 1.5rem;
+    color: #1F2937;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 .service-features {
@@ -476,14 +522,30 @@ a {
 }
 
 .service-features li {
-    padding: 0.4rem 0;
+    padding: 0.5rem 0;
     color: var(--text-light);
+    line-height: 1.6;
 }
 
-/* Hospitals Section */
+.service-features li::before {
+    content: '✓';
+    color: #4ECDC4; /* 青绿辅色 */
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* Hospitals Section - 紫色主题 */
 .hospitals {
     padding: 5rem 0;
-    background: var(--bg-light);
+    background: var(--white);
+}
+
+.hospitals h2 {
+    text-align: center;
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    color: #1F2937;
+    font-weight: 600;
 }
 
 .hospitals-grid {
@@ -493,32 +555,38 @@ a {
 }
 
 .hospital-card {
-    background: var(--white);
+    background: #FFFFFF;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
-    transition: transform 0.3s;
+    border: 1px solid #E5E7EB;
+    transition: all 0.3s ease;
 }
 
 .hospital-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
+    border-color: #7B61C1;
 }
 
 .hospital-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    color: #1F2937;
+    font-weight: 600;
 }
 
 .hospital-name {
     font-weight: 600;
-    color: var(--primary-color);
+    color: #7B61C1;
     margin-bottom: 0.8rem;
+    font-size: 1.1rem;
 }
 
 .hospital-desc {
     color: var(--text-light);
     margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .hospital-tags {
@@ -528,10 +596,10 @@ a {
 }
 
 .tag {
-    background: var(--bg-light);
+    background: #F3F4F6;
     color: var(--text-light);
     padding: 0.3rem 0.8rem;
-    border-radius: 15px;
+    border-radius: 9999px;
     font-size: 0.85rem;
 }
 
@@ -595,63 +663,80 @@ a {
     line-height: 1.7;
 }
 
-/* Pricing Section */
+/* Pricing Section - 紫色主题 */
 .pricing {
     padding: 5rem 0;
     background: var(--bg-light);
 }
 
+.pricing h2 {
+    text-align: center;
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    color: #1F2937;
+    font-weight: 600;
+}
+
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
 }
 
 .pricing-card {
-    background: var(--white);
+    background: #FFFFFF;
     padding: 2.5rem;
     border-radius: 12px;
     text-align: center;
     box-shadow: var(--shadow);
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     position: relative;
+    border: 1px solid #E5E7EB;
 }
 
 .pricing-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
 }
 
 .pricing-card.featured {
-    border: 3px solid var(--primary-color);
+    border: 2px solid #7B61C1;
+    box-shadow: 0 10px 25px -5px rgba(123, 97, 193, 0.3);
     transform: scale(1.05);
 }
 
 .pricing-card.featured:hover {
-    transform: scale(1.05) translateY(-5px);
+    transform: scale(1.05) translateY(-8px);
 }
 
 .pricing-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+    display: inline-block;
+    padding: 16px;
+    background: #EDE9FE;
+    border-radius: 12px;
+    color: #7B61C1;
 }
 
 .pricing-card h3 {
-    font-size: 1.4rem;
-    color: var(--primary-color);
+    font-size: 1.5rem;
+    color: #1F2937;
     margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 .pricing-desc {
     color: var(--text-light);
     margin-bottom: 1.5rem;
+    font-size: 0.95rem;
 }
 
 .price {
-    font-size: 3rem;
-    font-weight: bold;
-    color: var(--text-color);
+    font-size: 2.5rem; /* 设计文档标准 */
+    font-weight: 700;
+    color: #7B61C1; /* 紫色价格 */
     margin-bottom: 2rem;
 }
 
@@ -673,26 +758,45 @@ a {
 
 .pricing-features li {
     padding: 0.6rem 0;
-    border-bottom: 1px solid var(--bg-light);
+    border-bottom: 1px solid #F3F4F6;
     color: var(--text-light);
+    line-height: 1.6;
+}
+
+.pricing-features li::before {
+    content: '✓';
+    color: #4ECDC4;
+    font-weight: bold;
+    margin-right: 0.5rem;
 }
 
 .pricing-note {
-    background: var(--white);
+    background: #FFFFFF;
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    box-shadow: var(--shadow);
 }
 
 .pricing-note p {
     margin-bottom: 0.5rem;
+    color: var(--text-light);
 }
 
-/* Testimonials Section */
+/* Testimonials Section - 紫色主题 */
 .testimonials {
     padding: 5rem 0;
+    background: var(--white);
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    color: #1F2937;
+    font-weight: 600;
 }
 
 .testimonials-grid {
@@ -702,23 +806,32 @@ a {
 }
 
 .testimonial-card {
-    background: var(--white);
+    background: #F9FAFB; /* 柔和白背景 */
     padding: 2.5rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
-    border-left: 4px solid var(--primary-color);
+    border: 1px solid #E5E7EB;
+    transition: all 0.3s ease;
 }
 
-.testimonial-rating {
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.testimonial-stars {
+    color: #F59E0B; /* 橙色星星 */
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    letter-spacing: 2px;
 }
 
 .testimonial-text {
     font-style: italic;
-    color: var(--text-light);
+    color: #1F2937;
     margin-bottom: 1.5rem;
     line-height: 1.8;
+    font-size: 1.125rem;
 }
 
 .testimonial-author {
@@ -728,16 +841,17 @@ a {
 }
 
 .author-avatar {
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .author-info strong {
     display: block;
-    color: var(--text-color);
+    color: #1F2937;
+    font-weight: 600;
 }
 
 .author-info span {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     color: var(--text-light);
 }
 
@@ -1238,13 +1352,13 @@ a {
     }
     
     .hero h1 {
-        font-size: 1.9rem;
+        font-size: 2rem; /* 手机版 H1 */
         padding: 0 15px;
         margin-bottom: 0.8rem;
     }
     
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 1rem; /* 手机版 Body */
         padding: 0 20px;
         margin-bottom: 1.5rem;
     }
@@ -1285,12 +1399,31 @@ a {
         margin-top: 0.5rem;
     }
     
-    /* Healthcare 板块手机端降低 30% */
+    /* Problem/Solution 板块手机端适配 */
     .problem-solution {
-        padding: 1.4rem 0;
+        padding: 3rem 0;
     }
     
-    .contact-content {
+    .problem-solution h2 {
+        font-size: 1.75rem; /* 手机版 H2 */
+    }
+    
+    .problems-grid {
+        grid-template-columns: 1fr; /* 单列布局 */
+        gap: 1.5rem;
+    }
+    
+    .problem-card {
+        padding: 1.5rem;
+    }
+    
+    /* Services 板块手机端适配 */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Pricing 板块手机端适配 */
+    .pricing-grid {
         grid-template-columns: 1fr;
     }
     
@@ -1298,6 +1431,16 @@ a {
         transform: none;
     }
     
+    .pricing-card.featured:hover {
+        transform: translateY(-5px);
+    }
+    
+    /* Testimonials 板块手机端适配 */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Process 板块手机端适配 */
     .process-step {
         flex-direction: column;
         align-items: flex-start;
@@ -1307,15 +1450,20 @@ a {
         display: none;
     }
     
+    /* Contact 板块手机端适配 */
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+    
     .referral-rewards-grid {
         grid-template-columns: 1fr;
     }
 }
 
-/* Extra Small Devices */
+/* Extra Small Devices (≤375px) */
 @media (max-width: 375px) {
     .hero h1 {
-        font-size: 1.7rem;
+        font-size: 1.75rem;
     }
     
     .hero-subtitle {
@@ -1328,5 +1476,13 @@ a {
     
     .trust-badge {
         font-size: 0.85rem;
+    }
+    
+    .problem-solution h2 {
+        font-size: 1.5rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
     }
 }

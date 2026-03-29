@@ -10,11 +10,11 @@
  * - Conversion optimization
  */
 
-/* === 1. Enhanced Hero Section === */
+/* === 1. Enhanced Hero Section - 紫色主题 === */
 
-/* Animated gradient background */
+/* Animated gradient background - 紫色系 */
 .hero {
-    background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #667eea);
+    background: linear-gradient(-45deg, #7B61C1, #9D8AD6, #6B52B1, #7B61C1);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
     position: relative;
@@ -46,7 +46,7 @@
     100% { transform: translateY(-50px) rotate(360deg); }
 }
 
-/* Enhanced CTA buttons with pulse */
+/* Enhanced CTA buttons with pulse - 紫色光晕 */
 .hero .btn-primary {
     position: relative;
     overflow: hidden;
@@ -55,11 +55,11 @@
 
 @keyframes pulse {
     0%, 100% { 
-        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+        box-shadow: 0 0 0 0 rgba(123, 97, 193, 0.7);
         transform: scale(1);
     }
     50% { 
-        box-shadow: 0 0 0 15px rgba(102, 126, 234, 0);
+        box-shadow: 0 0 0 15px rgba(123, 97, 193, 0);
         transform: scale(1.02);
     }
 }
@@ -137,7 +137,7 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(90deg, #7B61C1, #4ECDC4);
     transform: scaleX(0);
     transition: transform 0.4s ease;
 }
@@ -148,7 +148,7 @@
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+    box-shadow: 0 20px 40px rgba(123, 97, 193, 0.2);
 }
 
 .service-icon {
@@ -181,7 +181,7 @@
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(90deg, #f093fb, #667eea);
+    background: linear-gradient(90deg, #7B61C1, #9D8AD6);
     color: white;
     padding: 0.4rem 1rem;
     border-radius: 20px;
@@ -211,8 +211,8 @@
     top: -10px;
     left: 20px;
     font-size: 6rem;
-    color: var(--primary-color);
-    opacity: 0.2;
+    color: #7B61C1;
+    opacity: 0.15;
     font-family: Georgia, serif;
     line-height: 1;
 }

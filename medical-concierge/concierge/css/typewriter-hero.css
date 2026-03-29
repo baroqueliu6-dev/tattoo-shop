@@ -1,7 +1,7 @@
-/* Typewriter Hero Section - New First Block */
+/* Typewriter Hero Section - 紫色渐变背景 */
 
 .typewriter-hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #7B61C1 0%, #9D8AD6 100%);
     color: white;
     padding: 4rem 0;
     text-align: center;
@@ -64,9 +64,9 @@
     display: inline-block;
 }
 
-/* Gradient Text Effect - Blue-Green gradient (Professional + Health) */
+/* Gradient Text Effect - 紫色渐变 (Professional + Trust) */
 .gradient-text {
-    background: linear-gradient(135deg, #2196F3 0%, #4CAF50 100%);
+    background: linear-gradient(135deg, #7B61C1 0%, #9D8AD6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
