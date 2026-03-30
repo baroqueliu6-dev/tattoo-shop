@@ -214,8 +214,9 @@
             </p>
             
             <div class="typewriter-cta">
-                <a href="#contact" class="btn btn-primary btn-large">📧 Get Immediate Consultation</a>
-                <a href="questionnaire-phase1.html" class="btn btn-secondary btn-large">⚡ Fast Track (2-min Quiz)</a>
+                <a href="#contact" class="btn btn-primary btn-large">📧 Get Consultation</a>
+                <a href="questionnaire-phase1.html" class="btn btn-secondary btn-large">⚡ 2-min Quiz</a>
+                <a href="https://www.paypal.com/ncp/payment/YOUR_PAYPAL_BUTTON_ID" target="_blank" class="btn btn-outline btn-large" style="border-color: #0070ba; color: #0070ba;">💳 Book Now</a>
             </div>
             
             <!-- Accessibility: Screen reader support -->
@@ -435,9 +436,9 @@
                 <p style="margin: 0.5rem 0 0 0; color: #92400e; font-size: 0.95rem;">Whether you choose per-session or package, your consultation fee will be deducted from the total cost.</p>
             </div>
             
-            <div class="pricing-intro" style="background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--primary-color); margin-bottom: 2rem;">
+            <div class="pricing-intro" style="background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.95) 100%); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--primary-color); margin-bottom: 2rem;">
                 <h3 style="margin: 0 0 1rem 0; color: var(--primary-color);">📅 Time Slot System (Per-Session Services)</h3>
-                <p style="margin: 0 0 1rem 0;">All per-session services are booked in 4-hour blocks for your convenience:</p>
+                <p style="margin: 0 0 1rem 0; color: #1F2937;">All per-session services use 4-hour blocks:</p>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
                     <div style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 1rem; border-radius: 8px; text-align: left;">
                         <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌅</div>
@@ -459,8 +460,8 @@
             
             <!-- Package Deals - Premium Options -->
             <div style="margin: 3rem 0;">
-                <h3 style="text-align: center; margin-bottom: 1rem; color: var(--primary-color);">🎯 Package Deals - Best Value</h3>
-                <p style="text-align: center; margin-bottom: 2rem; color: var(--text-light);">Comprehensive care packages for complete peace of mind. Save money and get dedicated support.</p>
+                <h3 style="text-align: center; margin-bottom: 0.5rem; color: #fff !important;">🎯 Package Deals - Best Value</h3>
+                <p style="text-align: center; margin-bottom: 2rem; color: rgba(255,255,255,0.95);">Complete care packages. Save money with dedicated support.</p>
                 
                 <div class="pricing-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
                     <!-- Standard Package -->
@@ -470,7 +471,7 @@
                         <h3>Standard Package</h3>
                         <p class="pricing-desc">Outpatient + Tests (1-3 days)</p>
                         <div class="price">
-                            <span class="currency">$</span>
+                            <span class="currency">From $</span>
                             <span class="amount">800</span>
                             <span class="period">/package</span>
                         </div>
@@ -499,7 +500,7 @@
                         <h3>Full Care Package</h3>
                         <p class="pricing-desc">Surgery / Hospitalization / Treatment Cycle</p>
                         <div class="price">
-                            <span class="currency">$</span>
+                            <span class="currency">From $</span>
                             <span class="amount">2500</span>
                             <span class="period">/package</span>
                         </div>
@@ -534,40 +535,52 @@
                     <div style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
                             <h4 style="margin: 0; color: #7c3aed;">⚡ Expedited Coordination</h4>
-                            <span style="background: #7c3aed; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 600; font-size: 0.9rem;">$300-$800</span>
+                            <button onclick="togglePrice(this)" style="background: #f3e8ff; border: none; padding: 0.4rem 0.8rem; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.85rem; color: #7c3aed; transition: all 0.3s;" onmouseover="this.style.background='#e9d5ff'" onmouseout="this.style.background='#f3e8ff'">👁️ Show Price</button>
                         </div>
                         <p style="color: var(--text-light); font-size: 0.9rem; margin: 0.5rem 0;">Urgent appointment/test coordination requiring extra resources</p>
                         <p style="color: #666; font-size: 0.85rem; margin: 0.5rem 0 0 0; font-style: italic;">⚠️ Must be approved in advance</p>
+                        <div style="display: none; margin-top: 0.75rem; padding: 0.5rem; background: #f3e8ff; border-radius: 6px; text-align: center;">
+                            <strong style="color: #7c3aed; font-size: 1.1rem;">$300-$800</strong>
+                        </div>
                     </div>
 
                     <!-- Add-on 2 -->
                     <div style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
                             <h4 style="margin: 0; color: #7c3aed;">🚗 Airport Pickup/Drop-off</h4>
-                            <span style="background: #7c3aed; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 600; font-size: 0.9rem;">Cost + $100-$200</span>
+                            <button onclick="togglePrice(this)" style="background: #f3e8ff; border: none; padding: 0.4rem 0.8rem; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.85rem; color: #7c3aed; transition: all 0.3s;" onmouseover="this.style.background='#e9d5ff'" onmouseout="this.style.background='#f3e8ff'">👁️ Show Price</button>
                         </div>
                         <p style="color: var(--text-light); font-size: 0.9rem; margin: 0.5rem 0;">Driver coordination, translation, luggage assistance</p>
                         <p style="color: #666; font-size: 0.85rem; margin: 0.5rem 0 0 0; font-style: italic;">Actual cost (ride/vehicle) + service fee</p>
+                        <div style="display: none; margin-top: 0.75rem; padding: 0.5rem; background: #f3e8ff; border-radius: 6px; text-align: center;">
+                            <strong style="color: #7c3aed; font-size: 1.1rem;">Cost + $100-$200</strong>
+                        </div>
                     </div>
 
                     <!-- Add-on 3 -->
                     <div style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
                             <h4 style="margin: 0; color: #7c3aed;">🏠 Accommodation Assistance</h4>
-                            <span style="background: #7c3aed; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 600; font-size: 0.9rem;">Cost + $100-$200</span>
+                            <button onclick="togglePrice(this)" style="background: #f3e8ff; border: none; padding: 0.4rem 0.8rem; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.85rem; color: #7c3aed; transition: all 0.3s;" onmouseover="this.style.background='#e9d5ff'" onmouseout="this.style.background='#f3e8ff'">👁️ Show Price</button>
                         </div>
                         <p style="color: var(--text-light); font-size: 0.9rem; margin: 0.5rem 0;">Hotel/apartment booking, check-in assistance, neighborhood guidance</p>
                         <p style="color: #666; font-size: 0.85rem; margin: 0.5rem 0 0 0; font-style: italic;">Actual cost (rent) + service fee</p>
+                        <div style="display: none; margin-top: 0.75rem; padding: 0.5rem; background: #f3e8ff; border-radius: 6px; text-align: center;">
+                            <strong style="color: #7c3aed; font-size: 1.1rem;">Cost + $100-$200</strong>
+                        </div>
                     </div>
 
                     <!-- Add-on 4 -->
                     <div style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
                             <h4 style="margin: 0; color: #7c3aed;">📞 Remote Follow-up Translation</h4>
-                            <span style="background: #7c3aed; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 600; font-size: 0.9rem;">$80-$120/session</span>
+                            <button onclick="togglePrice(this)" style="background: #f3e8ff; border: none; padding: 0.4rem 0.8rem; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.85rem; color: #7c3aed; transition: all 0.3s;" onmouseover="this.style.background='#e9d5ff'" onmouseout="this.style.background='#f3e8ff'">👁️ Show Price</button>
                         </div>
                         <p style="color: var(--text-light); font-size: 0.9rem; margin: 0.5rem 0;">Video consultation translation after you've returned home</p>
                         <p style="color: #666; font-size: 0.85rem; margin: 0.5rem 0 0 0; font-style: italic;">30-60 min video call interpretation</p>
+                        <div style="display: none; margin-top: 0.75rem; padding: 0.5rem; background: #f3e8ff; border-radius: 6px; text-align: center;">
+                            <strong style="color: #7c3aed; font-size: 1.1rem;">$80-$120/session</strong>
+                        </div>
                     </div>
                 </div>
                 
@@ -580,12 +593,12 @@
             
             <div class="pricing-grid">
                 <!-- Standard Care -->
-                <div class="pricing-card">
+                <div class="pricing-card standard-care">
                     <div class="pricing-icon">🩺</div>
                     <h3>Standard Care</h3>
                     <p class="pricing-desc">Certified companion</p>
                     <div class="price">
-                        <span class="currency">$</span>
+                        <span class="currency">From $</span>
                         <span class="amount">100</span>
                         <span class="period">/session</span>
                     </div>
@@ -610,13 +623,13 @@
                 </div>
 
                 <!-- Professional Care -->
-                <div class="pricing-card featured">
+                <div class="pricing-card professional-care featured">
                     <div class="featured-badge">Most Popular</div>
                     <div class="pricing-icon">👩‍⚕️</div>
                     <h3>Professional Care</h3>
                     <p class="pricing-desc">Licensed nurse</p>
                     <div class="price">
-                        <span class="currency">$</span>
+                        <span class="currency">From $</span>
                         <span class="amount">180</span>
                         <span class="period">/session</span>
                     </div>
@@ -649,7 +662,7 @@
                     <p class="pricing-desc">Bilingual medical pro</p>
                     <div class="price">
                         <span class="original-price" style="text-decoration: line-through; color: #999; margin-right: 0.5rem; font-size: 1.5rem;">$400</span>
-                        <span class="currency">$</span>
+                        <span class="currency">From $</span>
                         <span class="amount">320</span>
                         <span class="period">/session</span>
                     </div>
@@ -677,8 +690,8 @@
 
             <!-- Quick Consultation -->
             <div style="margin-top: 3rem; text-align: center;">
-                <h3 style="margin-bottom: 1rem;">💬 Quick Consultation - 15 minutes</h3>
-                <p style="max-width: 600px; margin: 0 auto 1.5rem auto; color: var(--text-light);">For simple questions, hospital recommendations, or medical advice referral. <strong style="color: #059669; font-size: 1.1rem;">💰 $20 consultation fee is deductible from ANY service (per-session or package)!</strong></p>
+                <h3 style="margin-bottom: 1rem; color: #fff !important;">💬 Quick Consultation - 15 minutes</h3>
+                <p style="max-width: 600px; margin: 0 auto 1.5rem auto; color: rgba(255,255,255,0.95);">For simple questions or hospital recommendations. <strong style="color: #4ade80; font-size: 1.1rem;">💰 $20 fee deductible from ANY service!</strong></p>
                 <div class="quick-consult-card">
                     <div class="quick-consult-content">
                         <h4>Initial Consultation</h4>
@@ -700,14 +713,20 @@
             </div>
             
             <!-- Complete Pricing Table -->
-            <div class="pricing-table-container" style="margin-top: 3rem; background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow);">
-                <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--primary-color);">📋 Per-Session Pricing Guide (4-Hour Blocks)</h3>
+            <div class="pricing-table-container" style="margin-top: 3rem; background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(248,249,250,0.98) 100%); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                    <h3 style="margin: 0; color: #1F2937 !important;">📋 Per-Session Pricing Guide (4-Hour Blocks)</h3>
+                    <button onclick="togglePriceTable()" style="background: #f0f4ff; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.9rem; color: var(--primary-color); transition: all 0.3s;" onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#f0f4ff'">
+                        <span id="price-table-toggle-icon">👁️</span> <span id="price-table-toggle-text">Show Prices</span>
+                    </button>
+                </div>
                 
                 <div style="background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%); padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
                     <p style="margin: 0; color: var(--primary-color); font-weight: 600;">💡 Flexible Option:</p>
-                    <p style="margin: 0.5rem 0 0 0; color: var(--text-light); font-size: 0.95rem;">Per-session services are perfect for single appointments, follow-up visits, or when you need flexible scheduling. <strong>Remember: Your $20 consultation fee is deductible if you upgrade to a package later!</strong></p>
+                    <p style="margin: 0.5rem 0 0 0; color: var(--text-light); font-size: 0.95rem;">Perfect for single appointments or follow-ups. <strong>$20 consultation fee deductible if you upgrade!</strong></p>
                 </div>
                 
+                <div id="price-table-content" style="display: none;">
                 <div class="pricing-table-wrapper" style="overflow-x: auto;">
                     <table class="pricing-table">
                         <thead>
@@ -740,23 +759,24 @@
                         </tbody>
                     </table>
                 </div>
+                </div>
                 
                 <div style="margin-top: 1.5rem; padding: 1rem; background: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 8px;">
-                    <p style="margin: 0;"><strong>⚡ Emergency Service:</strong> +50% all time slots (2-hour response guaranteed)</p>
+                    <p style="margin: 0;"><strong>⚡ Emergency:</strong> +50% (2-hour response)</p>
                 </div>
                 
                 <div style="margin-top: 1rem; padding: 1rem; background: #d1fae5; border-left: 4px solid #10b981; border-radius: 8px;">
-                    <p style="margin: 0;"><strong>📞 Time Slots:</strong> Morning (08:00-12:00) | Afternoon (13:00-17:00) | Evening (18:00-22:00)</p>
+                    <p style="margin: 0;"><strong>📞 Time Slots:</strong> 08:00-12:00 | 13:00-17:00 | 18:00-22:00</p>
                 </div>
                 
                 <div style="margin-top: 1rem; padding: 1rem; background: #f0f4ff; border-left: 4px solid var(--primary-color); border-radius: 8px;">
-                    <p style="margin: 0;"><strong>💳 Payment Methods:</strong> Credit card, bank transfer, WeChat Pay, Alipay. Package deals require 50% deposit.</p>
+                    <p style="margin: 0;"><strong>💳 Payment:</strong> Credit card, bank transfer, WeChat, Alipay. Packages: 50% deposit.</p>
                 </div>
             </div>
             
             <!-- Comparison Table: Per-Session vs Package -->
-            <div style="margin-top: 3rem; background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow);">
-                <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--primary-color);">📊 Which Option is Right for You?</h3>
+            <div style="margin-top: 3rem; background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(248,249,250,0.98) 100%); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow);">
+                <h3 style="text-align: center; margin-bottom: 1.5rem; color: #1F2937 !important;">📊 Which Option is Right for You?</h3>
                 
                 <div class="pricing-table-wrapper" style="overflow-x: auto;">
                     <table class="pricing-table">
@@ -810,8 +830,9 @@
                 </div>
                 
                 <div style="margin-top: 1.5rem; text-align: center;">
-                    <p style="color: var(--text-light); margin-bottom: 1rem;">Not sure which option to choose? Start with our $20 consultation and we'll recommend the best fit for your needs.</p>
-                    <a href="#contact" class="btn btn-primary">📧 Get Free Recommendation</a>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Not sure which option to choose? Start with our <strong>$20 Paid Consultation</strong> and we'll recommend the best fit for your needs.</p>
+                    <a href="https://www.paypal.com/ncp/payment/YOUR_PAYPAL_BUTTON_ID" target="_blank" class="btn btn-primary">💳 Book $20 Consultation</a>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-light);">🔒 Secure payment via PayPal • Fee credited toward full service</p>
                 </div>
             </div>
         </div>
@@ -913,7 +934,7 @@
     <section id="video" class="video-section">
         <div class="container">
             <h2>Patient Stories & Videos</h2>
-            <p class="section-subtitle">Real experiences from our clients</p>
+            <p class="section-subtitle">Real experiences from expats in Beijing</p>
             
             <div class="video-grid">
                 <div class="video-card">
@@ -1112,9 +1133,9 @@
                                 <li>✓ Receive a customized service plan</li>
                             </ul>
                             <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                                <a href="questionnaire-phase1.html" class="btn btn-secondary" style="flex: 1; min-width: 200px;">📋 Fill Questionnaire</a>
-                                <a href="questionnaire-phase1.md" download class="btn btn-outline" style="font-size: 0.9rem; white-space: nowrap;">📥 Download PDF</a>
+                                <a href="questionnaire-phase1.html" class="btn btn-secondary" style="flex: 1; min-width: 200px;">📋 Fill Questionnaire Online</a>
                             </div>
+                            <p style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-light);">✅ Takes only 2 minutes • Get personalized recommendation within 2 hours</p>
                         </div>
                         
                         <!-- Alternative Contact Methods -->
@@ -1125,7 +1146,11 @@
                                 <!-- WeChat Contact -->
                                 <div style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); padding: 1rem; border-radius: 8px; border-left: 3px solid #10b981;">
                                     <strong>💬 WeChat (Recommended for quick response):</strong>
-                                    <p style="margin: 0.25rem 0 0 0; color: var(--text-light); font-size: 0.9rem;">Add us: <strong style="color: #10b981;">baroqueliu6</strong></p>
+                                    <button onclick="toggleWeChat()" style="background: #10b981; color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 600; cursor: pointer; margin-top: 0.5rem; transition: all 0.3s;" onmouseover="this.style.background='#059669'" onmouseout="this.style.background='#10b981'">👁️ Show WeChat ID</button>
+                                    <div id="wechat-id-display" style="display: none; margin-top: 0.5rem; padding: 0.75rem; background: white; border-radius: 6px; border: 2px dashed #10b981;">
+                                        <p style="margin: 0; font-size: 1.1rem;"><strong>WeChat ID:</strong> <strong style="color: #10b981; font-size: 1.2rem;">louisleo99</strong></p>
+                                        <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: #666;">📱 Long press to copy or search in WeChat</p>
+                                    </div>
                                     <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: #666;">Scan QR code or search WeChat ID</p>
                                 </div>
                                 
@@ -1202,13 +1227,63 @@
     <script src="js/concierge-main.js"></script>
     <script src="js/typewriter-hero.js"></script>
     
-    <!-- WhatsApp/WeChat Float Button -->
-    <a href="https://wa.me/8613801380000" class="whatsapp-float" target="_blank" rel="noopener" style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; z-index: 1000; transition: all 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    <!-- Toggle Functions -->
+    <script>
+        function toggleWeChat() {
+            var display = document.getElementById('wechat-id-display');
+            var btn = event.target;
+            if (display.style.display === 'none') {
+                display.style.display = 'block';
+                btn.innerHTML = '🙈 Hide WeChat ID';
+            } else {
+                display.style.display = 'none';
+                btn.innerHTML = '👁️ Show WeChat ID';
+            }
+        }
+        
+        function togglePrice(element) {
+            var parentCard = element.closest('div[style*="background: linear-gradient"]');
+            var priceEl = parentCard.querySelector('div[style*="display: none"]');
+            if (!priceEl) {
+                priceEl = parentCard.lastElementChild;
+            }
+            if (priceEl && priceEl.style.display === 'none') {
+                priceEl.style.display = 'block';
+                element.innerHTML = '📉 Hide Price';
+            } else if (priceEl) {
+                priceEl.style.display = 'none';
+                element.innerHTML = '👁️ Show Price';
+            }
+        }
+        
+        function togglePriceTable() {
+            var content = document.getElementById('price-table-content');
+            var btnIcon = document.getElementById('price-table-toggle-icon');
+            var btnText = document.getElementById('price-table-toggle-text');
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                btnIcon.textContent = '📉';
+                btnText.textContent = 'Hide Prices';
+            } else {
+                content.style.display = 'none';
+                btnIcon.textContent = '👁️';
+                btnText.textContent = 'Show Prices';
+            }
+        }
+    </script>
+    
+    <!-- WeChat Float Button -->
+    <div class="wechat-float" style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #07C160; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; z-index: 1000; transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
         <svg viewBox="0 0 32 32" style="width: 35px; height: 35px;">
-            <path fill="#FFF" d="M16 0C7.163 0 0 7.163 0 16c0 2.825 0.737 5.607 2.137 8.048L0 32l8.161-2.082C10.535 31.263 13.262 32 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zM16 29.467c-2.482 0-4.908-0.668-7.055-1.932l-0.506-0.301-5.245 1.339 1.403-5.109-0.329-0.523C2.923 20.705 2.267 18.379 2.267 16c0-7.565 6.168-13.733 13.733-13.733S29.733 8.435 29.733 16 23.565 29.467 16 29.467z"/>
-            <path fill="#FFF" d="M22.756 18.963c-0.697-0.349-4.118-2.032-4.753-2.263-0.635-0.232-1.099-0.349-1.563 0.349-0.464 0.697-1.799 2.263-2.205 2.727-0.406 0.464-0.812 0.522-1.509 0.174-0.697-0.349-2.936-1.084-5.592-3.444-2.066-1.837-3.459-4.106-3.865-4.803-0.406-0.697-0.043-1.073 0.305-1.421 0.313-0.313 0.697-0.812 1.045-1.218 0.349-0.406 0.464-0.697 0.697-1.161 0.232-0.464 0.116-0.87-0.058-1.218-0.174-0.349-1.563-3.771-2.147-5.168-0.567-1.361-1.143-1.175-1.563-1.195-0.406-0.021-0.87-0.021-1.334-0.021s-1.218 0.174-1.855 0.87c-0.637 0.697-2.435 2.379-2.435 5.803s2.493 6.727 2.841 7.191c0.349 0.464 4.913 7.484 11.896 10.502 1.668 0.721 2.963 1.146 3.978 1.469 1.673 0.533 3.193 0.456 4.393 0.277 1.339-0.2 4.118-1.681 4.699-3.311 0.581-1.631 0.581-3.028 0.406-3.311-0.174-0.283-0.639-0.456-1.336-0.804z"/>
+            <path fill="#FFF" d="M16 2C8.268 2 2 7.82 2 15c0 3.89 1.82 7.39 4.67 9.79L5 29l5.33-1.78C11.86 27.71 13.89 28 16 28c7.732 0 14-5.82 14-13S23.732 2 16 2z"/>
+            <circle fill="#FFF" cx="9.5" cy="13.5" r="1.5"/>
+            <circle fill="#FFF" cx="13.5" cy="13.5" r="1.5"/>
+            <circle fill="#FFF" cx="18.5" cy="13.5" r="1.5"/>
+            <circle fill="#FFF" cx="22.5" cy="13.5" r="1.5"/>
+            <path fill="#FFF" d="M9 17c-1.5 0-3 1-3 2.5S7.5 22 9 22s3-1 3-2.5S10.5 17 9 17z"/>
+            <path fill="#FFF" d="M23 17c-1.5 0-3 1-3 2.5s1.5 2.5 3 2.5 3-1 3-2.5S24.5 17 23 17z"/>
         </svg>
-        <span style="position: absolute; right: 70px; background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 8px 12px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); font-size: 14px; font-weight: 600; color: #333; white-space: nowrap;">Chat with us!</span>
-    </a>
+        <span style="position: absolute; right: 70px; background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 8px 12px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); font-size: 14px; font-weight: 600; color: #333; white-space: nowrap;">WeChat: louisleo99</span>
+    </div>
 </body>
 </html>
