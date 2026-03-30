@@ -206,29 +206,13 @@
                 
                 <div class="form-group">
                     <label for="department">Department / Symptoms <span class="required">*</span></label>
-                    <select id="department" name="department" required>
-                        <option value="">Please select...</option>
-                        <option value="dental">Dental</option>
-                        <option value="internal">Internal Medicine</option>
-                        <option value="surgery">Surgery / Orthopedics</option>
-                        <option value="obgyn">Obstetrics & Gynecology</option>
-                        <option value="pediatrics">Pediatrics</option>
-                        <option value="checkup">Health Checkup / Vaccination</option>
-                        <option value="other">Other</option>
-                    </select>
+                    <textarea id="department" name="department" rows="4" required placeholder="Describe your symptoms or medical needs (e.g., 'tooth pain for 3 days', 'annual health checkup', 'knee injury consultation'). Max 1000 characters." maxlength="1000"></textarea>
                 </div>
                 
                 <div class="form-group">
                     <label for="hospital">Preferred Hospital <span class="required">*</span></label>
-                    <select id="hospital" name="hospital" required>
-                        <option value="">Please select...</option>
-                        <option value="none">No preference (recommend for me)</option>
-                        <option value="pumc">Peking Union Medical College Hospital</option>
-                        <option value="china_japan">China-Japan Friendship Hospital</option>
-                        <option value="chaoyang">Beijing Chaoyang Hospital</option>
-                        <option value="united">Beijing United Family Hospital (Premium)</option>
-                        <option value="other">Other</option>
-                    </select>
+                    <input type="text" id="hospital" name="hospital" required placeholder="No preference (recommend for me)" value="No preference (recommend for me)" onfocus="if(this.value==='No preference (recommend for me)')this.value=''" onblur="if(this.value==='')this.value='No preference (recommend for me)'">
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-light);">Enter a hospital name or leave as "No preference" for our recommendation</p>
                 </div>
                 
                 <div class="form-group">
@@ -253,13 +237,8 @@
                         <label><input type="checkbox" name="service_type" value="appointment"> Appointment Only</label>
                         <label><input type="checkbox" name="service_type" value="accompaniment"> Full Accompaniment</label>
                         <label><input type="checkbox" name="service_type" value="translation"> Translation Only</label>
-                        <label><input type="checkbox" name="service_type" value="consultation"> Free 15-Min Consultation</label>
+                        <label><input type="checkbox" name="service_type" value="consultation"> 15-Min Consultation ($20)</label>
                     </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="conditions">Chronic Conditions / Allergies</label>
-                    <textarea id="conditions" name="conditions" rows="3" placeholder="List any chronic conditions, drug allergies, or current medications. Write 'None' if not applicable."></textarea>
                 </div>
             </div>
 
@@ -277,7 +256,7 @@
                 
                 <div style="margin-top: 1.5rem; padding: 1rem; background: #f0fdf4; border-radius: 8px; border-left: 3px solid #10b981;">
                     <strong>💬 Need Help Now?</strong><br>
-                    WhatsApp: <strong>+86 138 0138 0000</strong> | WeChat: <strong>baroqueliu6</strong>
+                    WeChat: <strong>louisleo99</strong> | Email: <strong>hello@13801380.site</strong>
                 </div>
                 
                 <p style="margin-top: 1rem;">
