@@ -1,7 +1,7 @@
 # 项目文件结构说明
 
-**更新日期:** 2026-03-20  
-**目的:** 将刺青项目和陪诊项目的文件分开存放，便于管理
+**更新日期:** 2026-03-30  
+**备份位置:** `~/.openclaw/workspace/tattoo-shop-backup-20260330-104821/`
 
 ---
 
@@ -9,122 +9,153 @@
 
 ```
 tattoo-shop/
-├── tattoo/                     # 刺青项目文件
-│   ├── index.html             # 刺青网站首页
-│   ├── css/
-│   │   └── style.css          # 刺青网站样式
-│   ├── js/
-│   │   └── main.js            # 刺青网站交互
-│   ├── images/                # 刺青网站图片
-│   └── products/              # 纹身产品设计文件
-│       ├── love-character.png
-│       ├── love-character.svg
-│       ├── joy-character.png
-│       └── ... (6 个产品设计)
+├── .git/                      # Git 版本控制
+├── tattoo/                    # 纹身项目（独立网站）
+│   ├── index.html             # 纹身网站首页
+│   ├── css/                   # 纹身项目样式
+│   ├── js/                    # 纹身项目脚本
+│   ├── images/                # 纹身项目图片
+│   ├── products/              # 纹身产品设计文件（SVG/PNG）
+│   └── docs/                  # 纹身项目文档
+│       ├── GUMROAD-SETUP.md
+│       ├── MARKETING-PLAN.md
+│       ├── SOCIAL-MEDIA-POSTS.md
+│       ├── TATTOO-FORUMS.md
+│       └── product-template.md
 │
-├── medical-concierge/          # 陪诊项目文件
-│   ├── concierge/
+├── medical-concierge/         # 陪诊项目（独立网站）
+│   ├── concierge/             # 陪诊网站代码
 │   │   ├── index.html         # 陪诊网站首页
-│   │   ├── css/
-│   │   │   └── concierge-style.css
-│   │   └── js/
-│   │       └── concierge-main.js
-│   ├── research/              # 陪诊市场研究
-│   │   └── medical-concierge-cases-raw.md
-│   └── CONCIERGE-*.md         # 陪诊项目文档
+│   │   ├── css/               # 陪诊项目样式
+│   │   ├── js/                # 陪诊项目脚本
+│   │   ├── questionnaire-phase1.html
+│   │   ├── payment.html
+│   │   ├── patient-stories.html
+│   │   └── ... (其他页面)
+│   ├── docs/                  # 陪诊项目文档
+│   │   ├── CONCIERGE-*.md     # 陪诊配置和部署文档
+│   │   ├── PATIENT-STORIES-GUIDE.md
+│   │   ├── COPYWRITING-SOCIAL-MEDIA.md
+│   │   ├── 北京拔智齿医院对比.md
+│   │   └── ... (其他文档)
+│   └── research/              # 陪诊市场调研
 │
-├── PROJECT-*.md               # 通用项目文档
-├── WORKFLOW.md                # 工作流程
-├── ACCOUNTS.md                # 账号信息
-└── ... (其他通用文档)
+└── shared-docs/               # 共享文档（两个项目通用）
+    ├── ACCOUNTS.md            # 账号信息
+    ├── DNS-CONFIG.md          # DNS 配置
+    ├── VERCEL-*.md            # Vercel 部署文档
+    ├── PROJECT-*.md           # 项目规划文档
+    ├── WORKFLOW.md            # 工作流程
+    ├── BLOG-POST-1.md         # 博客文章
+    ├── CHAT-SUMMARY.md        # 聊天总结
+    ├── CLEANUP-REPORT.md      # 清理报告
+    ├── FILE-STRUCTURE.md      # 文件结构（本文档）
+    ├── LEARNING-ROADMAP.md    # 学习路线
+    ├── LESSONS-LEARNED.md     # 经验教训
+    ├── NAMING-CONVENTION.md   # 命名规范
+    ├── SSL-CHECK.md           # SSL 检查
+    ├── SUBDOMAIN-ADDED.md     # 子域名配置
+    ├── TODAY-PLAN.md          # 每日计划
+    ├── UI-UX-FIX-REPORT.md    # UI/UX 修复报告
+    ├── deploy.sh              # 部署脚本
+    ├── index-tattoo-backup.html  # 纹身网站备份
+    ├── license.html           # 许可证
+    ├── privacy.html           # 隐私政策
+    ├── terms.html             # 服务条款
+    └── marketing-strategy.md  # 营销策略
 ```
 
 ---
 
-## 🎯 项目对应关系
+## 🎯 项目分离说明
 
-### 刺青项目 (Tattoo)
-- **本地目录:** `tattoo-shop/tattoo/`
-- **GitHub 仓库:** `baroqueliu6-dev/tattoo-shop`
-- **Vercel 项目:** `tattoo-site`
-- **域名:** `tattoo.13801380.site`
-- **Root Directory:** 根目录 `/`
+### 纹身项目 (tattoo/)
+- **域名:** tattoo.13801380.site
+- **Vercel 项目:** tattoo-site
+- **Root Directory:** `/` (仓库根目录)
+- **用途:** 销售中文字纹身设计（数字产品）
+- **支付:** Gumroad
 
-### 陪诊项目 (Medical Concierge)
-- **本地目录:** `tattoo-shop/medical-concierge/concierge/`
-- **GitHub 仓库:** `baroqueliu6-dev/tattoo-shop`
-- **Vercel 项目:** `service-site`
-- **域名:** `13801380.site`
-- **Root Directory:** `medical-concierge/concierge` ⚠️ 完整路径，不是 `concierge`
-
----
-
-## 📝 文件分类说明
-
-### 刺青项目独有文件 → `tattoo/`
-- `index.html` - 刺青网站首页
-- `css/style.css` - 刺青网站样式
-- `js/main.js` - 刺青网站交互脚本
-- `images/` - 刺青网站图片资源
-- `products/` - 纹身设计产品文件（PNG、SVG、PDF 等）
-
-### 陪诊项目独有文件 → `medical-concierge/`
-- `concierge/index.html` - 陪诊网站首页
-- `concierge/css/concierge-style.css` - 陪诊网站样式
-- `concierge/js/concierge-main.js` - 陪诊网站交互脚本
-- `research/` - 市场调研、案例收集
-- `CONCIERGE-*.md` - 陪诊项目相关文档
-
-### 通用文档 → 根目录
-- `PROJECT-*.md` - 项目状态、计划等
-- `WORKFLOW.md` - 工作流程
-- `ACCOUNTS.md` - 账号信息
-- `DNS-CONFIG.md` - DNS 配置
-- `VERCEL-*.md` - Vercel 配置文档
-- `LESSONS-LEARNED.md` - 经验总结
+### 陪诊项目 (medical-concierge/concierge/)
+- **域名:** 13801380.site
+- **Vercel 项目:** service-site
+- **Root Directory:** `medical-concierge/concierge/`
+- **用途:** 北京外籍人士医疗陪诊服务
+- **支付:** PayPal（待配置）
 
 ---
 
-## 🔄 部署说明
+## 📝 文档分类规则
 
-### 刺青项目部署
+### 纹身项目文档 (tattoo/docs/)
+- Gumroad 配置
+- 纹身市场推广
+- 社交媒体内容
+- 纹身论坛列表
+- 产品设计模板
+
+### 陪诊项目文档 (medical-concierge/docs/)
+- 陪诊服务配置
+- 部署文档
+- 患者故事指南
+- 文案和社交媒体
+- 医院对比调研
+- 北京医疗市场调研
+
+### 共享文档 (shared-docs/)
+- 账号信息
+- DNS 和域名配置
+- Vercel 部署
+- 项目规划
+- 工作流程
+- 法律文件（隐私政策、服务条款等）
+- 备份文件
+
+---
+
+## 🔄 部署流程
+
+### 纹身项目
 ```bash
-cd ~/.openclaw/workspace/tattoo-shop/tattoo
-# 文件直接从 tattoo/ 目录部署到 Vercel
+cd tattoo-shop/tattoo
+# Vercel 自动部署（Git push 触发）
+# Root Directory: /
 ```
 
-### 陪诊项目部署
+### 陪诊项目
 ```bash
-cd ~/.openclaw/workspace/tattoo-shop/medical-concierge/concierge
-# 文件从 medical-concierge/concierge/ 目录部署到 Vercel
+cd tattoo-shop/medical-concierge/concierge
+# Vercel 自动部署（Git push 触发）
+# Root Directory: medical-concierge/concierge/
 ```
 
-### Git 推送
-两个项目共享同一个 GitHub 仓库，推送到 `main` 分支后：
-- Vercel 的 `tattoo-site` 项目从根目录部署
-- Vercel 的 `service-site` 项目从 `concierge` 子目录部署
+---
+
+## ⚠️ 重要提示
+
+1. **不要删除 .git/ 目录** - 包含所有版本历史
+2. **备份优先** - 重大修改前先备份
+3. **Git 提交** - 修改后及时提交并推送
+4. **Vercel 配置** - 确保两个项目的 Root Directory 正确
 
 ---
 
-## ⚠️ 注意事项
+## 📦 备份管理
 
-1. **Vercel Root Directory 设置**
-   - tattoo-site: 根目录 `/`
-   - service-site: `medical-concierge/concierge`
+备份位置：`~/.openclaw/workspace/tattoo-shop-backup-YYYYMMDD-HHMMSS/`
 
-2. **文件路径引用**
-   - 刺青网站：`css/style.css`, `js/main.js`
-   - 陪诊网站：`css/concierge-style.css`, `js/concierge-main.js`
+备份策略：
+- 重大修改前自动备份
+- 每周手动备份一次
+- 保留最近 3 个备份版本
 
-3. **产品文件**
-   - 纹身设计产品文件保留在 `tattoo/products/`
-   - 陪诊服务没有实体产品
-
-4. **研究文档**
-   - 纹身市场调研：已完成的在根目录
-   - 陪诊市场研究：在 `medical-concierge/research/`
+清理旧备份：
+```bash
+# 删除超过 30 天的备份
+find ~/.openclaw/workspace -name "tattoo-shop-backup-*" -mtime +30 -exec rm -rf {} \;
+```
 
 ---
 
-**整理完成时间:** 2026-03-20 21:18  
-**整理人:** 巴洛克
+**最后更新:** 2026-03-30  
+**维护人:** 巴洛克 👻
