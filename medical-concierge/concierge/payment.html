@@ -135,6 +135,68 @@
             font-size: 0.9rem;
         }
         
+        .legal-consent {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid #f59e0b;
+            margin: 2rem 0;
+        }
+        
+        .legal-consent h4 {
+            color: #92400e;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .legal-consent .consent-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background: rgba(255,255,255,0.5);
+            border-radius: 8px;
+        }
+        
+        .legal-consent .consent-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .legal-consent input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+        
+        .legal-consent label {
+            color: #78350f;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            cursor: pointer;
+        }
+        
+        .legal-consent label a {
+            color: #0070ba;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        
+        .legal-consent .error-message {
+            color: #dc2626;
+            font-weight: 600;
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background: rgba(220,38,38,0.1);
+            border-radius: 8px;
+            display: none;
+        }
+        
         .example-box {
             background: #f8f9fa;
             padding: 1rem;
@@ -203,6 +265,43 @@
                     <textarea id="needs" name="needs" rows="4" placeholder="Please describe your symptoms, preferred hospital, or any specific requirements..." required></textarea>
                 </div>
                 
+                <!-- Legal Consent Checkboxes -->
+                <div class="legal-consent" id="legalConsent">
+                    <h4>📋 Required Legal Agreements</h4>
+                    
+                    <div class="consent-item">
+                        <input type="checkbox" id="consentTerms" name="consentTerms" required>
+                        <label for="consentTerms">
+                            I have read and agree to the <a href="terms.html" target="_blank">Terms of Service</a>, including the medical service disclaimer and refund policy.
+                        </label>
+                    </div>
+                    
+                    <div class="consent-item">
+                        <input type="checkbox" id="consentPrivacy" name="consentPrivacy" required>
+                        <label for="consentPrivacy">
+                            I have read and agree to the <a href="privacy.html" target="_blank">Privacy Policy</a> and consent to my data being processed in China.
+                        </label>
+                    </div>
+                    
+                    <div class="consent-item">
+                        <input type="checkbox" id="consentMedical" name="consentMedical" required>
+                        <label for="consentMedical">
+                            I understand this service is NOT medical advice, and I will consult licensed medical professionals for all healthcare decisions.
+                        </label>
+                    </div>
+                    
+                    <div class="consent-item">
+                        <input type="checkbox" id="consentHealth" name="consentHealth" required>
+                        <label for="consentHealth">
+                            I warrant that I am physically fit to travel to China and undergo medical treatment.
+                        </label>
+                    </div>
+                    
+                    <div class="error-message" id="consentError">
+                        ⚠️ Please check all boxes to continue with payment.
+                    </div>
+                </div>
+                
                 <button type="submit" class="paypal-button">
                     💳 Pay $20 via PayPal
                 </button>
@@ -218,12 +317,35 @@
         document.getElementById('paymentForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
+            // 验证所有勾选框
+            const consentTerms = document.getElementById('consentTerms').checked;
+            const consentPrivacy = document.getElementById('consentPrivacy').checked;
+            const consentMedical = document.getElementById('consentMedical').checked;
+            const consentHealth = document.getElementById('consentHealth').checked;
+            
+            const errorDiv = document.getElementById('consentError');
+            
+            if (!consentTerms || !consentPrivacy || !consentMedical || !consentHealth) {
+                errorDiv.style.display = 'block';
+                errorDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
+            }
+            
+            errorDiv.style.display = 'none';
+            
             // 获取表单数据
             const formData = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value,
-                needs: document.getElementById('needs').value
+                needs: document.getElementById('needs').value,
+                consent: {
+                    terms: consentTerms,
+                    privacy: consentPrivacy,
+                    medical: consentMedical,
+                    health: consentHealth,
+                    timestamp: new Date().toISOString()
+                }
             };
             
             // 保存到 localStorage（支付成功后使用）
