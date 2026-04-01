@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Beijing Medical Concierge</title>
+    <meta name="description" content="Fill in your information and we'll respond within 2 hours.">
+    <link rel="stylesheet" href="css/concierge-style.css">
+    <link rel="stylesheet" href="css/enhancements.css">
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .note {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 8px;
+            color: #92400e;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">🏥 Beijing Medical Concierge</a>
+            <div class="nav-links">
+                <a href="index.html#services">Services</a>
+                <a href="index.html#hospitals">Hospitals</a>
+                <a href="index.html#pricing">Pricing</a>
+                <a href="patient-guide.html">Patient Guide</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="mobile-menu-toggle">☰</div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section class="section" style="padding: 4rem 0; background: #f9fafb;">
+        <div class="container">
+            <div class="form-container">
+                <h1 style="text-align: center; margin-bottom: 0.5rem; color: #1f2937;">Contact Us</h1>
+                <p style="text-align: center; color: #6b7280; margin-bottom: 2rem;">Fill in your information and we'll respond within 2 hours.</p>
+                
+                <div class="mission-note" style="background: #f0f4ff; padding: 1.5rem; border-left: 4px solid #7b61c1; margin: 2rem 0; border-radius: 8px;">
+                    <p style="margin: 0; color: #4b5563;">
+                        <strong style="color: #1f2937;">When you're ill, you shouldn't have to navigate alone.</strong>
+                    </p>
+                    <p style="margin: 1rem 0 0 0; color: #4b5563;">
+                        Language barriers can be overcome. Distance can be bridged. 
+                        But the hardest part is facing an unfamiliar hospital, an unfamiliar system, 
+                        and unfamiliar medical conditions while you're at your weakest.
+                    </p>
+                    <p style="margin: 1rem 0 0 0; color: #4b5563;">
+                        Fill in the form below. We'll respond within 2 hours and help you through every step.
+                    </p>
+                </div>
+                
+                <form id="contactForm" onsubmit="sendEmail(); return false;">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact">WeChat/Phone (Optional)</label>
+                        <input type="text" id="contact" name="contact" placeholder="Your WeChat ID or phone number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Medical Needs</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Describe your medical needs, symptoms, or questions..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="referral-code">Referral Code (Optional)</label>
+                        <input type="text" id="referral-code" name="referral_code" placeholder="Enter referral code if you have one (e.g., TOM2026)">
+                        <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; color: #6B7280;">
+                            Have a friend who recommended us? Enter their referral code to get $10 OFF your first service.
+                        </p>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block" style="padding: 1rem; font-size: 1.1rem;">
+                        Submit
+                    </button>
+                    
+                    <div style="margin-top: 1rem; padding: 1rem; background: #f0f4ff; border-radius: 8px; text-align: center;">
+                        <p style="margin: 0; color: #667eea; font-size: 0.95rem;">
+                            <strong>💰 Consultation Fee</strong> - Deductible from any service package
+                        </p>
+                    </div>
+                </form>
+                
+                <p class="note">
+                    <strong>Next Steps:</strong> After submission, you'll be directed to the Alipay payment page. Once payment is confirmed, we'll respond within 2 hours with your personalized consultation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>🏥 Beijing Medical Concierge</h4>
+                    <p>Professional medical concierge for international patients in Beijing.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#hospitals">Hospitals</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Beijing Medical Concierge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function sendEmail() {
+            const name = document.querySelector('[name="name"]').value;
+            const email = document.querySelector('[name="email"]').value;
+            const contact = document.querySelector('[name="contact"]').value;
+            const message = document.querySelector('[name="message"]').value;
+            const referralCode = document.querySelector('[name="referral_code"]').value;
+            
+            const subject = `Contact Inquiry from ${name}${referralCode ? ' (Referral: ' + referralCode + ')' : ''}`;
+            const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AContact: ${contact}%0D%0AReferral Code: ${referralCode || 'None'}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+            
+            window.location.href = `mailto:hello@13801380.site?subject=${subject}&body=${body}`;
+        }
+    </script>
+    <script src="js/concierge-main.js"></script>
+</body>
+</html>

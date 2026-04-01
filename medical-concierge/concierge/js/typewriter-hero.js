@@ -9,19 +9,24 @@
 
     // Configuration - Fast typewriter speed per Boss's requirement
     const CONFIG = {
-        typingSpeed: 45,        // ms per character (FAST - 40-50ms range)
-        deletingSpeed: 25,      // ms per character (faster deletion)
-        pauseTime: 2000,        // ms to wait after completing a phrase
-        deletePause: 500,       // ms to wait before deleting
+        typingSpeed: 35,        // ms per character (FAST - 35-45ms range)
+        deletingSpeed: 20,      // ms per character (faster deletion)
+        pauseTime: 2500,        // ms to wait after completing a phrase
+        deletePause: 800,       // ms to wait before deleting
         mobileBreakpoint: 768,  // disable typewriter on small screens
-        mobileSpeed: 50         // ms per character on mobile (also fast)
+        mobileSpeed: 40         // ms per character on mobile (also fast)
     };
 
-    // Advantage phrases - Friend-to-friend conversational style with rhyming punchlines
+    // Advantage phrases - Highlighting "Three Unfamiliar Difficulties" + Price Advantage
     const lines = [
-        "Same doctors, same care — way less than the US, honestly. Care can wait, your health can't. See someone today, not next month.",
-        "Why pay more? Why wait longer? Doctors rest, pain doesn't. Get checked this week, not in 3 months.",
-        "So many folks come here now. They get it: care waits, health doesn't. Top hospitals, fraction of cost. Done."
+        "80% Cheaper Than US Healthcare.",
+        "Same Expert Doctors.",
+        "Zero Language Barriers.",
+        "Unfamiliar Hospital? Unfamiliar System? Unfamiliar Medical Terms?",
+        "We Handle All Three.",
+        "500+ International Patients Treated.",
+        "100% Satisfaction.",
+        "You're Never Alone in Beijing."
     ];
 
     let currentPhraseIndex = 0;

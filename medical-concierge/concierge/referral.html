@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral Program | Beijing Medical Concierge</title>
+    <link rel="stylesheet" href="css/concierge-style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">🏥 Beijing Medical Concierge</a>
+            <div class="nav-links">
+                <a href="index.html#services">Services</a>
+                <a href="index.html#hospitals">Hospitals</a>
+                <a href="index.html#pricing">Pricing</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Referral Program Content -->
+    <section class="referral-program" style="padding: 5rem 0; background: #FFFFFF;">
+        <div class="container" style="max-width: 800px;">
+            <h1 style="text-align: center; font-size: 2.5rem; color: #7B61C1; margin-bottom: 0.5rem;">Share & Earn Up to $14 Per Referral</h1>
+            <p style="text-align: center; font-size: 1.1rem; color: #10B981; font-weight: 700; margin-bottom: 1rem;">
+                Direct: $10 • 2nd-Tier: $3 • 3rd-Tier: $1
+            </p>
+            <p style="text-align: center; font-size: 1rem; color: #6B7280; margin-bottom: 2rem;">
+                Help friends access world-class medical care in Beijing, and earn rewards for up to 3 levels of referrals.
+            </p>
+            
+            <!-- Quick Share Buttons -->
+            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 3rem;">
+                <p style="text-align: center; color: #6B7280; font-size: 0.95rem; margin-bottom: 1rem; font-weight: 600;">Share instantly:</p>
+                <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://wa.me/?text=Hey!%20I%20found%20this%20medical%20concierge%20service%20in%20Beijing.%20They%20help%20international%20patients%20navigate%20hospitals%2C%20and%20you%20get%20%2410%20OFF%20first%20service.%20Worth%20checking%20out%3A%20https%3A%2F%2F13801380.site" 
+                       target="_blank" 
+                       style="display: inline-flex; align-items: center; gap: 0.5rem; background: #25D366; color: white; padding: 0.875rem 1.75rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s;"
+                       onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+                        📱 WhatsApp
+                    </a>
+                    <a href="mailto:?subject=Medical%20Concierge%20in%20Beijing%20-%20%2410%20OFF&body=Hey!%0D%0A%0D%0AI%20found%20this%20medical%20concierge%20service%20in%20Beijing.%20They%20help%20international%20patients%20navigate%20hospitals%2C%20and%20you%20get%20%2410%20OFF%20your%20first%20service.%0D%0A%0D%0AWorth%20checking%20out%3A%20https%3A%2F%2F13801380.site" 
+                       style="display: inline-flex; align-items: center; gap: 0.5rem; background: #0070ba; color: white; padding: 0.875rem 1.75rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s;"
+                       onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+                        ✉️ Email
+                    </a>
+                    <button onclick="copyReferralLink()" 
+                            style="display: inline-flex; align-items: center; gap: 0.5rem; background: #6B7280; color: white; padding: 0.875rem 1.75rem; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 1rem; transition: all 0.3s;"
+                            onmouseover="this.style.background='#4B5563'" onmouseout="this.style.background='#6B7280'">
+                        📋 Copy Link
+                    </button>
+                </div>
+                <p id="copy-success" style="color: #10B981; font-size: 0.85rem; margin-top: 0.75rem; text-align: center; display: none;">✓ Link copied to clipboard!</p>
+            </div>
+
+            <!-- 3-Tier Rewards Explainer -->
+            <div style="background: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 2px solid #10B981; box-shadow: 0 4px 20px rgba(16, 185, 129, 0.1);">
+                <h2 style="color: #059669; margin-bottom: 1.5rem; font-size: 1.5rem; text-align: center;">🎯 3-Tier Rewards System</h2>
+                <div style="display: grid; gap: 1rem; margin-bottom: 1.5rem;">
+                    <div style="background: #f0fdf4; padding: 1.25rem; border-radius: 8px; border-left: 4px solid #10B981;">
+                        <strong style="color: #059669; font-size: 1.15rem;">Level 1 (Direct): $10 per person</strong>
+                        <p style="margin: 0.5rem 0 0 0; color: #4B5563; font-size: 0.95rem;">Your friends who sign up directly with your code</p>
+                    </div>
+                    <div style="background: #f0fdf4; padding: 1.25rem; border-radius: 8px; border-left: 4px solid #10B981;">
+                        <strong style="color: #059669; font-size: 1.15rem;">Level 2 (Indirect): $3 per person</strong>
+                        <p style="margin: 0.5rem 0 0 0; color: #4B5563; font-size: 0.95rem;">Your friends' friends (2nd degree connection)</p>
+                    </div>
+                    <div style="background: #f0fdf4; padding: 1.25rem; border-radius: 8px; border-left: 4px solid #10B981;">
+                        <strong style="color: #059669; font-size: 1.15rem;">Level 3 (Indirect): $1 per person</strong>
+                        <p style="margin: 0.5rem 0 0 0; color: #4B5563; font-size: 0.95rem;">Your friends' friends' friends (3rd degree connection)</p>
+                    </div>
+                </div>
+                
+                <!-- Example Calculation -->
+                <div style="background: linear-gradient(135deg, #fef3c7 0%, #fce7b5 100%); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #F59E0B;">
+                    <h4 style="color: #92400e; margin-bottom: 0.75rem; font-size: 1.1rem;">💡 Example: If you refer 5 friends, and each refers 5 more...</h4>
+                    <div style="display: grid; gap: 0.5rem; color: #78350f;">
+                        <p style="margin: 0;"><strong>Level 1:</strong> 5 friends × $10 = <strong>$50</strong></p>
+                        <p style="margin: 0;"><strong>Level 2:</strong> 25 friends × $3 = <strong>$75</strong></p>
+                        <p style="margin: 0;"><strong>Level 3:</strong> 125 friends × $1 = <strong>$125</strong></p>
+                        <p style="margin: 0.75rem 0 0 0; font-size: 1.2rem; color: #059669; font-weight: 700; border-top: 2px solid #059669; padding-top: 0.75rem;">Total Potential: <strong>$250</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission Note -->
+            <div class="mission-note" style="background: linear-gradient(135deg, #ede9fe 0%, #f3f0ff 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center;">
+                <h2 style="color: #1f2937; margin-bottom: 1rem;">Why Share This Service?</h2>
+                <p style="color: #4b5563; max-width: 700px; margin: 0 auto;">
+                    When someone you care about is ill in a foreign country, they face the hardest challenges:
+                </p>
+                <p style="color: #1f2937; font-weight: 600; margin: 1.5rem auto; max-width: 700px;">
+                    An unfamiliar hospital. An unfamiliar system. Unfamiliar medical conditions.
+                </p>
+                <p style="color: #4b5563; max-width: 700px; margin: 1.5rem auto;">
+                    By sharing our service, you're giving them more than a discount. 
+                    You're giving them a lifeline — someone to guide them through every step, 
+                    so they can focus on what matters most: their recovery.
+                </p>
+            </div>
+
+            <!-- How It Works -->
+            <div style="background: linear-gradient(135deg, #EDE9FE 0%, #F3F0FF 100%); padding: 3rem; border-radius: 12px; margin-bottom: 3rem;">
+                <h2 style="text-align: center; color: #1F2937; margin-bottom: 2rem;">How It Works</h2>
+                
+                <div style="display: grid; gap: 2rem;">
+                    <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                        <div style="background: #7B61C1; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</div>
+                        <div>
+                            <h3 style="margin: 0 0 0.5rem 0; color: #1F2937;">Get Your Unique Code</h3>
+                            <p style="margin: 0; color: #4B5563;">After your consultation or service, you'll receive a unique referral code via email.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                        <div style="background: #7B61C1; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</div>
+                        <div>
+                            <h3 style="margin: 0 0 0.5rem 0; color: #1F2937;">Share with Friends</h3>
+                            <p style="margin: 0; color: #4B5563;">Share your code via WeChat, WhatsApp, email, or social media. Your friend gets $10 OFF their first service.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                        <div style="background: #7B61C1; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</div>
+                        <div>
+                            <h3 style="margin: 0 0 0.5rem 0; color: #1F2937;">Earn 3-Tier Rewards</h3>
+                            <p style="margin: 0; color: #4B5563;">
+                                • Your friend: $10 OFF first service<br>
+                                • You: $10 for direct + $3 for 2nd-tier + $1 for 3rd-tier<br>
+                                • Unlimited earning across 3 levels
+                            </p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                        <div style="background: #7B61C1; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">4</div>
+                        <div>
+                            <h3 style="margin: 0 0 0.5rem 0; color: #1F2937;">Redeem or Withdraw</h3>
+                            <p style="margin: 0 0 1rem 0; color: #4B5563;">
+                                Use vouchers for your own services (up to $50 off per order), or withdraw cash when you reach $50.
+                            </p>
+                            
+                            <h4 style="margin: 1rem 0 0.5rem 0; color: #1F2937; font-size: 1rem;">Choose Your Reward Method:</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                                <!-- PayPal Cash Option -->
+                                <div style="background: #f0f4ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #7B61C1;">
+                                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">💵</div>
+                                    <h5 style="margin: 0 0 0.5rem 0; color: #1F2937;">PayPal Cash (Recommended)</h5>
+                                    <p style="margin: 0; color: #4B5563; font-size: 0.9rem;">Direct transfer to your PayPal account. Fast, flexible, and secure.</p>
+                                    <p style="margin: 0.5rem 0 0 0; color: #6B7280; font-size: 0.85rem;">Minimum withdrawal: $50</p>
+                                </div>
+                                
+                                <!-- Gift Card Option -->
+                                <div style="background: #f0fdf4; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #10B981;">
+                                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎁</div>
+                                    <h5 style="margin: 0 0 0.5rem 0; color: #1F2937;">Gift Card (Alternative)</h5>
+                                    <p style="margin: 0; color: #4B5563; font-size: 0.9rem;">Apple, Google, or Amazon gift cards. Delivered via email instantly.</p>
+                                    <p style="margin: 0.5rem 0 0 0; color: #6B7280; font-size: 0.85rem;">Minimum withdrawal: $25</p>
+                                </div>
+                            </div>
+                            
+                            <p style="margin: 1.5rem 0 0 0; color: #6B7280; font-size: 0.85rem;">
+                                <strong>Note:</strong> You are responsible for any applicable taxes in your jurisdiction. We do not handle tax reporting.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rewards Summary -->
+            <div style="background: #F9FAFB; padding: 2rem; border-radius: 12px; margin-bottom: 3rem; text-align: center;">
+                <h2 style="color: #1F2937; margin-bottom: 1.5rem;">Simple Rewards</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">💰</div>
+                        <div style="font-weight: bold; color: #7B61C1; font-size: 1.25rem;">$10 OFF</div>
+                        <div style="color: #6B7280; font-size: 0.9rem; margin-top: 0.5rem;">For your friend</div>
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎁</div>
+                        <div style="font-weight: bold; color: #7B61C1; font-size: 1.25rem;">$10 Voucher</div>
+                        <div style="color: #6B7280; font-size: 0.9rem; margin-top: 0.5rem;">For you per referral</div>
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">♾️</div>
+                        <div style="font-weight: bold; color: #7B61C1; font-size: 1.25rem;">Unlimited</div>
+                        <div style="color: #6B7280; font-size: 0.9rem; margin-top: 0.5rem;">No referral limit</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div style="margin-bottom: 3rem;">
+                <h2 style="text-align: center; color: #1F2937; margin-bottom: 2rem;">Frequently Asked Questions</h2>
+                
+                <div style="display: grid; gap: 1.5rem;">
+                    <div style="background: #F9FAFB; padding: 1.5rem; border-radius: 8px;">
+                        <h3 style="margin: 0 0 0.5rem 0; color: #7B61C1; font-size: 1.1rem;">Q: How do I get my referral code?</h3>
+                        <p style="margin: 0; color: #4B5563;">A: After your first service, you'll receive a unique referral code via email. You can also find it on your payment success page.</p>
+                    </div>
+
+                    <div style="background: #F9FAFB; padding: 1.5rem; border-radius: 8px;">
+                        <h3 style="margin: 0 0 0.5rem 0; color: #7B61C1; font-size: 1.1rem;">Q: How do I share my code?</h3>
+                        <p style="margin: 0; color: #4B5563;">A: Share via WeChat, WhatsApp, email, or social media. Your friend just needs to enter your code when they book their first service.</p>
+                    </div>
+
+                    <div style="background: #F9FAFB; padding: 1.5rem; border-radius: 8px;">
+                        <h3 style="margin: 0 0 0.5rem 0; color: #7B61C1; font-size: 1.1rem;">Q: When will I receive my reward?</h3>
+                        <p style="margin: 0; color: #4B5563;">A: You'll receive your $10 voucher code within 24 hours after your friend completes their first paid service.</p>
+                    </div>
+
+                    <div style="background: #F9FAFB; padding: 1.5rem; border-radius: 8px;">
+                        <h3 style="margin: 0 0 0.5rem 0; color: #7B61C1; font-size: 1.1rem;">Q: Can I withdraw the vouchers?</h3>
+                        <p style="margin: 0; color: #4B5563;">A: Yes! When your total vouchers reach $50, you can request a withdrawal via PayPal or bank transfer. Taxes are your responsibility.</p>
+                    </div>
+
+                    <div style="background: #F9FAFB; padding: 1.5rem; border-radius: 8px;">
+                        <h3 style="margin: 0 0 0.5rem 0; color: #7B61C1; font-size: 1.1rem;">Q: Is there a limit to how many people I can refer?</h3>
+                        <p style="margin: 0; color: #4B5563;">A: No limit! Refer as many people as you want. The more you share, the more you earn.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div style="text-align: center; background: linear-gradient(135deg, #7B61C1, #9D8AD6); padding: 3rem; border-radius: 12px; color: white;">
+                <h2 style="margin-bottom: 1rem;">Ready to Start Sharing?</h2>
+                <p style="margin-bottom: 2rem; opacity: 0.95;">Already a customer? Check your email for your referral code.</p>
+                <a href="index.html#contact" style="background: white; color: #7B61C1; padding: 1rem 2.5rem; border-radius: 30px; text-decoration: none; font-weight: bold; display: inline-block;">Book a Service Now →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="margin-top: 3rem;">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Beijing Medical Concierge. All rights reserved.</p>
+                <p style="font-size: 0.85rem; color: #999; margin-top: 0.5rem;">
+                    Terms: Vouchers are for personal use only. Maximum $50 discount per order. Withdrawable at $50+ (you are responsible for any applicable taxes).
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function copyReferralLink() {
+            var link = 'https://13801380.site';
+            navigator.clipboard.writeText(link).then(function() {
+                var successMsg = document.getElementById('copy-success');
+                if (successMsg) {
+                    successMsg.style.display = 'block';
+                    setTimeout(function() {
+                        successMsg.style.display = 'none';
+                    }, 3000);
+                }
+            }).catch(function(err) {
+                // Fallback for older browsers
+                var textArea = document.createElement('textarea');
+                textArea.value = link;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-999999px';
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    var successMsg = document.getElementById('copy-success');
+                    if (successMsg) {
+                        successMsg.style.display = 'block';
+                        setTimeout(function() {
+                            successMsg.style.display = 'none';
+                        }, 3000);
+                    }
+                } catch (err) {
+                    alert('Please copy this link manually: ' + link);
+                }
+                document.body.removeChild(textArea);
+            });
+        }
+    </script>
+</body>
+</html>

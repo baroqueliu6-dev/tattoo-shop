@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Guide | Beijing Medical Concierge - Your Complete Guide to Medical Care in Beijing</title>
+    <meta name="description" content="Complete guide for international patients seeking medical care in Beijing. Visa requirements, hospital navigation, treatment process, and post-care support.">
+    <link rel="stylesheet" href="css/concierge-style.css">
+    <link rel="stylesheet" href="css/enhancements.css">
+    <style>
+        .guide-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid #667eea;
+        }
+        
+        .guide-section h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .guide-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .guide-section li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f3f4f6;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 1.05rem;
+            color: #374151;
+        }
+        
+        .guide-section li:last-child {
+            border-bottom: none;
+        }
+        
+        .guide-section li::before {
+            content: "→";
+            color: #667eea;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .resource-card {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        
+        .resource-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .resource-card p {
+            color: #6b7280;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">🏥 Beijing Medical Concierge</a>
+            <div class="nav-links">
+                <a href="index.html#services">Services</a>
+                <a href="index.html#hospitals">Hospitals</a>
+                <a href="index.html#pricing">Pricing</a>
+                <a href="patient-guide.html" class="active">Patient Guide</a>
+                <a href="faq.html">FAQ</a>
+                <a href="index.html#contact" class="btn-contact">Contact</a>
+            </div>
+            <div class="mobile-menu-toggle">☰</div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 6rem 0;">
+        <div class="container" style="text-align: center; color: white;">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Patient Guide</h1>
+            <p class="subtitle" style="font-size: 1.5rem; opacity: 0.95;">Your Complete Guide to Medical Care in Beijing</p>
+            
+            <div class="mission-note" style="background: #f0f4ff; padding: 1.5rem; border-left: 4px solid #7b61c1; margin: 2rem auto; border-radius: 8px; max-width: 800px; text-align: left;">
+                <p style="margin: 0; color: #4b5563; font-style: italic;">
+                    <strong style="color: #1f2937;">Why this guide exists:</strong>
+                </p>
+                <p style="margin: 1rem 0 0 0; color: #4b5563;">
+                    When you're ill, the hardest part isn't the language barrier or the distance. 
+                    It's navigating an unfamiliar hospital, an unfamiliar system, and unfamiliar medical conditions 
+                    while you're at your weakest — physically and mentally.
+                </p>
+                <p style="margin: 1rem 0 0 0; color: #4b5563;">
+                    This guide walks you through every step, so you know what to expect. 
+                    And when you need more help, we're here to guide you personally.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guide Content -->
+    <section class="section" style="padding: 4rem 0; background: #f9fafb;">
+        <div class="container" style="max-width: 1000px;">
+            
+            <!-- Section 1: Before You Come -->
+            <div class="guide-section">
+                <h2>
+                    <span style="font-size: 2rem;">✈️</span>
+                    Before You Come
+                </h2>
+                <ul>
+                    <li>
+                        <div>
+                            <strong>Medical Visa Requirements (S1/S2)</strong>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.25rem;">
+                                Most international patients need a medical visa. We provide invitation letters and application guidance.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3 style="color: #1f2937; font-size: 1.1rem; margin: 0.5rem 0;">China Visa-Free Transit Policy</h3>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.25rem;">Many international patients can enter Beijing without a visa for short medical consultations:</p>
+                            <ul style="margin-top: 0.5rem; padding-left: 1.25rem; color: #374151; font-size: 0.95rem;">
+                                <li><strong>72-Hour Visa-Free Transit:</strong> Available for citizens from 53 countries (US, UK, Canada, Australia, most EU countries). Valid for Beijing, Shanghai, Guangzhou.</li>
+                                <li><strong>144-Hour Visa-Free Transit:</strong> Available for citizens from 53 countries. Valid for Beijing-Tianjin-Hebei region, Shanghai-Jiangsu-Zhejiang region, Guangdong-Hong Kong-Macau region.</li>
+                            </ul>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.5rem;"><strong>Requirements:</strong></p>
+                            <ul style="margin-top: 0.25rem; padding-left: 1.25rem; color: #374151; font-size: 0.95rem;">
+                                <li>Valid passport (6+ months validity)</li>
+                                <li>Confirmed onward ticket to third country (within 72/144 hours)</li>
+                                <li>Valid visa for onward destination (if required)</li>
+                            </ul>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.5rem;"><strong>Note:</strong> For longer medical treatments, you'll need to apply for a medical visa (S1/S2). We can provide invitation letters.</p>
+                            <p style="margin-top: 0.75rem; padding: 0.75rem; background: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 4px; color: #92400e; font-size: 0.95rem;">
+                                <strong>Check Your Eligibility:</strong> Contact us to verify if your nationality qualifies for visa-free transit.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Required Documents</strong>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.25rem;">
+                                Passport, medical records, doctor's referral letter, financial proof, and visa application forms.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Travel Preparation Checklist</strong>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.25rem;">
+                                Flight bookings, travel insurance, medication supply, power adapters, and emergency contacts.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Accommodation Near Hospitals</strong>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.25rem;">
+                                We can recommend hotels and serviced apartments near your chosen hospital.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Section 2: Arrival in Beijing -->
+            <div class="guide-section">
+                <h2>
+                    <span style="font-size: 2rem;">🛬</span>
+                    Arrival in Beijing
+                </h2>
+                <ul>
+                    <li>
+                        <div>
+                            <strong>Airport Pickup Service</strong>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.25rem;">
+                                Our team can arrange airport pickup with English-speaking driver.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Hotel Check-in Assistance</strong>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.25rem;">
+                                We help with hotel registration and explain local amenities.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Initial Consultation Booking</strong>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.25rem;">
+                                Schedule your first hospital appointment with our assistance.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Payment Setup (WeChat/Alipay/Cash)</strong>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.25rem;">
+                                Guidance on setting up mobile payments or exchanging currency.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Section 3: During Treatment -->
+            <div class="guide-section">
+                <h2>
+                    <span style="font-size: 2rem;">🏥</span>
+                    During Treatment
+                </h2>
+                <ul>
+                    <li>
+                        <div>
+                            <strong>Hospital Registration Process</strong>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.25rem;">
+                                We assist with check-in procedures and ensure all paperwork is completed correctly.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>What to Bring to Appointments</strong>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.25rem;">
+                                Passport, insurance documents, medical records, current medications list, and questions for the doctor.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Understanding Chinese Prescriptions</strong>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.25rem;">
+                                We translate prescription instructions and explain dosage clearly.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Follow-up Scheduling</strong>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.25rem;">
+                                Book follow-up appointments before you leave Beijing or arrange remote consultations.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Section 4: After Treatment -->
+            <div class="guide-section">
+                <h2>
+                    <span style="font-size: 2rem;">🏠</span>
+                    After Treatment
+                </h2>
+                <ul>
+                    <li>
+                        <div>
+                            <strong>Medical Records Translation</strong>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.25rem;">
+                                Complete translation of medical reports, test results, and discharge summaries.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Medication Instructions</strong>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.25rem;">
+                                Detailed explanation of medications, side effects, and usage in your language.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Remote Follow-up Consultations</strong>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.25rem;">
+                                Arrange video consultations with your Beijing doctor after you return home.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <strong>Traveling with Medications</strong>
+                            <p style="color: #6b7280; font-size: 0.95rem; margin-top: 0.25rem;">
+                                Guidance on customs regulations and carrying medications across borders.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Helpful Resources -->
+            <div style="margin-top: 3rem;">
+                <h2 style="color: #1f2937; margin-bottom: 2rem; font-size: 2rem; text-align: center;">Helpful Resources</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div class="resource-card">
+                        <h3>🗺️ Beijing Hospital Map</h3>
+                        <p>Interactive map showing recommended hospitals in Beijing with locations and specialties.</p>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3>📞 Emergency Contact Numbers</h3>
+                        <p>24/7 emergency hotline, hospital emergency departments, and ambulance services.</p>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3>💊 Pharmacy Locations</h3>
+                        <p>24-hour pharmacies near major hospitals and international clinics.</p>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h3>📖 Medical Translation Glossary</h3>
+                        <p>Common medical terms in English and Chinese. Available after consultation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div style="margin-top: 4rem; text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 3rem; border-radius: 12px; color: white;">
+                <h2 style="margin-bottom: 1rem; font-size: 2rem;">Need Personalized Guidance?</h2>
+                <p style="margin-bottom: 2rem; font-size: 1.1rem; opacity: 0.95;">
+                    Every patient's journey is unique. Let us create a customized plan for your medical trip to Beijing.
+                </p>
+                <a href="index.html#contact" class="btn" style="display: inline-block; padding: 1rem 2.5rem; background: white; color: #667eea; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">
+                    Get Assessment →
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>🏥 Beijing Medical Concierge</h4>
+                    <p>Professional medical concierge for international patients in Beijing. Breaking language barriers, one patient at a time.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#hospitals">Hospitals</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="index.html#resources">Medical Guide</a></li>
+                        <li><a href="patient-stories.html">Success Stories</a></li>
+                        <li><a href="index.html#resources">Visa-Free Policy</a></li>
+                        <li><a href="index.html#resources">Visa Application</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms of Service</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Beijing Medical Concierge. All rights reserved.</p>
+                <p style="font-size: 0.85rem; color: #999; margin-top: 0.5rem;">
+                    Disclaimer: We are not a medical institution and do not provide medical advice. 
+                    All medical services are provided by licensed healthcare professionals.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/concierge-main.js"></script>
+</body>
+</html>

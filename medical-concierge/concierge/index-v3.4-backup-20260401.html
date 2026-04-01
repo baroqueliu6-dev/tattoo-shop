@@ -1,0 +1,2239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beijing Medical Concierge | Professional Medical Concierge for International Patients in Beijing</title>
+    <meta name="description" content="Professional medical translation and hospital navigation services for international patients visiting Beijing. We help you navigate China's healthcare system with confidence.">
+    <link rel="stylesheet" href="css/concierge-style.css">
+    <link rel="stylesheet" href="css/enhancements.css">
+    <link rel="stylesheet" href="css/typewriter-hero.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@chatwoot/widget@latest/dist/widget.css">
+    
+    <!-- YouTube Embed Support -->
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Time Slot Selector Styles */
+        .time-slot-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .time-slot-option {
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .time-slot-option:hover {
+            border-color: var(--primary-color);
+            background: #f0f4ff;
+        }
+        
+        .time-slot-option.selected {
+            border-color: var(--primary-color);
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+        
+        .time-slot-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .time-slot-name {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .time-slot-hours {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        .pricing-table th,
+        .pricing-table td {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .pricing-table th {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-weight: 600;
+        }
+        
+        .pricing-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .pricing-table .service-name {
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .price-highlight {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+        
+        .session-prices {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        
+        .session-prices ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0 0 0;
+        }
+        
+        .session-prices li {
+            padding: 0.3rem 0;
+            color: var(--text-light);
+        }
+        
+        .quick-consult-card {
+            background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #48bb78;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .quick-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2f855a;
+            margin: 1rem 0;
+        }
+        
+        .quick-price .original-price {
+            font-size: 1.5rem;
+            color: #999;
+            text-decoration: line-through;
+            margin-right: 0.5rem;
+        }
+        
+        .quick-note {
+            color: #2f855a;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        /* Testimonial Collapse Styles */
+        .testimonial-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-text.expanded {
+            -webkit-line-clamp: unset;
+            overflow: visible;
+        }
+        
+        .testimonial-expand-btn {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            cursor: pointer;
+            padding: 0.25rem 0;
+            margin-top: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .testimonial-expand-btn:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">🏥 Beijing Medical Concierge</a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#hospitals">Hospitals</a>
+                <a href="#pricing">Pricing</a>
+                <a href="faq.html">FAQ</a>
+                <a href="#contact" class="btn-contact">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section - Static Display (No Typewriter) -->
+    <!-- UI Design 优化版 - 移动优先，3 秒规则 -->
+    <section class="typewriter-hero">
+        <div class="typewriter-container">
+            <!-- 主标题框：价值主张（3 秒内理解：这是什么、卖什么、为什么买） -->
+            <div class="hero-title-box">
+                <h1>
+                    World-Class Medical Care in Beijing.
+                </h1>
+                <p class="price-highlight">
+                    At 60-80% of US/Europe Prices.
+                </p>
+                <p style="font-size: 1.05rem; color: #4B5563; margin-top: 1.25rem; line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Gain priority access to China's top-ranked hospitals. 
+                    We bypass general admission queues to connect you directly with leading experts or department heads at Class 3A hospitals—matched specifically to your condition.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem; flex-wrap: wrap;">
+                    <span style="color: #6B7280; font-size: 0.9rem;">✓ Expert hospital matching</span>
+                    <span style="color: #6B7280; font-size: 0.9rem;">✓ Priority specialist appointments</span>
+                    <span style="color: #6B7280; font-size: 0.9rem;">✓ 100% Confidential</span>
+                </div>
+                <p style="color: #6B7280; font-size: 0.9rem; margin-top: 1rem; text-align: center;">
+                    Get a confidential expert review of your medical options—no cost, no obligation.
+                </p>
+            </div>
+            
+            <!-- 核心理念框：情感共鸣 + 解决方案 -->
+            <div class="mission-box">
+                <p>
+                    <span class="intro">Language barriers can be overcome. Distance can be bridged.</span>
+                    <span class="challenge">But when you're ill, navigating an unfamiliar hospital, an unfamiliar system, and unfamiliar medical conditions in a foreign land — <span class="highlight">these are the hardest challenges.</span></span>
+                    <span class="solution">That's where we come in. We help you through every step, so you can focus on what matters most: <strong>your recovery.</strong></span>
+                </p>
+            </div>
+            
+            <!-- CTA 按钮：2 个清晰选项（咨询 / 测试） -->
+            <div class="typewriter-cta">
+                <a href="#contact" class="btn btn-primary btn-large">📧 Get Consultation</a>
+                <a href="questionnaire-phase1.html" class="btn btn-secondary btn-large">⚡ 2-min Quiz</a>
+            </div>
+            <p style="color: #6B7280; font-size: 0.9rem; margin-top: 1rem;">Free consultation • No obligation • Response within 2 hours</p>
+        </div>
+    </section>
+
+    <!-- Trust Bar - Social Proof -->
+    <section class="trust-bar" style="background: white; padding: 2rem 0; border-bottom: 1px solid #E5E7EB;">
+      <div class="container">
+        <p style="text-align: center; color: #6B7280; font-size: 0.95rem; margin: 0 0 1.5rem 0;">
+          Trusted by International Patients from Multiple Countries
+        </p>
+        <div class="trust-badges" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <span class="badge" style="background: #EDE9FE; color: #7B61C1; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">🏥 Top 3A Hospitals</span>
+          <span class="badge" style="background: #EDE9FE; color: #7B61C1; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">🗣️ Bilingual Support</span>
+          <span class="badge" style="background: #EDE9FE; color: #7B61C1; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">💰 60-80% Cost Savings</span>
+          <span class="badge" style="background: #EDE9FE; color: #7B61C1; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">⏱️ Skip Long Waits</span>
+          <span class="badge" style="background: #EDE9FE; color: #7B61C1; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">🛂 Visa-Free Policy</span>
+          <span class="badge" style="background: #EDE9FE; color: #7B61C1; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">🛡️ Safe & Clean</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Original Hero Section - Now Second Block (Problem/Solution) -->
+    <section class="hero">
+        <div class="container">
+            <h2>Healthcare in Beijing Can Be Challenging</h2>
+            <div class="problems-grid">
+                <a href="blog-language-barrier.html" class="problem-card" style="display: block; transition: transform 0.3s;">
+                    <div class="problem-icon">🗣️</div>
+                    <h3>Language Barrier</h3>
+                    <p>Most doctors don't speak English. Misunderstandings can lead to wrong diagnoses or treatments.</p>
+                    <p style="color: var(--primary-color); font-weight: 600; margin-top: 1rem;">📖 Read full article →</p>
+                </a>
+                <a href="blog-unfamiliar-system.html" class="problem-card" style="display: block; transition: transform 0.3s;">
+                    <div class="problem-icon">🏥</div>
+                    <h3>Unfamiliar System</h3>
+                    <p>Chinese hospitals work differently. Registration, payment, pharmacy - all can be confusing.</p>
+                    <p style="color: var(--primary-color); font-weight: 600; margin-top: 1rem;">📖 Read full article →</p>
+                </a>
+                <a href="blog-long-waits.html" class="problem-card" style="display: block; transition: transform 0.3s;">
+                    <div class="problem-icon">⏰</div>
+                    <h3>Long Waits</h3>
+                    <p>Without local knowledge, you might wait hours. We help you skip the lines.</p>
+                    <p style="color: var(--primary-color); font-weight: 600; margin-top: 1rem;">📖 Read full article →</p>
+                </a>
+                <a href="blog-medication-confusion.html" class="problem-card" style="display: block; transition: transform 0.3s;">
+                    <div class="problem-icon">💊</div>
+                    <h3>Medication Confusion</h3>
+                    <p>Chinese prescriptions are hard to understand. Dosage instructions may be unclear.</p>
+                    <p style="color: var(--primary-color); font-weight: 600; margin-top: 1rem;">📖 Read full article →</p>
+                </a>
+            </div>
+            
+            <div class="solution-box">
+                <h3>💡 We're Here to Help</h3>
+                <p>Our professional medical concierge service provides English-speaking assistance throughout your entire healthcare journey in Beijing. From finding the right doctor to understanding your prescription, we've got you covered.</p>
+                <div class="guarantee-box">
+                    <strong>🛡️ 100% Satisfaction Guarantee:</strong> Not satisfied? Full refund. No questions asked.
+                </div>
+            </div>
+            
+            <!-- Enhanced Trust Badges -->
+            <div class="trust-badges" style="margin-top: 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+                <span class="trust-badge" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: white; border-radius: 20px; font-size: 0.95rem; font-weight: 600; color: #374151; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    ✓ Patients Served
+                </span>
+                <span class="trust-badge" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: white; border-radius: 20px; font-size: 0.95rem; font-weight: 600; color: #374151; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    ✓ Multiple Countries
+                </span>
+                <span class="trust-badge" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: white; border-radius: 20px; font-size: 0.95rem; font-weight: 600; color: #374151; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    ✓ Fast Response
+                </span>
+                <span class="trust-badge" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: white; border-radius: 20px; font-size: 0.95rem; font-weight: 600; color: #374151; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    ✓ 100% Satisfaction Guarantee
+                </span>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Trust Bar - Social Proof + Value Proposition -->
+    <section class="trust-bar" style="background: white; padding: 4rem 0;">
+      <div class="container">
+        <!-- Large "Trusted by" Header -->
+        <div style="text-align: center; margin-bottom: 3rem;">
+          <p style="color: #6B7280; font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">Trusted By</p>
+          <h2 style="color: #1F2937; font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">International Patients from Multiple Countries</h2>
+          <p style="color: #6B7280; font-size: 1.1rem; max-width: 700px; margin: 0 auto;">
+            From US, UK, Australia, Canada, Germany, France, Southeast Asia, and beyond — we've helped international patients navigate Beijing's healthcare system with confidence.
+          </p>
+        </div>
+        
+        <!-- Trust Badges - 统一为核心优势 -->
+        <div class="trust-badges" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
+          <span class="badge" style="background: #EDE9FE; color: #7B61C1; padding: 0.75rem 1.5rem; border-radius: 25px; font-size: 0.95rem; font-weight: 600;">🏥 Top 3A Hospitals</span>
+          <span class="badge" style="background: #EDE9FE; color: #7B61C1; padding: 0.75rem 1.5rem; border-radius: 25px; font-size: 0.95rem; font-weight: 600;">🗣️ Bilingual Support</span>
+          <span class="badge" style="background: #EDE9FE; color: #7B61C1; padding: 0.75rem 1.5rem; border-radius: 25px; font-size: 0.95rem; font-weight: 600;">💰 60-80% Savings</span>
+          <span class="badge" style="background: #EDE9FE; color: #7B61C1; padding: 0.75rem 1.5rem; border-radius: 25px; font-size: 0.95rem; font-weight: 600;">⏱️ Skip Long Waits</span>
+          <span class="badge" style="background: #EDE9FE; color: #7B61C1; padding: 0.75rem 1.5rem; border-radius: 25px; font-size: 0.95rem; font-weight: 600;">🛂 Visa-Free Entry</span>
+          <span class="badge" style="background: #EDE9FE; color: #7B61C1; padding: 0.75rem 1.5rem; border-radius: 25px; font-size: 0.95rem; font-weight: 600;">🛡️ Safe & Clean</span>
+        </div>
+        
+        <!-- Value Proposition Grid - 突出 8 大核心优势 -->
+        <div style="background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%); padding: 3rem; border-radius: 16px; margin-bottom: 3rem; text-align: center;">
+          <h3 style="color: var(--primary-color); font-size: 1.75rem; margin-bottom: 0.5rem;">Why Choose Beijing Medical Concierge?</h3>
+          <p style="color: #6B7280; font-size: 1rem; margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+            We're not just translators. We're your healthcare advocates in Beijing.
+          </p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem;">
+            <!-- 核心优势 1: 顶尖医疗（最重要） -->
+            <div style="text-align: left;">
+              <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🏥</div>
+              <strong style="color: var(--primary-color); font-size: 1.15rem; display: block; margin-bottom: 0.5rem;">Top 3A Hospitals</strong>
+              <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6;">Access to China's highest-rated hospitals with advanced technology and expert specialists.</p>
+            </div>
+            <!-- 核心优势 2: 流程熟悉 -->
+            <div style="text-align: left;">
+              <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎯</div>
+              <strong style="color: var(--primary-color); font-size: 1.15rem; display: block; margin-bottom: 0.5rem;">Expert Navigation</strong>
+              <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6;">We know the hospital systems inside out. No confusion, no wrong turns, no wasted time.</p>
+            </div>
+            <!-- 核心优势 3: 专家匹配 -->
+            <div style="text-align: left;">
+              <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">👨‍⚕️</div>
+              <strong style="color: var(--primary-color); font-size: 1.15rem; display: block; margin-bottom: 0.5rem;">Specialist Matching</strong>
+              <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6;">We match you with the right specialist for your condition — not just any available doctor.</p>
+            </div>
+            <!-- 核心优势 4: 现场陪护 -->
+            <div style="text-align: left;">
+              <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🤝</div>
+              <strong style="color: var(--primary-color); font-size: 1.15rem; display: block; margin-bottom: 0.5rem;">On-Site Support</strong>
+              <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6;">We're physically there with you — from check-in to pharmacy, every step of the way.</p>
+            </div>
+            <!-- 核心优势 5: 省钱 -->
+            <div style="text-align: left;">
+              <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">💰</div>
+              <strong style="color: var(--primary-color); font-size: 1.15rem; display: block; margin-bottom: 0.5rem;">60-80% Cost Savings</strong>
+              <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6;">Same quality care as US/Europe, at a fraction of the cost. Transparent pricing, no hidden fees.</p>
+            </div>
+            <!-- 核心优势 6: 省时 -->
+            <div style="text-align: left;">
+              <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">⏱️</div>
+              <strong style="color: var(--primary-color); font-size: 1.15rem; display: block; margin-bottom: 0.5rem;">Skip Long Waits</strong>
+              <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6;">We handle the queuing, paperwork, and logistics. You rest and focus on recovery.</p>
+            </div>
+            <!-- 核心优势 7: 签证政策 -->
+            <div style="text-align: left;">
+              <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🛂</div>
+              <strong style="color: var(--primary-color); font-size: 1.15rem; display: block; margin-bottom: 0.5rem;">Visa-Free Entry</strong>
+              <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6;">72/144-hour visa-free transit for 54 countries (US, UK, EU, Australia, etc.). <a href="#resources" style="color: var(--primary-color); font-weight: 600;">Check eligibility →</a></p>
+            </div>
+            <!-- 核心优势 8: 安全环境 -->
+            <div style="text-align: left;">
+              <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🛡️</div>
+              <strong style="color: var(--primary-color); font-size: 1.15rem; display: block; margin-bottom: 0.5rem;">Safe & Clean</strong>
+              <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6;">Beijing is one of the safest major cities. Hospitals maintain high hygiene standards.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Referral CTA Section - 3-tier rewards -->
+        <div style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); padding: 3rem; border-radius: 16px; text-align: center; border: 2px solid #10B981;">
+          <h3 style="color: #059669; font-size: 1.75rem; margin-bottom: 1rem;">💝 Know Someone Coming to Beijing for Medical Care?</h3>
+          <p style="color: #4B5563; font-size: 1.1rem; margin-bottom: 1rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+            Share our service! They'll save $10, and you'll earn:
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem; flex-wrap: wrap;">
+            <span style="background: #10B981; color: white; padding: 0.5rem 1.25rem; border-radius: 20px; font-weight: 700; font-size: 1rem;">Direct: $10</span>
+            <span style="background: #7B61C1; color: white; padding: 0.5rem 1.25rem; border-radius: 20px; font-weight: 700; font-size: 1rem;">2nd-Tier: $3</span>
+            <span style="background: #F59E0B; color: white; padding: 0.5rem 1.25rem; border-radius: 20px; font-weight: 700; font-size: 1rem;">3rd-Tier: $1</span>
+          </div>
+          <p style="color: #6B7280; font-size: 0.95rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Refer 5 friends, each refers 5 more = $250 potential!
+          </p>
+          <a href="referral.html" class="btn btn-primary" style="display: inline-block; padding: 1rem 3rem; font-size: 1.0625rem; font-weight: 700;">
+            Learn About Referral Rewards →
+          </a>
+          <p style="color: #9CA3AF; font-size: 0.85rem; margin-top: 1rem;">Cash via PayPal • Or use credits for your own services</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Medical Tourist Services - 突出 8 大核心优势 -->
+    <section class="medical-tourist-section">
+      <div class="container">
+        <h2>Coming to Beijing Specifically for Medical Treatment?</h2>
+        <p class="section-intro">We specialize in helping international patients who travel to Beijing for world-class care at 60-80% lower costs. Our team knows the hospital systems inside out and stays with you every step of the way.</p>
+        
+        <div class="medical-services-grid">
+          <div class="medical-service-card">
+            <div class="medical-icon">🏥</div>
+            <h3>Specialized Surgery</h3>
+            <p>Orthopedics, Cardiology, Oncology, Neurology — at top 3A hospitals with expert surgeons.</p>
+          </div>
+          
+          <div class="medical-service-card">
+            <div class="medical-icon">📋</div>
+            <h3>Comprehensive Health Checkups</h3>
+            <p>Full-day executive screenings with advanced technology and fast results. Great starting point for your health journey.</p>
+          </div>
+          
+          <div class="medical-service-card">
+            <div class="medical-icon">👨‍⚕️</div>
+            <h3>Remote Second Opinion</h3>
+            <p><strong>Gain diagnostic clarity before committing to travel.</strong></p>
+            <p style="color: #4B5563; font-size: 0.95rem; line-height: 1.6; margin: 0.75rem 0 1rem 0;">
+              Receive verified treatment plan validations and written reports from leading department heads within one week, directly to your inbox.
+            </p>
+            <ul style="list-style: none; padding: 0; margin: 1rem 0; color: #4B5563; font-size: 0.95rem; line-height: 1.8;">
+              <li>✓ Comprehensive review of diagnosis & treatment plan</li>
+              <li>✓ Medical record and imaging analysis (remote)</li>
+              <li>✓ Video consultation with specialist (optional)</li>
+              <li>✓ Written report delivered to your inbox</li>
+            </ul>
+            <p style="color: #10B981; font-weight: 600; font-size: 1rem;">From $150 • 3-5 business days</p>
+            <p style="color: #6B7280; font-size: 0.9rem; margin-top: 0.75rem;">100% Confidential • No travel required</p>
+            <div style="margin-top: 1rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="#contact" class="btn btn-primary" style="display: inline-block; padding: 0.6rem 1.25rem; font-size: 0.9rem;">Verify Your Diagnosis →</a>
+              <a href="#contact" class="btn btn-secondary" style="display: inline-block; padding: 0.6rem 1.25rem; font-size: 0.9rem;">Secure Your Plan →</a>
+            </div>
+          </div>
+          
+          <div class="medical-service-card">
+            <div class="medical-icon">🦷</div>
+            <h3>Dental Procedures</h3>
+            <p>Implants, crowns, veneers — same quality as US/Europe, at 60-80% lower cost.</p>
+          </div>
+          
+          <div class="medical-service-card">
+            <div class="medical-icon">🌿</div>
+            <h3>Traditional Chinese Medicine</h3>
+            <p>Acupuncture, Herbal Therapy, Rehabilitation — integrated with modern medicine.</p>
+          </div>
+        </div>
+        
+        <!-- Key Benefits Bar -->
+        <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%); border-radius: 12px; text-align: center;">
+          <p style="margin: 0; color: #1F2937; font-weight: 600; font-size: 1.05rem;">
+            🏥 Top 3A Hospitals &nbsp;•&nbsp; ⏱️ Skip Long Waits &nbsp;•&nbsp; 💰 Save 60-80% &nbsp;•&nbsp; 🛂 Visa-Free Entry &nbsp;•&nbsp; 🛡️ Safe & Clean
+          </p>
+        </div>
+        
+        <div class="medical-stats" style="margin-top: 1.5rem; text-align: center;">
+          <p style="color: #6B7280; font-size: 0.95rem;">
+            <strong>Estimated Stay:</strong> 1-4 weeks* &nbsp;|&nbsp; <strong>Average Savings:</strong> 60-80% vs US/Europe
+          </p>
+          <p style="color: #9CA3AF; font-size: 0.8rem; margin-top: 0.5rem;">
+            *Duration varies by procedure, recovery speed, and follow-up requirements.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services - 突出核心优势 -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 style="color: #1F2937 !important; font-weight: 700;">Our Services</h2>
+            <p class="section-subtitle" style="color: #1F2937 !important; font-weight: 600;">We're not just translators. We navigate the system, match you with the right specialists, and stay by your side throughout your entire healthcare journey.</p>
+            
+            <div class="services-grid">
+                <!-- Service 1: Expert Appointment Booking & Specialist Matching -->
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Expert Appointment Booking & Specialist Matching</h3>
+                    <p>We bypass general admission queues to connect you directly with leading experts or department heads at Class 3A and internationally accredited hospitals—matched specifically to your pathology.</p>
+                    
+                    <!-- 核心价值（始终显示） -->
+                    <ul class="service-features">
+                        <li>✓ Secure expert appointments at Beijing's top 3A hospitals</li>
+                        <li>✓ Direct connection with leading specialists</li>
+                    </ul>
+                    
+                    <!-- 隐藏内容 -->
+                    <div id="service-1-hidden" style="display: none;">
+                        <ul class="service-features">
+                            <li>✓ Navigate the competitive booking system on your behalf</li>
+                            <li>✓ Alternative channels when regular slots are full</li>
+                            <li>✓ Priority coordination for urgent cases</li>
+                            <li><strong>Matched specifically to your condition, not just any available doctor.</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <button onclick="toggleServiceDetails('service-1-hidden', this)" style="background: #f0f4ff; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.9rem; color: var(--primary-color); transition: all 0.3s; margin-top: 1rem;" onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#f0f4ff'">
+                        <span class="toggle-icon">👁️</span> <span class="toggle-text">Show More</span>
+                    </button>
+                </div>
+
+                <!-- Service 2: Bilingual Medical Advocacy -->
+                <div class="service-card featured">
+                    <div class="service-icon">🗣️</div>
+                    <h3>Bilingual Medical Advocacy</h3>
+                    <p>Go beyond basic translation. Your personal, medically trained bilingual case manager accompanies you to all appointments, advocating for your needs and ensuring zero communication barriers.</p>
+                    
+                    <!-- 核心价值（始终显示） -->
+                    <ul class="service-features">
+                        <li>✓ Full-time bilingual accompaniment during consultations</li>
+                        <li>✓ Medically trained case manager (not general translator)</li>
+                    </ul>
+                    
+                    <!-- 隐藏内容 -->
+                    <div id="service-2-hidden" style="display: none;">
+                        <ul class="service-features">
+                            <li>✓ Accurate medical history transmission to doctors</li>
+                            <li>✓ Clear explanation of diagnosis and treatment options</li>
+                            <li>✓ Written translation of prescriptions and medical reports</li>
+                            <li><strong>Your advocate ensures your needs are understood and met.</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <button onclick="toggleServiceDetails('service-2-hidden', this)" style="background: #f0f4ff; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.9rem; color: var(--primary-color); transition: all 0.3s; margin-top: 1rem;" onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#f0f4ff'">
+                        <span class="toggle-icon">👁️</span> <span class="toggle-text">Show More</span>
+                    </button>
+                </div>
+
+                <!-- Service 3: Ongoing Support & Continuity of Care -->
+                <div class="service-card">
+                    <div class="service-icon">📞</div>
+                    <h3>Ongoing Support & Continuity of Care</h3>
+                    <p>Your journey doesn't end when you fly home. We coordinate ongoing virtual follow-ups with your treating physicians and ensure the secure transfer of translated medical discharge records to your local doctor.</p>
+                    
+                    <!-- 核心价值（始终显示） -->
+                    <ul class="service-features">
+                        <li>✓ Dedicated account manager throughout your treatment</li>
+                        <li>✓ Virtual follow-ups with treating physicians</li>
+                    </ul>
+                    
+                    <!-- 隐藏内容 -->
+                    <div id="service-6-hidden" style="display: none;">
+                        <ul class="service-features">
+                            <li>✓ 24/7 hotline for urgent questions or emergencies</li>
+                            <li>✓ Secure transfer of translated medical records</li>
+                            <li>✓ Coordination with home-country doctors</li>
+                            <li><strong>Continuity of care, from Beijing to home.</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <button onclick="toggleServiceDetails('service-6-hidden', this)" style="background: #f0f4ff; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.9rem; color: var(--primary-color); transition: all 0.3s; margin-top: 1rem;" onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#f0f4ff'">
+                        <span class="toggle-icon">👁️</span> <span class="toggle-text">Show More</span>
+                    </button>
+                </div>
+
+                <!-- Service 4: End-to-End Process Assistance -->
+                <div class="service-card">
+                    <div class="service-icon">🔄</div>
+                    <h3>End-to-End Process Assistance</h3>
+                    <p>Chinese hospitals require multiple payment-checkup-report cycles. We handle the logistics.</p>
+                    
+                    <!-- 核心价值（始终显示） -->
+                    <ul class="service-features">
+                        <li>✓ Complete the "pay-test-report-follow up-medication" cycle for you</li>
+                        <li>✓ Queue for payments, tests, and medication pickup</li>
+                    </ul>
+                    
+                    <!-- 隐藏内容 -->
+                    <div id="service-3-hidden" style="display: none;">
+                        <ul class="service-features">
+                            <li>✓ You rest while we handle the paperwork</li>
+                            <li>✓ Coordinate between departments and specialists</li>
+                            <li><strong>Focus on your recovery. We handle the administrative maze.</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <button onclick="toggleServiceDetails('service-3-hidden', this)" style="background: #f0f4ff; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.9rem; color: var(--primary-color); transition: all 0.3s; margin-top: 1rem;" onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#f0f4ff'">
+                        <span class="toggle-icon">👁️</span> <span class="toggle-text">Show More</span>
+                    </button>
+                </div>
+
+                <!-- Service 4: Medical Records Review & Organization -->
+                <div class="service-card">
+                    <div class="service-icon">📝</div>
+                    <h3>Medical Records Review & Organization</h3>
+                    <p>Unsure if cross-border care is your best option? We provide a professional, secure evaluation of your existing medical reports to determine precise eligibility and map out realistic treatment pathways.</p>
+                    
+                    <!-- 核心价值（始终显示） -->
+                    <ul class="service-features">
+                        <li>✓ Professional evaluation of existing medical reports</li>
+                        <li>✓ Determine eligibility and map treatment pathways</li>
+                    </ul>
+                    
+                    <!-- 隐藏内容 -->
+                    <div id="service-4-hidden" style="display: none;">
+                        <ul class="service-features">
+                            <li>✓ Translate and organize your existing medical records</li>
+                            <li>✓ Prepare comprehensive history for Beijing specialists</li>
+                            <li>✓ Coordinate with your home-country doctors if needed</li>
+                            <li>✓ Digital and physical copies for your records</li>
+                            <li><strong>100% Confidential • Professional & Secure</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <button onclick="toggleServiceDetails('service-4-hidden', this)" style="background: #f0f4ff; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.9rem; color: var(--primary-color); transition: all 0.3s; margin-top: 1rem;" onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#f0f4ff'">
+                        <span class="toggle-icon">👁️</span> <span class="toggle-text">Show More</span>
+                    </button>
+                </div>
+
+                <!-- Service 5: Medication Pickup Service -->
+                <div class="service-card">
+                    <div class="service-icon">💊</div>
+                    <h3>Medication Pickup Service</h3>
+                    <p>After a long consultation, the last thing you need is more queuing.</p>
+                    
+                    <!-- 核心价值（始终显示） -->
+                    <ul class="service-features">
+                        <li>✓ Queue for medication pickup on your behalf</li>
+                        <li>✓ Arrange delivery to your hotel or residence</li>
+                    </ul>
+                    
+                    <!-- 隐藏内容 -->
+                    <div id="service-5-hidden" style="display: none;">
+                        <ul class="service-features">
+                            <li>✓ Explain dosage instructions clearly in English</li>
+                            <li>✓ Check for drug interactions with your current medications</li>
+                            <li>✓ Help find alternatives if medications are unavailable</li>
+                            <li><strong>Save your energy for recovery, not standing in lines.</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <button onclick="toggleServiceDetails('service-5-hidden', this)" style="background: #f0f4ff; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.9rem; color: var(--primary-color); transition: all 0.3s; margin-top: 1rem;" onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#f0f4ff'">
+                        <span class="toggle-icon">👁️</span> <span class="toggle-text">Show More</span>
+                    </button>
+                </div>
+
+                <!-- Service 7: Visa (S1/S2) & Travel Logistics -->
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Visa (S1/S2) & Travel Logistics</h3>
+                    <p>Eliminate bureaucratic stress. Our dedicated team fully manages your China medical visa applications, accessible accommodation bookings, and secure airport transfers for a seamless arrival.</p>
+                    
+                    <!-- 核心价值（始终显示） -->
+                    <ul class="service-features">
+                        <li>✓ S1/S2 medical visa application support</li>
+                        <li>✓ Accessible accommodation bookings near hospitals</li>
+                    </ul>
+                    
+                    <!-- 隐藏内容 -->
+                    <div id="service-7-hidden" style="display: none;">
+                        <ul class="service-features">
+                            <li>✓ Secure airport transfers</li>
+                            <li>✓ Local transportation assistance</li>
+                            <li>✓ Restaurant recommendations (diet-friendly options)</li>
+                            <li>✓ Currency exchange and payment setup help</li>
+                            <li><strong>Seamless arrival, stress-free logistics.</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <button onclick="toggleServiceDetails('service-7-hidden', this)" style="background: #f0f4ff; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.9rem; color: var(--primary-color); transition: all 0.3s; margin-top: 1rem;" onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#f0f4ff'">
+                        <span class="toggle-icon">👁️</span> <span class="toggle-text">Show More</span>
+                    </button>
+                </div>
+
+                <!-- Service 8: Post-Treatment & TCM Integration -->
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <h3>Post-Treatment & TCM Integration</h3>
+                    <p>Benefit from a scientifically integrated approach that combines precise Western interventions with Traditional Chinese Medicine (TCM). This unique, dual-pathway recovery model is designed to:</p>
+                    
+                    <!-- 核心价值（始终显示） -->
+                    <ul class="service-features">
+                        <li>✓ Alleviate chemotherapy side effects naturally</li>
+                        <li>✓ Accelerate post-surgical wound healing and mobility</li>
+                    </ul>
+                    
+                    <!-- 隐藏内容 -->
+                    <div id="service-8-hidden" style="display: none;">
+                        <ul class="service-features">
+                            <li>✓ Provide holistic immune system restoration</li>
+                            <li>✓ Acupuncture for pain management</li>
+                            <li>✓ Herbal therapy for recovery</li>
+                            <li>✓ Immunity-boosting protocols</li>
+                            <li>✓ Personalized recovery plans</li>
+                            <li><strong>Science-backed integrative healing (Western + TCM).</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <button onclick="toggleServiceDetails('service-8-hidden', this)" style="background: #f0f4ff; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.9rem; color: var(--primary-color); transition: all 0.3s; margin-top: 1rem;" onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#f0f4ff'">
+                        <span class="toggle-icon">👁️</span> <span class="toggle-text">Show More</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials - Moved here for emotional connection after Services -->
+    <section class="testimonials" style="background: white; padding: 4rem 0;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 0.5rem;">Patient Stories</h2>
+            <p class="section-subtitle" style="text-align: center; max-width: 800px; margin: 0 auto 2rem auto;">
+                Real stories from patients who saved 60-80% on treatment in Beijing's top 3A hospitals. 
+                See how we helped them navigate unfamiliar hospitals, match with the right specialists, and focus on recovery.
+            </p>
+            
+            <div class="testimonials-grid">
+                <!-- Testimonials are dynamically loaded from JavaScript -->
+                <!-- 30 testimonials in database, 6 random displayed per page load -->
+            </div>
+            
+            <p style="text-align: center; margin-top: 2rem; color: var(--text-light); font-size: 0.9rem;">
+                🔄 Refresh page to see more patient stories (36+ testimonials in database)
+            </p>
+        </div>
+    </section>
+
+    <!-- Who We Serve Best -->
+    <section class="ideal-patients" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 4rem 0;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 0.5rem;">Who We Serve Best</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 3rem;">We specialize in helping international patients with specific needs</p>
+            
+            <div class="patient-types" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div class="patient-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">🏥 Seeking Specialized Treatment</h3>
+                    <p style="color: var(--text-light); line-height: 1.6;">Beijing's 3A hospitals offer advanced procedures at 60-80% lower costs. We help you access the right specialists for complex conditions.</p>
+                </div>
+                
+                <div class="patient-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">❓ Second Medical Opinion</h3>
+                    <p style="color: var(--text-light); line-height: 1.6;">Unsure about your diagnosis or treatment plan? Get a fresh perspective from Beijing's top specialists before making critical decisions.</p>
+                </div>
+                
+                <div class="patient-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">😞 Previous Treatment Didn't Work</h3>
+                    <p style="color: var(--text-light); line-height: 1.6;">Tried treatments back home without success? Beijing offers alternative approaches and advanced therapies you may not have access to.</p>
+                </div>
+                
+                <div class="patient-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">🌏 International Patients</h3>
+                    <p style="color: var(--text-light); line-height: 1.6;">From US, Europe, Australia, Southeast Asia — we've helped international patients from multiple countries navigate Beijing's healthcare system with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended Hospitals - 突出顶尖医疗系统、高科技、干净卫生 -->
+    <section id="hospitals" class="hospitals">
+        <div class="container">
+            <h2>Recommended Hospitals</h2>
+            <p class="section-subtitle" style="text-align: left; max-width: 800px; margin: 0 auto 2rem auto;">Beijing's top 3A hospitals — China's highest medical rating. Advanced technology, expert specialists, and high hygiene standards.</p>
+            <div style="text-align: left; max-width: 800px; margin: 0 auto 2rem auto; color: #666; font-size: 0.95rem; background: #f0fdf4; padding: 1rem; border-radius: 8px; border-left: 4px solid #10B981;">
+                <strong>🏥 3A Hospital Rating:</strong> China's highest medical accreditation. These hospitals treat millions of patients annually, including international visitors from 50+ countries.
+            </div>
+            
+            <div class="hospitals-grid">
+                <!-- Hospital 1: Beijing Anzhen Hospital - Cardiovascular Specialty -->
+                <div class="hospital-card">
+                    <h3>🫀 Beijing Anzhen Hospital</h3>
+                    <p class="hospital-name">Capital Medical University Affiliated</p>
+                    <p class="hospital-desc">China's leading cardiovascular center, specializing in complex heart and vascular procedures. One of the highest-volume cardiac centers in Asia.</p>
+                    <div class="hospital-tags">
+                        <span class="tag">Cardiology Excellence</span>
+                        <span class="tag">Heart Transplantation</span>
+                        <span class="tag">Thoracic Surgery</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #6B7280; margin-top: 1rem; line-height: 1.6;">
+                        <strong>Key Specialties:</strong> Cardiovascular Surgery, Pediatric Heart Center, Vascular Surgery, Cardiac Intensive Care, Arrhythmia Center, Coronary Heart Disease Center, Heart Transplantation, Thoracic Surgery
+                    </p>
+                </div>
+
+                <!-- Hospital 2: Peking Union Medical College Hospital - Comprehensive -->
+                <div class="hospital-card">
+                    <h3>🏥 PUMC Hospital</h3>
+                    <p class="hospital-name">Peking Union Medical College Hospital</p>
+                    <p class="hospital-desc">One of China's most prestigious comprehensive hospitals, known for exceptional medical care, specialist expertise, and complex case management.</p>
+                    <div class="hospital-tags">
+                        <span class="tag">Top-Rated 3A</span>
+                        <span class="tag">Comprehensive Care</span>
+                        <span class="tag">Complex Cases</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #6B7280; margin-top: 1rem; line-height: 1.6;">
+                        <strong>Key Specialties:</strong> Allergy, Pathology, Infectious Diseases, Rheumatology, Obstetrics and Gynecology, Orthopedics, General Surgery, Otolaryngology, Radiology, Ultrasonography
+                    </p>
+                </div>
+
+                <!-- Hospital 3: Beijing Cancer Hospital - Oncology Specialty -->
+                <div class="hospital-card">
+                    <h3>🎗️ Beijing Cancer Hospital</h3>
+                    <p class="hospital-name">Peking University Cancer Hospital</p>
+                    <p class="hospital-desc">Asia's leading oncology center, offering comprehensive cancer care from diagnosis through treatment and recovery. Pioneer in precision oncology.</p>
+                    <div class="hospital-tags">
+                        <span class="tag">Oncology Excellence</span>
+                        <span class="tag">Precision Medicine</span>
+                        <span class="tag">Radiation Oncology</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #6B7280; margin-top: 1rem; line-height: 1.6;">
+                        <strong>Key Specialties:</strong> Medical Oncology, Thoracic Surgery, Gastrointestinal Oncology, Radiation Oncology, Breast Surgery, Hepatobiliary-Pancreatic Surgery, Bone and Soft Tissue Oncology, Head and Neck Surgery, Pathology
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Hospital Selection Criteria - 突出顶尖医疗、高科技、干净卫生 -->
+            <div class="hospital-details" style="margin-top: 3rem; background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%); padding: 2.5rem; border-radius: 12px; border-left: 4px solid #667eea;">
+                <h3 style="color: #667eea; margin-bottom: 1.5rem; font-size: 1.5rem;">Why These Hospitals?</h3>
+                <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+                    <li style="display: flex; align-items: flex-start; gap: 0.75rem; color: #374151; font-size: 1rem; line-height: 1.5;">
+                        <span style="color: #10b981; font-weight: bold; font-size: 1.2rem; flex-shrink: 0;">🏆</span>
+                        <span><strong>3A Rating (Highest in China):</strong> Only 10% of Chinese hospitals achieve this top accreditation.</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 0.75rem; color: #374151; font-size: 1rem; line-height: 1.5;">
+                        <span style="color: #10b981; font-weight: bold; font-size: 1.2rem; flex-shrink: 0;">🔬</span>
+                        <span><strong>Advanced Technology:</strong> MRI, CT, robotic surgery, proton therapy — cutting-edge equipment you'd expect in US/Europe.</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 0.75rem; color: #374151; font-size: 1rem; line-height: 1.5;">
+                        <span style="color: #10b981; font-weight: bold; font-size: 1.2rem; flex-shrink: 0;">👨‍⚕️</span>
+                        <span><strong>Expert Specialists:</strong> Doctors who trained internationally and publish in top medical journals.</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 0.75rem; color: #374151; font-size: 1rem; line-height: 1.5;">
+                        <span style="color: #10b981; font-weight: bold; font-size: 1.2rem; flex-shrink: 0;">🧼</span>
+                        <span><strong>High Hygiene Standards:</strong> Regular inspections, sterile environments, and strict infection control protocols.</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 0.75rem; color: #374151; font-size: 1rem; line-height: 1.5;">
+                        <span style="color: #10b981; font-weight: bold; font-size: 1.2rem; flex-shrink: 0;">🌍</span>
+                        <span><strong>International Experience:</strong> These hospitals treat thousands of international patients annually. Bilingual staff available.</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Virtual Tour CTA -->
+            <div class="virtual-tour-cta" style="margin-top: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2.5rem; border-radius: 12px; text-align: center; color: white;">
+                <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Want to see the hospitals before you come?</h3>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; opacity: 0.95;">We can arrange virtual tours of our recommended hospitals with our bilingual staff.</p>
+                <a href="#contact" class="btn" style="display: inline-block; padding: 0.75rem 2rem; background: white; color: #667eea; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.05rem;">
+                    Request Virtual Tour →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Available Specialties - 简化版 -->
+    <section style="background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%); padding: 4rem 0;">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 0.5rem; color: #1F2937; font-weight: 700;">50+ Specialties Available</h2>
+        <p style="text-align: center; color: #6B7280; margin-bottom: 2rem; font-size: 1.05rem;">
+          Don't worry — we'll match you with the most suitable specialist for your condition.
+        </p>
+        
+        <!-- 科室标签云 -->
+        <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+          <span style="background: white; padding: 0.6rem 1.25rem; border-radius: 25px; font-size: 0.9rem; color: #4B5563; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">🫀 Cardiology</span>
+          <span style="background: white; padding: 0.6rem 1.25rem; border-radius: 25px; font-size: 0.9rem; color: #4B5563; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">🎗️ Oncology</span>
+          <span style="background: white; padding: 0.6rem 1.25rem; border-radius: 25px; font-size: 0.9rem; color: #4B5563; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">🔪 Neurosurgery</span>
+          <span style="background: white; padding: 0.6rem 1.25rem; border-radius: 25px; font-size: 0.9rem; color: #4B5563; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">🦴 Orthopedics</span>
+          <span style="background: white; padding: 0.6rem 1.25rem; border-radius: 25px; font-size: 0.9rem; color: #4B5563; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">👶 Pediatrics</span>
+          <span style="background: white; padding: 0.6rem 1.25rem; border-radius: 25px; font-size: 0.9rem; color: #4B5563; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">💊 Gastroenterology</span>
+          <span style="background: white; padding: 0.6rem 1.25rem; border-radius: 25px; font-size: 0.9rem; color: #4B5563; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">🫁 Respiratory Medicine</span>
+          <span style="background: white; padding: 0.6rem 1.25rem; border-radius: 25px; font-size: 0.9rem; color: #4B5563; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">🧠 Neurology</span>
+          <span style="background: white; padding: 0.6rem 1.25rem; border-radius: 25px; font-size: 0.9rem; color: #4B5563; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">👁️ Ophthalmology</span>
+          <span style="background: white; padding: 0.6rem 1.25rem; border-radius: 25px; font-size: 0.9rem; color: #4B5563; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">+ 40 more</span>
+        </div>
+        
+        <!-- CTA -->
+        <div style="text-align: center;">
+          <a href="specialists.html" class="btn btn-primary" style="display: inline-block; padding: 1rem 2.5rem; font-size: 1.0625rem; font-weight: 700;">
+            View All 50+ Specialties →
+          </a>
+          <p style="color: #6B7280; font-size: 0.9rem; margin-top: 1rem;">
+            Free specialist matching consultation • Response within 2 hours
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing - Hybrid Model (Session + Package) -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 style="color: #1F2937 !important; font-weight: 700;">Flexible Pricing Options (USD)</h2>
+            <p class="section-subtitle" style="color: #1F2937 !important; font-weight: 600;">Choose per-session or package deals. Consultation fee is deductible from any service package.</p>
+            
+            <!-- Important Notice -->
+            <div style="background: linear-gradient(135deg, #fef3c7 0%, #fce7b5 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #f59e0b; margin-bottom: 2rem;">
+                <h3 style="margin: 0 0 0.5rem 0; color: #92400e;">💰 Consultation Fee Policy</h3>
+                <p style="margin: 0; color: #78350f; font-size: 1.05rem;"><strong>Initial Consultation</strong> (15 minutes) - <span style="color: #059669; font-weight: 600;">✓ Deductible from ANY service package</span></p>
+                <p style="margin: 0.5rem 0 0 0; color: #92400e; font-size: 0.95rem;">Whether you choose per-session or package, your consultation fee will be deducted from the total cost.</p>
+            </div>
+            
+            <!-- Time Slot Info - 精简版，移到价格表内部 -->
+            <div style="background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.95) 100%); padding: 1.25rem; border-radius: 12px; border-left: 4px solid var(--primary-color); margin-bottom: 1.5rem;">
+                <p style="margin: 0; color: #1F2937; font-weight: 600;">
+                    📅 <strong>Time Slots:</strong> 08:00-12:00 | 13:00-17:00 | 18:00-22:00 (4-hour blocks)
+                </p>
+            </div>
+            
+            <!-- Package Deals - Premium Options -->
+            <div style="margin: 3rem 0;">
+                <h3 style="text-align: center; margin-bottom: 0.5rem; color: #1F2937 !important; font-weight: 700;">🎯 Package Deals - Best Value</h3>
+                <p style="text-align: center; margin-bottom: 2rem; color: #374151 !important; font-weight: 600;">Complete care packages. Save money with dedicated support.</p>
+                
+                <div class="pricing-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+                    <!-- Standard Package -->
+                    <div class="pricing-card" style="border: 3px solid var(--primary-color); position: relative;">
+                        <div class="featured-badge" style="background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));">Great for Outpatient Care</div>
+                        <div class="pricing-icon">📦</div>
+                        <h3>Standard Package</h3>
+                        
+                        <!-- 精简介绍（约 20 词，始终显示） -->
+                        <p style="color: #4B5563; font-size: 0.95rem; line-height: 1.6; margin: 1rem 0 1.5rem 0;">
+                            Perfect for checkups, second opinions, or short-term outpatient care. Includes specialist appointments, full accompaniment, and medical records organization.
+                        </p>
+                        
+                        <!-- 隐藏内容：价格 + 详细功能 -->
+                        <div id="standard-pkg-hidden" style="display: none;">
+                            <div class="price" style="margin: 1.5rem 0 1rem 0;">
+                                <span class="currency">From $</span>
+                                <span class="amount">800</span>
+                                <span class="period">/package</span>
+                            </div>
+                            <p style="color: #059669; font-weight: 600; margin-bottom: 1rem;">💰 Save up to $400 vs per-session</p>
+                            
+                            <ul class="pricing-features">
+                                <li>✓ Pre-consultation assessment (health questionnaire + medical history)</li>
+                                <li>✓ Specialist appointment coordination (top 3A hospital)</li>
+                                <li>✓ Full accompaniment 1-3 days</li>
+                                <li>✓ Professional medical translation</li>
+                                <li>✓ Payment assistance</li>
+                                <li>✓ English medical records organization</li>
+                                <li>✓ <strong>Consultation fee deducted</strong></li>
+                                <li>✓ <strong>100% Refund if not satisfied</strong></li>
+                            </ul>
+                        </div>
+                        
+                        <button onclick="togglePricingFeatures('standard-pkg-hidden', this)" style="background: #f0f4ff; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.95rem; color: var(--primary-color); transition: all 0.3s; margin: 1.5rem 0 1rem 0;" onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#f0f4ff'">
+                            <span class="toggle-icon">👁️</span> <span class="toggle-text">View Pricing & Details</span>
+                        </button>
+                        
+                        <a href="#contact" class="btn btn-primary">Choose Standard Package</a>
+                        <p style="text-align: center; margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-light);">💳 Credit card & bank transfer accepted</p>
+                    </div>
+
+                    <!-- Full Care Package -->
+                    <div class="pricing-card premium-tier" style="border: 3px solid #f093fb; position: relative;">
+                        <div class="featured-badge" style="background: linear-gradient(90deg, #f093fb, #667eea);">Best Value - Surgery/ Hospitalization</div>
+                        <div class="pricing-icon">⭐</div>
+                        <h3>Full Care Package</h3>
+                        
+                        <!-- 精简介绍（约 20 词，始终显示） -->
+                        <p style="color: #4B5563; font-size: 0.95rem; line-height: 1.6; margin: 1rem 0 1.5rem 0;">
+                            Comprehensive support for surgery or hospitalization. Daily visits, expedited coordination, discharge assistance, and complimentary follow-up consultation included.
+                        </p>
+                        
+                        <!-- 隐藏内容：价格 + 详细功能 -->
+                        <div id="full-pkg-hidden" style="display: none;">
+                            <div class="price" style="margin: 1.5rem 0 1rem 0;">
+                                <span class="currency">From $</span>
+                                <span class="amount">2500</span>
+                                <span class="period">/package</span>
+                            </div>
+                            <p style="color: #059669; font-weight: 600; margin-bottom: 1rem;">💰 Save up to $1500 vs per-session</p>
+                            
+                            <ul class="pricing-features">
+                                <li>✓ <strong>Everything in Standard Package</strong></li>
+                                <li>✓ Daily visits/coordination during hospitalization</li>
+                                <li>✓ Expedited test coordination (faster appointments)</li>
+                                <li>✓ Discharge assistance (procedures, medication prep)</li>
+                                <li>✓ One complimentary remote follow-up consultation (post-discharge)</li>
+                                <li>✓ Priority 24/7 support throughout treatment</li>
+                                <li>✓ <strong>Consultation fee deducted</strong></li>
+                                <li>✓ <strong>100% Refund if not satisfied</strong></li>
+                            </ul>
+                        </div>
+                        
+                        <button onclick="togglePricingFeatures('full-pkg-hidden', this)" style="background: #f0f4ff; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.95rem; color: var(--primary-color); transition: all 0.3s; margin: 1.5rem 0 1rem 0;" onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#f0f4ff'">
+                            <span class="toggle-icon">👁️</span> <span class="toggle-text">View Pricing & Details</span>
+                        </button>
+                        
+                        <a href="#contact" class="btn btn-primary">Choose Full Care Package</a>
+                        <p style="text-align: center; margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-light);">💳 Credit card & bank transfer accepted</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add-on Services Menu -->
+            <div style="margin: 3rem 0; background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); padding: 2rem; border-radius: 12px; border-left: 4px solid #a855f7;">
+                <h3 style="text-align: center; margin-bottom: 1rem; color: #7c3aed;">➕ Add-on Services <span style="font-size: 0.9rem; color: #666; font-weight: normal;">(À La Carte = Order Individual Services)</span></h3>
+                <p style="text-align: left; max-width: 800px; margin: 0 auto 2rem auto; color: var(--text-light);">💡 <strong>À La Carte</strong> means you can order individual services separately, without booking a full package. Perfect for quick needs like translation-only or appointment booking only.</p>
+                <p style="text-align: left; max-width: 800px; margin: 0 auto 2rem auto; color: var(--text-light);">Enhance your experience with our premium add-on services. All prices transparent - approved before service.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <!-- Add-on 1 -->
+                    <div style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <h4 style="margin: 0; color: #7c3aed;">⚡ Expedited Coordination</h4>
+                            <button onclick="togglePrice(this)" style="background: #f3e8ff; border: none; padding: 0.4rem 0.8rem; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.85rem; color: #7c3aed; transition: all 0.3s;" onmouseover="this.style.background='#e9d5ff'" onmouseout="this.style.background='#f3e8ff'">👁️ Show Price</button>
+                        </div>
+                        <p style="color: var(--text-light); font-size: 0.9rem; margin: 0.5rem 0;">Urgent appointment/test coordination requiring extra resources</p>
+                        <p style="color: #666; font-size: 0.85rem; margin: 0.5rem 0 0 0; font-style: italic;">⚠️ Must be approved in advance</p>
+                        <div style="display: none; margin-top: 0.75rem; padding: 0.5rem; background: #f3e8ff; border-radius: 6px; text-align: center;">
+                            <strong style="color: #7c3aed; font-size: 1.1rem;">$300-$800</strong>
+                        </div>
+                    </div>
+
+                    <!-- Add-on 2 -->
+                    <div style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <h4 style="margin: 0; color: #7c3aed;">🚗 Airport Pickup/Drop-off</h4>
+                            <button onclick="togglePrice(this)" style="background: #f3e8ff; border: none; padding: 0.4rem 0.8rem; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.85rem; color: #7c3aed; transition: all 0.3s;" onmouseover="this.style.background='#e9d5ff'" onmouseout="this.style.background='#f3e8ff'">👁️ Show Price</button>
+                        </div>
+                        <p style="color: var(--text-light); font-size: 0.9rem; margin: 0.5rem 0;">Driver coordination, translation, luggage assistance</p>
+                        <p style="color: #666; font-size: 0.85rem; margin: 0.5rem 0 0 0; font-style: italic;">Actual cost (ride/vehicle) + service fee</p>
+                        <div style="display: none; margin-top: 0.75rem; padding: 0.5rem; background: #f3e8ff; border-radius: 6px; text-align: center;">
+                            <strong style="color: #7c3aed; font-size: 1.1rem;">Cost + $100-$200</strong>
+                        </div>
+                    </div>
+
+                    <!-- Add-on 3 -->
+                    <div style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <h4 style="margin: 0; color: #7c3aed;">🏠 Accommodation Assistance</h4>
+                            <button onclick="togglePrice(this)" style="background: #f3e8ff; border: none; padding: 0.4rem 0.8rem; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.85rem; color: #7c3aed; transition: all 0.3s;" onmouseover="this.style.background='#e9d5ff'" onmouseout="this.style.background='#f3e8ff'">👁️ Show Price</button>
+                        </div>
+                        <p style="color: var(--text-light); font-size: 0.9rem; margin: 0.5rem 0;">Hotel/apartment booking, check-in assistance, neighborhood guidance</p>
+                        <p style="color: #666; font-size: 0.85rem; margin: 0.5rem 0 0 0; font-style: italic;">Actual cost (rent) + service fee</p>
+                        <div style="display: none; margin-top: 0.75rem; padding: 0.5rem; background: #f3e8ff; border-radius: 6px; text-align: center;">
+                            <strong style="color: #7c3aed; font-size: 1.1rem;">Cost + $100-$200</strong>
+                        </div>
+                    </div>
+
+                    <!-- Add-on 4 -->
+                    <div style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <h4 style="margin: 0; color: #7c3aed;">📞 Remote Follow-up Translation</h4>
+                            <button onclick="togglePrice(this)" style="background: #f3e8ff; border: none; padding: 0.4rem 0.8rem; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.85rem; color: #7c3aed; transition: all 0.3s;" onmouseover="this.style.background='#e9d5ff'" onmouseout="this.style.background='#f3e8ff'">👁️ Show Price</button>
+                        </div>
+                        <p style="color: var(--text-light); font-size: 0.9rem; margin: 0.5rem 0;">Video consultation translation after you've returned home</p>
+                        <p style="color: #666; font-size: 0.85rem; margin: 0.5rem 0 0 0; font-style: italic;">30-60 min video call interpretation</p>
+                        <div style="display: none; margin-top: 0.75rem; padding: 0.5rem; background: #f3e8ff; border-radius: 6px; text-align: center;">
+                            <strong style="color: #7c3aed; font-size: 1.1rem;">$80-$120/session</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 1.5rem; padding: 1rem; background: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 8px;">
+                    <p style="margin: 0; color: #92400e;"><strong>⚠️ Important:</strong> All add-on services require prior approval. We will confirm the exact cost before proceeding. No surprises.</p>
+                </div>
+            </div>
+            
+            <h3 style="text-align: center; margin: 3rem 0 2rem 0;">Per-Session Services (À La Carte)</h3>
+            
+            <div class="pricing-grid">
+                <!-- Standard Care -->
+                <div class="pricing-card standard-care">
+                    <div class="pricing-icon">🩺</div>
+                    <h3>Standard Care</h3>
+                    
+                    <!-- 精简介绍（约 20 词，始终显示） -->
+                    <p style="color: #4B5563; font-size: 0.95rem; line-height: 1.6; margin: 1rem 0 1.5rem 0;">
+                        Basic companion for routine appointments. Helps with navigation, queueing, and simple translation. Suitable for straightforward visits.
+                    </p>
+                    
+                    <!-- 隐藏内容：价格 + 详细功能 -->
+                    <div id="standard-care-hidden" style="display: none;">
+                        <div class="price" style="margin: 1.5rem 0 1rem 0;">
+                            <span class="currency">From $</span>
+                            <span class="amount">100</span>
+                            <span class="period">/session</span>
+                        </div>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">$25/hour - Weekdays</p>
+                        
+                        <div style="background: #f8f9fa; padding: 0.75rem; border-radius: 8px; margin: 1rem 0;">
+                            <p style="margin: 0; font-size: 0.85rem; color: #666;"><strong>Qualifications:</strong> High school +, 40hr training, CPR certified</p>
+                        </div>
+                        
+                        <ul class="pricing-features">
+                            <li>✓ High school education +</li>
+                            <li>✓ 40-hour basic training</li>
+                            <li>✓ CPR/AED certified</li>
+                            <li>✓ Hospital process training</li>
+                            <li>✓ Basic medical knowledge</li>
+                            <li>✓ <strong>100% Refund if not satisfied</strong></li>
+                        </ul>
+                        <div class="session-prices">
+                            <ul>
+                                <li>Weekday: $100</li>
+                                <li>Weekend: $125 (+25%)</li>
+                                <li>Evening: $140 (+40%)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <button onclick="togglePricingFeatures('standard-care-hidden', this)" style="background: #f0f4ff; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.95rem; color: var(--primary-color); transition: all 0.3s; margin: 1.5rem 0 1rem 0;" onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#f0f4ff'">
+                        <span class="toggle-icon">👁️</span> <span class="toggle-text">View Pricing & Details</span>
+                    </button>
+                    
+                    <a href="#contact" class="btn btn-primary">Book Standard</a>
+                </div>
+
+                <!-- Professional Care -->
+                <div class="pricing-card professional-care featured">
+                    <div class="pricing-icon">👩‍⚕️</div>
+                    <h3>Professional Care</h3>
+                    
+                    <!-- 精简介绍（约 20 词，始终显示） -->
+                    <p style="color: #4B5563; font-size: 0.95rem; line-height: 1.6; margin: 1rem 0 1.5rem 0;">
+                        Licensed nurse for medical procedures and post-op care. Provides medication management, clinical expertise, and professional health support.
+                    </p>
+                    
+                    <!-- 隐藏内容：价格 + 详细功能 -->
+                    <div id="professional-care-hidden" style="display: none;">
+                        <div class="price" style="margin: 1.5rem 0 1rem 0;">
+                            <span class="currency">From $</span>
+                            <span class="amount">180</span>
+                            <span class="period">/session</span>
+                        </div>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">$45/hour - Weekdays</p>
+                        
+                        <div style="background: #f8f9fa; padding: 0.75rem; border-radius: 8px; margin: 1rem 0;">
+                            <p style="margin: 0; font-size: 0.85rem; color: #666;"><strong>Qualifications:</strong> Nursing degree, RN license, 2+ years experience</p>
+                        </div>
+                        
+                        <ul class="pricing-features">
+                            <li>✓ Nursing degree required</li>
+                            <li>✓ Licensed nurse (RN)</li>
+                            <li>✓ 2+ years clinical experience</li>
+                            <li>✓ 80-hour advanced training</li>
+                            <li>✓ Medication management</li>
+                            <li>✓ Post-op care expertise</li>
+                            <li>✓ <strong>100% Refund if not satisfied</strong></li>
+                        </ul>
+                        <div class="session-prices">
+                            <ul>
+                                <li>Weekday: $180</li>
+                                <li>Weekend: $225 (+25%)</li>
+                                <li>Evening: $250 (+40%)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <button onclick="togglePricingFeatures('professional-care-hidden', this)" style="background: #f0f4ff; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.95rem; color: var(--primary-color); transition: all 0.3s; margin: 1.5rem 0 1rem 0;" onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#f0f4ff'">
+                        <span class="toggle-icon">👁️</span> <span class="toggle-text">View Pricing & Details</span>
+                    </button>
+                    
+                    <a href="#contact" class="btn btn-primary">Book Professional</a>
+                </div>
+
+                <!-- Premium Care -->
+                <div class="pricing-card premium-tier">
+                    <div class="pricing-icon">⭐</div>
+                    <h3>Premium Care</h3>
+                    
+                    <!-- 精简介绍（约 20 词，始终显示） -->
+                    <p style="color: #4B5563; font-size: 0.95rem; line-height: 1.6; margin: 1rem 0 1.5rem 0;">
+                        Bilingual medical professional for complex cases. Expert translation, international hospital expertise, and elite clinical training. Best for critical treatments.
+                    </p>
+                    
+                    <!-- 隐藏内容：价格 + 详细功能 -->
+                    <div id="premium-care-hidden" style="display: none;">
+                        <div class="price" style="margin: 1.5rem 0 1rem 0;">
+                            <span class="original-price" style="text-decoration: line-through; color: #999; margin-right: 0.5rem; font-size: 1.5rem;">$400</span>
+                            <span class="currency">From $</span>
+                            <span class="amount">320</span>
+                            <span class="period">/session</span>
+                        </div>
+                        <p style="color: #48bb78; font-weight: 600; margin-bottom: 1rem;">💰 Early Bird Price - 20% OFF (Save $80/session)</p>
+                        
+                        <div style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); padding: 0.75rem; border-radius: 8px; margin: 1rem 0; border-left: 3px solid #10b981;">
+                            <p style="margin: 0; font-size: 0.85rem; color: #059669;"><strong>⭐ Best Value:</strong> Nursing degree, 3+ years, Bilingual Support, Early Bird 20% OFF</p>
+                        </div>
+                        
+                        <ul class="pricing-features">
+                            <li>✓ Nursing/Medical degree</li>
+                            <li>✓ 3+ years at top hospital</li>
+                            <li>✓ Bilingual Support (IELTS 6.5+)</li>
+                            <li>✓ 120-hour elite training</li>
+                            <li>✓ Bilingual medical translation</li>
+                            <li>✓ International hospital expertise</li>
+                            <li>✓ <strong>100% Refund if not satisfied</strong></li>
+                        </ul>
+                        <div class="session-prices">
+                            <ul>
+                                <li>Weekday: $320</li>
+                                <li>Weekend: $400 (+25%)</li>
+                                <li>Evening: $450 (+40%)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <button onclick="togglePricingFeatures('premium-care-hidden', this)" style="background: #f0f4ff; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.95rem; color: var(--primary-color); transition: all 0.3s; margin: 1.5rem 0 1rem 0;" onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#f0f4ff'">
+                        <span class="toggle-icon">👁️</span> <span class="toggle-text">View Pricing & Details</span>
+                    </button>
+                    
+                    <a href="#contact" class="btn btn-primary">Book Premium</a>
+                </div>
+            </div>
+
+            <!-- Quick Consultation - Low Risk Entry Product -->
+            <div style="margin-top: 3rem; text-align: center;">
+                <h3 style="margin-bottom: 1rem; color: #1F2937 !important; font-weight: 700;">💬 Not Sure Yet? Start with a Quick Chat</h3>
+                <p style="max-width: 700px; margin: 0 auto 1.5rem auto; color: #4B5563; font-size: 1.05rem; line-height: 1.6;">
+                    We get it — choosing a medical concierge is a big decision. That's why we offer a <strong>no-pressure, 15-minute consultation</strong> for less than the cost of a coffee.
+                </p>
+                
+                <div class="quick-consult-card">
+                    <div class="quick-consult-content">
+                        <h4 style="color: #1F2937 !important; font-weight: 700; font-size: 1.5rem;">Initial Consultation — $20</h4>
+                        <p style="color: #6B7280; font-size: 1rem; margin: 1rem 0;">
+                            What you get: Hospital recommendations + Service options + All your questions answered
+                        </p>
+                        
+                        <div class="quick-price">
+                            <span class="original-price">$50</span>
+                            <span class="currency">$</span>
+                            <span class="amount">20</span>
+                        </div>
+                        
+                        <!-- Value Props -->
+                        <div style="text-align: left; max-width: 500px; margin: 1.5rem auto; padding: 1.25rem; background: #f0fdf4; border-radius: 8px;">
+                            <p style="margin: 0 0 0.75rem 0; color: #059669; font-weight: 600;">✓ Fully deductible from ANY service</p>
+                            <p style="margin: 0 0 0.75rem 0; color: #059669; font-weight: 600;">✓ No obligation to book further services</p>
+                            <p style="margin: 0 0 0.75rem 0; color: #059669; font-weight: 600;">✓ Get expert advice even if you don't proceed</p>
+                        </div>
+                        
+                        <p style="color: #6B7280; font-size: 0.9rem; margin: 1rem 0;">
+                            💡 <strong>Think of it as:</strong> A cheap way to test if we're the right fit. If you love us, the $20 goes toward your full service. If not, you still got expert advice.
+                        </p>
+                        
+                        <div style="background: #fef3c7; padding: 0.75rem; border-radius: 8px; margin: 1.5rem 0; border-left: 4px solid #f59e0b;">
+                            <p style="margin: 0; color: #92400e; font-size: 0.9rem;"><strong>⏱️ Note:</strong> Payment confirmation may take 2-24 hours due to international network. But it's our honor to serve you immediately!</p>
+                        </div>
+                        
+                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+                            <a href="questionnaire-phase1.html" class="btn btn-secondary" style="display: inline-block; padding: 0.875rem 2rem;">💬 Answer 2-3 Quick Questions</a>
+                            <a href="payment.html" class="btn btn-primary" style="display: inline-block; padding: 0.875rem 2rem;">💳 Book Consultation ($20)</a>
+                        </div>
+                        <p style="color: #9CA3AF; font-size: 0.85rem; margin-top: 0.75rem;">🔒 Secure payment • Takes 2 minutes</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Complete Pricing Table -->
+            <div class="pricing-table-container" style="margin-top: 3rem; background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(248,249,250,0.98) 100%); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                    <h3 style="margin: 0; color: #1F2937 !important;">📋 Per-Session Pricing Guide (4-Hour Blocks)</h3>
+                    <button onclick="togglePriceTable()" style="background: #f0f4ff; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.9rem; color: var(--primary-color); transition: all 0.3s;" onmouseover="this.style.background='#e0e7ff'" onmouseout="this.style.background='#f0f4ff'">
+                        <span id="price-table-toggle-icon">👁️</span> <span id="price-table-toggle-text">Show Prices</span>
+                    </button>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%); padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <p style="margin: 0; color: var(--primary-color); font-weight: 600;">💡 Flexible Option:</p>
+                    <p style="margin: 0.5rem 0 0 0; color: var(--text-light); font-size: 0.95rem;">Perfect for single appointments or follow-ups. <strong>Consultation fee deductible if you upgrade!</strong></p>
+                </div>
+                
+                <div id="price-table-content" style="display: none;">
+                <div class="pricing-table-wrapper" style="overflow-x: auto;">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th style="text-align: left;">Service Level</th>
+                                <th>Weekday</th>
+                                <th>Weekend</th>
+                                <th>Evening</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="service-name">🏥 Standard</td>
+                                <td class="price-highlight">$100</td>
+                                <td class="price-highlight">$125</td>
+                                <td class="price-highlight">$140</td>
+                            </tr>
+                            <tr style="background: #f8f9fa;">
+                                <td class="service-name">👩‍⚕️ Professional (Nurse)</td>
+                                <td class="price-highlight">$180</td>
+                                <td class="price-highlight">$225</td>
+                                <td class="price-highlight">$250</td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">🌟 Premium (Bilingual)</td>
+                                <td class="price-highlight">$320</td>
+                                <td class="price-highlight">$400</td>
+                                <td class="price-highlight">$450</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+                
+                <div style="margin-top: 1.5rem; padding: 1rem; background: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 8px;">
+                    <p style="margin: 0; color: #1F2937;"><strong>⚡ Emergency:</strong> +50% (2-hour response)</p>
+                </div>
+                
+                <div style="margin-top: 1rem; padding: 1rem; background: #d1fae5; border-left: 4px solid #10b981; border-radius: 8px;">
+                    <p style="margin: 0; color: #1F2937;"><strong>📞 Time Slots:</strong> 08:00-12:00 | 13:00-17:00 | 18:00-22:00</p>
+                </div>
+                
+                <div style="margin-top: 1rem; padding: 1rem; background: #f0f4ff; border-left: 4px solid var(--primary-color); border-radius: 8px;">
+                    <p style="margin: 0; color: #1F2937;"><strong>💳 Payment:</strong> Credit card, bank transfer, WeChat, Alipay. Packages: 50% deposit.</p>
+                </div>
+            </div>
+            
+            <!-- Comparison Table: Per-Session vs Package -->
+            <div style="margin-top: 3rem; background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(248,249,250,0.98) 100%); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow);">
+                <h3 style="text-align: center; margin-bottom: 1.5rem; color: #1F2937 !important;">📊 Which Option is Right for You?</h3>
+                
+                <div class="pricing-table-wrapper" style="overflow-x: auto;">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th style="text-align: left; color: white;">Feature</th>
+                                <th style="color: white;">Per-Session</th>
+                                <th style="background: var(--primary-color); color: white;">Standard Package</th>
+                                <th style="background: var(--secondary-color); color: white;">Full Care Package</th>
+                            </tr>
+                        </thead>
+                        <tbody style="color: #1F2937;">
+                            <tr>
+                                <td class="service-name"><strong>Best For</strong></td>
+                                <td>Single appointments, follow-ups</td>
+                                <td>Outpatient care, checkups (1-3 days)</td>
+                                <td>Surgery, hospitalization, long-term care</td>
+                            </tr>
+                            <tr style="background: #f8f9fa;">
+                                <td class="service-name"><strong>Price Range</strong></td>
+                                <td>$100-$450/session</td>
+                                <td>$800 (save up to $400)</td>
+                                <td>$2500 (save up to $1500)</td>
+                            </tr>
+                            <tr>
+                                <td class="service-name"><strong>Duration</strong></td>
+                                <td>4 hours per session</td>
+                                <td>1-3 days full accompaniment</td>
+                                <td>Entire treatment cycle</td>
+                            </tr>
+                            <tr style="background: #f8f9fa;">
+                                <td class="service-name"><strong>Payment</strong></td>
+                                <td>After service completion</td>
+                                <td>50% deposit, 50% on completion</td>
+                                <td>50% deposit, 50% on completion</td>
+                            </tr>
+                            <tr>
+                                <td class="service-name"><strong>Coordination</strong></td>
+                                <td>Basic appointment booking</td>
+                                <td>Specialist coordination + records</td>
+                                <td>Priority + daily visits + discharge</td>
+                            </tr>
+                            <tr style="background: #f8f9fa;">
+                                <td class="service-name"><strong>Follow-up</strong></td>
+                                <td>Not included</td>
+                                <td>Not included</td>
+                                <td>✓ One complimentary remote consultation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div style="margin-top: 1.5rem; text-align: center;">
+                    <p style="color: #4B5563; margin-bottom: 1rem;">Not sure which option to choose? Start with our <strong>Paid Consultation</strong> and we'll recommend the best fit for your needs.</p>
+                    <a href="https://www.paypal.com/ncp/payment/YOUR_PAYPAL_BUTTON_ID" target="_blank" class="btn btn-primary">💳 Book Consultation</a>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6B7280;">🔒 Secure payment via PayPal • Fee credited toward full service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referral Program CTA - 3-tier rewards -->
+    <section style="background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%); padding: 3rem 0; margin: 3rem 0;">
+        <div class="container" style="text-align: center;">
+            <h3 style="color: #7B61C1; margin-bottom: 0.5rem; font-size: 1.75rem;">💝 Know Someone Coming to Beijing for Medical Care?</h3>
+            <p style="color: #4B5563; font-size: 1.1rem; margin-bottom: 1rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Share our service! They'll save $10, and you'll earn:
+            </p>
+            <div style="display: flex; gap: 0.75rem; justify-content: center; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                <span style="background: #10B981; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.95rem;">Direct: $10</span>
+                <span style="background: #7B61C1; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.95rem;">2nd-Tier: $3</span>
+                <span style="background: #F59E0B; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.95rem;">3rd-Tier: $1</span>
+            </div>
+            <p style="color: #6B7280; font-size: 0.95rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Refer 5 friends, each refers 5 more = $250 potential!
+            </p>
+            
+            <!-- Quick Share Buttons -->
+            <div style="margin-bottom: 2rem;">
+                <p style="color: #6B7280; font-size: 0.9rem; margin-bottom: 1rem;">Share instantly:</p>
+                <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://wa.me/?text=Hey!%20I%20found%20this%20medical%20concierge%20service%20in%20Beijing.%20They%20help%20international%20patients%20navigate%20hospitals%2C%20and%20you%20get%20%2410%20OFF%20first%20service.%20Worth%20checking%20out%3A%20https%3A%2F%2F13801380.site" 
+                       target="_blank" 
+                       style="display: inline-flex; align-items: center; gap: 0.5rem; background: #25D366; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.3s;"
+                       onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+                        📱 WhatsApp
+                    </a>
+                    <a href="mailto:?subject=Medical%20Concierge%20in%20Beijing%20-%20%2410%20OFF&body=Hey!%0D%0A%0D%0AI%20found%20this%20medical%20concierge%20service%20in%20Beijing.%20They%20help%20international%20patients%20navigate%20hospitals%2C%20and%20you%20get%20%2410%20OFF%20your%20first%20service.%0D%0A%0D%0AWorth%20checking%20out%3A%20https%3A%2F%2F13801380.site" 
+                       style="display: inline-flex; align-items: center; gap: 0.5rem; background: #0070ba; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.3s;"
+                       onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+                        ✉️ Email
+                    </a>
+                    <button onclick="copyReferralLink()" 
+                            style="display: inline-flex; align-items: center; gap: 0.5rem; background: #6B7280; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.95rem; transition: all 0.3s;"
+                            onmouseover="this.style.background='#4B5563'" onmouseout="this.style.background='#6B7280'">
+                        📋 Copy Link
+                    </button>
+                </div>
+                <p id="copy-success" style="color: #10B981; font-size: 0.85rem; margin-top: 0.75rem; display: none;">✓ Link copied to clipboard!</p>
+            </div>
+            
+            <a href="referral.html" class="btn btn-primary" style="display: inline-block; padding: 1rem 2.5rem; font-size: 1.0625rem; font-weight: 700;">
+                Learn About Referral Rewards →
+            </a>
+            <p style="color: #9CA3AF; font-size: 0.85rem; margin-top: 1rem;">Cash via PayPal • Or use credits for your own services</p>
+        </div>
+    </section>
+
+    <!-- Cost Comparison Table -->
+    <section class="cost-comparison-section">
+      <div class="container">
+        <h2>Why Medical Tourists Choose Beijing</h2>
+        <p class="section-subtitle">Save 60-80% on medical procedures compared to US/Europe prices</p>
+        
+        <!-- Affordable Excellence Value Proposition -->
+        <div style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); padding: 2.5rem; border-radius: 12px; margin-bottom: 2rem; border-left: 4px solid #10B981; text-align: center;">
+          <h3 style="color: #059669; margin-bottom: 1rem; font-size: 1.75rem;">💰 Affordable Excellence: Save 60-80% on Complex Procedures</h3>
+          <p style="color: #4B5563; font-size: 1.05rem; max-width: 900px; margin: 0 auto 1.5rem auto; line-height: 1.6;">
+            Experience elite, life-saving medical care without the crushing financial burden. We provide fully transparent pricing models that make advanced treatments highly cost-effective compared to private healthcare in the US, UK, or Australasia.
+          </p>
+          <div style="display: flex; gap: 1.5rem; justify-content: center; margin-top: 1rem; flex-wrap: wrap;">
+            <span style="color: #059669; font-weight: 600;">✓ Save 60-80% on procedures</span>
+            <span style="color: #059669; font-weight: 600;">✓ Fully transparent pricing</span>
+            <span style="color: #059669; font-weight: 600;">✓ No hidden fees</span>
+          </div>
+        </div>
+        
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th class="procedure-col">Procedure</th>
+                <th>USA</th>
+                <th>UK (Private)</th>
+                <th>Beijing</th>
+                <th class="savings-col">Your Savings</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="procedure-name">🦷 Dental Implant</td>
+                <td>$4,000</td>
+                <td>£2,500</td>
+                <td class="beijing-price">$1,100</td>
+                <td class="savings-highlight">70-80%</td>
+              </tr>
+              <tr>
+                <td class="procedure-name">🦵 Knee Replacement</td>
+                <td>$50,000</td>
+                <td>£12,000</td>
+                <td class="beijing-price">$11,000</td>
+                <td class="savings-highlight">75-80%</td>
+              </tr>
+              <tr>
+                <td class="procedure-name">❤️ Cardiac Bypass</td>
+                <td>$123,000</td>
+                <td>£20,000</td>
+                <td class="beijing-price">$21,000</td>
+                <td class="savings-highlight">80-85%</td>
+              </tr>
+              <tr>
+                <td class="procedure-name">📋 Full Health Checkup</td>
+                <td>$3,000</td>
+                <td>£1,500</td>
+                <td class="beijing-price">$700</td>
+                <td class="savings-highlight">75-80%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <p class="table-note">* Prices include treatment + concierge service. Contact us for detailed quotes.</p>
+        
+        <div class="cta-box">
+          <h3>Ready to Calculate Your Savings?</h3>
+          <p>Get a complimentary consultation and personalized cost estimate for your specific procedure.</p>
+          <a href="#contact" class="btn btn-primary btn-large">Get Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <h2>Patient Resources</h2>
+            <p class="section-subtitle">Everything you need for medical treatment in Beijing</p>
+            
+            <div class="resources-grid">
+                <!-- NEW: Integrative Medicine/TCM Article -->
+                <div class="resource-card featured" style="border: 2px solid #10B981; position: relative;">
+                    <div style="position: absolute; top: -12px; right: 20px; background: #10B981; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">NEW</div>
+                    <div class="resource-icon">🌿</div>
+                    <h3>Integrative Medicine Recovery: Western Surgery + TCM Healing</h3>
+                    <p>Combine advanced Western surgical precision with Traditional Chinese Medicine (TCM) for faster recovery. Acupuncture reduces opioid use, accelerates healing.</p>
+                    <ul class="resource-list">
+                        <li>• Pain management: Reduce opioid dependency</li>
+                        <li>• GI recovery: Electroacupuncture as "pacemaker"</li>
+                        <li>• Chemo support: Ganoderma lucidum (灵芝)</li>
+                        <li>• Treatment plan: Within 48-72 hours</li>
+                        <li>• 6 clinical sources & references</li>
+                    </ul>
+                    <a href="blog-integrative-medicine-recovery-china.html" class="btn btn-primary" style="display: inline-block; padding: 0.75rem 1.5rem;">📖 Read Full Guide →</a>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-light);">⏱️ Reading time: 10 minutes</p>
+                </div>
+
+                <!-- NEW: Orthopedic/Robotic Surgery Article -->
+                <div class="resource-card">
+                    <div class="resource-icon">🦴</div>
+                    <h3>China Robotic Joint Replacement: Save 70-85%, Skip 2-Year Waitlists</h3>
+                    <p>Complete guide for hip/knee replacement patients. Access robotic surgery (Stryker MAKO, Da Vinci) at 70-85% lower cost with zero wait times.</p>
+                    <ul class="resource-list">
+                        <li>• Surgeon volume: 200-500 vs 65 procedures/year</li>
+                        <li>• Safety data: 0.1% mortality, 1.0% complication rate</li>
+                        <li>• Cost comparison: $8,000-$20,000 vs $35,000-$70,000</li>
+                        <li>• Timeline: Consultation → Surgery in 3-14 days</li>
+                        <li>• 7 clinical sources & references</li>
+                    </ul>
+                    <a href="blog-robotic-joint-replacement-china.html" class="btn btn-secondary" style="display: inline-block; padding: 0.75rem 1.5rem;">📖 Read Full Guide →</a>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-light);">⏱️ Reading time: 10 minutes</p>
+                </div>
+
+                <!-- NEW: Payment Guide Article -->
+                <div class="resource-card">
+                    <div class="resource-icon">💰</div>
+                    <h3>Guide to Paying for Medical Treatment in China</h3>
+                    <p>Complete guide to hospital payments, insurance claims, Fapiao tax invoices, and digital payment options for foreigners in China.</p>
+                    <ul class="resource-list">
+                        <li>• Prepayment system explained</li>
+                        <li>• Fapiao rule for insurance claims</li>
+                        <li>• Cost comparison: China vs US (3 treatments)</li>
+                        <li>• Alipay/WeChat Pay 2024 guide</li>
+                        <li>• S2 visa financial requirements</li>
+                    </ul>
+                    <a href="blog-paying-for-medical-treatment-china.html" class="btn btn-secondary" style="display: inline-block; padding: 0.75rem 1.5rem;">📖 Read Full Guide →</a>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-light);">⏱️ Reading time: 10 minutes</p>
+                </div>
+
+                <!-- FAQ Page -->
+                <div class="resource-card">
+                    <div class="resource-icon">❓</div>
+                    <h3>Frequently Asked Questions (FAQ)</h3>
+                    <p>Get quick answers to common questions about medical treatment in China.</p>
+                    <ul class="resource-list">
+                        <li>• Are Chinese hospitals safe?</li>
+                        <li>• Do doctors speak English?</li>
+                        <li>• How to book appointments?</li>
+                        <li>• Visa requirements explained</li>
+                        <li>• Payment & insurance options</li>
+                    </ul>
+                    <a href="faq.html" class="btn btn-secondary" style="display: inline-block; padding: 0.75rem 1.5rem;">📖 View All FAQs →</a>
+                </div>
+
+                <!-- NEW: NPC Treatment Article -->
+                <div class="resource-card">
+                    <div class="resource-icon">🎗️</div>
+                    <h3>NPC Treatment in China: 20% Higher Survival, 60-80% Lower Cost</h3>
+                    <p>Complete guide for Nasopharyngeal Carcinoma patients. Learn why Chinese cancer centers achieve 20% higher survival rates at 60-80% lower cost.</p>
+                    <ul class="resource-list">
+                        <li>• Survival rates: China vs US (Stage I-IV)</li>
+                        <li>• Advanced treatments (IMRT, PD-1, ENPG)</li>
+                        <li>• Cost comparison: Proton Therapy & Immunotherapy</li>
+                        <li>• How to access top Chinese cancer centers</li>
+                        <li>• 11 clinical sources & references</li>
+                    </ul>
+                    <a href="blog-npc-treatment-china.html" class="btn btn-secondary" style="display: inline-block; padding: 0.75rem 1.5rem;">📖 Read Full Article →</a>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-light);">⏱️ Reading time: 10 minutes</p>
+                </div>
+
+                <!-- Resource 4: Hospital Access Guide -->
+                <div class="resource-card">
+                    <div class="resource-icon">📰</div>
+                    <h3>China Hospitals for Foreigners: Save 60-80%, Skip 18-Month Waitlists</h3>
+                    <p>Complete guide to skipping waitlists and saving 60-80% on major surgeries in China's Grade 3A hospitals.</p>
+                    <ul class="resource-list">
+                        <li>• Why Western healthcare is failing patients</li>
+                        <li>• How to save 60-80% on surgeries</li>
+                        <li>• S1/S2 visa requirements explained</li>
+                        <li>• Payment solutions for foreigners</li>
+                        <li>• Real cost comparisons (US vs China)</li>
+                    </ul>
+                    <a href="blog-how-to-access-chinese-hospitals.html" class="btn btn-secondary" style="display: inline-block; padding: 0.75rem 1.5rem;">📖 Read Full Article →</a>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-light);">⏱️ Reading time: 10 minutes</p>
+                </div>
+
+                <!-- Resource 5: Medical Guide (通用指南) -->
+                <div class="resource-card">
+                    <div class="resource-icon">🏥</div>
+                    <h3>Medical Guide</h3>
+                    <p>Complete guide to healthcare in Beijing for foreigners — your starting point for medical treatment</p>
+                    <ul class="resource-list">
+                        <li>• How to choose the right hospital</li>
+                        <li>• What to bring to appointments</li>
+                        <li>• Understanding Chinese prescriptions</li>
+                        <li>• Emergency procedures</li>
+                        <li>• Insurance claims process</li>
+                        <li>• Common medications in China</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">📥 Request Guide (PDF)</a>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-light);">📧 We'll email you the PDF within 24 hours</p>
+                </div>
+
+                <!-- Resource 2: Medical Insurance Guide -->
+                <div class="resource-card">
+                    <div class="resource-icon">💰</div>
+                    <h3>Medical Insurance Guide for Travelers</h3>
+                    <p>Complete guide to insurance reimbursement for Americans, Europeans, and Canadians visiting China for medical treatment</p>
+                    <ul class="resource-list">
+                        <li>• Which insurance works in China</li>
+                        <li>• Medicare/NHS/EHIC coverage (spoiler: they don't work)</li>
+                        <li>• Best travel insurance companies ($4-15/day)</li>
+                        <li>• Direct-pay hospitals in Beijing, Shanghai, Guangzhou</li>
+                        <li>• How to claim reimbursement step-by-step</li>
+                        <li>• Common rejection reasons & how to avoid them</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">📥 Request Guide (PDF)</a>
+                </div>
+
+                <!-- Resource 3: Visa-Free Policy (突出签证优势) -->
+                <div class="resource-card featured" style="border: 2px solid #10B981; position: relative;">
+                    <div style="position: absolute; top: -12px; right: 20px; background: #10B981; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">EASY ENTRY</div>
+                    <div class="resource-icon">🛂</div>
+                    <h3>China Visa-Free Policy</h3>
+                    <p>72/144-hour visa-free transit for 54 countries — perfect for medical treatment visits.</p>
+                    <ul class="resource-list">
+                        <li>• 72/144-hour transit visa-free (54 eligible countries)</li>
+                        <li>• Includes US, UK, Canada, Australia, EU, Japan, South Korea</li>
+                        <li>• No visa needed for short medical visits</li>
+                        <li>• Simple entry requirements</li>
+                        <li>• Latest policy updates 2026</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">📥 Request Guide (PDF)</a>
+                    <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #6B7280;"><a href="#contact" style="color: var(--primary-color); font-weight: 600;">Check your eligibility →</a></p>
+                </div>
+
+                <!-- Resource 4: Visa Application -->
+                <div class="resource-card">
+                    <div class="resource-icon">📝</div>
+                    <h3>Visa Application Steps</h3>
+                    <p>Step-by-step guide to applying for Chinese visa</p>
+                    <ul class="resource-list">
+                        <li>• Required documents checklist</li>
+                        <li>• Online application process</li>
+                        <li>• Appointment booking</li>
+                        <li>• Visa center locations</li>
+                        <li>• Processing times</li>
+                        <li>• Common mistakes to avoid</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">📥 Request Guide (PDF)</a>
+                </div>
+
+                <!-- Resource 5: Living Guide -->
+                <div class="resource-card">
+                    <div class="resource-icon">🏠</div>
+                    <h3>Living in Beijing</h3>
+                    <p>Daily life guide for expats - food, housing, transport</p>
+                    <ul class="resource-list">
+                        <li>• Finding accommodation</li>
+                        <li>• Getting around (metro, bus, taxi)</li>
+                        <li>• Best areas for expats</li>
+                        <li>• Shopping & supermarkets</li>
+                        <li>• Restaurants & food delivery</li>
+                        <li>• Banking & mobile payment</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">📥 Request Guide (PDF)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section - 突出核心优势 -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <h2>See Beijing Healthcare in Action</h2>
+            <p class="section-subtitle">Watch why patients from US, UK, and Australia choose Beijing for treatment</p>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/Ko7wU0R8Rbk" 
+                            title="China Hospital vs UK NHS"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0; flex-wrap: wrap;">
+                        <span style="background: #EDE9FE; color: #7B61C1; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">🏥 Top 3A Hospitals</span>
+                        <span style="background: #f0fdf4; color: #10B981; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">💰 60-80% Savings</span>
+                    </div>
+                    <h4>China Hospital vs UK NHS (We Took My Dad)</h4>
+                    <p>Real comparison of healthcare systems - 100k+ views</p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/2wiC9PhfoYE" 
+                            title="Dental Hospital in China - Future of Dentistry"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0; flex-wrap: wrap;">
+                        <span style="background: #EDE9FE; color: #7B61C1; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">🔬 Advanced Technology</span>
+                        <span style="background: #f0fdf4; color: #10B981; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">🧼 High Hygiene Standards</span>
+                    </div>
+                    <h4>🦷 Dental Hospital in China - Future of Dentistry</h4>
+                    <p>American expat shares dental implant experience - 500k+ views</p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="Medical Concierge Service Overview"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin: 0.5rem 0; flex-wrap: wrap;">
+                        <span style="background: #EDE9FE; color: #7B61C1; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">🤝 On-Site Support</span>
+                        <span style="background: #f0fdf4; color: #10B981; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">🗣️ Bilingual Support</span>
+                    </div>
+                    <h4>How Medical Concierge Service Works</h4>
+                    <p>See how we help international patients navigate Beijing hospitals</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 2rem;">
+                <a href="patient-stories.html" style="color: var(--primary-color); font-weight: 600; font-size: 1.1rem;">View all patient stories with full videos →</a>
+            </p>
+            
+            <p style="text-align: center; margin-top: 1rem; color: var(--text-light); font-size: 0.9rem;">
+                🔄 Refresh page to see different videos
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about our service</p>
+            
+            <div class="faq-container">
+                <!-- 【认知阶段】 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What exactly is a medical concierge?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A medical concierge is your personal healthcare assistant in Beijing. <strong>We're not just translators</strong> — we navigate the hospital system for you, match you with the right specialists, and provide on-site support throughout your entire healthcare journey. Think of us as your healthcare advocate and local expert.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How much can I save compared to US/Europe?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most patients save 60-80% on treatment costs compared to US/Europe prices. For example: Dental implants ($1,100 vs $4,000), Knee replacement ($11,000 vs $50,000), Cardiac bypass ($21,000 vs $123,000). These are typical treatment costs at Beijing's 3A hospitals. <a href="#cost-comparison" style="color: var(--primary-color); font-weight: 600;">See full comparison →</a></p>
+                    </div>
+                </div>
+
+                <!-- 【信任阶段】 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you provide medical advice?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No, we are not doctors and cannot provide medical advice. We help you find qualified doctors with bilingual staff support and facilitate communication, but all medical decisions should be made with licensed healthcare providers.</p>
+                        <p style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #E5E7EB; color: #6B7280; font-size: 0.95rem;">
+                            <strong>Need expert clarity?</strong> Get a second opinion from China's leading specialists. 
+                            <a href="#services" style="color: var(--primary-color); font-weight: 600;">Verify your diagnosis. Secure your plan. →</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What is your refund policy?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer a 100% satisfaction guarantee. If you're not completely satisfied with our service, simply let us know within 24 hours and we'll refund your payment in full. No questions asked.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is Beijing safe for international patients?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Beijing is one of the safest major cities in the world. Violent crime against foreigners is extremely rare. Hospitals maintain high hygiene standards with regular inspections. Our team provides 24/7 support to ensure your safety and comfort throughout your stay.</p>
+                    </div>
+                </div>
+
+                <!-- 【资格阶段】 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do I need a visa for medical treatment in Beijing?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Many nationalities qualify for <strong>72/144-hour visa-free transit</strong> (54 countries including US, UK, Canada, Australia, EU, and more). This is perfect for short medical visits. We'll help you check eligibility and guide you through the process. <a href="#resources" style="color: var(--primary-color); font-weight: 600;">Download our Visa-Free Policy Guide →</a></p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you only serve patients from specific countries?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We serve all international patients visiting Beijing for medical treatment, regardless of nationality. We also serve local patients who prefer English communication. Our team will communicate in English and has experience helping patients from multiple countries.</p>
+                    </div>
+                </div>
+
+                <!-- 【决策阶段】 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How far in advance should I book?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>For non-emergency appointments, we recommend booking at least 2-3 days in advance. However, we can often arrange same-day or next-day service for urgent situations. Our 24/7 hotline is always available for emergencies.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What happens after I book a consultation?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Within 2 hours, we'll contact you to understand your medical needs, recommend the right hospitals and specialists, and explain the entire process. If you proceed with our service, we'll handle appointment booking, medical records preparation, and all logistics. You'll have a dedicated account manager throughout your treatment.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can you help with insurance claims?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We can help you understand your insurance coverage, provide necessary documentation, and guide you through the claims process. However, we don't directly bill insurance companies - payment is due at the time of service.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p class="section-subtitle">Ready to get started? Contact us today!</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <strong>Contact Process</strong>
+                            <p style="margin-top: 0.5rem;">
+                                <a href="contact-form.html" class="btn btn-primary" style="display: inline-block; padding: 0.875rem 1.75rem; text-decoration: none; font-weight: 700; font-size: 1.0625rem; background: linear-gradient(135deg, #7B61C1 0%, #6B52B1 100%); color: #FFFFFF !important; box-shadow: 0 4px 14px rgba(123, 97, 193, 0.4);">Contact Us →</a>
+                            </p>
+                            <p style="font-size: 0.9rem; color: #666; margin-top: 0.75rem;">
+                                Fill in your information → Pay consultation fee → Get our contact details
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">⏰</span>
+                        <div>
+                            <strong>Response Time</strong>
+                            <p>Within 2 hours (subject to network conditions)</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🛡️</span>
+                        <div>
+                            <strong>Guarantee</strong>
+                            <p>100% satisfaction or full refund</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <!-- Contact Form - Email Client Method (Formspree temporarily disabled) -->
+                    <div class="contact-form">
+                        <div style="background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--primary-color); margin-bottom: 1.5rem;">
+                            <h4 style="margin: 0 0 1rem 0; color: var(--primary-color);">📧 Quick Contact</h4>
+                            <p style="margin: 0 0 1rem 0; color: var(--text-light);">Click the button below to open your email client with a pre-filled message. Or email us directly:</p>
+                            <p style="margin: 0; font-size: 1.1rem;">
+                                <a href="mailto:hello@13801380.site" style="color: var(--primary-color); font-weight: 600;">hello@13801380.site</a>
+                            </p>
+                        </div>
+                        
+                        <a href="mailto:hello@13801380.site?subject=Medical Concierge Inquiry&body=Hi,%0D%0A%0D%0AI need medical assistance in Beijing.%0D%0A%0D%0A--- Basic Info ---%0D%0AMy name: %0D%0ASymptoms/Needs: %0D%0APhone: %0D%0A%0D%0A--- Service Type ---%0D%0AService Type: [Per-Session / Standard Package ($800) / Full Care Package ($2500)]%0D%0A%0D%0AFor Per-Session:%0D%0A- Service Level: [Standard $100 / Professional $180 / Premium $320]%0D%0A- Time Slot: [Morning/Afternoon/Evening]%0D%0A- Date Preference: [Weekday/Weekend]%0D%0A%0D%0AFor Packages:%0D%0A- Preferred dates: %0D%0A- Hospital preference: %0D%0A%0D%0A--- Add-on Services (Optional) ---%0D%0A[ ] Expedited Coordination ($300-$800)%0D%0A[ ] Airport Pickup (Cost + $100-$200)%0D%0A[ ] Accommodation Assistance (Cost + $100-$200)%0D%0A[ ] Remote Follow-up Translation ($80-$120)%0D%0A%0D%0A--- Additional Notes ---%0D%0A%0D%0AThank you!" 
+                           class="btn btn-primary btn-block" 
+                           style="display: block; text-align: center; margin-bottom: 1rem;">
+                            ✉️ Open Email Client
+                        </a>
+                        
+                        <!-- NEW: Quick Questionnaire Section -->
+                        <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%); border-radius: 12px; border-left: 4px solid var(--primary-color);">
+                            <h4 style="margin: 0 0 1rem 0; color: var(--primary-color);">⚡ Fast Track Your Request</h4>
+                            <p style="margin: 0 0 1rem 0; color: var(--text-light);">Fill out our 2-minute questionnaire and get a personalized recommendation within 2 hours.</p>
+                            <ul style="margin: 0 0 1rem 0; padding-left: 1.5rem; color: var(--text-light); font-size: 0.9rem;">
+                                <li>✓ Only 5 quick questions</li>
+                                <li>✓ Get expert hospital recommendations</li>
+                                <li>✓ Receive a customized service plan</li>
+                            </ul>
+                            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <a href="questionnaire-phase1.html" class="btn btn-secondary" style="flex: 1; min-width: 200px;">📋 Fill Questionnaire Online</a>
+                            </div>
+                            <p style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-light);">✅ Takes only 2 minutes • Get personalized recommendation within 2 hours</p>
+                        </div>
+                        
+                        <!-- Alternative Contact Methods -->
+                        <div style="margin-top: 1.5rem;">
+                            <h4 style="margin: 0 0 1rem 0; font-size: 1rem;">📱 Other Contact Options:</h4>
+                            
+                            <div style="display: grid; gap: 0.75rem;">
+                                <!-- WhatsApp Contact -->
+                                <div style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); padding: 1rem; border-radius: 8px; border-left: 3px solid #10b981;">
+                                    <strong>💬 WhatsApp:</strong>
+                                    <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: #666;">+86 138 0138 0000 (Available after initial consultation)</p>
+                                </div>
+                                
+                                <!-- WeChat Contact -->
+                                <div style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); padding: 1rem; border-radius: 8px; border-left: 3px solid #10b981;">
+                                    <strong>💬 WeChat:</strong>
+                                    <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: #666;">louisleo99 (Available after initial consultation)</p>
+                                    <a href="contact-form.html" style="display: inline-block; margin-top: 0.5rem; background: #10b981; color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.background='#059669'" onmouseout="this.style.background='#10b981'">Fill Form & Pay →</a>
+                                </div>
+                                
+                                <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+                                    <strong>⏰ Response Time:</strong>
+                                    <p style="margin: 0.25rem 0 0 0; color: var(--text-light); font-size: 0.9rem;">Within 2 hours (subject to network conditions)</p>
+                                </div>
+                                
+                                <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+                                    <strong>🛡️ Guarantee:</strong>
+                                    <p style="margin: 0.25rem 0 0 0; color: var(--text-light); font-size: 0.9rem;">100% satisfaction or full refund</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="form-note" style="margin-top: 1.5rem;">🔒 Your information is secure. We never share your data.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Referral Program CTA in Contact Section -->
+            <div style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border-radius: 12px; border-left: 4px solid #10b981; text-align: center;">
+                <h4 style="color: #059669; margin-bottom: 0.5rem; font-size: 1.5rem;">💝 Had a Good Experience?</h4>
+                <p style="color: #10B981; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.75rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Earn up to $14 per referral with 3-tier rewards!
+                </p>
+                <p style="color: #4B5563; font-size: 1rem; margin-bottom: 0.75rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Direct: $10 • 2nd-Tier: $3 • 3rd-Tier: $1
+                </p>
+                <p style="color: #6B7280; font-size: 0.95rem; margin-bottom: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Refer 5 friends, each refers 5 more = $250 potential!
+                </p>
+                
+                <!-- Quick Share Buttons -->
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="https://wa.me/?text=Hey!%20I%20found%20this%20medical%20concierge%20service%20in%20Beijing.%20They%20help%20international%20patients%20navigate%20hospitals%2C%20and%20you%20get%20%2410%20OFF%20first%20service.%20Worth%20checking%20out%3A%20https%3A%2F%2F13801380.site" 
+                           target="_blank" 
+                           style="display: inline-flex; align-items: center; gap: 0.5rem; background: #25D366; color: white; padding: 0.6rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s;"
+                           onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+                            📱 WhatsApp
+                        </a>
+                        <a href="mailto:?subject=Medical%20Concierge%20in%20Beijing%20-%20%2410%20OFF&body=Hey!%0D%0A%0D%0AI%20found%20this%20medical%20concierge%20service%20in%20Beijing.%20They%20help%20international%20patients%20navigate%20hospitals%2C%20and%20you%20get%20%2410%20OFF%20your%20first%20service.%0D%0A%0D%0AWorth%20checking%20out%3A%20https%3A%2F%2F13801380.site" 
+                           style="display: inline-flex; align-items: center; gap: 0.5rem; background: #0070ba; color: white; padding: 0.6rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s;"
+                           onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+                            ✉️ Email
+                        </a>
+                        <button onclick="copyReferralLink()" 
+                                style="display: inline-flex; align-items: center; gap: 0.5rem; background: #6B7280; color: white; padding: 0.6rem 1.25rem; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.9rem; transition: all 0.3s;"
+                                onmouseover="this.style.background='#4B5563'" onmouseout="this.style.background='#6B7280'">
+                            📋 Copy Link
+                        </button>
+                    </div>
+                </div>
+                
+                <a href="referral.html" class="btn btn-primary" style="display: inline-block; padding: 0.875rem 2.5rem; font-weight: 700;">
+                    Learn How It Works →
+                </a>
+                <p style="color: #6B7280; font-size: 0.85rem; margin-top: 1rem;">Cash via PayPal • Or use credits for your own services</p>
+            </div>
+        </div>
+        
+        <!-- Final CTA -->
+        <div style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%); border-radius: 12px; text-align: center;">
+            <p style="color: #4B5563; font-size: 1.05rem; margin-bottom: 1.5rem;">
+                Get a confidential expert review of your medical options—no cost, no obligation.
+            </p>
+            <a href="#contact" class="btn btn-primary" style="display: inline-block; padding: 1rem 2.5rem; font-size: 1.0625rem; font-weight: 700;">
+                Start Your Journey →
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>🏥 Beijing Medical Concierge</h4>
+                    <p>Professional medical concierge for international patients in Beijing. Breaking language barriers, one patient at a time.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#hospitals">Hospitals</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="patient-guide.html">Patient Guide</a></li>
+                        <li><a href="specialists.html">Specialists</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#resources">Medical Guide</a></li>
+                        <li><a href="patient-stories.html">Success Stories</a></li>
+                        <li><a href="#resources">Visa-Free Policy</a></li>
+                        <li><a href="#resources">Visa Application</a></li>
+                        <li><a href="#resources">Living in Beijing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms of Service</a></li>
+                        <li><a href="refund-policy.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Beijing Medical Concierge. All rights reserved.</p>
+
+                <p style="font-size: 0.85rem; color: #999; margin-top: 0.5rem;">
+                    Disclaimer: We are not a medical institution and do not provide medical advice. 
+                    All medical services are provided by licensed healthcare professionals.
+                </p>
+
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #E5E7EB; text-align: center;">
+                    <p style="color: #6B7280; font-size: 0.95rem;">
+                        💝 Know someone who needs medical help in Beijing? 
+                        <a href="referral.html" style="color: #7B61C1; font-weight: 600;">Refer them & both get $10 OFF →</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/concierge-main.js"></script>
+    <script src="js/typewriter-hero.js"></script>
+    
+    <!-- Toggle Functions -->
+    <script>
+        function toggleWeChat() {
+            var display = document.getElementById('wechat-id-display');
+            var btn = event.target;
+            if (display.style.display === 'none') {
+                display.style.display = 'block';
+                btn.innerHTML = '🙈 Hide WeChat ID';
+            } else {
+                display.style.display = 'none';
+                btn.innerHTML = '👁️ Show WeChat ID';
+            }
+        }
+        
+        function togglePrice(element) {
+            var parentCard = element.closest('div[style*="background: linear-gradient"]');
+            var priceEl = parentCard.querySelector('div[style*="display: none"]');
+            if (!priceEl) {
+                priceEl = parentCard.lastElementChild;
+            }
+            if (priceEl && priceEl.style.display === 'none') {
+                priceEl.style.display = 'block';
+                element.innerHTML = '📉 Hide Price';
+            } else if (priceEl) {
+                priceEl.style.display = 'none';
+                element.innerHTML = '👁️ Show Price';
+            }
+        }
+        
+        function togglePriceTable() {
+            var content = document.getElementById('price-table-content');
+            var btnIcon = document.getElementById('price-table-toggle-icon');
+            var btnText = document.getElementById('price-table-toggle-text');
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                btnIcon.textContent = '📉';
+                btnText.textContent = 'Hide Prices';
+            } else {
+                content.style.display = 'none';
+                btnIcon.textContent = '👁️';
+                btnText.textContent = 'Show Prices';
+            }
+        }
+        
+        function togglePricingFeatures(featureId, button) {
+            var features = document.getElementById(featureId);
+            var icon = button.querySelector('.toggle-icon');
+            var text = button.querySelector('.toggle-text');
+            if (features.style.display === 'none') {
+                features.style.display = 'block';
+                icon.textContent = '📉';
+                text.textContent = 'Hide Details';
+            } else {
+                features.style.display = 'none';
+                icon.textContent = '👁️';
+                text.textContent = 'Show Details';
+            }
+        }
+        
+        function toggleServiceDetails(featureId, button) {
+            var features = document.getElementById(featureId);
+            var icon = button.querySelector('.toggle-icon');
+            var text = button.querySelector('.toggle-text');
+            if (features.style.display === 'none') {
+                features.style.display = 'block';
+                icon.textContent = '📉';
+                text.textContent = 'Show Less';
+            } else {
+                features.style.display = 'none';
+                icon.textContent = '👁️';
+                text.textContent = 'Show More';
+            }
+        }
+        
+        function copyReferralLink() {
+            var link = 'https://13801380.site';
+            navigator.clipboard.writeText(link).then(function() {
+                var successMsg = document.getElementById('copy-success');
+                if (successMsg) {
+                    successMsg.style.display = 'block';
+                    setTimeout(function() {
+                        successMsg.style.display = 'none';
+                    }, 3000);
+                }
+            }).catch(function(err) {
+                // Fallback for older browsers
+                var textArea = document.createElement('textarea');
+                textArea.value = link;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-999999px';
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    var successMsg = document.getElementById('copy-success');
+                    if (successMsg) {
+                        successMsg.style.display = 'block';
+                        setTimeout(function() {
+                            successMsg.style.display = 'none';
+                        }, 3000);
+                    }
+                } catch (err) {
+                    alert('Please copy this link manually: ' + link);
+                }
+                document.body.removeChild(textArea);
+            });
+        }
+    </script>
+    
+    <!-- WeChat Float Button -->
+    <div class="wechat-float" style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #07C160; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; z-index: 1000; transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+        <svg viewBox="0 0 32 32" style="width: 35px; height: 35px;">
+            <path fill="#FFF" d="M16 2C8.268 2 2 7.82 2 15c0 3.89 1.82 7.39 4.67 9.79L5 29l5.33-1.78C11.86 27.71 13.89 28 16 28c7.732 0 14-5.82 14-13S23.732 2 16 2z"/>
+            <circle fill="#FFF" cx="9.5" cy="13.5" r="1.5"/>
+            <circle fill="#FFF" cx="13.5" cy="13.5" r="1.5"/>
+            <circle fill="#FFF" cx="18.5" cy="13.5" r="1.5"/>
+            <circle fill="#FFF" cx="22.5" cy="13.5" r="1.5"/>
+            <path fill="#FFF" d="M9 17c-1.5 0-3 1-3 2.5S7.5 22 9 22s3-1 3-2.5S10.5 17 9 17z"/>
+            <path fill="#FFF" d="M23 17c-1.5 0-3 1-3 2.5s1.5 2.5 3 2.5 3-1 3-2.5S24.5 17 23 17z"/>
+        </svg>
+        <span style="position: absolute; right: 70px; background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 8px 12px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); font-size: 14px; font-weight: 600; color: #333; white-space: nowrap;">Contact Us →</span>
+    </div>
+    <script>
+        // Modified WeChat float button to redirect to contact form
+        document.querySelector('.wechat-float').addEventListener('click', function() {
+            window.location.href = 'contact-form.html';
+        });
+    </script>
+</body>
+</html>

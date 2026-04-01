@@ -1,17 +1,27 @@
 /* Typewriter Hero Section - 紫色渐变背景 */
+/* UI Design 优化版 - 移动优先，3 秒规则，视觉层次 */
 
 .typewriter-hero {
-    background: linear-gradient(135deg, #7B61C1 0%, #9D8AD6 100%);
-    color: white;
+    background: linear-gradient(135deg, #EDE9FE 0%, #F3F0FF 100%);
     padding: 4rem 0;
     text-align: center;
     position: relative;
-    overflow: hidden;
-    min-height: 280px; /* FIXED HEIGHT - prevents jumping */
-    max-height: 280px; /* LOCK HEIGHT - no expansion */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: visible;
+    min-height: auto;
+    max-height: none;
+    height: auto;
+    display: block;
+}
+
+.typewriter-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.hero-title-box, .mission-box {
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .typewriter-hero::before {
@@ -38,26 +48,115 @@
 }
 
 .typewriter-container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
     position: relative;
     z-index: 1;
 }
 
-.typewriter-text {
+/* Hero Title Box - 主标题区域 */
+.hero-title-box {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 2.5rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    overflow: visible;
+}
+
+.hero-title-box h1 {
     font-size: 2.5rem;
+    color: #1F2937;
     font-weight: 700;
+    margin: 0;
     line-height: 1.3;
-    height: 4rem;
-    min-height: 3.25rem; /* 固定文本高度，防止跳动 */
+}
+
+.hero-title-box .price-highlight {
+    font-size: 1.75rem;
+    color: #10B981;
+    font-weight: 700;
+    margin: 1.25rem 0 0 0;
+    line-height: 1.4;
+}
+
+/* Mission Box - 核心理念区域 */
+.mission-box {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: visible;
+}
+
+.mission-box p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    margin: 0;
+    color: #4B5563;
+}
+
+.mission-box .intro {
+    color: #6B7280;
+    display: block;
+    margin-bottom: 0.875rem;
+}
+
+.mission-box .challenge {
+    color: #1F2937;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.875rem;
+}
+
+.mission-box .highlight {
+    color: #7B61C1;
+}
+
+.mission-box .solution {
+    color: #6B7280;
+    display: block;
+}
+
+/* CTA Buttons */
+.typewriter-cta {
     display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease 0.7s backwards;
+}
+
+.typewriter-cta .btn {
+    min-height: 56px;
+    padding: 1rem 2rem;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 0.5rem;
-    overflow: hidden;
-    transition: opacity 0.3s ease;
+}
+
+.typewriter-cta .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* PayPal 按钮特殊样式 */
+.typewriter-cta .paypal-btn {
+    border-color: #0070ba !important;
+    color: #0070ba !important;
+}
+
+.typewriter-cta .paypal-btn:hover {
+    background: #0070ba !important;
+    color: #ffffff !important;
 }
 
 .typewriter-word {
@@ -105,54 +204,145 @@
     50% { opacity: 0; }
 }
 
-/* Mobile Responsive */
+/* ========================================
+   响应式设计 - 移动优先原则
+   - 字体最小 16px (1rem)
+   - 触摸目标最小 44x44px
+   - 8px 网格间距系统
+   ======================================== */
+
+/* Tablet (768px and below) */
 @media (max-width: 768px) {
     .typewriter-hero {
-        min-height: 200px;
-        padding: 3rem 1rem;
+        padding: 3rem 0;
     }
     
     .typewriter-container {
-        padding: 0 15px;
+        padding: 0 20px;
     }
     
-    .typewriter-text {
-        font-size: 1.3rem;
-        line-height: 1.5;
-        min-height: 2.5rem; /* FIXED HEIGHT - prevents jumping */
-        height: auto;
-        display: block !important;
-        opacity: 1 !important;
-        visibility: visible !important;
+    .hero-title-box {
+        padding: 2rem !important;
+        margin-bottom: 1.5rem !important;
     }
     
-    .typewriter-word {
-        display: inline;
+    .hero-title-box h1 {
+        font-size: 2rem !important;
     }
     
-    .typewriter-cursor {
-        display: none; /* Hide cursor on mobile */
+    .hero-title-box .price-highlight {
+        font-size: 1.5rem !important;
     }
     
-    .gradient-text {
-        font-size: 1.4rem;
+    .mission-box {
+        padding: 1.75rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .mission-box p {
+        font-size: 1.0625rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    .typewriter-cta {
+        gap: 0.875rem !important;
+    }
+    
+    .typewriter-cta .btn {
+        min-height: 52px;
+        padding: 0.875rem 1.5rem;
     }
 }
 
-/* Small Mobile (iPhone SE etc.) */
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    .typewriter-hero {
+        padding: 2.5rem 0;
+    }
+    
+    .typewriter-container {
+        padding: 0 16px;
+    }
+    
+    .hero-title-box {
+        padding: 1.75rem !important;
+        margin-bottom: 1.25rem !important;
+        border-radius: 12px;
+    }
+    
+    .hero-title-box h1 {
+        font-size: 1.75rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .hero-title-box .price-highlight {
+        font-size: 1.25rem !important;
+        margin-top: 1rem !important;
+    }
+    
+    .mission-box {
+        padding: 1.5rem !important;
+        margin-bottom: 1.25rem !important;
+        border-radius: 12px;
+    }
+    
+    .mission-box p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    .mission-box .intro,
+    .mission-box .solution {
+        font-size: 0.9375rem !important;
+    }
+    
+    .typewriter-cta {
+        flex-direction: column;
+        gap: 0.75rem !important;
+        margin-top: 2rem;
+    }
+    
+    .typewriter-cta .btn {
+        width: 100%;
+        min-height: 56px;
+        padding: 1rem 1.5rem;
+        font-size: 1rem !important;
+    }
+}
+
+/* Small Mobile (375px and below - iPhone SE) */
 @media (max-width: 375px) {
     .typewriter-hero {
-        min-height: 220px;
-        padding: 2.5rem 0.75rem;
+        padding: 2rem 0;
     }
     
-    .typewriter-text {
-        font-size: 1.1rem;
-        height: auto;
+    .typewriter-container {
+        padding: 0 14px;
     }
     
-    .gradient-text {
-        font-size: 1.2rem;
+    .hero-title-box {
+        padding: 1.5rem !important;
+    }
+    
+    .hero-title-box h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    .hero-title-box .price-highlight {
+        font-size: 1.125rem !important;
+    }
+    
+    .mission-box {
+        padding: 1.25rem !important;
+    }
+    
+    .mission-box p {
+        font-size: 0.9375rem !important;
+    }
+    
+    .typewriter-cta .btn {
+        min-height: 52px;
+        font-size: 0.9375rem !important;
     }
 }
 

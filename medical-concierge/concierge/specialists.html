@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Specialties | Beijing Medical Concierge</title>
+    <meta name="description" content="50+ medical specialties available at Beijing's top 3A hospitals. We'll match you with the most suitable specialist for your condition.">
+    <link rel="stylesheet" href="css/concierge-style.css">
+    <style>
+        .specialty-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        .specialty-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        .specialty-card h3 {
+            color: #1F2937;
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .specialty-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .specialty-card li {
+            color: #4B5563;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            margin-bottom: 0.75rem;
+        }
+        .specialty-card strong {
+            color: #1F2937;
+        }
+        .breadcrumb {
+            background: #F9FAFB;
+            padding: 1rem 0;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        .breadcrumb a {
+            color: #7B61C1;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <a href="index.html">← Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">🏥 Beijing Medical Concierge</a>
+            <div class="nav-links">
+                <a href="index.html#services">Services</a>
+                <a href="index.html#hospitals">Hospitals</a>
+                <a href="index.html#pricing">Pricing</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Available Specialties - 完整展示 -->
+    <section style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 5rem 0;">
+      <div class="container">
+        <h1 style="text-align: center; margin-bottom: 0.5rem; color: #1F2937; font-weight: 700; font-size: 2.5rem;">Available Specialties</h1>
+        <p style="text-align: center; color: #6B7280; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto; font-size: 1.1rem;">
+          Don't worry — we'll match you with the most suitable specialist for your condition. 
+          Our partner hospitals cover 50+ specialties across cardiology, oncology, orthopedics, and more.
+        </p>
+        
+        <!-- 科室分类展示（网格布局） -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+          
+          <!-- 心血管科室 -->
+          <div class="specialty-card" style="border-top: 4px solid #EF4444;">
+            <h3><span style="font-size: 1.5rem;">🫀</span> Cardiology & Cardiovascular</h3>
+            <ul>
+              <li><strong>Cardiology:</strong> Expert diagnosis and treatment for diseases of the heart and blood vessels, from hypertension to complex interventional procedures.</li>
+              <li><strong>Cardiovascular Surgery:</strong> Connecting you with elite surgeons for advanced heart, valve, and vascular procedures.</li>
+              <li><strong>Vascular Surgery:</strong> Advanced treatment of diseases affecting the arteries, veins, and vascular system.</li>
+              <li><strong>Thoracic Surgery:</strong> Expert procedures involving the lungs, esophagus, and other organs within the chest.</li>
+              <li><strong>Pediatric Cardiology:</strong> Elite pediatric heart specialists for congenital and acquired childhood heart conditions.</li>
+              <li><strong>Pediatric Cardiovascular Surgery:</strong> Complex congenital and acquired heart conditions in infants and children.</li>
+            </ul>
+          </div>
+          
+          <!-- 肿瘤科室 -->
+          <div class="specialty-card" style="border-top: 4px solid #F59E0B;">
+            <h3><span style="font-size: 1.5rem;">🎗️</span> Oncology & Cancer Care</h3>
+            <ul>
+              <li><strong>Medical Oncology:</strong> Systemic treatment of cancer using advanced chemotherapy, immunotherapy, and targeted therapies.</li>
+              <li><strong>Radiation Oncology:</strong> Advanced radiation therapies to precisely target and treat cancer.</li>
+              <li><strong>Oncological Surgery:</strong> Precise surgical removal of tumors using advanced, minimally invasive, and robotic techniques.</li>
+              <li><strong>Integrative Oncology:</strong> Synergizes modern Western oncology with Traditional Chinese Medicine (TCM) to enhance treatment efficacy.</li>
+              <li><strong>Breast Surgery:</strong> Diagnosis and surgical treatment of breast cancer, including mastectomy and oncoplastic reconstruction.</li>
+              <li><strong>Gastrointestinal Oncology:</strong> Advanced treatment of digestive and GI cancer disorders.</li>
+              <li><strong>Hepatobiliary Surgery:</strong> Complex liver, pancreas, and gallbladder diseases including tumors.</li>
+            </ul>
+          </div>
+          
+          <!-- 外科科室 -->
+          <div class="specialty-card" style="border-top: 4px solid #3B82F6;">
+            <h3><span style="font-size: 1.5rem;">🔪</span> Surgery & Specialized Care</h3>
+            <ul>
+              <li><strong>Neurosurgery:</strong> Elite neurosurgeons for complex surgical procedures of the brain, spine, and nervous system.</li>
+              <li><strong>Orthopedics:</strong> World-class experts in treating musculoskeletal conditions, specializing in joint replacement, spine surgery, and sports medicine.</li>
+              <li><strong>General Surgery:</strong> Expert surgical care for abdominal conditions, including hernia repair, gallbladder, and gastrointestinal surgery.</li>
+              <li><strong>Plastic and Reconstructive Surgery:</strong> Advanced burn care, reconstructive surgery, and aesthetic procedures.</li>
+              <li><strong>Hand Surgery:</strong> Complex microsurgery for hand, wrist, and peripheral nerve injuries.</li>
+              <li><strong>Foot and Ankle Surgery:</strong> Advanced treatment of injuries, arthritis, and deformities.</li>
+              <li><strong>Pancreatic Surgery:</strong> Highly specialized surgeons for pancreatic conditions, including tumors and cancer.</li>
+            </ul>
+          </div>
+          
+          <!-- 儿科科室 -->
+          <div class="specialty-card" style="border-top: 4px solid #10B981;">
+            <h3><span style="font-size: 1.5rem;">👶</span> Pediatrics</h3>
+            <ul>
+              <li><strong>Pediatric Surgery:</strong> Specialized surgical care for infants, children, and adolescents with congenital defects and tumors.</li>
+              <li><strong>Pediatric Medicine:</strong> Comprehensive diagnosis and non-surgical management of complex childhood diseases.</li>
+              <li><strong>Neonatology:</strong> Expert care for newborns, specializing in premature infants and complex neonatal conditions.</li>
+              <li><strong>Pediatric Neurosurgery:</strong> Complex conditions of the brain, spine, and nervous system in children.</li>
+              <li><strong>Pediatric Orthopedics:</strong> Children's musculoskeletal conditions, including scoliosis and limb deformities.</li>
+              <li><strong>Pediatric Gastroenterology:</strong> Complex childhood gastrointestinal, liver, and nutritional disorders.</li>
+              <li><strong>Pediatric Pulmonology:</strong> Childhood respiratory health, including asthma and chronic lung conditions.</li>
+              <li><strong>Pediatric Nephrology:</strong> Advanced care of complex childhood renal conditions.</li>
+            </ul>
+          </div>
+          
+          <!-- 内科科室 -->
+          <div class="specialty-card" style="border-top: 4px solid #8B5CF6;">
+            <h3><span style="font-size: 1.5rem;">💊</span> Internal Medicine</h3>
+            <ul>
+              <li><strong>Neurology:</strong> Expert diagnosis and medical management of conditions affecting the brain, spine, and nerves.</li>
+              <li><strong>Gastroenterology:</strong> All conditions of the digestive system, liver, and pancreas.</li>
+              <li><strong>Respiratory Medicine:</strong> Lung cancer, COPD, asthma, and other complex respiratory diseases.</li>
+              <li><strong>Nephrology:</strong> Advanced treatments for chronic kidney disease, dialysis, and renal care.</li>
+              <li><strong>Endocrinology & Metabolism:</strong> Diabetes, thyroid disorders, and complex hormonal imbalances.</li>
+              <li><strong>Rheumatology and Immunology:</strong> Autoimmune diseases, arthritis, and complex connective tissue disorders.</li>
+              <li><strong>Hematology:</strong> Blood-related diseases like leukemia and lymphoma.</li>
+              <li><strong>Infectious Diseases:</strong> Complex viral, bacterial, and fungal infections.</li>
+            </ul>
+          </div>
+          
+          <!-- 其他科室 -->
+          <div class="specialty-card" style="border-top: 4px solid #6B7280;">
+            <h3><span style="font-size: 1.5rem;">🔬</span> Other Specialties</h3>
+            <ul>
+              <li><strong>Prosthodontics (Dental):</strong> Specialists in rebuilding and replacing teeth with dental implants, crowns, and veneers to restore a perfect smile.</li>
+              <li><strong>Ophthalmology:</strong> Full range of eye conditions, from vision correction to complex retinal surgery.</li>
+              <li><strong>Urology:</strong> Urinary system and male reproductive health, including prostate and kidney conditions.</li>
+              <li><strong>Obstetrics and Gynecology:</strong> Women's health, pregnancy, fertility, and complex gynecologic conditions.</li>
+              <li><strong>Dermatology:</strong> Medical conditions and cosmetic enhancement of the skin, hair, and nails.</li>
+              <li><strong>Otorhinolaryngology – Head and Neck Surgery:</strong> Disorders of the ear, nose, and throat (ENT), and complex head and neck conditions.</li>
+              <li><strong>Reproductive Medicine:</strong> Top fertility experts for IVF and advanced reproductive health solutions.</li>
+              <li><strong>Physical Medicine & Rehabilitation:</strong> Restoring function for patients recovering from stroke, spinal cord injuries, and brain trauma.</li>
+              <li><strong>Pathology:</strong> The foundation of accurate diagnosis. Definitive tissue analysis, cancer diagnosis, and crucial second opinions.</li>
+              <li><strong>Nuclear Medicine:</strong> Advanced molecular imaging to visualize organ function for early diagnosis, and targeted radiation therapies.</li>
+              <li><strong>Prosthodontics:</strong> Specialists in rebuilding and replacing teeth with dental implants, crowns, and veneers.</li>
+              <li><strong>Aesthetic and Laser Surgery:</strong> Leading surgeons specializing in advanced cosmetic, laser, and reconstructive procedures.</li>
+              <li><strong>Sports Medicine:</strong> Specializing in rapid recovery and treatment of athletic injuries to restore peak performance.</li>
+              <li><strong>Andrology:</strong> Expert care for men's health, reproductive issues, and urological conditions.</li>
+              <li><strong>Allergy and Immunology:</strong> Diagnosing and managing complex allergies, asthma, and disorders of the immune system.</li>
+              <li><strong>Developmental and Behavioral Pediatrics:</strong> Expert diagnosis and care for children with Autism Spectrum Disorder (ASD), ADHD, and learning disabilities.</li>
+              <li><strong>Pediatric Neurology:</strong> Advanced diagnosis and treatment of complex childhood neurological conditions.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- CTA -->
+        <div style="text-align: center; margin-top: 3rem; padding: 3rem; background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%); border-radius: 12px; border: 2px solid #7B61C1;">
+          <h3 style="color: #1F2937; margin-bottom: 1rem; font-size: 1.75rem;">Don't See Your Specialty Listed?</h3>
+          <p style="color: #4B5563; font-size: 1.1rem; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+            We work with 50+ departments across Beijing's top hospitals. Contact us to verify if we can match you with the right specialist.
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="index.html#contact" class="btn btn-primary" style="display: inline-block; padding: 1rem 2.5rem; font-size: 1.0625rem; font-weight: 700;">
+              Contact Us to Verify →
+            </a>
+            <a href="questionnaire-phase1.html" class="btn btn-secondary" style="display: inline-block; padding: 1rem 2.5rem; font-size: 1.0625rem; font-weight: 700;">
+              Free Specialist Matching →
+            </a>
+          </div>
+          <p style="color: #6B7280; font-size: 0.9rem; margin-top: 1.5rem;">
+            Get a free specialist matching consultation • Response within 2 hours
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="margin-top: 0;">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Beijing Medical Concierge. All rights reserved.</p>
+                <p style="font-size: 0.85rem; color: #999; margin-top: 0.5rem;">
+                    Disclaimer: We are not a medical institution and do not provide medical advice. 
+                    All medical services are provided by licensed healthcare professionals.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

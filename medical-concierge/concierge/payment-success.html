@@ -315,6 +315,23 @@
                 </div>
             </div>
             
+            <!-- Referral Banner -->
+            <div class="referral-banner" style="background: linear-gradient(135deg, #f0fdf4, #ecfdf5); padding: 2rem; border-radius: 12px; border-left: 4px solid #10b981; margin-top: 2rem;">
+                <h3 style="margin: 0 0 1rem 0; color: #059669; font-size: 1.5rem;">🎉 Share & Earn $10!</h3>
+                <p style="margin: 0 0 1rem 0; color: #4b5563; font-size: 1.1rem;">
+                    Your referral code: <strong id="referral-code" style="font-size: 1.4rem; color: #7b61c1; background: white; padding: 0.5rem 1rem; border-radius: 6px; display: inline-block; margin-top: 0.5rem;">LUCKY2026</strong>
+                </p>
+                <ul style="margin: 1rem 0; color: #4b5563; padding-left: 1.5rem;">
+                    <li>Share with friends → They get $10 OFF</li>
+                    <li>You get $10 voucher per referral</li>
+                    <li>Accumulate $50+ vouchers = Withdrawable (taxes apply)</li>
+                </ul>
+                <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <button onclick="copyCode()" style="background: #7B61C1; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; cursor: pointer; font-weight: 600;">📋 Copy Code</button>
+                    <a href="referral.html" style="background: white; color: #7B61C1; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 2px solid #7B61C1;">Learn More →</a>
+                </div>
+            </div>
+
             <div style="text-align: center; margin-top: 2rem;">
                 <a href="index.html#contact" style="color: var(--primary-color); font-weight: 600; font-size: 1.1rem;">← Back to Website</a>
             </div>
@@ -363,6 +380,24 @@
             }).catch(err => {
                 console.error('Download failed:', err);
                 alert('❌ Download failed. Please try again or take a screenshot.');
+            });
+        }
+
+        // 复制推荐码
+        function copyCode() {
+            const code = document.getElementById('referral-code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('🎉 Referral code copied! Share it with your friends.');
+            }).catch(err => {
+                console.error('Copy failed:', err);
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = code;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                alert('🎉 Referral code copied! Share it with your friends.');
             });
         }
     </script>
