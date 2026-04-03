@@ -2,7 +2,7 @@
 /* UI Design 优化版 - 移动优先，3 秒规则，视觉层次 */
 
 .typewriter-hero {
-    background: linear-gradient(135deg, #EDE9FE 0%, #F3F0FF 100%);
+    background: linear-gradient(135deg, #DDD6FE 0%, #C4B5FD 50%, #A78BFA 100%);
     padding: 4rem 0;
     text-align: center;
     position: relative;
@@ -57,11 +57,13 @@
 
 /* Hero Title Box - 主标题区域 */
 .hero-title-box {
-    background: rgba(255, 255, 255, 0.98);
+    background: rgba(255, 255, 255, 0.15); /* 15% 透明，透出紫色背景 */
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
     padding: 2.5rem;
     border-radius: 16px;
     margin-bottom: 2rem;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.3); /* 白色边框 */
     overflow: visible;
 }
 
@@ -83,11 +85,13 @@
 
 /* Mission Box - 核心理念区域 */
 .mission-box {
-    background: rgba(255, 255, 255, 0.98);
+    background: rgba(255, 255, 255, 0.15); /* 15% 透明，透出紫色背景 */
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
     padding: 2rem;
     border-radius: 16px;
     margin-bottom: 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3); /* 白色边框 */
     overflow: visible;
 }
 
